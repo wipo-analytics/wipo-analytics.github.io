@@ -1,0 +1,4 @@
+book_filename: "manual_bookdown"
+output_dir: "docs"
+chapter_name: "Chapter "
+rmd_files: ["index.Rmd", "2-introduction.Rmd", "3-overview.Rmd", "4-datafields.Rmd", "5-datasets.Rmd", "6-databases.Rmd", "7-lens.Rmd", "8-patentscope.Rmd", "9-openrefine.Rmd", "10-tableau.Rmd", "11-gephi.Rmd", "12-plotly.Rmd", "13-infographics.Rmd", "14-rplos.Rmd"]

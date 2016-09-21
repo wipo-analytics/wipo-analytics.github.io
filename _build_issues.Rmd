@@ -1,0 +1,17 @@
+---
+title: "issues"
+author: "Paul Oldham"
+date: "16 September 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Corrections
+
+Reproof
+
+1. plotly
+2. rplos
+3. Infographics

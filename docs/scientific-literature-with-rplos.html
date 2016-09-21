@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The WIPO Manual on Open Source Patent Analytics</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="This is the index for the Manual site">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the index for the Manual site" />
+  <meta name="github-repo" content="wipo-analytics/manual_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  
+  <meta name="twitter:description" content="This is the index for the Manual site" />
+  
+
+
+<meta name="date" content="2016-01-01">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="patent-infographics-with-r.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Frontmatter</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#authorship"><i class="fa fa-check"></i><b>1.1</b> Authorship</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.2</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#further-information"><i class="fa fa-check"></i><b>1.3</b> Further information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>1.4</b> Disclaimer</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>2.0.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="2.0.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>2.0.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="2.0.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>2.0.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="2.0.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>2.0.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="2.0.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>2.0.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="2.0.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>2.0.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>3</b> An Overview of Tools</a><ul>
+<li class="chapter" data-level="3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>3.1</b> General Tools</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>3.1.1</b> <a href="https://www.openoffice.org">Open Office</a></a></li>
+<li class="chapter" data-level="3.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>3.1.2</b> <a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></a></li>
+<li class="chapter" data-level="3.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>3.1.3</b> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>3.2</b> Cleaning Tools</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>3.2.1</b> <a href="http://openrefine.org">Open Refine</a> (formerly Google Refine)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>3.3</b> Data Mining</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>3.3.1</b> <a href="http://www.rstudio.com">RStudio</a></a></li>
+<li class="chapter" data-level="3.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>3.3.2</b> <a href="https://rapidminer.com/products/studio/">RapidMiner Studio</a></a></li>
+<li class="chapter" data-level="3.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>3.3.3</b> <a href="http://www.knime.org">KNIME</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>3.4</b> Data visualization</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>3.4.1</b> <a href="https://developers.google.com/chart/interactive/docs/gallery">Google Charts</a></a></li>
+<li class="chapter" data-level="3.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>3.4.2</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="3.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>3.4.3</b> R and RStudio</a></li>
+<li class="chapter" data-level="3.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>3.4.4</b> Shiny</a></li>
+<li class="chapter" data-level="3.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>3.4.5</b> <a href="http://www-01.ibm.com/software/analytics/many-eyes/">IBM Many Eyes</a></a></li>
+<li class="chapter" data-level="3.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>3.4.6</b> Other visualization Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>3.5</b> Network Visualization</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>3.5.1</b> <a href="https://gephi.github.io">Gephi</a></a></li>
+<li class="chapter" data-level="3.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>3.5.2</b> <a href="http://nodexl.codeplex.com">NodeXL</a></a></li>
+<li class="chapter" data-level="3.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>3.5.3</b> <a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a></a></li>
+<li class="chapter" data-level="3.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>3.5.4</b> <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a></a></li>
+<li class="chapter" data-level="3.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>3.5.5</b> <a href="http://www.vosviewer.com/Home">VOS Viewer</a></a></li>
+<li class="chapter" data-level="3.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>3.5.6</b> <a href="http://www.hiveplot.net">Hive Plots</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>3.6</b> Infographics</a></li>
+<li class="chapter" data-level="3.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>3.7</b> Geographical Mapping</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>3.7.1</b> <a href="http://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a></a></li>
+<li class="chapter" data-level="3.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>3.7.2</b> <a href="http://leafletjs.com">Leaflet</a></a></li>
+<li class="chapter" data-level="3.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>3.7.3</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="3.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>3.7.4</b> <a href="http://www.qgis.org/en/site/">QGIS</a></a></li>
+<li class="chapter" data-level="3.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>3.7.5</b> <a href="http://www.geonames.org">Geonames.org</a>.</a></li>
+<li class="chapter" data-level="3.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>3.7.6</b> <a href="http://icharts.net/product/web-data-visualization">iCharts</a></a></li>
+<li class="chapter" data-level="3.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>3.7.7</b> <a href="http://openlayers.org">OpenLayers3</a></a></li>
+<li class="chapter" data-level="3.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>3.7.8</b> <a href="https://cartodb.com/gallery/">CartoDB</a></a></li>
+<li class="chapter" data-level="3.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>3.7.9</b> <a href="http://d3js.org">d3.js</a></a></li>
+<li class="chapter" data-level="3.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>3.7.10</b> <a href="http://www.highcharts.com">Highcharts</a></a></li>
+<li class="chapter" data-level="3.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>3.7.11</b> <a href="https://datawrapper.de">Datawrapper</a></a></li>
+<li class="chapter" data-level="3.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>3.7.12</b> <a href="https://plot.ly/feed/">Plotly</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>3.8</b> Text Mining</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>3.8.1</b> <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Jigsaw Visual Analytics</a></a></li>
+<li class="chapter" data-level="3.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>3.8.2</b> <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a></a></li>
+<li class="chapter" data-level="3.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>3.8.3</b> Word Trees</a></li>
+<li class="chapter" data-level="3.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>3.8.4</b> <a href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Word Trees</a> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="3.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>3.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="3.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>3.8.6</b> R and the <code>tm</code> package</a></li>
+<li class="chapter" data-level="3.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>3.8.7</b> Python and Text Mining</a></li>
+<li class="chapter" data-level="3.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkit-ntlk-appears-to-be-the-leading-package-and-covers-almost-all-major-needs.-the-accompanying-book-natural-language-processing-with-python-may-also-be-worth-considering.-2.-the-python-textmining-package.-this-is-simpler-than-the-giant-ntlk-package-but-may-suit-your-needs."><i class="fa fa-check"></i><b>3.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit (NTLK)</a> appears to be the leading package and covers almost all major needs. The accompanying book <a href="http://shop.oreilly.com/product/9780596516499.do">Natural Language Processing with Python</a> may also be worth considering. 2. The <a href="http://www.christianpeccei.com/textmining/">Python Textmining Package</a>. This is simpler than the giant NTLK package but may suit your needs.</a></li>
+<li class="chapter" data-level="3.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>3.8.9</b> Other text mining resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>3.9</b> Round Up</a></li>
+<li class="chapter" data-level="3.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-checklist"><i class="fa fa-check"></i><b>3.10</b> The Checklist</a></li>
+<li class="chapter" data-level="3.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#credits"><i class="fa fa-check"></i><b>3.11</b> Credits</a></li>
+</ul></li>
+<li class="part"><span><b>Approaching Patent Data</b></span></li>
+<li class="chapter" data-level="4" data-path="datafields.html"><a href="datafields.html"><i class="fa fa-check"></i><b>4</b> Datafields</a><ul>
+<li class="chapter" data-level="4.1" data-path="datafields.html"><a href="datafields.html#what-is-a-patent"><i class="fa fa-check"></i><b>4.1</b> What is a Patent?</a></li>
+<li class="chapter" data-level="4.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>4.2</b> As a form of intellectual property right</a></li>
+<li class="chapter" data-level="4.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>4.3</b> Patents as a type of document</a></li>
+<li class="chapter" data-level="4.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>4.4</b> Basic Data Types</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>4.4.1</b> <a href="http://www.nature.com/nature/journal/v473/n7347/full/473403a.html">Synthetic Genomes</a></a></li>
+<li class="chapter" data-level="4.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>4.4.2</b> <a href="http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Original Front Page</a></a></li>
+<li class="chapter" data-level="4.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>4.4.3</b> <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">espacenet Front Page</a></a></li>
+<li class="chapter" data-level="4.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>4.4.4</b> <a href="http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Description</a></a></li>
+<li class="chapter" data-level="4.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>4.4.5</b> <a href="http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Claims</a></a></li>
+<li class="chapter" data-level="4.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>4.4.6</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Family Members</a></a></li>
+<li class="chapter" data-level="4.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>4.4.7</b> <a href="http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Cited</a></a></li>
+<li class="chapter" data-level="4.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>4.4.8</b> <a href="http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Citing</a></a></li>
+<li class="chapter" data-level="4.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>4.4.9</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Legal Status</a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="datafields.html"><a href="datafields.html#patent-registers"><i class="fa fa-check"></i><b>4.5</b> Patent Registers</a></li>
+<li class="chapter" data-level="4.6" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>4.6</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>5</b> Datasets</a><ul>
+<li class="chapter" data-level="5.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>5.1</b> The datasets</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="datasets.html"><a href="datasets.html#pizza-patent-datasets"><i class="fa fa-check"></i><b>5.1.1</b> Pizza patent datasets</a></li>
+<li class="chapter" data-level="5.1.2" data-path="datasets.html"><a href="datasets.html#patent-landscape-reports-datasets"><i class="fa fa-check"></i><b>5.1.2</b> Patent Landscape Reports datasets</a></li>
+<li class="chapter" data-level="5.1.3" data-path="datasets.html"><a href="datasets.html#other-datasets"><i class="fa fa-check"></i><b>5.1.3</b> Other datasets</a></li>
+<li class="chapter" data-level="5.1.4" data-path="datasets.html"><a href="datasets.html#round-up-2"><i class="fa fa-check"></i><b>5.1.4</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Obtaining Patent Data</b></span></li>
+<li class="chapter" data-level="6" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>6</b> Databases</a><ul>
+<li class="chapter" data-level="6.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>6.2</b> The Databases</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>6.2.1</b> <a href="https://www.lens.org/lens/">The Lens</a></a></li>
+<li class="chapter" data-level="6.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>6.2.2</b> <a href="https://patentscope.wipo.int/search/en/search.jsf">Patentscope</a></a></li>
+<li class="chapter" data-level="6.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>6.2.3</b> <a href="http://worldwide.espacenet.com/?locale=en_EP">espacenet</a></a></li>
+<li class="chapter" data-level="6.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>6.2.4</b> <a href="http://lp.espacenet.com">LATIPAT</a></a></li>
+<li class="chapter" data-level="6.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>6.2.5</b> <a href="http://www.epo.org/searching/free/ops.html">EPO Open Patent Services</a></a></li>
+<li class="chapter" data-level="6.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>6.2.6</b> <a href="http://www.patentsview.org/web/">USPTO Patents View</a></a></li>
+<li class="chapter" data-level="6.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>6.2.7</b> <a href="http://www.google.com/patents">Google Patents</a></a></li>
+<li class="chapter" data-level="6.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>6.2.8</b> <a href="https://www.google.com/patents/related">Google Prior Art Finder</a></a></li>
+<li class="chapter" data-level="6.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>6.2.9</b> <a href="https://www.google.com/googlebooks/uspto.html">Google USPTO Bulk download</a></a></li>
+<li class="chapter" data-level="6.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>6.2.10</b> <a href="http://www.freepatentsonline.com">Free Patents Online</a></a></li>
+<li class="chapter" data-level="6.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>6.2.11</b> <a href="http://www.dpma.de/english/service/e-services/depatisnet/">DEPATISnet</a></a></li>
+<li class="chapter" data-level="6.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>6.2.12</b> <a href="http://www.oecd.org/sti/inno/oecdpatentdatabases.htm">OECD Patent Databases</a></a></li>
+<li class="chapter" data-level="6.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>6.2.13</b> <a href="https://www.epo.org/searching-for-patents/business/patstat.html">EPO World Patent Statistical Database</a></a></li>
+<li class="chapter" data-level="6.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>6.2.14</b> Other data sources</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="databases.html"><a href="databases.html#tools-for-accessing-patent-data"><i class="fa fa-check"></i><b>6.3</b> Tools for Accessing Patent Data</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>6.3.1</b> <a href="https://github.com/Patent2net/Patent2Net">Patent2Net</a> in Python</a></li>
+<li class="chapter" data-level="6.3.2" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>6.3.2</b> <a href="https://github.com/55minutes/python-epo-ops-client">Python EPO OPS Client</a> by Gsong</a></li>
+<li class="chapter" data-level="6.3.3" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>6.3.3</b> <a href="https://github.com/funginstitute/patentserver">Fung Institute Patent Server</a> for USPTO data in JSON</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="databases.html"><a href="databases.html#round-up-3"><i class="fa fa-check"></i><b>6.4</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>7</b> The Lens</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="the-lens-1.html"><a href="the-lens-1.html#getting-started"><i class="fa fa-check"></i><b>7.2</b> Getting Started</a></li>
+<li class="chapter" data-level="7.3" data-path="the-lens-1.html"><a href="the-lens-1.html#additional-features"><i class="fa fa-check"></i><b>7.3</b> Additional features</a></li>
+<li class="chapter" data-level="7.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>7.4</b> Visualisation</a></li>
+<li class="chapter" data-level="7.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>7.5</b> Working with texts</a></li>
+<li class="chapter" data-level="7.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>7.6</b> PatSeq</a></li>
+<li class="chapter" data-level="7.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-4"><i class="fa fa-check"></i><b>7.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>8</b> Patentscope</a><ul>
+<li class="chapter" data-level="8.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="patentscope-1.html"><a href="patentscope-1.html#collections-to-search"><i class="fa fa-check"></i><b>8.2</b> Collections to Search</a></li>
+<li class="chapter" data-level="8.3" data-path="patentscope-1.html"><a href="patentscope-1.html#simple-search"><i class="fa fa-check"></i><b>8.3</b> Simple Search</a></li>
+<li class="chapter" data-level="8.4" data-path="patentscope-1.html"><a href="patentscope-1.html#results"><i class="fa fa-check"></i><b>8.4</b> Results</a></li>
+<li class="chapter" data-level="8.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>8.5</b> Downloading Results</a></li>
+<li class="chapter" data-level="8.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>8.6</b> Cross Lingual Searching</a></li>
+<li class="chapter" data-level="8.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>8.7</b> Sequence Data</a></li>
+<li class="chapter" data-level="8.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-5"><i class="fa fa-check"></i><b>8.8</b> Round Up</a></li>
+</ul></li>
+<li class="part"><span><b>Cleaning Patent Data</b></span></li>
+<li class="chapter" data-level="9" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>9</b> Open Refine</a><ul>
+<li class="chapter" data-level="9.1" data-path="open-refine.html"><a href="open-refine.html#install-open-refine"><i class="fa fa-check"></i><b>9.1</b> Install Open Refine</a></li>
+<li class="chapter" data-level="9.2" data-path="open-refine.html"><a href="open-refine.html#create-a-project"><i class="fa fa-check"></i><b>9.2</b> Create a Project</a></li>
+<li class="chapter" data-level="9.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-basics"><i class="fa fa-check"></i><b>9.3</b> Open Refine Basics</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="open-refine.html"><a href="open-refine.html#open-refine-runs-in-a-browser"><i class="fa fa-check"></i><b>9.3.1</b> Open Refine runs in a browser</a></li>
+<li class="chapter" data-level="9.3.2" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-on-columns."><i class="fa fa-check"></i><b>9.3.2</b> Open Refine works on columns.</a></li>
+<li class="chapter" data-level="9.3.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-with-facets."><i class="fa fa-check"></i><b>9.3.3</b> Open Refine works with Facets.</a></li>
+<li class="chapter" data-level="9.3.4" data-path="open-refine.html"><a href="open-refine.html#custom-facets"><i class="fa fa-check"></i><b>9.3.4</b> Custom Facets</a></li>
+<li class="chapter" data-level="9.3.5" data-path="open-refine.html"><a href="open-refine.html#reordering-columns"><i class="fa fa-check"></i><b>9.3.5</b> Reordering Columns</a></li>
+<li class="chapter" data-level="9.3.6" data-path="open-refine.html"><a href="open-refine.html#undo-and-redo"><i class="fa fa-check"></i><b>9.3.6</b> Undo and Redo</a></li>
+<li class="chapter" data-level="9.3.7" data-path="open-refine.html"><a href="open-refine.html#exporting"><i class="fa fa-check"></i><b>9.3.7</b> Exporting</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="open-refine.html"><a href="open-refine.html#basic-cleaning"><i class="fa fa-check"></i><b>9.4</b> Basic Cleaning</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="open-refine.html"><a href="open-refine.html#changing-case"><i class="fa fa-check"></i><b>9.4.1</b> Changing case</a></li>
+<li class="chapter" data-level="9.4.2" data-path="open-refine.html"><a href="open-refine.html#regularise-case"><i class="fa fa-check"></i><b>9.4.2</b> Regularise case</a></li>
+<li class="chapter" data-level="9.4.3" data-path="open-refine.html"><a href="open-refine.html#remove-leading-and-trailing-whitespace"><i class="fa fa-check"></i><b>9.4.3</b> Remove leading and trailing whitespace</a></li>
+<li class="chapter" data-level="9.4.4" data-path="open-refine.html"><a href="open-refine.html#add-columns"><i class="fa fa-check"></i><b>9.4.4</b> Add Columns</a></li>
+<li class="chapter" data-level="9.4.5" data-path="open-refine.html"><a href="open-refine.html#address-encoding-and-related-problems"><i class="fa fa-check"></i><b>9.4.5</b> Address Encoding and related problems</a></li>
+<li class="chapter" data-level="9.4.6" data-path="open-refine.html"><a href="open-refine.html#reformatting-dates"><i class="fa fa-check"></i><b>9.4.6</b> Reformatting dates</a></li>
+<li class="chapter" data-level="9.4.7" data-path="open-refine.html"><a href="open-refine.html#access-additional-information"><i class="fa fa-check"></i><b>9.4.7</b> Access additional information</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="open-refine.html"><a href="open-refine.html#fill-blank-cells"><i class="fa fa-check"></i><b>9.5</b> Fill blank cells</a></li>
+<li class="chapter" data-level="9.6" data-path="open-refine.html"><a href="open-refine.html#renaming-columns"><i class="fa fa-check"></i><b>9.6</b> Renaming columns</a></li>
+<li class="chapter" data-level="9.7" data-path="open-refine.html"><a href="open-refine.html#exporting-data"><i class="fa fa-check"></i><b>9.7</b> Exporting Data</a></li>
+<li class="chapter" data-level="9.8" data-path="open-refine.html"><a href="open-refine.html#splitting-applicants"><i class="fa fa-check"></i><b>9.8</b> Splitting Applicants</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="open-refine.html"><a href="open-refine.html#situation-1---first-applicants"><i class="fa fa-check"></i><b>9.8.1</b> Situation 1 - First Applicants</a></li>
+<li class="chapter" data-level="9.8.2" data-path="open-refine.html"><a href="open-refine.html#situation-2---all-applicants"><i class="fa fa-check"></i><b>9.8.2</b> Situation 2 - All Applicants</a></li>
+<li class="chapter" data-level="9.8.3" data-path="open-refine.html"><a href="open-refine.html#phonetic-fingerprint-metaphone-3-clustering"><i class="fa fa-check"></i><b>9.8.3</b> Phonetic Fingerprint (Metaphone 3) clustering</a></li>
+<li class="chapter" data-level="9.8.4" data-path="open-refine.html"><a href="open-refine.html#levenshtein-edit-distance"><i class="fa fa-check"></i><b>9.8.4</b> Levenshtein Edit Distance</a></li>
+<li class="chapter" data-level="9.8.5" data-path="open-refine.html"><a href="open-refine.html#ppm"><i class="fa fa-check"></i><b>9.8.5</b> PPM</a></li>
+<li class="chapter" data-level="9.8.6" data-path="open-refine.html"><a href="open-refine.html#preparing-for-export"><i class="fa fa-check"></i><b>9.8.6</b> Preparing for export</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="open-refine.html"><a href="open-refine.html#round-up-6"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
+<li class="chapter" data-level="9.10" data-path="open-refine.html"><a href="open-refine.html#useful-resources"><i class="fa fa-check"></i><b>9.10</b> Useful Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Visualizing Patent Data</b></span></li>
+<li class="chapter" data-level="10" data-path="tableau-public-2.html"><a href="tableau-public-2.html"><i class="fa fa-check"></i><b>10</b> Tableau Public</a><ul>
+<li class="chapter" data-level="10.1" data-path="tableau-public-2.html"><a href="tableau-public-2.html#introduction-4"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="tableau-public-2.html"><a href="tableau-public-2.html#installing-tableau"><i class="fa fa-check"></i><b>10.2</b> Installing Tableau</a></li>
+<li class="chapter" data-level="10.3" data-path="tableau-public-2.html"><a href="tableau-public-2.html#getting-started-1"><i class="fa fa-check"></i><b>10.3</b> Getting Started</a></li>
+<li class="chapter" data-level="10.4" data-path="tableau-public-2.html"><a href="tableau-public-2.html#publication-trends"><i class="fa fa-check"></i><b>10.4</b> Publication Trends</a></li>
+<li class="chapter" data-level="10.5" data-path="tableau-public-2.html"><a href="tableau-public-2.html#adding-new-data-sources"><i class="fa fa-check"></i><b>10.5</b> Adding New Data Sources</a></li>
+<li class="chapter" data-level="10.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>10.6</b> Creating an Overview Dashboard</a></li>
+<li class="chapter" data-level="10.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>10.7</b> Saving, Display and Privacy Settings</a></li>
+<li class="chapter" data-level="10.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>10.8</b> Privacy and Security</a></li>
+<li class="chapter" data-level="10.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-7"><i class="fa fa-check"></i><b>10.9</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>11</b> Gephi</a><ul>
+<li class="chapter" data-level="11.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>11.1</b> Installing Gephi</a></li>
+<li class="chapter" data-level="11.2" data-path="gephi-1.html"><a href="gephi-1.html#opening-gephi-and-installing-plugins"><i class="fa fa-check"></i><b>11.2</b> Opening Gephi and Installing Plugins</a></li>
+<li class="chapter" data-level="11.3" data-path="gephi-1.html"><a href="gephi-1.html#importing-a-file-to-gephi-with-the-converter-plugin"><i class="fa fa-check"></i><b>11.3</b> Importing a file to Gephi with the converter plugin</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import-spigot"><i class="fa fa-check"></i><b>11.3.1</b> Step 1. Open Gephi and Choose File &gt; Import Spigot</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="gephi-1.html"><a href="gephi-1.html#sizing-and-colouring-nodes"><i class="fa fa-check"></i><b>11.4</b> Sizing and Colouring Nodes</a></li>
+<li class="chapter" data-level="11.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>11.5</b> Laying out the Graph</a></li>
+<li class="chapter" data-level="11.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>11.6</b> Adding Labels</a></li>
+<li class="chapter" data-level="11.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-timeline"><i class="fa fa-check"></i><b>11.7</b> Using the Timeline</a></li>
+<li class="chapter" data-level="11.8" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>11.8</b> Using the Preview Options</a></li>
+<li class="chapter" data-level="11.9" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>11.9</b> Exporting from Preview</a></li>
+<li class="chapter" data-level="11.10" data-path="gephi-1.html"><a href="gephi-1.html#resources"><i class="fa fa-check"></i><b>11.10</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html"><i class="fa fa-check"></i><b>12</b> Patent Analytics with Plotly</a><ul>
+<li class="chapter" data-level="12.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#introduction-5"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#getting-started-with-plotly"><i class="fa fa-check"></i><b>12.2</b> Getting Started with Plotly</a></li>
+<li class="chapter" data-level="12.3" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#importing-files"><i class="fa fa-check"></i><b>12.3</b> Importing Files</a></li>
+<li class="chapter" data-level="12.4" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#creating-a-graphic"><i class="fa fa-check"></i><b>12.4</b> Creating a graphic</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#adding-a-second-axis"><i class="fa fa-check"></i><b>12.4.1</b> Adding a Second Axis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>12.5</b> Saving and Sharing</a></li>
+<li class="chapter" data-level="12.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>12.6</b> Working with Plotly in R</a></li>
+<li class="chapter" data-level="12.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-8"><i class="fa fa-check"></i><b>12.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>13</b> Patent Infographics with R</a><ul>
+<li class="chapter" data-level="13.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>13.1</b> Getting Started</a></li>
+<li class="chapter" data-level="13.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#load-a-.csv-file-using-readr"><i class="fa fa-check"></i><b>13.2</b> Load a .csv file using <code>readr</code></a></li>
+<li class="chapter" data-level="13.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#viewing-data"><i class="fa fa-check"></i><b>13.3</b> Viewing Data</a></li>
+<li class="chapter" data-level="13.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#identifying-types-of-object"><i class="fa fa-check"></i><b>13.4</b> Identifying Types of Object</a></li>
+<li class="chapter" data-level="13.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#working-with-data"><i class="fa fa-check"></i><b>13.5</b> Working with Data</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#select"><i class="fa fa-check"></i><b>13.5.1</b> Select</a></li>
+<li class="chapter" data-level="13.5.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#adding-data-with-mutate"><i class="fa fa-check"></i><b>13.5.2</b> Adding data with <code>mutate()</code></a></li>
+<li class="chapter" data-level="13.5.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#counting-data-using-count"><i class="fa fa-check"></i><b>13.5.3</b> Counting data using <code>count()</code></a></li>
+<li class="chapter" data-level="13.5.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#rename-a-field-with-rename"><i class="fa fa-check"></i><b>13.5.4</b> Rename a field with <code>rename()</code></a></li>
+<li class="chapter" data-level="13.5.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#make-a-quickplot-with-qplot"><i class="fa fa-check"></i><b>13.5.5</b> Make a quickplot with <code>qplot()</code></a></li>
+<li class="chapter" data-level="13.5.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#filter-data-using-filter"><i class="fa fa-check"></i><b>13.5.6</b> Filter data using <code>filter()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#simplify-code-with-pipes"><i class="fa fa-check"></i><b>13.6</b> Simplify code with pipes <code>%&gt;%</code></a></li>
+<li class="chapter" data-level="13.7" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#harmonising-data"><i class="fa fa-check"></i><b>13.7</b> Harmonising data</a></li>
+<li class="chapter" data-level="13.8" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#country-trends-using-spread"><i class="fa fa-check"></i><b>13.8</b> Country Trends using <code>spread()</code></a></li>
+<li class="chapter" data-level="13.9" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#tidying-data---separating-and-gathering"><i class="fa fa-check"></i><b>13.9</b> Tidying data - Separating and Gathering</a><ul>
+<li class="chapter" data-level="13.9.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#trimming-with-stringr"><i class="fa fa-check"></i><b>13.9.1</b> Trimming with <code>stringr</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#selecting-applicants-using-filter"><i class="fa fa-check"></i><b>13.10</b> Selecting applicants using <code>filter()</code></a></li>
+<li class="chapter" data-level="13.11" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#generating-ipc-tables"><i class="fa fa-check"></i><b>13.11</b> Generating IPC Tables</a><ul>
+<li class="chapter" data-level="13.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>13.11.1</b> Phrases Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="13.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>13.12</b> Creating an infographic in infogr.am</a><ul>
+<li class="chapter" data-level="13.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-9"><i class="fa fa-check"></i><b>13.12.1</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Using APIs</b></span></li>
+<li class="chapter" data-level="14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html"><i class="fa fa-check"></i><b>14</b> Scientific Literature with Rplos</a><ul>
+<li class="chapter" data-level="14.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#introduction-6"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-r-and-rstudio"><i class="fa fa-check"></i><b>14.2</b> Install R and RStudio</a></li>
+<li class="chapter" data-level="14.3" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#create-a-project-1"><i class="fa fa-check"></i><b>14.3</b> Create A Project</a></li>
+<li class="chapter" data-level="14.4" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-packages"><i class="fa fa-check"></i><b>14.4</b> Install Packages</a></li>
+<li class="chapter" data-level="14.5" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#key-functions-in-rplos"><i class="fa fa-check"></i><b>14.5</b> Key functions in rplos</a></li>
+<li class="chapter" data-level="14.6" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#data-fields-in-rplos"><i class="fa fa-check"></i><b>14.6</b> Data Fields in rplos</a></li>
+<li class="chapter" data-level="14.7" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#basic-searching-using-searchplos-navigating-and-exporting-data"><i class="fa fa-check"></i><b>14.7</b> Basic Searching using <code>searchplos()</code>, Navigating and Exporting Data</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#creating-a-new-object-and-writing-to-file"><i class="fa fa-check"></i><b>14.7.1</b> Creating a New Object and Writing to File</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#limit-by-journal"><i class="fa fa-check"></i><b>14.8</b> Limit by journal</a></li>
+<li class="chapter" data-level="14.9" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-number-of-records-across-plos-journals"><i class="fa fa-check"></i><b>14.9</b> Obtaining the number of records across PLOS Journals</a></li>
+<li class="chapter" data-level="14.10" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-the-results-and-using-a-codebook"><i class="fa fa-check"></i><b>14.10</b> Writing the results and using a codebook</a></li>
+<li class="chapter" data-level="14.11" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#proximity-searching"><i class="fa fa-check"></i><b>14.11</b> Proximity Searching</a></li>
+<li class="chapter" data-level="14.12" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#searching-using-multiple-phrases"><i class="fa fa-check"></i><b>14.12</b> Searching Using Multiple Phrases</a></li>
+<li class="chapter" data-level="14.13" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#tidying-and-organising-the-data"><i class="fa fa-check"></i><b>14.13</b> Tidying and Organising the Data</a><ul>
+<li class="chapter" data-level="14.13.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#renaming-a-column"><i class="fa fa-check"></i><b>14.13.1</b> Renaming a column</a></li>
+</ul></li>
+<li class="chapter" data-level="14.14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>14.14</b> Filling Blank Spaces</a></li>
+<li class="chapter" data-level="14.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>14.15</b> Converting Dates</a></li>
+<li class="chapter" data-level="14.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#adding-columns"><i class="fa fa-check"></i><b>14.16</b> Adding columns</a></li>
+<li class="chapter" data-level="14.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>14.17</b> Add a count</a></li>
+<li class="chapter" data-level="14.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>14.18</b> Remove a column</a></li>
+<li class="chapter" data-level="14.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>14.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="14.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>14.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="14.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>14.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="14.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>14.20.2</b> Deleting Duplicates</a></li>
+</ul></li>
+<li class="chapter" data-level="14.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>14.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="14.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>14.22</b> By author</a></li>
+<li class="chapter" data-level="14.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>14.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="14.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>14.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="14.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>14.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="14.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>14.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="14.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>14.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="14.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>14.26.2</b> fragment size using hl.fragsize</a></li>
+</ul></li>
+<li class="chapter" data-level="14.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>14.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="14.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>14.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="14.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-10"><i class="fa fa-check"></i><b>14.29</b> Round Up</a></li>
+<li class="chapter" data-level="14.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>14.30</b> Resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The WIPO Manual on Open Source Patent Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="scientific-literature-with-rplos" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> Scientific Literature with Rplos</h1>
+<div id="introduction-6" class="section level2">
+<h2><span class="header-section-number">14.1</span> Introduction</h2>
+<p>In this chapter we look at the use of the <a href="https://github.com/ropensci/rplos"><code>rplos</code></a> package from <a href="https://ropensci.org">rOpenSci</a> to access the scientific literature from the <a href="https://www.plos.org">Public Library of Science</a> using the <a href="http://api.plos.org/solr/faq/">PLOS Search API</a>.</p>
+<p>The Public Library of Science (PLOS) is the main champion of open access peer reviewed scientific publications and has published somewhere in the region of 140,000 articles. These articles are a fantastic resource. PLOS includes the following titles.</p>
+<ul>
+<li>PLOS ONE</li>
+<li>PLOS Biology</li>
+<li>PLOS Medicine</li>
+<li>PLOS Computational Biology</li>
+<li>PLOS Genetics</li>
+<li>PLOS Pathogens</li>
+<li>PLOS Neglected Tropical Diseases</li>
+<li>PLOS Clinical Trials ()</li>
+<li>PLOS Collections (collections of articles)</li>
+</ul>
+<p>PLOS is important because it provides open access to the full text of peer reviewed research. For researchers interested in working with R, <code>rplos</code> and its bigger sister package, the <a href="https://ropensci.org/tutorials/fulltext_tutorial.html">rOpenSci <code>fulltext</code> package</a> are very important tools for gaining access to research.</p>
+<p>This article is part of work in progress for the WIPO Manual on Open Source Patent Analytics. The Manual is intended to introduce open source analytics tools to patent researchers in developing countries and to be of wider use to the science and technology research community. An important part of patent research is being able to access and analyse the scientific literature.</p>
+<p>This article makes no assumptions about knowledge of R or programming. <code>rplos</code> is a good place to start with learning how to access scientific literature in R using Application Programming Interfaces (APIs). Because <code>rplos</code> is well organised and the data is very clean it is also a good place to learn some of the basics of working with data in R. This provides a good basis for working with the ROpenSci <a href="https://github.com/ropensci/fulltext">fulltext package</a>. <code>fulltext</code> allows you to retrieve scientific literature from multiple data sources and we will deal with that next.</p>
+<p>We will also use this as an opportunity to introduce some of the popular packages for working with data in R, notably the family of packages for tidying and wrangling data developed by Hadley Wickham at RStudio (namely, <code>plyr</code>, <code>dplyr</code>, <code>stringr</code> and <code>tidyr</code>). We will only touch on these but we include then as everyday working packages that you will find useful in learning more about R.</p>
+<p>The first step is to make sure that you have R and RStudio.</p>
+</div>
+<div id="install-r-and-rstudio" class="section level2">
+<h2><span class="header-section-number">14.2</span> Install R and RStudio</h2>
+<p>To get up and running you need to install a version of R for your operating system. You can do that from <a href="http://cran.rstudio.com/">here</a>. Then download RStudio Desktop for your operating system from <a href="https://www.rstudio.com/products/rstudio/download/">here</a> using the installer for your system. Then open RStudio.</p>
+</div>
+<div id="create-a-project-1" class="section level2">
+<h2><span class="header-section-number">14.3</span> Create A Project</h2>
+<p>Projects are probably the best way of organising your work in RStudio. To create a new project select the dropdown menu in to top right where you see the blue R icon. Navigate to where you want to keep your R materials and give your project a name (e.g. rplos). Now you will be able to save you work into an rplos project folder and R will keep everything together when you save the project.</p>
+</div>
+<div id="install-packages" class="section level2">
+<h2><span class="header-section-number">14.4</span> Install Packages</h2>
+<p>First we need to install some packages to help us work with the data. This list of packages are common “go to” packages for daily use.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;rplos&quot;</span>)  <span class="co">#the main event</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;readr&quot;</span>)  <span class="co">#for reading data</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;plyr&quot;</span>)  <span class="co">#for wrangling data</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)  <span class="co">#for wrangling data</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;tidyr&quot;</span>)  <span class="co">#for tidying data</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;stringr&quot;</span>)  <span class="co">#for manipulating strings</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;tm&quot;</span>)  <span class="co">#for text mining</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;XML&quot;</span>)  <span class="co">#for dealing with text in xml</span></code></pre></div>
+<p>Then we load the libraries. Note that <code>rplos</code> will install and load any other packages that it needs (in this case ggplot2 for graphing) so we don’t need to worry about that.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rplos)
+<span class="kw">library</span>(readr)
+<span class="kw">library</span>(plyr)  <span class="co"># load before dplyr to avoid errors</span>
+<span class="kw">library</span>(dplyr)
+<span class="kw">library</span>(tidyr)
+<span class="kw">library</span>(stringr)
+<span class="kw">library</span>(tm)
+<span class="kw">library</span>(XML)</code></pre></div>
+<p>Next let’s take a look at the wide range of functions that are available for searching using <code>rplos</code> by moving over to the Packages tab in RStudio and clicking on <code>rplos</code>. A very useful tutorial on using <code>rplos</code> can be found <a href="https://ropensci.org/tutorials/rplos_tutorial.html">here</a> and can be cited as “Scott Chamberlain, Carl Boettiger and Karthik Ram (2015). rplos: Interface to PLOS Journals search API. R package version 0.5.0 <a href="https://github.com/ropensci/rplos" class="uri">https://github.com/ropensci/rplos</a>”. If you are already comfortable working in R you might want to head to that introductory tutorial as this article contains a lot more in the way of explanation. However, we will also add some new examples and code for working with the results to add to the resource base for <code>rplos</code>.</p>
+</div>
+<div id="key-functions-in-rplos" class="section level2">
+<h2><span class="header-section-number">14.5</span> Key functions in rplos</h2>
+<p>R is an object oriented language meaning that it works on objects such as a vector, table, list, or matrix. These are easy to create. We then apply functions to the data from <code>base R</code> or from packages we have installed for particular tasks.</p>
+<ul>
+<li><code>searchplos()</code>, the basic function for searching plos</li>
+<li><code>plosauthor()</code>, search on author name</li>
+<li><code>plostitle()</code>, search the title</li>
+<li><code>plosabstract()</code>, search the abstract</li>
+<li><code>plossubject()</code>, search by subject</li>
+<li><code>citations()</code>, search the <a href="http://api.richcitations.org/">PLOS Rich Citations</a></li>
+<li><code>plos_fulltext()</code>, retrieve full text using a DOI</li>
+<li><code>highplos()</code>, highlight search terms in the results.</li>
+<li><code>highbrow()</code>, browse search terms in a browser with hyperlinks.</li>
+</ul>
+<p>Functions in R take (accept) arguments which are options for the type of data we want to obtain when using an API or the calculations that we want to run on the data. For <code>rplos</code> we will mainly use arguments setting out our search query, the fields that we want to search, and the number of results.</p>
+<p>If you are new to R this will typically takes the form of a short piece of code that is structured like this.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">newobject &lt;-<span class="st"> </span>function(yourdata, argument1, argument2, etc)</code></pre></div>
+<p>A new object is likely to be a table or list containing data. the sign <code>&lt;-</code> gets or passes the results of the function (such as seachplos) to the new object. To specify what we want we first include our data (<code>yourdata</code>) and then one or more arguments which control what we get, such as the number of records or the title etc.</p>
+</div>
+<div id="data-fields-in-rplos" class="section level2">
+<h2><span class="header-section-number">14.6</span> Data Fields in rplos</h2>
+<p>There are quite a number of fields that can be searched with <code>rplos</code> or used to refine a search. We will only use a few of them. To see the range of fields type <code>plosfields</code> into the console and press Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plosfields</code></pre></div>
+<p>For example, if we wanted to search the title, abstract and conclusions we would use these fields in building the query (see below). If we wanted to search everything but those fields we would probably use body. If we wanted to retrieve the references then we would include <code>reference</code> in the fields. In <code>rplos</code> a field is denoted by <code>fl =</code> with the fields in quotes such as <code>fl = &quot;title&quot;</code> and so on as we will see below.</p>
+</div>
+<div id="basic-searching-using-searchplos-navigating-and-exporting-data" class="section level2">
+<h2><span class="header-section-number">14.7</span> Basic Searching using <code>searchplos()</code>, Navigating and Exporting Data</h2>
+<p><code>searchplos()</code> is the basic <code>rplos</code> search function and returns a list of document identifiers (DOIs) or other data fields. The basic search result is a set of DOIs that can be used for further work. To get help for a function, or to find working examples, use <code>?</code> in front of the function in the console:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">`</span><span class="dt">?</span><span class="st">`</span>(searchplos)</code></pre></div>
+<p>This will bring up the help page for that function with a description of the arguments that are available and with examples at the bottom of the page.</p>
+<p>The examples are there to help you. In <code>rplos</code> they presently focus on the use of single search terms such as ecology. However, as we will see below, it is possible to use phrases in searching and to use multiple terms. There are quite a number of arguments (options) available for refining the results and we will include some of these in the examples.</p>
+<p>The author of this article is a big fan of pizza. So, in the first example we will carry out a simple search for the term pizza and then specify the results we want to see using the argument <code>fl =</code> (for fields) and the number of results that we want to see using <code>limit = 20</code>. In specifying the fields we will use <code>c()</code> to combine them together.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;algeria&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, 
+    <span class="st">&quot;publication_date&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), 
+    <span class="dt">limit =</span> <span class="dv">20</span>)</code></pre></div>
+<p>What <code>searchplos()</code> has done in the background is to send a request to the PLOS API to bring back the id, publication_date, title and abstract for 20 records across the PLOS journals. To see the results type:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p</code></pre></div>
+<p>Results in R are stored in objects (in this case the object is a list). To see the type of object in R use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(p)</code></pre></div>
+<p>When working with R it is generally more useful to understand the structure of the data so that you can work out how to access it. That can be done using <code>str()</code> for structure. This is one of the most useful functions in R and well worth writing down.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(p)</code></pre></div>
+<p>The results might seem a little confusing at first but what this is telling us is that we have an R object that is a list consisting of two components. The first is an item called <code>meta</code> that reports the number of records found and the type of object (a data.frame). The second is <code>data</code> which contains the information on the two results in the form of a data frame (basically a table) containing the id, date, title and abstract information that we asked PLOS for.</p>
+<p>Note that the list contains a marker <code>$</code> for the beginning of the two lists with the data they contain appearing as <code>..$</code> signifying that they are nested under <code>meta</code> or <code>data</code>. This hierarchy helps us with accessing the data using subsetting in R. For example, if we wanted to access the <code>meta</code> data (and we do) we can use the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p$meta</code></pre></div>
+<p>That will just print the full <code>meta</code> data entries. If we wanted to just access the number of records (num$Found) then we would extend this a little by moving to that position in the hierarchy with:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p$meta$numFound</code></pre></div>
+<p>That will print out just the number of records returned by our search. An alternative way of subsetting is to use the “[” and “[[” and the numeric position in the list. In <a href="http://www.amazon.com/Hands-On-Programming-Write-Functions-Simulations/dp/1449359019">Hands on Programming with R</a> Garrett Grolemund compares this to a train with numbered carriages where “[]” selects the train carriage e.g. [1] and “[[1]]” selects the contents of carriage number 1. We don’t need to worry about this but it is very helpful as a way of remembering the difference. For example the following selects the contents of the first item in our list (<code>meta</code>):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p[[<span class="dv">1</span>]]</code></pre></div>
+<p>and is the same as <code>p$meta</code>. While:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p[[<span class="dv">1</span>]][[<span class="dv">1</span>]]</code></pre></div>
+<p>is the same as <code>p$meta$numFound</code>.</p>
+<p>Subsetting the data by its numeric position rather than its name makes life much easier when working with lists with lots of items. As we will see below, when applying a function to a list with multiple items we can also use “[[”, 2. This will retrieve the second item in each of our line of train carriages.</p>
+<p>Another useful tip for navigating the data in RStudio is using autocomplete. Try typing the following into the console.</p>
+<p>p<span class="math inline">\(meta\)</span> #type me in the console, do not cut and paste</p>
+<p>When we type the $ a popup will appear and display two entries as tables for <code>meta</code> and <code>data</code>. Click on meta, then add another $ sign at the end. It will now display three items in purple (for vectors). Select <code>numFound</code> and hey presto! As you work with RStudio you will notice that when you start to type a function name, lists of names will start to pop up. Type <code>search</code> into the console but do not press enter and wait a moment. A list with three items should pop up with search {base}, searchpaths {base}, and searchplos {rplos}. This is really helpful because it saves a lot of typing. As you become more familiar with R it also helpfully displays what a function does and a reminder of its arguments. The soft brackets around {base} indicate the package where the function can be found (this can be useful for discovering functions when you get stuck).</p>
+<p>Finally, you can also see the items in your project in the Environment pane. Click on the blue arrow for <code>p</code> in the Environment pane under Values and you will see the structure of the data in <code>p</code> and some of its content.</p>
+<div id="creating-a-new-object-and-writing-to-file" class="section level3">
+<h3><span class="header-section-number">14.7.1</span> Creating a New Object and Writing to File</h3>
+<p>Ok so we have a list with some results containing <code>meta</code> and <code>data</code>. We now want to export <code>data</code> to a .csv file that we can work with in Excel or another programme.</p>
+<p>While we will want to make a note of the total number of results in <code>meta</code>, what we really want will be in <code>data</code>. We can simply create a new object using the code above and assign it to a name using <code>&lt;-</code>. Note that there is no space here and <code>&lt; -</code> will not work.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span>p$data</code></pre></div>
+<p>If we look at the class of this object (<code>class(dat)</code>) we now have a data.frame (a table) that we can write to a .csv file to use later. We can do this easily using <code>write.csv()</code> and start by naming the object we want to write (<code>dat</code>) and then giving it a file name. Because we created an <code>rplos</code> project in RStudio earlier (didn’t we), the file will be saved into the project folder. If you didn’t create a project or want to check the directory then use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
+<p>This will show your current working directory. If you do not see the name of your <code>rplos</code> project then copy the full file path so that it looks something like this (don’t forget the “” around the path):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&quot;/Users/pauloldham/Desktop/open_source_master/rplos&quot;</span>)</code></pre></div>
+<p>Ok, we now know where we are. So, let’s save the file.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(dat, <span class="st">&quot;dat.csv&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>If we open this up in Excel or Open Office Calc then we will see two blank entries in the abstract fields. Blank cells can create calculation problems. Inside R we can handle this by filling in the blanks with NA as follows [2]. In this case we are subsetting into dat and then asking R to identify those cells that exactly match <code>==</code> with <code>&quot;&quot;</code>. We then fill those cells in dat with NA (for Not Available).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat[dat ==<span class="st"> &quot;&quot;</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></code></pre></div>
+<p>We can then simply write the file as before. If we wanted to remove the NAs we have just introduced then we could use <code>write.csv(dat, &quot;dat.csv&quot;, row.names = FALSE, na = &quot;&quot;)</code> which will convert them back to blank spaces.</p>
+<p>A faster way to deal with writing files is to use the recent <code>readr</code> package as this will not add row numbers to exported files. Here we will use the <code>write_csv()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write_csv</span>(dat, <span class="st">&quot;dat.csv&quot;</span>)</code></pre></div>
+<p>The advantage of <code>readr</code> is that it is fast and does not require the same number of arguments as the standard <code>write.csv</code> such as specifying row names or with <code>read.csv</code> specifying stringsAsFactors = FALSE.</p>
+<p>Finally, if we wanted to write the entire list <code>p</code>, including <code>meta</code> to file then we could use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(p, <span class="st">&quot;p.csv&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>We have now retrieved some data containing pizza through the PLOS API using <code>rplos</code> and we have written the data to a file as a table we can use later. We will now move on to some more sophisticated things we can do with <code>rplos</code>.</p>
+</div>
+</div>
+<div id="limit-by-journal" class="section level2">
+<h2><span class="header-section-number">14.8</span> Limit by journal</h2>
+<p>As we have seen above, PLOS contains 7 journals and in <code>rplos</code> the results for a search can be limited to specific journals such as PLOS ONE or PLOS Biology. Note that the short journal names appear to use the old format for PLOS consisting of mixed upper and lowercase characters (e.g. PLoSONE not PLOSONE). A nice easy way to find the short journal names is to use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">journalnamekey</span>()</code></pre></div>
+<p>Here we will limit the search to PLOS ONE by adding <code>fq =</code> to the arguments and then the <code>cross_published_journal_key</code> argument. Note that the <code>fq=</code> argument takes the same options as <code>fl=</code>. But, <code>fq =</code> filters the results returned by PLOS to only those specified in <code>fq =</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pizza &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;pizza&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;publication_date&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">fq =</span> <span class="st">&#39;cross_published_journal_key:PLoSONE&#39;</span>, <span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="dv">20</span>)
+<span class="kw">head</span>(pizza$data)</code></pre></div>
+<p>We have retrieved 20 records here using <code>limit = 20</code> (the default is 10). It is generally a good idea to start with a small number of results to test that we are getting what we expect back rather than lots of irrelevant data. What if we wanted to retrieve all of the results? Here we will need to do a bit more work using the meta field.<br />
+##Obtaining the full number of results</p>
+<p>One way to do this is to take our original number of results and then subset in to the data and create a new object containing the value for the number of records in <code>numFound</code>. Note that the number of records for a particular query below may well have gone up by the time that you read this article.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">r &lt;-<span class="st"> </span>pizza$meta$numFound</code></pre></div>
+<p>To run a new search we can now insert <code>r</code> into the limit = value. This will be interpreted as the numeric value of <code>r</code> (210).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pizza &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;pizza&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;publication_date&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">fq =</span> <span class="st">&#39;cross_published_journal_key:PLoSONE&#39;</span>, <span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">limit =</span> r)
+<span class="kw">head</span>(pizza$data)</code></pre></div>
+<p>An alternative way of doing this is to make life a bit easier for ourselves by first running our query and setting the limit as <code>limit = 0</code>. This will only return the <code>meta</code> data. We then add the subset for number found to the end of the code as <code>$meta$numFound</code>. That will pull back the value (210) directly.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">r &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;pizza&quot;</span>, <span class="dt">fq =</span> <span class="st">&quot;cross_published_journal_key:PLoSONE&quot;</span>, <span class="dt">limit =</span> <span class="dv">0</span>)$meta$numFound</code></pre></div>
+<p>We can then run the query again using the value of <code>r</code> in limit = :</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pizza &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;pizza&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;publication_date&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">fq =</span> <span class="st">&#39;cross_published_journal_key:PLoSONE&#39;</span>, <span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">limit =</span> r) 
+<span class="kw">head</span>(pizza$data)</code></pre></div>
+</div>
+<div id="obtaining-the-number-of-records-across-plos-journals" class="section level2">
+<h2><span class="header-section-number">14.9</span> Obtaining the number of records across PLOS Journals</h2>
+<p>That has returned the full 210 results for PLOS ONE. We could attempt to make life even easier by first getting the results across all PLOS journals. We do this by removing the <code>fq =</code> argument limiting the data to PLOS ONE and saving the result in and object we will call <code>r1</code>. Note that the number of records will probably have gone up by the time you read this.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">r1 &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="st">&quot;pizza&quot;</span>, <span class="dt">limit =</span> <span class="dv">0</span>)$meta$numFound</code></pre></div>
+<p>This produces 244 results. What happens now if we run our original query using the value of <code>r1</code> (244 records) but limiting the results only to PLOS ONE?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pizza &lt;-<span class="st"> </span><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;pizza&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;publication_date&quot;</span>, <span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">fq =</span> <span class="st">&#39;cross_published_journal_key:PLoSONE&#39;</span>, <span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">limit =</span> r1)
+pizza$meta$numFound</code></pre></div>
+<p>The answer is that the 210 results in PLOS ONE are returned from the total of 244 across the PLOS journals. Why? The reason this works is that <code>searchplos()</code> initially pulls back all of the data from the PLOS API and then applies our entry in <code>fq =</code> as a filter. So, in reality the full 244 records are fetched and then filtered down to the 210 from PLOS ONE. In this case, this makes our lives easier because we can use the results across PLOS journals and then restrict the data.</p>
+</div>
+<div id="writing-the-results-and-using-a-codebook" class="section level2">
+<h2><span class="header-section-number">14.10</span> Writing the results and using a codebook</h2>
+<p>We now have a total of 210 results for pizza. We can simply write the results to a .csv file.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(pizza, <span class="st">&quot;plosone_pizza.csv&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>As this illustrates, it is very easy to use <code>rplos()</code> and rapidly create a file that can be used for other purposes.</p>
+<p>When working in R you will often create multiple tables and take multiple steps. To keep track of what you do it is a good idea to create a text file as a codebook. Use the codebook to note down the important steps you take. The idea of a codebook is taken from Jeffrey Leek’s <a href="https://leanpub.com/datastyle">Elements of Data Analytic Sytle</a> which provides a very accessible introduction to staying organised. To create a codebook in RStudio simply use <code>File &gt; New File &gt; Text File</code>. This will open a text file that can be saved with your project. The codebook allows you to recall what actions you performed on the data months or years later. It also allows others to follow and reproduce your results and is important for <a href="https://ropensci.org/blog/2014/06/09/reproducibility/">reproducible research</a>.</p>
+</div>
+<div id="proximity-searching" class="section level2">
+<h2><span class="header-section-number">14.11</span> Proximity Searching</h2>
+<p>We will typically want to carry out a search by first retrieving a rough working set of results to get a feel for the data and then experimenting until we are happy with the data to noise ratio (see this <a href="http://rsta.royalsocietypublishing.org/content/372/2031/20140065">article</a> for an example).</p>
+<p>In thinking about ways to refine our search criteria we can also use proximity searching. Proximity searching focuses on the distance between words that we are interested in. To read more about this use <code>?searchplos</code> in the console and scroll down to example seven in the help list. We reproduce that example here using the words synthetic and biology as our terms.</p>
+<p>We can set the proximity of terms using tilde <code>~</code> and a value. For example, <code>~15</code> will find instances of the terms synthetic and biology within 15 words of each other in the full texts of PLOS articles.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;everything:</span><span class="ch">\&quot;</span><span class="st">synthetic biology</span><span class="ch">\&quot;</span><span class="st">~15&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;title&quot;</span>, <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>)</code></pre></div>
+<p>Note that while synthetic and biology appear inside quotes (suggesting they are a phrase to be searched) in reality the API will treat this as synthetic AND biology. That is, the query will look first for documents that contain the words synthetic AND biology and then for those cases where the words appear within 15 words of each other. In this case we get 1,684 results across PLOS (everything) and full texts (<code>fq = &quot;doc_type:full</code>) as we can see from this code.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;everything:</span><span class="ch">\&quot;</span><span class="st">synthetic biology</span><span class="ch">\&quot;</span><span class="st">~15&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;title&quot;</span>, <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>)$meta$numFound</code></pre></div>
+<p>We can narrow the search horizon to ~1 to capture those cases where the terms appear next to each other (within 1 word either to the left or the right) which produces 1001 results.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">searchplos</span>(<span class="dt">q =</span> <span class="st">&quot;everything:</span><span class="ch">\&quot;</span><span class="st">synthetic biology</span><span class="ch">\&quot;</span><span class="st">~1&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;title&quot;</span>, <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>)$meta$numFound</code></pre></div>
+<p>This is actually about 10 records higher than the total returned on an exact match for the phrase suggesting that there could be cases of “biology synthetic” or other issues (such as punctuation) or API performance that account for the variance. As noted in the <code>searchplos()</code> documentation:</p>
+<p>“Don’t be surprised if queries you perform in a scripting language, like using rplos in R, give different results than when searching for articles on the PLOS website. I am not sure what exact defaults they use on their website.”</p>
+<p>As a result, it is a good idea to try different approaches. Even if it is not possible to get to the bottom of any variance it is very useful to note it down in your codebook to highlight the issue to others who may try and repeat your work.</p>
+<p>It is also important to emphasise that when using <code>rplos()</code> it is possible to return a fragment of the text with the highlighted terms using <code>highplos()</code> and the <code>hl.fragsize</code> argument to set the horizon for the fragment of text around the search. This is particularly useful for text mining.</p>
+<p>In many cases the most useful information comes from searching using phrases and multiple terms. Unlike words, phrases can articulate concepts. This generally makes them more useful than single words for searching for information.</p>
+</div>
+<div id="searching-using-multiple-phrases" class="section level2">
+<h2><span class="header-section-number">14.12</span> Searching Using Multiple Phrases</h2>
+<p>To search by phrases we start by creating an object containing our phrases and put the phrases inside double quotation marks. If we do not use double quotation marks the search will look for documents containing both words rather than the complete phrase (e.g. synthetic AND biology rather than “synthetic biology”). Note that the code below will display “” as “&quot; but you don’t need to enter the <code>\</code>.</p>
+<p>We will use the search query developed in this <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368">PLOS ONE article on synthetic biology</a> in this example and retrieve the id, data, author, title and abstract across the PLOS journals.</p>
+<p>First we create the search query. Note that we use <code>c()</code>, for combine, to combine the list of terms into a vector inside the object called <code>s</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic biology</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic genomics</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic genome</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+    <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic genomes</span><span class="ch">\&quot;</span><span class="st">&quot;</span>)</code></pre></div>
+<p>We now want to get the maximum number of results returned by one of the search terms. This is slightly tricky because <code>rplos</code> will return a list containing four list items (one for each of our search terms). Each of those lists will contain <code>meta</code> and <code>data</code> items. What we want to do is find out which of the search terms returns the highest number of results inside <code>meta</code> in <code>numFound</code>. Then we can use that number as our limit.</p>
+<p>This involves more than one step.</p>
+<ol style="list-style-type: decimal">
+<li>First we need to fetch the data.</li>
+<li>Then we need to extract <code>meta</code> from each list.</li>
+<li>Then we need to select <code>numFound</code> and find and return the maximum value across the lists of results.</li>
+</ol>
+<p>The easiest way to do this is to create a small function that we will call <code>plos_records</code>. To load the function into your Environment copy it and paste it into your console and press enter. The comments following <code>#</code> explain what is happening will be ignored when the function runs. When you have done this if you move over to Environment you will see <code>plos_records</code> under Functions.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plos_records &lt;-<span class="st"> </span>function(q) {
+  <span class="kw">library</span>(plyr) <span class="co">#for ldply</span>
+  <span class="kw">library</span>(dplyr) <span class="co">#for pipes, select and filter</span>
+    <span class="kw">lapply</span>(q, function(x) <span class="kw">searchplos</span>(x, <span class="dt">limit =</span> <span class="dv">0</span>)) %&gt;%
+<span class="st">    </span><span class="kw">ldply</span>(<span class="st">&quot;[[&quot;</span>, <span class="dv">1</span>) %&gt;%<span class="st"> </span><span class="co">#get meta from the lists</span>
+<span class="st">    </span><span class="kw">select</span>(numFound) %&gt;%<span class="st"> </span><span class="co">#select numFound column of meta</span>
+<span class="st">    </span><span class="kw">filter</span>(numFound ==<span class="st"> </span><span class="kw">max</span>(numFound)) %&gt;%<span class="st"> </span><span class="co">#filter on max numFound</span>
+<span class="st">      </span><span class="kw">print</span>() <span class="co">#print max value of numFound</span>
+}</code></pre></div>
+<p>Now we can run the following code using <code>s</code> as our query (q = s) in the function. If all goes well a result will be printed in the console with the maximum number of results. It can take a few moments for the results to come back from the API.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">r2 &lt;-<span class="st"> </span><span class="kw">plos_records</span>(<span class="dt">q =</span> s)</code></pre></div>
+<p>You should now see a number around 991 (at the time of writing). Yay!</p>
+<p>Now we can use <code>r2</code> in the limit to return all of the records. We will write this in the standard way and then display a simpler way using pipes <code>%&gt;%</code> below. Note that we use <code>s</code> as our search terms (see <code>q = s</code>) and we have used <code>r2</code> for the limit (limit = r2). Because we are calling a chunk of data this can take around a minute to run.</p>
+<p>Note that at each step in the code below we are creating and then overwriting an object called <code>results</code>. We are also naming <code>results</code> as the first argument in each step.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">lapply</span>(s, function(x) <span class="kw">searchplos</span>(x, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&#39;id&#39;</span>,<span class="st">&#39;author&#39;</span>, <span class="st">&#39;publication_date&#39;</span>, <span class="st">&#39;title&#39;</span>, <span class="st">&#39;abstract&#39;</span>), <span class="dt">limit =</span> r2))
+results &lt;-<span class="st"> </span><span class="kw">setNames</span>(results, s) <span class="co">#add query terms to the relevant results in the list</span>
+results &lt;-<span class="st"> </span><span class="kw">ldply</span>(results, <span class="st">&quot;[[&quot;</span>, <span class="dv">2</span>) <span class="co">#extract the data into a single data.frame</span></code></pre></div>
+<p>We can make life simpler by using pipes <code>%&gt;%</code> to simplify the code. The advantage of using pipes is that we do not have to keep creating and overwriting temporary objects (see above for <code>results</code>). The code is also much easier to read and faster. To learn more about using pipes see this article from <a href="http://seananderson.ca/2014/09/13/dplyr-intro.html">Sean Anderson</a>. Again the query might be a bit slow as the data is fetched back.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">lapply</span>(s, function(x) <span class="kw">searchplos</span>(x, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&#39;id&#39;</span>, <span class="st">&#39;author&#39;</span>, <span class="st">&#39;publication_date&#39;</span>, <span class="st">&#39;title&#39;</span>, <span class="st">&#39;abstract&#39;</span>), <span class="dt">limit =</span> r2)) %&gt;%
+<span class="st">    </span><span class="kw">setNames</span>(s) %&gt;%<span class="st"> </span>
+<span class="st">    </span><span class="kw">ldply</span>(<span class="st">&quot;[[&quot;</span>, <span class="dv">2</span>)</code></pre></div>
+<p>Pipes are a relatively recent innovation in R (see the <code>magrittr</code>, <code>dplyr</code> and <code>tidyr</code> packages) and most code you will see will be written in the traditional way. However, pipes make R code faster and much easier to follow. While you will need to be familiar with regular R code to follow most existing work, pipes are becoming increasingly popular because the code is simpler and has a clearer logic (e.g. do this then that).</p>
+<p>We now have our data consisting of 1,405 records in a single data frame that we can view.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">View</span>(results)</code></pre></div>
+<p>We could now simply write this to a .csv file. But there are a number of things that we might want to do first. Most of these tasks fall into the category of wrangling and tidying up data so that we can carry on working with it in R or other software such as Excel.</p>
+</div>
+<div id="tidying-and-organising-the-data" class="section level2">
+<h2><span class="header-section-number">14.13</span> Tidying and Organising the Data</h2>
+<p>Many useful data cleaning and organisational tasks can be easily performed using the <code>dplyr()</code> and <code>tidyr()</code> packages developed by Hadley Wickham at RStudio. Other important packages include <code>stringr()</code>(for working with text strings), <code>plyr()</code> and <code>reshape2()</code> (general wrangling) and <code>lubridate()</code> (for working with dates). These packages were developed by Hadley Wickham and colleagues with the specific aim of making it easier to work with data in R in a consistent way. We will mainly use <code>dplyr</code> and <code>tidyr</code> in the examples below and a very useful <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">RStudio cheatsheet</a> can help you with working with <code>dplyr</code> and <code>tidyr</code>.</p>
+<div id="renaming-a-column" class="section level3">
+<h3><span class="header-section-number">14.13.1</span> Renaming a column</h3>
+<p>First we might want to tidy up by renaming a column. For example we might want to rename <code>.id</code> to something more meaningful. We can use <code>rename()</code> from <code>dplyr()</code> to do that (see <code>?rename</code>).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">rename</span>(results, <span class="dt">search_terms =</span> .id)</code></pre></div>
+</div>
+</div>
+<div id="filling-blank-spaces" class="section level2">
+<h2><span class="header-section-number">14.14</span> Filling Blank Spaces</h2>
+<p>It is good practice to fill blank cells with NA for “Not Available”&quot; to avoid calculation problems. For example, as in the earlier example, we have some blank cells in the abstract field and there may be others somewhere else. Following this <a href="http://r.789695.n4.nabble.com/How-to-convert-blanks-to-NA-td895155.html">StackOverflow answer</a> we can do this easily.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results[results ==<span class="st"> &quot;&quot;</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></code></pre></div>
+<p>If for some reason we wanted to remove the NA values we can handle that at the time of exporting to a file (see above).</p>
+</div>
+<div id="converting-dates" class="section level2">
+<h2><span class="header-section-number">14.15</span> Converting Dates</h2>
+<p>The <code>publication_date</code> field is a character vector. We can easily turn this into a Date format that can be used in R and drop the T00:00:00 for time information using:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results$publication_date &lt;-<span class="st"> </span><span class="kw">as.Date</span>(results$publication_date)</code></pre></div>
+</div>
+<div id="adding-columns" class="section level2">
+<h2><span class="header-section-number">14.16</span> Adding columns</h2>
+<p>When dealing with dates we might want to simply split the <code>publication_date</code> field into three columns for year, month and day. We can do that using <code>separate()</code> from <code>tidyr</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">separate</span>(results, publication_date, <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>, 
+    <span class="dt">remove =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>Here we have specified the data (results), the column we want to separate (results) and then the three new columns that we want to create by closing them in <code>c()</code> and placing them in quotes. This creates three new columns. The <code>remove</code> argument specifies whether we want to remove the original column (the default is TRUE) or keep it.</p>
+<p>Because working with dates can be quite awkward (to put it mildly) it makes sense to have a range of options available to you early on in working with your data rather than having to go back to the beginning much later on.</p>
+</div>
+<div id="add-a-count" class="section level2">
+<h2><span class="header-section-number">14.17</span> Add a count</h2>
+<p>One feature of pulling back literature from an API for scientific literature is that the fields tend to be character fields rather than numeric. Character vectors in R are quoted with “”. This can make life awkward if we want to start counting things later on. To add a count column we can use <code>mutate</code> from the <code>dplyr()</code> package to create a new column <code>number</code>. <code>number</code> is based on assigning the value 1 to the id columns using <code>mutate()</code>. We are avoiding the term count because it is the name of a function <code>count()</code>. There are other ways of doing this but this approach points to the very useful <code>mutate()</code> function in <code>dplyr</code> for adding a new variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">mutate</span>(results, <span class="dt">number =</span> <span class="kw">sum</span>(<span class="dt">id =</span> <span class="dv">1</span>))</code></pre></div>
+<p>When we view results we will now see a new column number that contains the value 1 for each entry.</p>
+</div>
+<div id="remove-a-column" class="section level2">
+<h2><span class="header-section-number">14.18</span> Remove a column</h2>
+<p>We will often end up with more data than we want, or create more columns than we need. The standard way to remove a column is to use the trusty <code>$</code> to select the column and assign it to NULL.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results$columnname &lt;-<span class="st"> </span><span class="ot">NULL</span>  <span class="co">#dummy example</span></code></pre></div>
+<p>Another way of doing this, which can be used for multiple columns, is to use <code>select()</code> from <code>dplyr</code> (see <code>?select()</code>). Select will only keep the columns that we name. We can do this using the column names or position. For example the following will keep the first 8 columns (1:8) but will drop the unnamed 9th column because the default is to drop columns that are not named. We could also write out the column names but using the position numbers is faster in this case.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span><span class="kw">select</span>(results, <span class="dv">1</span>:<span class="dv">8</span>)</code></pre></div>
+<p>We could also drop columns by position using the following (to remove column 5 and 6). This approach is useful when there are lots of columns to deal with.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span><span class="kw">select</span>(results, <span class="dv">1</span>:<span class="dv">4</span>, <span class="dv">7</span>:<span class="dv">9</span>)</code></pre></div>
+<p>An easier approach in this case is to explicitly drop columns using <code>-</code> and keep the others.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span><span class="kw">select</span>(results, -month, -day)</code></pre></div>
+<p>Select is also very useful for reordering columns. Let’s imagine that we wanted to move the <code>id</code> column to the first column. We can simply put <code>id</code> as the first entry in <code>select()</code> and then the total columns to reorder.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span><span class="kw">select</span>(results, id, <span class="dv">1</span>:<span class="dv">9</span>)</code></pre></div>
+<p>The select function is incredibly useful for rapidly organising data as we will see below.</p>
+</div>
+<div id="arranging-the-data" class="section level2">
+<h2><span class="header-section-number">14.19</span> Arranging the Data</h2>
+<p>We might want to arrange our rows (which can be quite difficult to do in base R). The <code>arrange()</code> function in <code>dplyr</code> makes this easy and arranges a column’s values in ascending order by default. Here we will specify descending <code>desc()</code> because we want to see the most recent publications that mention our search terms at the top.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results &lt;-<span class="st"> </span><span class="kw">arrange</span>(results, <span class="kw">desc</span>(publication_date))</code></pre></div>
+<p>When we use <code>View(results)</code> we will see that the most recent data is at the top. We will also see that some of the titles towards the top are duplicates of the same article because they include all the terms in our search. So, the next thing we will want to do is to address duplicates.</p>
+</div>
+<div id="dealing-with-duplicates" class="section level2">
+<h2><span class="header-section-number">14.20</span> Dealing with Duplicates</h2>
+<p>How you deal with duplicates depends on what you are trying to achieve. If you are attempting to develop data on trends then duplicates will result in overcounting unless you take steps to count only distinct records. Duplicates of the same data will also distort text mining of the frequencies of terms. So, from that perspective duplicates are bad. On the other hand. If we are interested in the use of terms over time within an emerging area of science and technology, then we might well want to look in detail at the use of particular terms. For example, synthetic genomics is an alternative term for synthetic biology favoured by the J. Craig Venter group. We could look at whether this term is more widely used. Do synthetic biologists also use terms such as engineering biology, genome engineering or the fashionable new genome editing technique? In these cases duplicate records using terms are good because shifts in language can be mapped over time. This suggests a need for a strategy that uses different data tables to answer different questions.</p>
+<p>As we have already seen, it is very easy in R to create new objects (typically data.frames), take some kind of action, and write the data to a file. In thinking about duplicates we would probably first want to find out what we are dealing with by identifying unique records. There are multiple ways to do this, here are two:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(results$id)  <span class="co">#displays unique DOIs (base R)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">n_distinct</span>(results$id)  <span class="co">#displays the count of distinct DOIs (dplyr)</span></code></pre></div>
+<p>This tells us there are 1,098 unique DOIs meaning there were 307 duplicates at the time of writing.</p>
+<p>Next we have two main options.</p>
+<ol style="list-style-type: decimal">
+<li>We can spread the duplicate results across the table</li>
+<li>We can identify and delete the duplicates.</li>
+</ol>
+<div id="spreading-data-using-spread-from-tidyr" class="section level3">
+<h3><span class="header-section-number">14.20.1</span> Spreading data using <code>spread()</code> from <code>tidyr</code></h3>
+<p>Rather than simply deleting our duplicate DOIs, we could create new columns for each search term and its associated DOI. This will be useful because it will tell us which terms are associated with which records over time. This is easy to do with <code>spread()</code> by providing a <code>key</code> and a <code>value</code> in the arguments. In this case, we want to use <code>search_terms</code> as the <code>key</code> (column names) to spread across the table and the DOIs in the <code>id</code> column as the <code>value</code> for the rows.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">spread_results &lt;-<span class="st"> </span><span class="kw">spread</span>(results, search_terms, id)</code></pre></div>
+<p>This creates a column for each search term with the relevant DOIs as the values. Note that the default is to drop the original column (in this case <code>search_terms</code>) when creating the new columns. Things will go badly wrong if you try to keep the existing column because R will be simultaneously trying to spread the data, thus reducing the size of the table, and keep the table in the same size. So, we will leave the default to drop the column as is.</p>
+<p>We now have a data.frame with 1098 rows and the search terms identified in each column. If we briefly inspect <code>spread_results</code> on the terms at the end we can detect a potentially interesting pattern where some documents are only using terms such as synthetic genome or synthetic genomics while others are using only synthetic biology or a mix of terms.</p>
+<p>We have now reduced our data to unique records while preserving our search terms as reference points. The limitation of this approach is that by spreading the DOIs across 4 columns we no longer have a tidy single column of DOIs.</p>
+</div>
+<div id="deleting-duplicates" class="section level3">
+<h3><span class="header-section-number">14.20.2</span> Deleting Duplicates</h3>
+<p>As an alternative, or complement, to spread we can use a logical TRUE/FALSE test to filter our dataset. There are a number of functions that perform logical tests in R (see also <code>which()</code>, <code>%in%</code>, <code>within()</code>). In this case the most appropriate choice is probably <code>duplicated()</code>. <code>duplicated()</code> will mark duplicate records as TRUE and non-duplicated records as FALSE. We will add a column to our data using the trusty <code>$</code> when creating the new column.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">results$duplicate &lt;-<span class="st"> </span><span class="kw">duplicated</span>(results$id)</code></pre></div>
+<p>If we use View(results) a new column will have been added to results. Records that are not duplicates are marked FALSE while records that are duplicates are marked TRUE. We now want to filter that table down to the results that are not duplicated (are FALSE) from our logical test. We will use <code>filter()</code> from <code>dplyr</code> (see above). While <code>select()</code> works exclusively with columns <code>filter()</code> works with rows and allows us to easily filter the data on the values contained in a row.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">unique_results &lt;-<span class="st"> </span><span class="kw">filter</span>(results, duplicate ==<span class="st"> </span><span class="ot">FALSE</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(-<span class="st"> </span>search_terms) 
+<span class="co">#drop search_terms column</span></code></pre></div>
+<p>Here we have asked <code>filter()</code> to show us only those values in the duplicate column that exactly match with FALSE. We now have a data from with 1097 unique results with the DOIs in one column.</p>
+<p>The creation of logical TRUE/FALSE vectors is very useful in creating conditions to filter data. In this case however, in the process note that we will lose information from the <code>search_terms</code> column which will become incomplete. To avoid potential confusion later on we drop the <code>search_terms</code> column using <code>select(- search_terms)</code> in the code above. If we wanted to keep the terms we would use the spread method above.</p>
+<p>We now have three data.frames, <code>results</code>, <code>spread_results</code>, and <code>unique_results</code>.</p>
+<p><code>results</code> is our core or reference set. If we planned to do a significant amount of work with this data we would save a copy of <code>results</code> to .csv and label it as <code>raw</code> with notes in our codebook on its origins and the actions taken to generate it. It can be a good idea to <code>.zip</code> a raw file so that it is more difficult to access by accident.</p>
+<p>Going forward we would use the <code>spread_results</code> and <code>unique_results</code> for further work.</p>
+<p>As we did earlier, use either write.csv(x, “x.csv”, row.names = FALSE) or the simpler and faster <code>write_csv()</code>. R can write multiple files in a blink. This will write all three files to the rplos project folder (use <code>getwd()</code> and <code>setwd()</code> if you want to do something different).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write_csv</span>(results, <span class="st">&quot;results.csv&quot;</span>)
+<span class="kw">write_csv</span>(spread_results, <span class="st">&quot;spread_results.csv&quot;</span>)
+<span class="kw">write_csv</span>(unique_results, <span class="st">&quot;unique_results.csv&quot;</span>)</code></pre></div>
+<p>Ok, so we have now a dataset containing the records for a range of terms and we have come a long way. Quite a lot of this has been about what to do with PLOS data once we have accessed it in terms of turning it into tables that we can work with. In the next section we will look at how to restrict searches by section.</p>
+</div>
+</div>
+<div id="restricting-searches-by-section" class="section level2">
+<h2><span class="header-section-number">14.21</span> Restricting searches by section</h2>
+<p>The default for searching with <code>rplos</code> is to search everything. This can produce many passing results and be overwhelming. There are quite a number of options for restricting searches in <code>rplos</code>.</p>
+</div>
+<div id="by-author" class="section level2">
+<h2><span class="header-section-number">14.22</span> By author</h2>
+<p>In creating the results dataset above we included the <code>author</code> field. However, there are some complexities to searching with author names and working with author data that it is important to understand. We will start by searching on author names and then look at how to process the data.</p>
+<p>To restrict a search by author name we can use either the full name or the surname:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plosauthor</span>(<span class="dt">q =</span> <span class="st">&quot;Paul Oldham&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;author&quot;</span>, <span class="st">&quot;id&quot;</span>), <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>, 
+    <span class="dt">limit =</span> <span class="dv">20</span>)</code></pre></div>
+<p>In this example we have specified <code>doc_type:full</code> to return only the results for full articles. If you do not use this then the search will return a large number of repeated results based on article sections. So, in this case, Paul Oldham - the author of this article on <code>rplos</code> - has published two articles in PLOS ONE. If <code>doc_type:full</code> isn’t specified more than 20 results are returned that display different sections of the two articles. This will create a duplication issue later on, so a sensible default approach is to use <code>doc_type:full</code>.</p>
+<p>As a general observation, considerable caution should be exercised when working with author names because of problems with the lumping of names and splitting of names as described in this <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0070299">PLOS ONE article</a>. If a large number of results are encountered on a single author name consider using match criteria from other available data fields to ensure that separate persons are not being lumped together by name. Above all, do not assume that simply because a name is the same, or very similar to the target name, that the name designates the same person.</p>
+<p>The next issue we need to address is what to do with the author data when we have retrieved it. The reason for this is that the author field in the results is generally a concatenated field containing the names of the authors of a particular article. We will start with the <code>oldham</code> results set.</p>
+<p>In this case we will make the call to <code>plosauthor()</code> and then use <code>ldply()</code> from <code>plyr</code> to return a data frame containing <code>meta</code> and <code>data</code>. Then we will use <code>fill</code> from <code>tidyr</code> to take the <code>numFound</code> and fill down that column. We will remove the start column using <code>select()</code> and finally <code>filter()</code> to limit the table to data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">oldham &lt;-<span class="st"> </span><span class="kw">plosauthor</span>(<span class="dt">q =</span> <span class="st">&quot;Paul Oldham&quot;</span>, <span class="dt">fl =</span> <span class="kw">c</span>(<span class="st">&quot;author&quot;</span>, <span class="st">&quot;id&quot;</span>), <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>, <span class="dt">limit =</span> <span class="dv">20</span>) %&gt;%
+<span class="st">  </span><span class="kw">ldply</span>(<span class="st">&quot;[&quot;</span>, <span class="dv">1</span>:<span class="dv">2</span>) %&gt;%
+<span class="st">  </span><span class="kw">fill</span>(numFound, start) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(-<span class="st"> </span>start) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(.id ==<span class="st"> &quot;data&quot;</span>)</code></pre></div>
+<p>We now have a two records with the author and id (DOI) data. The next thing we want to do is to separate the author names out. We can do this using <code>separate()</code>. Note that <code>separate()</code> will need to know the number of names involved before hand. In the oldham data case there are three authors of each article. We will deal with how to calculate the number of author names shortly.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">oldham &lt;-<span class="st"> </span><span class="kw">separate</span>(oldham, author, <span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="dt">remove =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>We now have some other choices. We could simply keep only the first author name. To do that, in this particular case, we could use <code>select()</code> and the numeric position of the columns that we want to remove.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">first_author &lt;-<span class="st"> </span><span class="kw">select</span>(oldham, -<span class="dv">7</span>, -<span class="dv">8</span>)</code></pre></div>
+<p>As an alternative, we could place each author name on its own row so that we can focus in on a specific author later. For that we can use <code>gather()</code> from <code>tidyr</code> and the column position numbers (not their names in this case) of the columns we want to gather.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">authors &lt;-<span class="st"> </span><span class="kw">gather</span>(oldham, number, authors, <span class="dv">5</span>:<span class="dv">7</span>)</code></pre></div>
+<p>As above <code>gather()</code> requires a key and value field. In this case we have used the number as our key and authors as our value. We have then specified that we want to gather columns 6 to 8 into the new column authors.</p>
+<p>That was easy because we are dealing with a small number of results with a uniform number of authors. However, our <code>results</code> data is more complicated than this because we have multiple author names for each article and the number of authors for the articles could vary considerably.</p>
+<p>We will need to organise the data and to run some simple calculations to make this work. This will take six steps. The full working code is below.</p>
+<ol style="list-style-type: decimal">
+<li>We calculate the number of columns in our dataset. We do this because the number may vary depending on what fields we retrieve from <code>rplos</code>. We will use <code>ncols()</code> to make the calculation.</li>
+<li>We use a short function from <code>stringr</code> to calculate the number of authors based on the author name separator “;” (+1 to capture the final names in the sequence). This gives us the maximum number of authors across the dataset that we need to split the data into (in this case 83 as the value of n). Copy and paste the function below into the console to access it.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">author_count &lt;-<span class="st"> </span>function(data, <span class="dt">col =</span> <span class="st">&quot;&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;[^[:alnum:]]+&quot;</span>) {
+    <span class="kw">library</span>(stringr)
+    authcount &lt;-<span class="st"> </span><span class="kw">str_count</span>(data[[col]], <span class="dt">pattern =</span> sep)
+    n &lt;-<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">max</span>(authcount) +<span class="st"> </span><span class="dv">1</span>)
+    <span class="kw">print</span>(n)
+}</code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>We use <code>select()</code> from <code>dplyr</code> to move our target column to the first column. This simply makes it easier to specify column positions in <code>separate()</code> and <code>gather()</code> later on.</li>
+<li>We use the value of <code>n</code> to separate the author names into multiple columns</li>
+<li>We then gather them back in using the value of <code>n</code>.</li>
+<li>Splitting on a separator such as <code>;</code> normally generates invisible leading and trailing white space. This will prevent author names from ranking correctly (e.g. in Excel or Tableau). The <code>str_trim()</code> function from <code>stringr</code> provides an easy way of removing the white space (specify side as right, left or both).</li>
+</ol>
+<p>Copy and paste the code below and then hit Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#---calculations---</span>
+colno &lt;-<span class="st"> </span><span class="kw">ncol</span>(unique_results)  <span class="co">#calculate number of columns</span>
+n &lt;-<span class="st"> </span><span class="kw">author_count</span>(unique_results, <span class="st">&quot;author&quot;</span>, <span class="st">&quot;;&quot;</span>)  <span class="co"># See function above. Calculate n as an integer to meet requirement for separate()</span>
+<span class="co">#---select, separate and gather---</span>
+full_authors &lt;-<span class="st"> </span><span class="kw">select</span>(unique_results, author, <span class="dv">1</span>:colno)  <span class="co">#bring author to the front</span>
+full_authors &lt;-<span class="st"> </span><span class="kw">separate</span>(full_authors, author, <span class="dv">1</span>:n, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>, 
+    <span class="dt">convert =</span> <span class="ot">FALSE</span>, <span class="dt">extra =</span> <span class="st">&quot;merge&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;right&quot;</span>)  <span class="co">#separate</span>
+full_authors &lt;-<span class="st"> </span><span class="kw">gather</span>(full_authors, value, authors, <span class="dv">1</span>:n, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)  <span class="co">#gather</span>
+<span class="co">#---trim authors----</span>
+full_authors$authors &lt;-<span class="st"> </span><span class="kw">str_trim</span>(full_authors$authors, <span class="dt">side =</span> <span class="st">&quot;both&quot;</span>)  <span class="co">#trim leading and trailing whitespace</span></code></pre></div>
+<p>We can simplify this with pipes to bring together the actions on the new full_authors object.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#---calculations---</span>
+colno &lt;-<span class="st"> </span><span class="kw">ncol</span>(unique_results)
+n &lt;-<span class="st"> </span><span class="kw">author_count</span>(unique_results, <span class="st">&quot;author&quot;</span>, <span class="st">&quot;;&quot;</span>)
+<span class="co">#---select, separate, gather---</span>
+full_authors &lt;-<span class="st"> </span><span class="kw">select</span>(unique_results, author, <span class="dv">1</span>:colno) %&gt;%<span class="st"> </span><span class="kw">separate</span>(author, 
+    <span class="dv">1</span>:n, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>, <span class="dt">convert =</span> <span class="ot">FALSE</span>, <span class="dt">extra =</span> <span class="st">&quot;merge&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;right&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">    </span><span class="kw">gather</span>(value, authors, <span class="dv">1</span>:n, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
+<span class="co">#---trim authors----</span>
+full_authors$authors &lt;-<span class="st"> </span><span class="kw">str_trim</span>(full_authors$authors, <span class="dt">side =</span> <span class="st">&quot;both&quot;</span>)</code></pre></div>
+<p>In running this code we will remove the original author column (column 1) by specifying <code>remove = TRUE</code> in <code>separate()</code>. <code>gather()</code> will place the new <code>authors</code> column at the end. So, make sure you scroll to the final column when viewing the results. We could also drop unwanted columns.</p>
+<p>We now have a complete list of individual author names that could be used to look up individual authors, to clean up author names for statistical use and for author network mapping. As a brief example, if we wanted to look up contributions by Jean Peccoud who leads the <a href="http://blogs.plos.org/synbio/">PLOS SynBio blog</a> we might use the following based on this useful <a href="http://stackoverflow.com/questions/22850026/filtering-row-which-contains-a-certain-string-using-dplyr">Stack Overflow answer</a>. See ?grepl for more info.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Peccoud &lt;-<span class="st"> </span><span class="kw">filter</span>(full_authors, <span class="kw">grepl</span>(<span class="st">&quot;Peccoud&quot;</span>, authors))</code></pre></div>
+<p>We will not go into depth on these topics, but generating this type of author list is an important step in enabling wider analytics and visualisation. While the code used to get to this list of authors may appear quite involved, once the basics are understood it can be used over and over again.</p>
+<p>Let’s write that data to a .csv file to explore later.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write_csv</span>(full_authors, <span class="st">&quot;full_authors.csv&quot;</span>)</code></pre></div>
+</div>
+<div id="title-search-using-plostitle" class="section level2">
+<h2><span class="header-section-number">14.23</span> Title search using <code>plostitle()</code></h2>
+<p>For a title search we can use <code>plostitle()</code>. As above you may want to count the number of records first using:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">t &lt;-<span class="st"> </span><span class="kw">plostitle</span>(<span class="dt">q =</span> <span class="st">&quot;synthetic biology&quot;</span>, <span class="dt">limit =</span> <span class="dv">0</span>)$meta$numFound</code></pre></div>
+<p>Then we run the search to return the number of results we would like. Here we have set it to the value of t above (11). We have limited the results to the data field by subsetting with $data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">title &lt;-<span class="st"> </span><span class="kw">plostitle</span>(<span class="dt">q =</span> <span class="st">&quot;synthetic biology&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;title&quot;</span>, <span class="dt">limit =</span> t)$data</code></pre></div>
+</div>
+<div id="abstract-search-using-plosabstract" class="section level2">
+<h2><span class="header-section-number">14.24</span> Abstract search using <code>plosabstract()</code></h2>
+<p>For confining the searches to abstracts we can use <code>plosabstract()</code>. We will start with a quick count of records.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">plosabstract</span>(<span class="dt">q =</span> <span class="st">&quot;synthetic biology&quot;</span>, <span class="dt">limit =</span> <span class="dv">0</span>)$meta$numFound</code></pre></div>
+<p>To retrieve the results we could use the value of <code>a</code>. As an alternative we could set it arbitrarily high and the correct results will be returned. Of course if we don’t know what the total number of results are then we will be unsure whether we have captured the universe. But, an arbitrary number can be useful for exploration.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">abstract &lt;-<span class="st"> </span><span class="kw">plosabstract</span>(<span class="dt">q =</span> <span class="st">&quot;synthetic biology&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;id, title, abstract&quot;</span>, 
+    <span class="dt">limit =</span> <span class="dv">200</span>)
+abstract$data</code></pre></div>
+<p>As before, we can easily create a new object containing the data.frame. In this case we will also include the meta data and then use <code>fill()</code> from <code>tidyr()</code> to fill down the <code>numFound</code> field and the start with 0. Note that <code>meta</code> will appear at the top of the list and will create a largely blank row. To avoid this, while keeping number of records for reference, we will use filter from <code>tidyr()</code>. This short code will do that.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">abstract_df &lt;-<span class="st"> </span><span class="kw">ldply</span>(abstract, <span class="st">&quot;[&quot;</span>, <span class="dv">1</span>:<span class="dv">2</span>) %&gt;%<span class="st"> </span><span class="kw">fill</span>(numFound, start) %&gt;%<span class="st"> </span><span class="kw">filter</span>(.id ==<span class="st"> </span>
+<span class="st">    &quot;data&quot;</span>)</code></pre></div>
+</div>
+<div id="subject-area-using-plossubject" class="section level2">
+<h2><span class="header-section-number">14.25</span> Subject Area using <code>plossubject()</code></h2>
+<p>To search by subject area use <code>plossubject</code>. The default return is 10 results of the total results. So, try starting with a search such as this to get an idea of how many results there are. In this case the query has been limited to PLOS ONE and full text articles.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sa &lt;-<span class="st"> </span><span class="kw">plossubject</span>(<span class="dt">q =</span> <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic+biology</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="dt">fq =</span> <span class="kw">list</span>(<span class="st">&quot;cross_published_journal_key:PLoSONE&quot;</span>, 
+    <span class="st">&quot;doc_type:full&quot;</span>))$meta$numFound</code></pre></div>
+<p>At the time of writing this returns 739 results. We will simply pull back 10 results. To pull back all of the results replace 10 with <code>sa</code> above or type the number into <code>limit =</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plossubject</span>(<span class="dt">q =</span> <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">synthetic+biology</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="dt">fl =</span> <span class="st">&quot;id&quot;</span>, <span class="dt">fq =</span> <span class="kw">list</span>(<span class="st">&quot;cross_published_journal_key:PLoSONE&quot;</span>, 
+    <span class="st">&quot;doc_type:full&quot;</span>), <span class="dt">limit =</span> <span class="dv">10</span>)</code></pre></div>
+<p>As noted in the documentation, the results we return from the API and the results on the website are not necessarily the same because the settings used by PLOS on the website are not clear.</p>
+<p>In this case we return 740 results while, at the time of writing, PLOS ONE lists 417 articles in the <a href="http://www.plosone.org/browse/Synthetic+biology?startPage=0&amp;filterAuthors=&amp;filterSubjectsDisjunction=&amp;filterArticleTypes=&amp;pageSize=13&amp;filterKeyword=&amp;filterJournals=PLoSONE&amp;query=&amp;ELocationId=&amp;id=&amp;resultView=&amp;sortValue=&amp;unformattedQuery=*%3A*&amp;sortKey=Most+views%2C+all+time&amp;filterSubjects=Synthetic%20biology&amp;volume=&amp;">Synthetic Biology subject area</a>. This will merit clarification of the criteria for counts used on the PLOS website and the API returns.</p>
+</div>
+<div id="highlighting-terms-and-text-fragments-with-highplos" class="section level2">
+<h2><span class="header-section-number">14.26</span> Highlighting terms and text fragments with highplos()</h2>
+<p><code>highplos()</code> is a great function for research in PLOS, particularly when combined with opening results in a browser using <code>highbrow()</code>.</p>
+<p>Highlighting will pull back a chunk of text with the search term highlighted with the emphasis <em> </em> tag enclosing the individual words in a search phrase. It is possible that an entire phrase can be highlighted (see hl.usePhraseHighlighter) but this requires further exploration.</p>
+<p>In this example we will simply use the term synthetic biology and then highlight the terms in the abstract <code>hl.fl =</code> and limit this to 10 rows of results. We will also add the function <code>highbrow()</code> (for highlight browse) at the end. This will open the results in our browser. In the examples we use a pipe (%&gt;%) meaning <code>this %then% that</code>. This means that we do not have to enter the name snippet into the highbrow function and simplifies the code.</p>
+<p>When reviewing the results in a browser note that we can click on the DOI to see the full article. This is a really useful tool for assessing which articles we might want to take a closer look at.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">highplos</span>(<span class="dt">q =</span> <span class="st">&#39;&quot;synthetic biology&quot;&#39;</span>, <span class="dt">hl.fl =</span> <span class="st">&#39;abstract&#39;</span>, <span class="dt">fq =</span> <span class="st">&quot;doc_type:full&quot;</span>, <span class="dt">rows =</span> <span class="dv">10</span>) %&gt;%
+<span class="st">  </span><span class="kw">highbrow</span>() <span class="co">#launches the browser</span></code></pre></div>
+<p>Note that in some cases, even though we are restricting to <code>doc-type:full</code>, we retrieve entries with no data. In one case this is because we are highlighting terms in the abstract when the term appears in the full text. In a second case we have picked up a correction where one of the authors is at a synthetic biology centre but neither the abstract or text mention synthetic biology. So, bear in mind that some further exploration may be required to understand why particular results are being returned. These issues are minor and this is a great tool.</p>
+<p>There are two additional options (arguments) for <code>highplos()</code> that we can use. The first of these is snippets using <code>hl.snippets =</code> and the second is <code>hl.fragsize =</code>. Both can be used in conjunction with <code>highbrow()</code>.</p>
+<div id="snippets-using-hl.snippets" class="section level3">
+<h3><span class="header-section-number">14.26.1</span> Snippets using hl.snippets</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">snippet &lt;-<span class="st"> </span><span class="kw">highplos</span>(<span class="dt">q =</span> <span class="st">&#39;&quot;synthetic biology&quot;&#39;</span>, <span class="dt">hl.fl =</span> <span class="kw">list</span>(<span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">hl.snippets =</span> <span class="dv">10</span>, <span class="dt">rows =</span> <span class="dv">100</span>) %&gt;%
+<span class="st">  </span><span class="kw">highbrow</span>()</code></pre></div>
+<p>The snippets argument is handy (the default value for a snippet is 1 but goes up to as many as you like). It become very interesting when we add <code>hl.mergeContiguous = 'true'</code>. This will display the entries captured in the order of the articles to provide a sense of its uses by the author(s).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">highplos</span>(<span class="dt">q=</span><span class="st">&#39;&quot;synthetic biology&quot;&#39;</span>, <span class="dt">hl.fl =</span> <span class="st">&quot;abstract&quot;</span>, <span class="dt">hl.snippets =</span> <span class="dv">10</span>, <span class="dt">hl.mergeContiguous =</span> <span class="st">&#39;true&#39;</span>, <span class="dt">rows =</span> <span class="dv">10</span>) %&gt;%
+<span class="st">  </span><span class="kw">highbrow</span>()</code></pre></div>
+</div>
+<div id="fragment-size-using-hl.fragsize" class="section level3">
+<h3><span class="header-section-number">14.26.2</span> fragment size using hl.fragsize</h3>
+<p>Greater control over what we are seeing is provided using the <code>hl.fragsize</code> option. This allows us to specify the number of characters (including spaces) that we want to see in relation to our target terms.</p>
+<p>In the first example we will highlight the phrase synthetic biology in the titles and abstracts and set the fragment size (using hl.fragsize ) to a high 500. This will return the first 500 characters including spaces rather than words. We will set the number of rows to a somewhat arbitrary 200. This can easily be pushed a lot higher but expect to wait for a few moments if you move this to 1000 rows.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">highplos</span>(<span class="dt">q =</span> <span class="st">&#39;&quot;synthetic biology&quot;&#39;</span>, <span class="dt">hl.fl =</span> <span class="kw">list</span>(<span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">hl.fragsize =</span> <span class="dv">500</span>, <span class="dt">rows =</span> <span class="dv">200</span>) %&gt;%
+<span class="st">  </span><span class="kw">highbrow</span>()</code></pre></div>
+<p>We can also do the reverse of a larger search by reducing the fragment size to say up to 100 characters. At the moment it is unclear whether it is possible to control whether characters are selected to the right or the left of our target terms. Note that results will display up to 100 characters where they are available (short results will be for sentences such as titles that are less than 100 characters)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">highplos</span>(<span class="dt">q =</span> <span class="st">&#39;&quot;synthetic biology&quot;&#39;</span>, <span class="dt">hl.fl =</span> <span class="kw">list</span>(<span class="st">&quot;title&quot;</span>, <span class="st">&quot;abstract&quot;</span>), <span class="dt">hl.fragsize =</span> <span class="dv">100</span>, <span class="dt">rows =</span> <span class="dv">200</span>) %&gt;%
+<span class="st">  </span><span class="kw">highbrow</span>()</code></pre></div>
+<p>What is great about this is that we can easily control the amount of text that we are seeing and then select articles of interest to read straight from the browser. We can also start to think about ways to use this information for text mining to identify terms used in conjunction with synthetic biology or types of synthetic biology.</p>
+</div>
+</div>
+<div id="get-the-full-text-of-one-or-more-articles" class="section level2">
+<h2><span class="header-section-number">14.27</span> Get the full text of one or more articles</h2>
+<p>We will finish this article by briefly demonstrating how to retrieve and save the full text of one or more articles. <code>rplos</code> uses a combination of the <code>XML</code> and the <code>tm</code> (for text mining) package.</p>
+<p>Retrieving full text should initially be used rather sparingly because you could pull back a lot of data in XML format that you may then struggle to process. So, it is probably best to start small.</p>
+<p>Using the unique_results data that we created above we have a list of DOIs in the id field. We can create a vector of these using the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">doi &lt;-<span class="st"> </span>unique_results$id</code></pre></div>
+<p>That has created a vector of 1097 dois. To limit those results, let’s create a shorter version where we select five rows.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">short_doi &lt;-<span class="st"> </span>doi[<span class="dv">1</span>:<span class="dv">5</span>]</code></pre></div>
+<p>Now we can use <code>plos_fulltext()</code> to retrieve the full text.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ft &lt;-<span class="st"> </span><span class="kw">plos_fulltext</span>(short_doi)</code></pre></div>
+<p>When we pull back the two articles an object is created of class <code>plosft</code>. To see the full text of one of the individual articles we use the trusty <code>$</code> and then select a doi.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ft$<span class="st">`</span><span class="dt">10.1371/journal.pone.0140969</span><span class="st">`</span></code></pre></div>
+<p>This displays a lot of the XML tags inside the text. We would now like to extract the text without the XML tags. The <code>rplos</code> documentation for <code>plos_fulltext()</code> helps us to do this using the following code. The first part of the code uses the XML package to parse the results removing the xml tags in the process.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tm)
+<span class="kw">library</span>(XML)
+ft_parsed &lt;-<span class="st"> </span><span class="kw">lapply</span>(ft, function(x) {
+    <span class="kw">xpathApply</span>(<span class="kw">xmlParse</span>(x), <span class="st">&quot;//body&quot;</span>, xmlValue)
+})</code></pre></div>
+<p>If we type <code>ft_parsed</code> we will now see the text (the body without title and abstract) fly by without all of the tags.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ft_parsed</code></pre></div>
+<p>The object returned by this is a list (use <code>class(ft_parsed)</code>). Next, we can transform this into a corpus (a text or collection of texts) that we can save to disk using the following code from the <code>rplos</code> <code>plos_fulltext()</code> example.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tmcorpus &lt;-<span class="st"> </span><span class="kw">Corpus</span>(<span class="kw">VectorSource</span>(ft_parsed))</code></pre></div>
+<p>If we type tmcorpus$ into the console then we will see 1 to 5 pop up, but this will return NULL if selected. The data is there but we need to use <code>str(tmcorpus</code>) to see the structure of the corpus. If we want to view a text within the corpus we can use <code>writeLines()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="kw">as.character</span>(tmcorpus[[<span class="dv">2</span>]]))</code></pre></div>
+<p>We can also view the five texts in our corpus (be prepared for a lot of scrolling) by using lapply to read over the two texts as character.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(tmcorpus[<span class="dv">1</span>:<span class="dv">5</span>], as.character)</code></pre></div>
+<p>For more information see the <a href="https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf">Ingo Feinerer (2015) Introduction to the tm package</a> (also available in the tm documentation) from which the above is drawn.</p>
+</div>
+<div id="writing-a-corpus-to-disk" class="section level2">
+<h2><span class="header-section-number">14.28</span> Writing a corpus to disk</h2>
+<p>To write a corpus we first need to create a folder where the files will be housed (otherwise they will simply be written into your project folder with everything else).</p>
+<p>The easiest way to create a new folder is to head over to the Files Tab in RStudio (normally in the bottom right pane) and choose <code>New Folder</code>. We will call it <code>tm</code>.</p>
+<p>Now use <code>getwd()</code> and copy the file path into the following function, from the writeCorpus examples, adding <code>/tm</code> at the end. It will look something like this but replace the path with your own, not forgetting the <code>/tm</code>. Then press Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeCorpus</span>(tmcorpus, <span class="dt">path =</span> <span class="st">&quot;/Users/paul/Desktop/open_source_master/rplos/tm&quot;</span>)</code></pre></div>
+<p>When you look in the tm folder inside rplos (use the Files tab in RStudio) you will now see five texts with the names 1 to 5. For more details, such as naming files and specifying file types, see <code>?writeCorpus</code> and the tm package documentation.</p>
+</div>
+<div id="round-up-10" class="section level2">
+<h2><span class="header-section-number">14.29</span> Round Up</h2>
+<p>In this chapter we have focused on using the <code>rplos</code> package to access scientific articles from the Public Library of Science (PLOS). As we have seen, with short pieces of code it is easy to search and retrieve data from PLOS on a whole range of subjects whether it be pizza or synthetic biology.</p>
+<p>One of the most powerful features of R is that it is quite easy to access free online data using APIs. <code>rplos</code> is a very good starting point for learning how to retrieve data using an API because it is well written and the data that comes back is remarkably clean.</p>
+<p>Perhaps the biggest challenge facing new users of R is what to do with data once you have retrieved it. This can result in many hours of frustration staring at a list or object with the data you need without the tools to access it and transform it into the format you need. In this article we have focused on using the <code>plyr</code>, <code>dplyr</code>, <code>tidyr</code> and <code>stringr</code> suite of packages to turn <code>rplos</code> data into something you can use. These packages are rightly very popular for everyday work in R and becoming more familiar with them will reap rewards in learning R for practical work. At the close of the article we used the <code>tm</code> (text mining) package to save the full text of articles. This is only a very small part of this package and <code>rplos</code> provides some useful examples to begin text mining using <code>tm</code> (see the <code>plos_fulltext()</code> examples). R now has a rich range of text mining packages and we will address this in a future article.</p>
+<p>In the meantime, if you would like to learn more about R try the resources below. If you would like to learn R inside R then try the very useful Swirl package (details below).</p>
+</div>
+<div id="resources-1" class="section level2">
+<h2><span class="header-section-number">14.30</span> Resources</h2>
+<ol style="list-style-type: decimal">
+<li><a href="https://ropensci.org/">rOpenSci</a></li>
+<li><a href="http://www.cookbook-r.com/">Winston Chang’s R Cookbook</a></li>
+<li><a href="https://www.rstudio.com/resources/training/online-learning/">RStudio Online Learning</a></li>
+<li><a href="http://www.r-bloggers.com/">r-bloggers.com</a></li>
+<li><a href="https://www.datacamp.com/">Datacamp</a></li>
+<li>Swirl (developed by the <a href="https://www.coursera.org/course/rprog">free Coursea R Programming course</a> team at John Hopkins University. If you would like to get started with Swirl run the code chunk below to install the package and load the library.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;swirl&quot;</span>)
+<span class="kw">library</span>(swirl)</code></pre></div>
+
+</div>
+</div>
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="patent-infographics-with-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

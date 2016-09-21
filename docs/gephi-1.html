@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The WIPO Manual on Open Source Patent Analytics</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="This is the index for the Manual site">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the index for the Manual site" />
+  <meta name="github-repo" content="wipo-analytics/manual_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  
+  <meta name="twitter:description" content="This is the index for the Manual site" />
+  
+
+
+<meta name="date" content="2016-01-01">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="tableau-public-2.html">
+<link rel="next" href="patent-analytics-with-plotly.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Frontmatter</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#authorship"><i class="fa fa-check"></i><b>1.1</b> Authorship</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.2</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#further-information"><i class="fa fa-check"></i><b>1.3</b> Further information</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>1.4</b> Disclaimer</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>2.0.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="2.0.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>2.0.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="2.0.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>2.0.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="2.0.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>2.0.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="2.0.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>2.0.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="2.0.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>2.0.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>3</b> An Overview of Tools</a><ul>
+<li class="chapter" data-level="3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>3.1</b> General Tools</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>3.1.1</b> <a href="https://www.openoffice.org">Open Office</a></a></li>
+<li class="chapter" data-level="3.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>3.1.2</b> <a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></a></li>
+<li class="chapter" data-level="3.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>3.1.3</b> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>3.2</b> Cleaning Tools</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>3.2.1</b> <a href="http://openrefine.org">Open Refine</a> (formerly Google Refine)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>3.3</b> Data Mining</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>3.3.1</b> <a href="http://www.rstudio.com">RStudio</a></a></li>
+<li class="chapter" data-level="3.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>3.3.2</b> <a href="https://rapidminer.com/products/studio/">RapidMiner Studio</a></a></li>
+<li class="chapter" data-level="3.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>3.3.3</b> <a href="http://www.knime.org">KNIME</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>3.4</b> Data visualization</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>3.4.1</b> <a href="https://developers.google.com/chart/interactive/docs/gallery">Google Charts</a></a></li>
+<li class="chapter" data-level="3.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>3.4.2</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="3.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>3.4.3</b> R and RStudio</a></li>
+<li class="chapter" data-level="3.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>3.4.4</b> Shiny</a></li>
+<li class="chapter" data-level="3.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>3.4.5</b> <a href="http://www-01.ibm.com/software/analytics/many-eyes/">IBM Many Eyes</a></a></li>
+<li class="chapter" data-level="3.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>3.4.6</b> Other visualization Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>3.5</b> Network Visualization</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>3.5.1</b> <a href="https://gephi.github.io">Gephi</a></a></li>
+<li class="chapter" data-level="3.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>3.5.2</b> <a href="http://nodexl.codeplex.com">NodeXL</a></a></li>
+<li class="chapter" data-level="3.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>3.5.3</b> <a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a></a></li>
+<li class="chapter" data-level="3.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>3.5.4</b> <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a></a></li>
+<li class="chapter" data-level="3.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>3.5.5</b> <a href="http://www.vosviewer.com/Home">VOS Viewer</a></a></li>
+<li class="chapter" data-level="3.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>3.5.6</b> <a href="http://www.hiveplot.net">Hive Plots</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>3.6</b> Infographics</a></li>
+<li class="chapter" data-level="3.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>3.7</b> Geographical Mapping</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>3.7.1</b> <a href="http://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a></a></li>
+<li class="chapter" data-level="3.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>3.7.2</b> <a href="http://leafletjs.com">Leaflet</a></a></li>
+<li class="chapter" data-level="3.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>3.7.3</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="3.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>3.7.4</b> <a href="http://www.qgis.org/en/site/">QGIS</a></a></li>
+<li class="chapter" data-level="3.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>3.7.5</b> <a href="http://www.geonames.org">Geonames.org</a>.</a></li>
+<li class="chapter" data-level="3.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>3.7.6</b> <a href="http://icharts.net/product/web-data-visualization">iCharts</a></a></li>
+<li class="chapter" data-level="3.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>3.7.7</b> <a href="http://openlayers.org">OpenLayers3</a></a></li>
+<li class="chapter" data-level="3.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>3.7.8</b> <a href="https://cartodb.com/gallery/">CartoDB</a></a></li>
+<li class="chapter" data-level="3.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>3.7.9</b> <a href="http://d3js.org">d3.js</a></a></li>
+<li class="chapter" data-level="3.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>3.7.10</b> <a href="http://www.highcharts.com">Highcharts</a></a></li>
+<li class="chapter" data-level="3.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>3.7.11</b> <a href="https://datawrapper.de">Datawrapper</a></a></li>
+<li class="chapter" data-level="3.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>3.7.12</b> <a href="https://plot.ly/feed/">Plotly</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>3.8</b> Text Mining</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>3.8.1</b> <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Jigsaw Visual Analytics</a></a></li>
+<li class="chapter" data-level="3.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>3.8.2</b> <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a></a></li>
+<li class="chapter" data-level="3.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>3.8.3</b> Word Trees</a></li>
+<li class="chapter" data-level="3.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>3.8.4</b> <a href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Word Trees</a> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="3.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>3.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="3.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>3.8.6</b> R and the <code>tm</code> package</a></li>
+<li class="chapter" data-level="3.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>3.8.7</b> Python and Text Mining</a></li>
+<li class="chapter" data-level="3.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkit-ntlk-appears-to-be-the-leading-package-and-covers-almost-all-major-needs.-the-accompanying-book-natural-language-processing-with-python-may-also-be-worth-considering.-2.-the-python-textmining-package.-this-is-simpler-than-the-giant-ntlk-package-but-may-suit-your-needs."><i class="fa fa-check"></i><b>3.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit (NTLK)</a> appears to be the leading package and covers almost all major needs. The accompanying book <a href="http://shop.oreilly.com/product/9780596516499.do">Natural Language Processing with Python</a> may also be worth considering. 2. The <a href="http://www.christianpeccei.com/textmining/">Python Textmining Package</a>. This is simpler than the giant NTLK package but may suit your needs.</a></li>
+<li class="chapter" data-level="3.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>3.8.9</b> Other text mining resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>3.9</b> Round Up</a></li>
+<li class="chapter" data-level="3.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-checklist"><i class="fa fa-check"></i><b>3.10</b> The Checklist</a></li>
+<li class="chapter" data-level="3.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#credits"><i class="fa fa-check"></i><b>3.11</b> Credits</a></li>
+</ul></li>
+<li class="part"><span><b>Approaching Patent Data</b></span></li>
+<li class="chapter" data-level="4" data-path="datafields.html"><a href="datafields.html"><i class="fa fa-check"></i><b>4</b> Datafields</a><ul>
+<li class="chapter" data-level="4.1" data-path="datafields.html"><a href="datafields.html#what-is-a-patent"><i class="fa fa-check"></i><b>4.1</b> What is a Patent?</a></li>
+<li class="chapter" data-level="4.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>4.2</b> As a form of intellectual property right</a></li>
+<li class="chapter" data-level="4.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>4.3</b> Patents as a type of document</a></li>
+<li class="chapter" data-level="4.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>4.4</b> Basic Data Types</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>4.4.1</b> <a href="http://www.nature.com/nature/journal/v473/n7347/full/473403a.html">Synthetic Genomes</a></a></li>
+<li class="chapter" data-level="4.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>4.4.2</b> <a href="http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Original Front Page</a></a></li>
+<li class="chapter" data-level="4.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>4.4.3</b> <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">espacenet Front Page</a></a></li>
+<li class="chapter" data-level="4.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>4.4.4</b> <a href="http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Description</a></a></li>
+<li class="chapter" data-level="4.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>4.4.5</b> <a href="http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Claims</a></a></li>
+<li class="chapter" data-level="4.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>4.4.6</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Family Members</a></a></li>
+<li class="chapter" data-level="4.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>4.4.7</b> <a href="http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Cited</a></a></li>
+<li class="chapter" data-level="4.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>4.4.8</b> <a href="http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Citing</a></a></li>
+<li class="chapter" data-level="4.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>4.4.9</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Legal Status</a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="datafields.html"><a href="datafields.html#patent-registers"><i class="fa fa-check"></i><b>4.5</b> Patent Registers</a></li>
+<li class="chapter" data-level="4.6" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>4.6</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>5</b> Datasets</a><ul>
+<li class="chapter" data-level="5.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>5.1</b> The datasets</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="datasets.html"><a href="datasets.html#pizza-patent-datasets"><i class="fa fa-check"></i><b>5.1.1</b> Pizza patent datasets</a></li>
+<li class="chapter" data-level="5.1.2" data-path="datasets.html"><a href="datasets.html#patent-landscape-reports-datasets"><i class="fa fa-check"></i><b>5.1.2</b> Patent Landscape Reports datasets</a></li>
+<li class="chapter" data-level="5.1.3" data-path="datasets.html"><a href="datasets.html#other-datasets"><i class="fa fa-check"></i><b>5.1.3</b> Other datasets</a></li>
+<li class="chapter" data-level="5.1.4" data-path="datasets.html"><a href="datasets.html#round-up-2"><i class="fa fa-check"></i><b>5.1.4</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Obtaining Patent Data</b></span></li>
+<li class="chapter" data-level="6" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>6</b> Databases</a><ul>
+<li class="chapter" data-level="6.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>6.2</b> The Databases</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>6.2.1</b> <a href="https://www.lens.org/lens/">The Lens</a></a></li>
+<li class="chapter" data-level="6.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>6.2.2</b> <a href="https://patentscope.wipo.int/search/en/search.jsf">Patentscope</a></a></li>
+<li class="chapter" data-level="6.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>6.2.3</b> <a href="http://worldwide.espacenet.com/?locale=en_EP">espacenet</a></a></li>
+<li class="chapter" data-level="6.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>6.2.4</b> <a href="http://lp.espacenet.com">LATIPAT</a></a></li>
+<li class="chapter" data-level="6.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>6.2.5</b> <a href="http://www.epo.org/searching/free/ops.html">EPO Open Patent Services</a></a></li>
+<li class="chapter" data-level="6.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>6.2.6</b> <a href="http://www.patentsview.org/web/">USPTO Patents View</a></a></li>
+<li class="chapter" data-level="6.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>6.2.7</b> <a href="http://www.google.com/patents">Google Patents</a></a></li>
+<li class="chapter" data-level="6.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>6.2.8</b> <a href="https://www.google.com/patents/related">Google Prior Art Finder</a></a></li>
+<li class="chapter" data-level="6.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>6.2.9</b> <a href="https://www.google.com/googlebooks/uspto.html">Google USPTO Bulk download</a></a></li>
+<li class="chapter" data-level="6.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>6.2.10</b> <a href="http://www.freepatentsonline.com">Free Patents Online</a></a></li>
+<li class="chapter" data-level="6.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>6.2.11</b> <a href="http://www.dpma.de/english/service/e-services/depatisnet/">DEPATISnet</a></a></li>
+<li class="chapter" data-level="6.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>6.2.12</b> <a href="http://www.oecd.org/sti/inno/oecdpatentdatabases.htm">OECD Patent Databases</a></a></li>
+<li class="chapter" data-level="6.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>6.2.13</b> <a href="https://www.epo.org/searching-for-patents/business/patstat.html">EPO World Patent Statistical Database</a></a></li>
+<li class="chapter" data-level="6.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>6.2.14</b> Other data sources</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="databases.html"><a href="databases.html#tools-for-accessing-patent-data"><i class="fa fa-check"></i><b>6.3</b> Tools for Accessing Patent Data</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>6.3.1</b> <a href="https://github.com/Patent2net/Patent2Net">Patent2Net</a> in Python</a></li>
+<li class="chapter" data-level="6.3.2" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>6.3.2</b> <a href="https://github.com/55minutes/python-epo-ops-client">Python EPO OPS Client</a> by Gsong</a></li>
+<li class="chapter" data-level="6.3.3" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>6.3.3</b> <a href="https://github.com/funginstitute/patentserver">Fung Institute Patent Server</a> for USPTO data in JSON</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="databases.html"><a href="databases.html#round-up-3"><i class="fa fa-check"></i><b>6.4</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>7</b> The Lens</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="the-lens-1.html"><a href="the-lens-1.html#getting-started"><i class="fa fa-check"></i><b>7.2</b> Getting Started</a></li>
+<li class="chapter" data-level="7.3" data-path="the-lens-1.html"><a href="the-lens-1.html#additional-features"><i class="fa fa-check"></i><b>7.3</b> Additional features</a></li>
+<li class="chapter" data-level="7.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>7.4</b> Visualisation</a></li>
+<li class="chapter" data-level="7.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>7.5</b> Working with texts</a></li>
+<li class="chapter" data-level="7.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>7.6</b> PatSeq</a></li>
+<li class="chapter" data-level="7.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-4"><i class="fa fa-check"></i><b>7.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>8</b> Patentscope</a><ul>
+<li class="chapter" data-level="8.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="patentscope-1.html"><a href="patentscope-1.html#collections-to-search"><i class="fa fa-check"></i><b>8.2</b> Collections to Search</a></li>
+<li class="chapter" data-level="8.3" data-path="patentscope-1.html"><a href="patentscope-1.html#simple-search"><i class="fa fa-check"></i><b>8.3</b> Simple Search</a></li>
+<li class="chapter" data-level="8.4" data-path="patentscope-1.html"><a href="patentscope-1.html#results"><i class="fa fa-check"></i><b>8.4</b> Results</a></li>
+<li class="chapter" data-level="8.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>8.5</b> Downloading Results</a></li>
+<li class="chapter" data-level="8.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>8.6</b> Cross Lingual Searching</a></li>
+<li class="chapter" data-level="8.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>8.7</b> Sequence Data</a></li>
+<li class="chapter" data-level="8.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-5"><i class="fa fa-check"></i><b>8.8</b> Round Up</a></li>
+</ul></li>
+<li class="part"><span><b>Cleaning Patent Data</b></span></li>
+<li class="chapter" data-level="9" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>9</b> Open Refine</a><ul>
+<li class="chapter" data-level="9.1" data-path="open-refine.html"><a href="open-refine.html#install-open-refine"><i class="fa fa-check"></i><b>9.1</b> Install Open Refine</a></li>
+<li class="chapter" data-level="9.2" data-path="open-refine.html"><a href="open-refine.html#create-a-project"><i class="fa fa-check"></i><b>9.2</b> Create a Project</a></li>
+<li class="chapter" data-level="9.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-basics"><i class="fa fa-check"></i><b>9.3</b> Open Refine Basics</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="open-refine.html"><a href="open-refine.html#open-refine-runs-in-a-browser"><i class="fa fa-check"></i><b>9.3.1</b> Open Refine runs in a browser</a></li>
+<li class="chapter" data-level="9.3.2" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-on-columns."><i class="fa fa-check"></i><b>9.3.2</b> Open Refine works on columns.</a></li>
+<li class="chapter" data-level="9.3.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-with-facets."><i class="fa fa-check"></i><b>9.3.3</b> Open Refine works with Facets.</a></li>
+<li class="chapter" data-level="9.3.4" data-path="open-refine.html"><a href="open-refine.html#custom-facets"><i class="fa fa-check"></i><b>9.3.4</b> Custom Facets</a></li>
+<li class="chapter" data-level="9.3.5" data-path="open-refine.html"><a href="open-refine.html#reordering-columns"><i class="fa fa-check"></i><b>9.3.5</b> Reordering Columns</a></li>
+<li class="chapter" data-level="9.3.6" data-path="open-refine.html"><a href="open-refine.html#undo-and-redo"><i class="fa fa-check"></i><b>9.3.6</b> Undo and Redo</a></li>
+<li class="chapter" data-level="9.3.7" data-path="open-refine.html"><a href="open-refine.html#exporting"><i class="fa fa-check"></i><b>9.3.7</b> Exporting</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="open-refine.html"><a href="open-refine.html#basic-cleaning"><i class="fa fa-check"></i><b>9.4</b> Basic Cleaning</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="open-refine.html"><a href="open-refine.html#changing-case"><i class="fa fa-check"></i><b>9.4.1</b> Changing case</a></li>
+<li class="chapter" data-level="9.4.2" data-path="open-refine.html"><a href="open-refine.html#regularise-case"><i class="fa fa-check"></i><b>9.4.2</b> Regularise case</a></li>
+<li class="chapter" data-level="9.4.3" data-path="open-refine.html"><a href="open-refine.html#remove-leading-and-trailing-whitespace"><i class="fa fa-check"></i><b>9.4.3</b> Remove leading and trailing whitespace</a></li>
+<li class="chapter" data-level="9.4.4" data-path="open-refine.html"><a href="open-refine.html#add-columns"><i class="fa fa-check"></i><b>9.4.4</b> Add Columns</a></li>
+<li class="chapter" data-level="9.4.5" data-path="open-refine.html"><a href="open-refine.html#address-encoding-and-related-problems"><i class="fa fa-check"></i><b>9.4.5</b> Address Encoding and related problems</a></li>
+<li class="chapter" data-level="9.4.6" data-path="open-refine.html"><a href="open-refine.html#reformatting-dates"><i class="fa fa-check"></i><b>9.4.6</b> Reformatting dates</a></li>
+<li class="chapter" data-level="9.4.7" data-path="open-refine.html"><a href="open-refine.html#access-additional-information"><i class="fa fa-check"></i><b>9.4.7</b> Access additional information</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="open-refine.html"><a href="open-refine.html#fill-blank-cells"><i class="fa fa-check"></i><b>9.5</b> Fill blank cells</a></li>
+<li class="chapter" data-level="9.6" data-path="open-refine.html"><a href="open-refine.html#renaming-columns"><i class="fa fa-check"></i><b>9.6</b> Renaming columns</a></li>
+<li class="chapter" data-level="9.7" data-path="open-refine.html"><a href="open-refine.html#exporting-data"><i class="fa fa-check"></i><b>9.7</b> Exporting Data</a></li>
+<li class="chapter" data-level="9.8" data-path="open-refine.html"><a href="open-refine.html#splitting-applicants"><i class="fa fa-check"></i><b>9.8</b> Splitting Applicants</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="open-refine.html"><a href="open-refine.html#situation-1---first-applicants"><i class="fa fa-check"></i><b>9.8.1</b> Situation 1 - First Applicants</a></li>
+<li class="chapter" data-level="9.8.2" data-path="open-refine.html"><a href="open-refine.html#situation-2---all-applicants"><i class="fa fa-check"></i><b>9.8.2</b> Situation 2 - All Applicants</a></li>
+<li class="chapter" data-level="9.8.3" data-path="open-refine.html"><a href="open-refine.html#phonetic-fingerprint-metaphone-3-clustering"><i class="fa fa-check"></i><b>9.8.3</b> Phonetic Fingerprint (Metaphone 3) clustering</a></li>
+<li class="chapter" data-level="9.8.4" data-path="open-refine.html"><a href="open-refine.html#levenshtein-edit-distance"><i class="fa fa-check"></i><b>9.8.4</b> Levenshtein Edit Distance</a></li>
+<li class="chapter" data-level="9.8.5" data-path="open-refine.html"><a href="open-refine.html#ppm"><i class="fa fa-check"></i><b>9.8.5</b> PPM</a></li>
+<li class="chapter" data-level="9.8.6" data-path="open-refine.html"><a href="open-refine.html#preparing-for-export"><i class="fa fa-check"></i><b>9.8.6</b> Preparing for export</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="open-refine.html"><a href="open-refine.html#round-up-6"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
+<li class="chapter" data-level="9.10" data-path="open-refine.html"><a href="open-refine.html#useful-resources"><i class="fa fa-check"></i><b>9.10</b> Useful Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Visualizing Patent Data</b></span></li>
+<li class="chapter" data-level="10" data-path="tableau-public-2.html"><a href="tableau-public-2.html"><i class="fa fa-check"></i><b>10</b> Tableau Public</a><ul>
+<li class="chapter" data-level="10.1" data-path="tableau-public-2.html"><a href="tableau-public-2.html#introduction-4"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="tableau-public-2.html"><a href="tableau-public-2.html#installing-tableau"><i class="fa fa-check"></i><b>10.2</b> Installing Tableau</a></li>
+<li class="chapter" data-level="10.3" data-path="tableau-public-2.html"><a href="tableau-public-2.html#getting-started-1"><i class="fa fa-check"></i><b>10.3</b> Getting Started</a></li>
+<li class="chapter" data-level="10.4" data-path="tableau-public-2.html"><a href="tableau-public-2.html#publication-trends"><i class="fa fa-check"></i><b>10.4</b> Publication Trends</a></li>
+<li class="chapter" data-level="10.5" data-path="tableau-public-2.html"><a href="tableau-public-2.html#adding-new-data-sources"><i class="fa fa-check"></i><b>10.5</b> Adding New Data Sources</a></li>
+<li class="chapter" data-level="10.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>10.6</b> Creating an Overview Dashboard</a></li>
+<li class="chapter" data-level="10.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>10.7</b> Saving, Display and Privacy Settings</a></li>
+<li class="chapter" data-level="10.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>10.8</b> Privacy and Security</a></li>
+<li class="chapter" data-level="10.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-7"><i class="fa fa-check"></i><b>10.9</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>11</b> Gephi</a><ul>
+<li class="chapter" data-level="11.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>11.1</b> Installing Gephi</a></li>
+<li class="chapter" data-level="11.2" data-path="gephi-1.html"><a href="gephi-1.html#opening-gephi-and-installing-plugins"><i class="fa fa-check"></i><b>11.2</b> Opening Gephi and Installing Plugins</a></li>
+<li class="chapter" data-level="11.3" data-path="gephi-1.html"><a href="gephi-1.html#importing-a-file-to-gephi-with-the-converter-plugin"><i class="fa fa-check"></i><b>11.3</b> Importing a file to Gephi with the converter plugin</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import-spigot"><i class="fa fa-check"></i><b>11.3.1</b> Step 1. Open Gephi and Choose File &gt; Import Spigot</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="gephi-1.html"><a href="gephi-1.html#sizing-and-colouring-nodes"><i class="fa fa-check"></i><b>11.4</b> Sizing and Colouring Nodes</a></li>
+<li class="chapter" data-level="11.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>11.5</b> Laying out the Graph</a></li>
+<li class="chapter" data-level="11.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>11.6</b> Adding Labels</a></li>
+<li class="chapter" data-level="11.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-timeline"><i class="fa fa-check"></i><b>11.7</b> Using the Timeline</a></li>
+<li class="chapter" data-level="11.8" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>11.8</b> Using the Preview Options</a></li>
+<li class="chapter" data-level="11.9" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>11.9</b> Exporting from Preview</a></li>
+<li class="chapter" data-level="11.10" data-path="gephi-1.html"><a href="gephi-1.html#resources"><i class="fa fa-check"></i><b>11.10</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html"><i class="fa fa-check"></i><b>12</b> Patent Analytics with Plotly</a><ul>
+<li class="chapter" data-level="12.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#introduction-5"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#getting-started-with-plotly"><i class="fa fa-check"></i><b>12.2</b> Getting Started with Plotly</a></li>
+<li class="chapter" data-level="12.3" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#importing-files"><i class="fa fa-check"></i><b>12.3</b> Importing Files</a></li>
+<li class="chapter" data-level="12.4" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#creating-a-graphic"><i class="fa fa-check"></i><b>12.4</b> Creating a graphic</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#adding-a-second-axis"><i class="fa fa-check"></i><b>12.4.1</b> Adding a Second Axis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>12.5</b> Saving and Sharing</a></li>
+<li class="chapter" data-level="12.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>12.6</b> Working with Plotly in R</a></li>
+<li class="chapter" data-level="12.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-8"><i class="fa fa-check"></i><b>12.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>13</b> Patent Infographics with R</a><ul>
+<li class="chapter" data-level="13.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>13.1</b> Getting Started</a></li>
+<li class="chapter" data-level="13.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#load-a-.csv-file-using-readr"><i class="fa fa-check"></i><b>13.2</b> Load a .csv file using <code>readr</code></a></li>
+<li class="chapter" data-level="13.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#viewing-data"><i class="fa fa-check"></i><b>13.3</b> Viewing Data</a></li>
+<li class="chapter" data-level="13.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#identifying-types-of-object"><i class="fa fa-check"></i><b>13.4</b> Identifying Types of Object</a></li>
+<li class="chapter" data-level="13.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#working-with-data"><i class="fa fa-check"></i><b>13.5</b> Working with Data</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#select"><i class="fa fa-check"></i><b>13.5.1</b> Select</a></li>
+<li class="chapter" data-level="13.5.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#adding-data-with-mutate"><i class="fa fa-check"></i><b>13.5.2</b> Adding data with <code>mutate()</code></a></li>
+<li class="chapter" data-level="13.5.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#counting-data-using-count"><i class="fa fa-check"></i><b>13.5.3</b> Counting data using <code>count()</code></a></li>
+<li class="chapter" data-level="13.5.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#rename-a-field-with-rename"><i class="fa fa-check"></i><b>13.5.4</b> Rename a field with <code>rename()</code></a></li>
+<li class="chapter" data-level="13.5.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#make-a-quickplot-with-qplot"><i class="fa fa-check"></i><b>13.5.5</b> Make a quickplot with <code>qplot()</code></a></li>
+<li class="chapter" data-level="13.5.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#filter-data-using-filter"><i class="fa fa-check"></i><b>13.5.6</b> Filter data using <code>filter()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#simplify-code-with-pipes"><i class="fa fa-check"></i><b>13.6</b> Simplify code with pipes <code>%&gt;%</code></a></li>
+<li class="chapter" data-level="13.7" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#harmonising-data"><i class="fa fa-check"></i><b>13.7</b> Harmonising data</a></li>
+<li class="chapter" data-level="13.8" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#country-trends-using-spread"><i class="fa fa-check"></i><b>13.8</b> Country Trends using <code>spread()</code></a></li>
+<li class="chapter" data-level="13.9" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#tidying-data---separating-and-gathering"><i class="fa fa-check"></i><b>13.9</b> Tidying data - Separating and Gathering</a><ul>
+<li class="chapter" data-level="13.9.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#trimming-with-stringr"><i class="fa fa-check"></i><b>13.9.1</b> Trimming with <code>stringr</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#selecting-applicants-using-filter"><i class="fa fa-check"></i><b>13.10</b> Selecting applicants using <code>filter()</code></a></li>
+<li class="chapter" data-level="13.11" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#generating-ipc-tables"><i class="fa fa-check"></i><b>13.11</b> Generating IPC Tables</a><ul>
+<li class="chapter" data-level="13.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>13.11.1</b> Phrases Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="13.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>13.12</b> Creating an infographic in infogr.am</a><ul>
+<li class="chapter" data-level="13.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-9"><i class="fa fa-check"></i><b>13.12.1</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Using APIs</b></span></li>
+<li class="chapter" data-level="14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html"><i class="fa fa-check"></i><b>14</b> Scientific Literature with Rplos</a><ul>
+<li class="chapter" data-level="14.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#introduction-6"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-r-and-rstudio"><i class="fa fa-check"></i><b>14.2</b> Install R and RStudio</a></li>
+<li class="chapter" data-level="14.3" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#create-a-project-1"><i class="fa fa-check"></i><b>14.3</b> Create A Project</a></li>
+<li class="chapter" data-level="14.4" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-packages"><i class="fa fa-check"></i><b>14.4</b> Install Packages</a></li>
+<li class="chapter" data-level="14.5" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#key-functions-in-rplos"><i class="fa fa-check"></i><b>14.5</b> Key functions in rplos</a></li>
+<li class="chapter" data-level="14.6" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#data-fields-in-rplos"><i class="fa fa-check"></i><b>14.6</b> Data Fields in rplos</a></li>
+<li class="chapter" data-level="14.7" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#basic-searching-using-searchplos-navigating-and-exporting-data"><i class="fa fa-check"></i><b>14.7</b> Basic Searching using <code>searchplos()</code>, Navigating and Exporting Data</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#creating-a-new-object-and-writing-to-file"><i class="fa fa-check"></i><b>14.7.1</b> Creating a New Object and Writing to File</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#limit-by-journal"><i class="fa fa-check"></i><b>14.8</b> Limit by journal</a></li>
+<li class="chapter" data-level="14.9" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-number-of-records-across-plos-journals"><i class="fa fa-check"></i><b>14.9</b> Obtaining the number of records across PLOS Journals</a></li>
+<li class="chapter" data-level="14.10" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-the-results-and-using-a-codebook"><i class="fa fa-check"></i><b>14.10</b> Writing the results and using a codebook</a></li>
+<li class="chapter" data-level="14.11" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#proximity-searching"><i class="fa fa-check"></i><b>14.11</b> Proximity Searching</a></li>
+<li class="chapter" data-level="14.12" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#searching-using-multiple-phrases"><i class="fa fa-check"></i><b>14.12</b> Searching Using Multiple Phrases</a></li>
+<li class="chapter" data-level="14.13" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#tidying-and-organising-the-data"><i class="fa fa-check"></i><b>14.13</b> Tidying and Organising the Data</a><ul>
+<li class="chapter" data-level="14.13.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#renaming-a-column"><i class="fa fa-check"></i><b>14.13.1</b> Renaming a column</a></li>
+</ul></li>
+<li class="chapter" data-level="14.14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>14.14</b> Filling Blank Spaces</a></li>
+<li class="chapter" data-level="14.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>14.15</b> Converting Dates</a></li>
+<li class="chapter" data-level="14.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#adding-columns"><i class="fa fa-check"></i><b>14.16</b> Adding columns</a></li>
+<li class="chapter" data-level="14.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>14.17</b> Add a count</a></li>
+<li class="chapter" data-level="14.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>14.18</b> Remove a column</a></li>
+<li class="chapter" data-level="14.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>14.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="14.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>14.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="14.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>14.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="14.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>14.20.2</b> Deleting Duplicates</a></li>
+</ul></li>
+<li class="chapter" data-level="14.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>14.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="14.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>14.22</b> By author</a></li>
+<li class="chapter" data-level="14.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>14.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="14.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>14.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="14.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>14.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="14.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>14.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="14.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>14.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="14.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>14.26.2</b> fragment size using hl.fragsize</a></li>
+</ul></li>
+<li class="chapter" data-level="14.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>14.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="14.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>14.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="14.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-10"><i class="fa fa-check"></i><b>14.29</b> Round Up</a></li>
+<li class="chapter" data-level="14.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>14.30</b> Resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The WIPO Manual on Open Source Patent Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="gephi-1" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Gephi</h1>
+<!---update dataset links--->
+<p>This chapter focuses on visualising patent data in networks using the open source software <a href="http://gephi.github.io">Gephi</a>. Gephi is one of a growing number of free network analysis and visualisation tools with others including <a href="http://www.cytoscape.org">Cytoscape</a>, <a href="http://tulip.labri.fr/TulipDrupal/">Tulip</a>, <a href="http://www.graphviz.org">GraphViz</a>, <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a> for Windows, and <a href="http://www.vosviewer.com/Home">VOSviewer</a> to name but a few. In addition, network visualisation packages are available for R and Python. We have chosen to focus on Gephi because it is a good all round network visualisation tool that is quite easy to use and to learn.</p>
+<div class="figure">
+<img src="images/figures_gephi/Gephifront.png" />
+
+</div>
+<p>In this chapter we will focus on creating a simple network visualisation of the relationship between patent applicants (assignees). However, network visualisation can be used to visualise a range of fields and relationships, such as inventors, key words, IPC and CPC codes, and citations among other options.</p>
+<p>For this chapter we will use the synthetic biology patent dataset developed by Paul Oldham based on a simple worldwide search of the Thomson Innovation database using the key terms <code>&quot;synthetic biology&quot; or &quot;synthetic genomics&quot; or &quot;synthetic genome&quot; or &quot;synthetic genomes&quot;</code>(for background see this <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368">article</a>). The dataset consists of 576 first filings of patent applications (INPADOC families) linked to 2,882 INPADOC Family Members worldwide. The dataset has been extensively cleaned and the cleaning steps are described in detail in the codebook <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_patents_code_book_12052015.txt">here</a>. The dataset has been developed to provide an insight into the emergence of patent activity for synthetic biology. However, it does not provide the complete patent landscape for this emerging field. In addition, this dataset provides a useful sample of the range of data fields that are available from the commercial <a href="http://info.thomsoninnovation.com">Thomson Innovation</a> platform.</p>
+<p>We will use the Excel version of the dataset in this chapter and it can be downloaded <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>.</p>
+<div id="installing-gephi" class="section level2">
+<h2><span class="header-section-number">11.1</span> Installing Gephi</h2>
+<p>Gephi is the subject of ongoing development and as with many other open source tools this has advantages and disadvantages. In the case of Gephi the issues are as follows.</p>
+<ol style="list-style-type: decimal">
+<li><p>The latest release of Gephi (version 9.1 at the time of writing) is a considerable improvement on the previous version because it removes dependency on an old version of Java. However, the Plug Ins that make it easier to work with Gephi - notably to import data directly from Excel files - have not yet been updated. This makes it harder than it should be to import data into Gephi.</p></li>
+<li><p>Version 8.2 allows you to easily import Excel files using an Add In. However, it suffers from an issue that the Java version on your machine may not be the version required by Gephi (notably for Windows and Mac users). This can be frustrating to fix although clear instructions that actually work are available</p></li>
+</ol>
+<p>In this chapter we will use Version 8.2.</p>
+<p>To install Gephi 82. for Windows use this link to directly download the <a href="https://github.com/gephi/gephi/releases/download/v0.8.2/gephi-0.8.2-beta.setup.exe">.exe</a> file. To install for Mac OSX download the <a href="https://github.com/gephi/gephi/releases/download/v0.8.2/gephi-0.8.2-beta.dmg">.dmg</a> file. Then try installing the software. If all goes well you should see the Welcome Screen below with Welcome to Gephi when you open Gephi 8.2. If you do not see the Welcome screen or everything is grey then you need to install the version of Java that Gephi is expecting. To do that for Windows follow these <a href="https://github.com/poldham/opensource-patent-analytics/raw/master/6_workshop_presentations/gephi_installation.pdf">instructions</a> to install Java 7. The instructions have been tested in two regional workshops and they work. The key to success is to uninstall Gephi if you have already installed it, install Java 7 and then reinstall Gephi v8.2.</p>
+<p>Mac users who experience issues with installing Gephi 8.2 should follow the instructions <a href="http://sumnous.github.io/blog/2014/07/24/gephi-on-mac/">here</a>. If those don’t work try this more <a href="https://lbartkowski.wordpress.com/2014/11/28/gephi-0-8-2-on-apple-osx-yosemite/">detailed account</a>. Again, these instructions have been tested and they will work.</p>
+<p>After you have finished this chapter you may want to follow the <a href="https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf">Quick start guide</a> although we will cover those topics in the article. The <a href="http://gephi.github.io/users/">Learn section</a> of the website provides additional tutorials.</p>
+</div>
+<div id="opening-gephi-and-installing-plugins" class="section level2">
+<h2><span class="header-section-number">11.2</span> Opening Gephi and Installing Plugins</h2>
+<p>When you have installed Gephi, open it and you should see the following welcome screen.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig1_gephi_welcome.png" />
+
+</div>
+<p>Before we do anything else, we need to install a plugin developed by <a href="http://www.em-lyon.com/en/faculty-research-education/faculty-research/international-business-school-professors/Permanent-Professors/Clement-LEVALLOIS">Clement Levallois</a> to convert Excel and csv files into gephi network files. To install the plugin select the <code>Tools</code> menu in the menu bar and then <code>Plugins</code>.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig2_plugins.png" />
+
+</div>
+<p>You will see a pop up menu for the plugins. At this point you may want to press <code>Reload Catalog</code> to make sure everything is loaded. Then head to <code>Available Plugins</code>. Click on <code>name</code> to sort them alphabetically. You now want to look for a plugin called <code>Convert Excel and csv files to networks</code>. Select the check box and then <code>Install</code>.</p>
+<p>While you are here, one very useful plugin that is not installed by default is <code>Nooverlap</code>. This is very helpful for preventing nodes in network maps from overlapping. Find this plug in and install it now or you will need to do this later.</p>
+<p>You will need to restart Gephi for it to take effect but if you return to the Plugins menu and then choose the installed tab you should see this.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig3_available_plugins.png" />
+
+</div>
+<p>You are good to go. While you are there you may want to check out the other plugins to get an idea of what is available. For more on the conversion plugin see this description <a href="https://marketplace.gephi.org/plugin/excel-csv-converter-to-network/">Excel/csv converter to network plugin</a>.</p>
+</div>
+<div id="importing-a-file-to-gephi-with-the-converter-plugin" class="section level2">
+<h2><span class="header-section-number">11.3</span> Importing a file to Gephi with the converter plugin</h2>
+<p>We will concentrate on using the <code>synbio</code> patent dataset in the Excel version <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>. While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.</p>
+<div id="step-1.-open-gephi-and-choose-file-import-spigot" class="section level3">
+<h3><span class="header-section-number">11.3.1</span> Step 1. Open Gephi and Choose File &gt; Import Spigot</h3>
+<p>For this to work we need to use the Import Spigot function under the File menu. You should see a menu like that below. Make sure that you choose the co-occurrence option.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig4_import_spigot.png" />
+
+</div>
+<p>When you have chosen <code>Data importer(co-occurrences)</code> then choose <code>Next</code>. Make sure the column headers stays selected (unless using your own data). You will then need to choose a delimiter. In this case it is a comma but in other cases it may be a semicolon or a tab. Select the <code>synbio.xlsx</code> file that you have downloaded from <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig5_idelimiter.png" />
+
+</div>
+<p>We now need to choose the agents, that is the actors or objects that we want to create a network map with. We will use <code>patent_assignees_cleaned</code> as this is a relatively small set. We will choose the same field in the two boxes because we are interested in co-occurrence analysis.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig6_selection.png" />
+
+</div>
+<p>In the next step we need to specify the delimiter for splitting the contents of the <code>patent_assignees_cleaned</code> column. In all the fields it is a semicolon so let’s choose that.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig6b_delimiter.png" />
+
+</div>
+<p>We will then be asked if we want a dynamic network. This presently only works with Excel files so in this case we are using the Excel version. Because this dataset has been deduplicated on first filings (INPADOC First Family Member Numbers) we will select the <code>priority_year_earliest</code> field as below for our time series filter. That will give use the year that is closest to the research and development that led to the submission of the original application.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig7_yearselection.png" />
+
+</div>
+<p>The next menu provides us with a list of options. Unfortunately, with one exception, it is not entirely clear what the consequences of these choices are so experimentation may be needed.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig8_options.png" />
+
+</div>
+<p>Choice1. Create links between <code>patent_assignees_cleaned</code>. Choice 2. remove duplicates. We don’t need that as we know that they are unique Choice 3. remove self-loops. Generally we do want this (otherwise known as removing the diagonal to prevent actors counting against themselves).</p>
+<p>We will choose to create the links and to remove the self loops.</p>
+<p>Next we will see a create network screen setting out our choices.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig11_create.png" />
+
+</div>
+<p>Press Finish</p>
+<p>Next we will see an import screen.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig12_import.png" />
+
+</div>
+<p>We will often see a message telling us that there is a problem with the year field not being correctly formatted. It is not clear what this actually means but check the data in the data laboratory after import if this happens (see below).</p>
+<p>We have left the defaults as is. Note that this is an undirected graph (meaning that we do not believe there is a causal relationship between any of the elements in the data). Undirected is generally the default for patent data.</p>
+<p>Note that Gephi is telling us that there are 362 nodes in the network and 176 edges (links). That suggests that this is quite a sparse graph in terms of connections and clusters.</p>
+<p>Click OK. You should now see a raw network that looks like this.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig13_raw_network.png" />
+
+</div>
+<p>We can now see a set of tabs in the top left. Before we go any further let’s take a look at the <code>Data Laboratory</code>. When we look in the <code>Nodes</code> we can see that under frequency (the count of our publication records) the highest value is for NA for Not Available. The reason for this is that we have focused on mapping patent applicants that are organisations (rather than the names of individuals).</p>
+<div class="figure">
+<img src="images/figures_gephi/fig14_nodes.png" />
+
+</div>
+<p>To remove the NA values right click and select Delete. Then confirm the deletion. This will prevent NA from showing up as a large node on the network diagram. Note that you can always exclude nodes after you have laid out the network.</p>
+<p>While we are here in the data laboratory let’s note the division of the data into two sections. 1. A set of nodes. 2. A set of edges.</p>
+<p>The nodes are the organisations (or inventors, keywords etc.). In this case the frequency refers to a count of the number of times an organisation name appears and is very close to, bout not quite matching, the count of records in the set . Note that it is possible to export the nodes table as a .csv file to add information to it and then reimport it. If choosing this option it is generally best to first sort the nodes table alphabetically as it is easier to get right.</p>
+<p>The edges table involves a source and a target, where the source is the source node and the target is another node where there is a link between the nodes. We can see the edges table sorted alphabetically (click the source heading to sort) where the value in weight is the number of shared records.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig15_edges.png" />
+
+</div>
+<p>Again, note that it is possible to export the edges set and import a set. Also note the menus at the bottom of the screen which allow column values to be copied over. This can be useful where the label value is not populated meaning that a name will not display on the node when the graph is laid out.</p>
+<p>Most of the time we can simply proceed with laying out the network without paying much attention to the data laboratory. However, it is important to become familiar with the data laboratory to avoid unexpected problems or to spot corruption in the data.</p>
+<p>In this case we will also see a small box with <code>Enable Timeline</code> at the bottom of the screen. Click to enable it and we will see a list of years. This is a tool for mapping the emergence of networks over time and we will come back to it shortly.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig16_timeline.png" />
+
+</div>
+</div>
+</div>
+<div id="sizing-and-colouring-nodes" class="section level2">
+<h2><span class="header-section-number">11.4</span> Sizing and Colouring Nodes</h2>
+<p>When we look at the Overview screen we have quite a wide range of options. We will start on the upper right with the Statistics panel. <img src="images/figures_gephi/fig17_overview.png" /></p>
+<p>The <code>Run</code> buttons will calculate a range of statistics on the network. Probably the two most useful are:</p>
+<ol style="list-style-type: decimal">
+<li>Modularity Class. This algorithm iterates over the connections (edges) and allocates the nodes to communities or clusters based on the strength of the connections. This algorithm is explained in detail in this article <a href="http://arxiv.org/abs/0803.0476">Vincent D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre, Fast unfolding of communities in large networks, in Journal of Statistical Mechanics: Theory and Experiment 2008 (10), P1000</a>. The ability to detect communities in networks based on the strength of connections is a powerful tool in patent analytics.</li>
+<li>Network Diameter. This calculates two measures of <code>betweeness</code>, that is <code>betweeness centrality</code> (how often a node appears on the shortest path between nodes) and centrality(the average distance from a starting node to other nodes in the network). Network Diameter also calculates Eccentricity which is the distance between a given node and the farthest node from it in the network. For background on this see the Wikipedia entry and also <a href="http://www.inf.uni-konstanz.de/algo/publications/b-fabc-01.pdf">Ulrik Brandes, A Faster Algorithm for Betweenness Centrality, in Journal of Mathematical Sociology 25(2):163-177, (2001)</a></li>
+</ol>
+<p>Whereas Modularity Class identifies communities (particularly in large networks), centrality measures examine the position of a node in the graph relative to other nodes. This can be useful for identifying key actors in networks based on the nature of their connections with other actors (rather than simply the number of records).</p>
+<p>If we run Modularity Class as in the figure a pop up message will inform us that there are 246 communities in the network. Given that there are only 362 nodes this suggests a weakly connected network made up of small individual clusters.</p>
+<p>Move over to the left where it says Ranking and then select the red inverted triangle. Set the largest value to 200 and the smallest to 20 (it is up to you what you choose). Then apply. The network will now change.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig18_nodesize.png" />
+
+</div>
+<p>You can always change the node size later. But in general a size between 10 and 20 for the smallest nodes will allow labels to be seen in later steps.</p>
+<p>To set the colour choose the small colour wheel next to the size nodes triangle. To change the colour select the small square to the right of the colour slider as seen below.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig19_colour.png" />
+
+</div>
+<p>An alternative way of colouring the graph is to select the partition tab to the left of the ranking tab. A small green arrow appears next to a blank drop down menu. Click the arrow button to activate the drop down and choose an option. In this case we have chosen Modularity Class. This will partition the network into coloured groups based on the choice we make. To change the colour of the groups right click and choose randomise colours.</p>
+<p>There are a range of other options for colouring nodes including a colour plugin that will detect if a column with a colour value is present.</p>
+</div>
+<div id="laying-out-the-graph" class="section level2">
+<h2><span class="header-section-number">11.5</span> Laying out the Graph</h2>
+<p>In the bottom left panel called Layout in the figure above there are a range of network visualisation options with more that can be imported from the plugin menus. Among the most useful are Fruchterman-Reingold, Force Atlas, OpenOrd and Circular with specialist plugins for georeferenced layouts that are well worth experimenting with.</p>
+<p>We will illustrate network layout using Fruchterman-Reingold. The first setting is the area for the graph. The default is 10,000 but we will start with 20,000 because 10,000 tends to be too crunched. The default for the gravity setting is 10. This is intended to stop the nodes dispersing too far but is often too tight when labels are applied. Try changing the setting to 5 (which reduces the gravitational pull). The settings in the different layout options can take some getting used too and it is worthwhile creating a record of useful settings. Gephi does not save your settings so make sure you write down useful settings.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig20_settings.png" />
+
+</div>
+<p>We are now good to go. But, before we start take note of two important options for later use.</p>
+<p>The first is the NoOverlap plugin we installed above. This will help us to deal with overlapping nodes after layout. The second is Expansion which will help us to increase the size of a network are to make it easier to see the labels. Note also the Contraction option which will allow us to pull a network back in if it expands too far.</p>
+<p>Now make sure that Fruchterman-Reingold is selected with the settings mentioned above and click <code>Run</code>.</p>
+<p>You can leave the network to run and the nodes will start to settle. If the network disappears from view (depending on your mouse) try scrolling to zoom out. Our aim is to arrive at a situation where lines only cross through nodes where they are connected. As you become more experienced with layout you may want to assist the nodes with moving into a clear position for a tidier graph.</p>
+<p>You will now have a network that looks something like this (note that 15,000 for the Area may have been enough).</p>
+<div class="figure">
+<img src="images/figures_gephi/fig21_laidout.png" />
+
+</div>
+<p>We can see that some of the nodes are set very close together. That will affect the ability to label the nodes in a clear way. To address this we first use the NoOverlap function and later we may want to use the Expansion function in the Layout drop down menu items.</p>
+<p>Choose nooverlap from the menu and Run.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig22_nooverlap.png" />
+
+</div>
+<p>While the difference is minor in this case we have at least moved the nodes into separate positions.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig23_nooverlap2.png" />
+
+</div>
+<p>At this stage we will save our work. One feature of Gephi as a Java programme is that there is no undo option. As a result it is a good idea to save work at a point where you are fairly happy with the layout as it stands.</p>
+<p>Go to File and choose Save As and give the file name a <code>.gephi</code> extension. Do not forget to do this or gephi will not know how to read the file. If all goes well the file will save. On some occasions Java throws an exception and you will basically have to start again. That is one reason to save work in Gephi regularly because it is a beta programme and subject to the predilections of Java on your computer.</p>
+</div>
+<div id="adding-labels" class="section level2">
+<h2><span class="header-section-number">11.6</span> Adding Labels</h2>
+<p>The next step is to add some labels. In the bottom menu bar there are a range of options. What we want is the small grey triangle on the right of this menu bar that will open up a new bar. Click in the triangle and you will see a set of options. Choose labels and then at the far left check the <code>Node</code> box. We will not see any labels yet.</p>
+<p>To the right is a menu with size. This is set to scaled. To see some labels move the scale slider as far as it will go. We will see labels come into view and a first hint that we will need to do some more work on laying out the graph to make it readable.</p>
+<p>Next, change size to Node Size, the screen will now fill with text. Go to the scaler and pull it back until there is something more or less readable</p>
+<div class="figure">
+<img src="images/figures_gephi/fig24_sizelabels.png" />
+
+</div>
+<p>At this stage we may want to edit the labels to make them less long but still meaningful. Go to the Observatory and Nodes and sort on frequency. Change Massachusetts Institute of Technology to MIT, Joule Technology to Joule, Leland Stanford Junior to Stanford and Harvard College to Harvard. You may want to take the INC off Synthetic Genomics. Somewhat inconveniently when we edit in the labels column we have to resort each time. Generally speaking shorter labels are better. However, you will probably want to avoid masses of abbreviations and to ensure that any modifications are appropriately explained in the text for example the California Institute of Technology is CALTECH.</p>
+<p>You will now have something that looks more or less like this.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig25_renaming.png" />
+
+</div>
+<p>Note that you can use the slider to the right in the bottom menu to adjust the sizes and you could of course adjust the font. In some cases you may be happy with a rough and ready network rather than the detailed adjustments that are required for a final network graph.</p>
+<p>Note the small camera icon on the left of the bottom menu. Either press that to take a screenshot or hold to bring up a configure menu that will allow you to choose a size.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig26_screenshot.png" />
+
+</div>
+<p>If you pursuing this option you may also want to adjust the font or the colour and to use the bottom menu to arrive at a result you are happy with for display.</p>
+</div>
+<div id="using-the-timeline" class="section level2">
+<h2><span class="header-section-number">11.7</span> Using the Timeline</h2>
+<p>The timeline option requires a data field or it will not be available. To use it select one end of the timeline and drag it to the desired point. The image below shows first filings of patent applications using the selected simple terms for synthetic biology.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig27_time1.png" />
+
+</div>
+<p>This could be an indicator of early use of these terms and foundational patent documents but requires investigation. As we scroll forward other actors will come into view (we will need to resize the labels as we go)</p>
+<div class="figure">
+<img src="images/figures_gephi/fig28_time2.png" />
+
+</div>
+<p>Note here that in a stepwise fashion we can start to observe the emergence of the network until we arrive at the full network.</p>
+<p>Note here that we had already laid out the graph. An alternative option might be to segment and visualise a set of networks over time (note that new workspaces could be used for this option but that is not covered here).</p>
+</div>
+<div id="using-the-preview-options" class="section level2">
+<h2><span class="header-section-number">11.8</span> Using the Preview Options</h2>
+<p>A more involved option for network visualisation is to move over to the Preview tab next to the Data Laboratory. Use this if you are aiming for publication quality maps rather than everyday use.</p>
+<p>The default option uses curved edges. To use this press Refresh. This is fine but we can’t see any labels. In the presets now try default curved. You should see something like this.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig29_defaultcurve.png" />
+
+</div>
+<p>The main issue that we have here is that the labels are too large. Note here the difference with the visualisation in the Overview. With Gephi what you see is not what you get.</p>
+<p>To arrive at a more readable network the first option is to adjust the size of the font in the <code>Node Labels</code> panel of the preview settings. Note here that label size is set to be proportional to the font (uncheck that and experiment if you wish). If we stick with proportional font size then we will start smaller and move upwards. For example, if we adjust the font size to 3 then the proportional font size will be reduced producing a much more readable network as follows.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig30_font3.png" />
+
+</div>
+<p>That is quite an acceptable graph for seeing the larger nodes. However, note that the labels of some of the nodes are overlapping some of the other nodes. This can produce a very cluttered look. The larger the base font size the more cluttered the graph will look and the more adjustment it is likely to need.</p>
+<p>To make adjustments to this network we will use size 5. That will create a graph where the majority of labels are readable. We will now need to move back and forwards between the Preview and the Overview adjusting the position of the nodes. For complex graphs it can help to print the preview to see what you need to adjust. Another sensible way to proceed is to mentally divide the graph into quarters and proceed clockwise quarter by quarter adjusting the nodes as you go. It is a very good idea to save your work at this point and as you go along.</p>
+<p>In the first quarter we will probably want to tidy imperial innovations. To do that move to Overview, then select the small hand in the left vertical menu for grab. Locate Imperial in the first quarter and move RIKEN down and Univ Avignon and Commissariat Energie Atomique up slightly so they are out of the way. Go back to Preview and Refresh. When doing this quarter by quarter it can be helpful to zoom in in the overview and in the Preview. For each of the overlapping nodes quarter by quarter make an adjustment periodically checking back by using Refresh in Preview and saving as you go along. Note that the aim is minor adjustments rather than major adjustments to node position (it is also possible to attempt to use Label Adjust in the Layout options but in practice this can distort the network). In the process it is also worth watching out for edges that intersect with nodes where there is no actual link and adjusting the node position. Note that this is often not possible with complex graphs and it needs to be explained that nodes may intersect with unrelated edges. Also check that any edits to labels do not contain mistakes (such as CATECH rather than CALTECH) and adjust accordingly. Typically long labels cause problems at this point.</p>
+<p>Through a series of minor adjustments in a clockwise direction that take about 20 minutes (in this case) you should arrive at a final network graph that looks like this. It is worth noting that you will often need to go back to make final adjustments.</p>
+<div class="figure">
+<img src="images/figures_gephi/fig31_adjust_nodes.png" />
+
+</div>
+<p>The basic principle here is that each node should have a readable label when you zoom in and that edges should not intersect with unrelated nodes (except if this is unavoidable).</p>
+<p>Also note that at this point, choices made when cleaning the data become apparent. For example in the top left quadrant we see Joule (for Joule Unlimited Technologies Inc.) and Joule Biotechnologies. The presence of the two related nodes reflects a decision made by the author of the dataset (and this article) not to assume that closely related company names were actually the same company. By the same token, failure to adequately clean up names at the data preparation stage will come back to haunt you at the network visualisation stage. In short, investments in data preparation save a lot of time later on.</p>
+</div>
+<div id="exporting-from-preview" class="section level2">
+<h2><span class="header-section-number">11.9</span> Exporting from Preview</h2>
+<p>At this stage we will want to do a final check and then export the data. Arriving at a publication quality export can in fact be the most time consuming and troublesome aspect of using Gephi. Before going any further save your work.</p>
+<p>When exporting note that what you see on the screen and what you get are not exactly the same thing. The main issues are borders around nodes and the weight of lines in the edges. To adjust for this in the Nodes panel in Preview change the border width to a lower setting or 0 (the option we are choosing here). In the edges panel, if you do not want heavy lines then adjust the thickness or opacity (or both). In this case we have reduced the opacity of the edges to 50 and left the thickness as is. If you change something remember to hit Refresh</p>
+<p>Next select the export button in the bottom left. We will export to .pdf. The defaults are sensible and we will use those. If you are tempted to adjust them note that Gephi does not remember your settings, even when saved, so write them down. In reality the defaults work very well.</p>
+<p>If all goes well you will end up with an image that looks like this. <img src="images/figures_gephi/final.png" /></p>
+<p>Because the default size is portrait you will want to crop the image. For publication you will also want to outline the text (to fix the font across system). This can be done with the free GIMP software or paid software such as Adobe Illustrator.</p>
+<p>Congratulations, you have now created your first Gephi network graph.</p>
+</div>
+<div id="resources" class="section level2">
+<h2><span class="header-section-number">11.10</span> Resources</h2>
+<ol style="list-style-type: decimal">
+<li><a href="http://gephi.github.io/">Gephi website</a></li>
+<li>Quick start <a href="https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf">guide</a></li>
+<li>Installation instructions for <a href="http://gephi.github.io/users/install/">All platforms</a>. Gephi suffers from a known issue for Mac users. That is, it uses Java 6 which is not installed by default on Macs. To resolve this you should follow the instructions posted <a href="http://sumnous.github.io/blog/2014/07/24/gephi-on-mac/">here</a> and works very well in most cases. It basically involves downloading a mac version of Java containing Java 6 and then running three or four commands in the Terminal on the mac to configure Gephi. If that doesn’t work try this more <a href="https://lbartkowski.wordpress.com/2014/11/28/gephi-0-8-2-on-apple-osx-yosemite/">detailed account</a>.</li>
+<li><a href="https://marketplace.gephi.org/plugin/excel-csv-converter-to-network/">Excel/csv converter to network plugin</a></li>
+<li>For ideas on patent network visualisation you might want to try this article on <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368">synthetic biology</a>, this <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0078737">article</a> on species names in patent data, and the use of exploratory network analysis using IPC/CPC co-occurrence analysis in the <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/animal_gr.html">WIPO Patent Landscape for Animal Genetic Resources</a>. For more try this <a href="https://www.google.co.uk/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=patent%20network%20analysis">Google Search</a>.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tableau-public-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="patent-analytics-with-plotly.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
