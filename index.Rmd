@@ -7,7 +7,7 @@ documentclass: book
 github-repo: wipo-analytics/manual_bookdown
 description: "A practical introduction to free and open source tools for patent analytics."
 ---
-#Frontmatter
+#Frontmatter {-}
 
 ##Authorship
 
