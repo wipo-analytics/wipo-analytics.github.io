@@ -5,7 +5,7 @@ output: bookdown::gitbook
 site: bookdown::bookdown_site
 documentclass: book
 github-repo: wipo-analytics/manual_bookdown
-description: "This is the index for the Manual site"
+description: "A practical introduction to free and open source tools for patent analytics."
 ---
 #Frontmatter
 
