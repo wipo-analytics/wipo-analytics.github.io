@@ -29,6 +29,4 @@ You are welcome to use the information provided in this publication, but please 
 
 This Manual does not constitute an exhaustive presentation of all open source tools and the information contained therein was valid at the time of printing.  In addition, the opinions expressed in the Manual do not necessarily reflect the opinion of WIPO Member States.
 
-
-
-
+This is a test
