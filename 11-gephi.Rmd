@@ -17,7 +17,7 @@ Gephi is the subject of ongoing development and as with many other open source t
 
 1. The latest release of Gephi (version 9.1 at the time of writing) is a considerable improvement on the previous version because it removes dependency on an old version of Java. However, the Plug Ins that make it easier to work with Gephi - notably to import data directly from Excel files - have not yet been updated. This makes it harder than it should be to import data into Gephi. 
 
-2. Version 8.2 allows you to easily import Excel files using an Add In. However, it suffers from an issue that the Java version on your machine may not be the version required by Gephi (notably for Windows and Mac users). This can be frustrating to fix although clear instructions that actually work are available
+2. Version 8.2 allows you to easily import Excel files using an Add In. However, it suffers from an issue that the Java version on your machine may not be the version required by Gephi (notably for Windows and Mac users). This can be frustrating to fix although clear instructions that work are available.
 
 In this chapter we will use Version 8.2. 
 
@@ -54,7 +54,7 @@ We will concentrate on using the `synbio` patent dataset in the Excel version [h
 
 ###Step 1. Open Gephi and Choose File > Import Spigot
 
-For this to work we need to use the Import Spigot function under the File menu. You should see a menu like that below. Make sure that you choose the co-occurrence option.
+For this to work we need to use the `Import Spigot` function under the File menu. You should see a menu like that below. Make sure that you choose the co-occurrence option.
 
 ![](images/figures_gephi/fig4_import_spigot.png)
 
@@ -232,7 +232,7 @@ Note here that we had already laid out the graph. An alternative option might be
 
 A more involved option for network visualisation is to move over to the Preview tab next to the Data Laboratory. Use this if you are aiming for publication quality maps rather than everyday use. 
 
-The default option uses curved edges. To use this press Refresh. This is fine but we can't see any labels. In the presets now try default curved. You should see something like this. 
+The default option uses curved edges. To use this press `Refresh`. This is fine but we can't see any labels. In the presets now try default curved. You should see something like this. 
 
 ![](images/figures_gephi/fig29_defaultcurve.png)
 
@@ -265,6 +265,7 @@ When exporting note that what you see on the screen and what you get are not exa
 Next select the export button in the bottom left. We will export to .pdf. The defaults are sensible and we will use those. If you are tempted to adjust them note that Gephi does not remember your settings, even when saved,  so write them down. In reality the defaults work very well. 
 
 If all goes well you will end up with an image that looks like this. 
+
 ![](images/figures_gephi/final.png)
 
 Because the default size is portrait you will want to crop the image. For publication you will also want to outline the text (to fix the font across system). This can be done with the free GIMP software or paid software such as Adobe Illustrator. 
@@ -274,8 +275,9 @@ Congratulations, you have now created your first Gephi network graph.
 ##Resources
 
 1.  [Gephi website](http://gephi.github.io/)
-2.  Quick start [guide](https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf)
-3.  Installation instructions for [All platforms](http://gephi.github.io/users/install/).
+2. [Gephi github repository](https://github.com/gephi/gephi)
+3.  Quick start [guide](https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf)
+4.  Installation instructions for [All platforms](http://gephi.github.io/users/install/).
 Gephi suffers from a known issue for Mac users. That is, it uses Java 6 which is not installed by default on Macs. To resolve this you should follow the instructions posted [here](http://sumnous.github.io/blog/2014/07/24/gephi-on-mac/) and works very well in most cases. It basically involves downloading a mac version of Java containing Java 6 and then running three or four commands in the Terminal on the mac to configure Gephi. If that doesn't work try this more [detailed account](https://lbartkowski.wordpress.com/2014/11/28/gephi-0-8-2-on-apple-osx-yosemite/). 
-4.  [Excel/csv converter to network plugin](https://marketplace.gephi.org/plugin/excel-csv-converter-to-network/)
-5. For ideas on patent network visualisation you might want to try this article on [synthetic biology](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368), this [article](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0078737) on species names in patent data, and the use of exploratory network analysis using IPC/CPC co-occurrence analysis in the [WIPO Patent Landscape for Animal Genetic Resources](http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/animal_gr.html). For more try this [Google Search](https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=patent%20network%20analysis).
+5.  [Excel/csv converter to network plugin](https://marketplace.gephi.org/plugin/excel-csv-converter-to-network/)
+6. For ideas on patent network visualisation you might want to try this article on [synthetic biology](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368), this [article](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0078737) on species names in patent data, and the use of exploratory network analysis using IPC/CPC co-occurrence analysis in the [WIPO Patent Landscape for Animal Genetic Resources](http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/animal_gr.html). For more try this [Google Search](https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=patent%20network%20analysis).

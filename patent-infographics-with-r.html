@@ -172,7 +172,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
 <li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
 <li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
-<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkit-ntlk-appears-to-be-the-leading-package-and-covers-almost-all-major-needs.-the-accompanying-book-natural-language-processing-with-python-may-also-be-worth-considering.-2.-the-python-textmining-package.-this-is-simpler-than-the-giant-ntlk-package-but-may-suit-your-needs."><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit (NTLK)</a> appears to be the leading package and covers almost all major needs. The accompanying book <a href="http://shop.oreilly.com/product/9780596516499.do">Natural Language Processing with Python</a> may also be worth considering. 2. The <a href="http://www.christianpeccei.com/textmining/">Python Textmining Package</a>. This is simpler than the giant NTLK package but may suit your needs.</a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit(NTLK)</a></a></li>
 <li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
@@ -606,10 +606,7 @@ pizza_total &lt;-<span class="st"> </span><span class="kw">rename</span>(pizza_t
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">qplot</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> publications, <span class="dt">data =</span> pizza_total, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</code></pre></div>
 <p><img src="manual_bookdown_files/figure-html/qplot-1.png" width="1152" style="display: block; margin: auto;" /></p>
-<div class="figure">
-<img src="images_foot/infogram/fig1_infographic.png" />
-
-</div>
+<!---![](images_foot/infogram/fig1_infographic.png)--->
 <p>The plot reveals a data cliff in recent years. This normally reflects a lack of data for the last 2-3 years as recent documents feed through the system en route to publication.</p>
 <p>It is a good idea to remove the data cliff by cutting the data 2-3 years prior to the present. In some cases two years is sufficient, but 3 years is a good rule of thumb.</p>
 <p>We also have long tail of data with limited data from 1940 until the late 1970s. Depending on our purposes with the analysis we might want to keep this data (for historical analysis) or to focus in on a more recent period.</p>
@@ -671,10 +668,7 @@ df1 &lt;-<span class="st"> </span><span class="kw">select</span>(pizza, publicat
 <span class="st">    </span><span class="kw">filter</span>(pubyear &gt;=<span class="st"> </span><span class="dv">1990</span>, pubyear &lt;=<span class="st"> </span><span class="dv">2012</span>) %&gt;%<span class="st"> </span><span class="kw">qplot</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> publications, 
     <span class="dt">data =</span> ., <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">print</span>()</code></pre></div>
 <p><img src="manual_bookdown_files/figure-html/piped-1.png" width="1152" style="display: block; margin: auto;" /></p>
-<div class="figure">
-<img src="images_foot/infogram/fig2_infographic_qplot.png" />
-
-</div>
+<!---![](images_foot/infogram/fig2_infographic_qplot.png)--->
 <p>In the standard code we typed <code>df</code> nine times to arrive at the same result. Using pipes we typed df1 once. Of greater importance is that the use of pipes simplifies the structure of R code by introducing a basic “this” then “that” logic which makes it easier to understand.</p>
 <p>One point to note about this code is that <code>qplot()</code> requires us to name our data (in this case <code>df1</code>). However, <code>df1</code> is actually the final output of the code and does not exist as an input object before the final line is run. So, if we attempt to use <code>data = df1</code> in <code>qplot()</code> we will receive an error message. The way around this is to use <code>.</code> in place of our data object. That way <code>qplot()</code> will know we want to graph the outputs of the earlier code. Finally, we need to add an explicit call to <code>print()</code> to display the graph (without this the code will work but we will not see the graph).</p>
 <p>If we now inspect the structure of the df1 object (using <code>str(df1)</code>) in the console, it will be a list. The reason for this is that it is an object with mixed components, including a data.frame with our data plus additional data setting out the contents of the plot. As there is no direct link between R and our infographics software this will create problems for us later because the infographics software won’t know how to interpret the list object. So, it is generally a good idea to use a straight data.frame by excluding the call to <code>qplot</code> and adding it later when needed as follows.</p>
@@ -866,7 +860,7 @@ country_totals</code></pre></div>
 </div>
 <div id="tidying-data---separating-and-gathering" class="section level2">
 <h2><span class="header-section-number">12.9</span> Tidying data - Separating and Gathering</h2>
-<p>In patent data we often see concatenated fields with a separator (normally a <code>;</code>). These are typically applicant names, inventor names, International Patent Classification (IPC) codes, or document numbers (priority numbers, family numbers). We need to <code>tidy</code> this data prior to data cleaning (such as cleaning names) or to prepare for analysis and visualisation. For more on the concept of tidy data read <a href="http://vita.had.co.nz/papers/tidy-data.pdf">Hadley Wickham’s Tidy Data article</a> . The new <a href="http://r4ds.had.co.nz/tidy-data.html">R for Data Science book</a> by Garrett Grolemund and Hadley Wickham (see Chapter 12) is also strongly recommended.</p>
+<p>In patent data we often see concatenated fields with a separator (normally a <code>;</code>). These are typically applicant names, inventor names, International Patent Classification (IPC) codes, or document numbers (priority numbers, family numbers). We need to <code>tidy</code> this data prior to data cleaning (such as cleaning names) or to prepare for analysis and visualisation. For more on the concept of tidy data read <a href="http://vita.had.co.nz/papers/tidy-data.pdf">Hadley Wickham’s Tidy Data article</a>. The new <a href="http://r4ds.had.co.nz/tidy-data.html">R for Data Science book</a> by Garrett Grolemund and Hadley Wickham (see Chapter 12) is also strongly recommended.</p>
 <p>To tidy patent data we will typically need to do two things.</p>
 <ol style="list-style-type: decimal">
 <li><p>Separate the data so that each cell contains a unique data point (e.g. a name, code or publication number). This normally involves separating data into columns.</p></li>
@@ -938,7 +932,7 @@ pizza1 &lt;-<span class="st"> </span><span class="kw">select</span>(pizza1, <spa
 ## [19] &quot;Cole Lorin R&quot;                     
 ## [20] &quot; Middleton Scott W&quot;</code></pre>
 <p>This is a big issue because any counts that we make later on using the applicants_cleaned field will treat “Oppenheimer Alan A” and &quot; Oppenheimer Alan A&quot; as separate names when they should be grouped together.</p>
-<p>We can address this in a couple of ways. One approach is to recognise that actually our separator is not a simple “;” but “;space” in our call to <code>separate_rows()</code>. In that case the call to separate_rows() would actually be <code>sep = &quot;; &quot;</code>. We will add a line of code to illustrate the impact of this change.</p>
+<p>We can address this in a couple of ways. One approach is to recognise that actually our separator is not a simple <code>&quot;;&quot;</code> but <code>&quot;;space&quot;</code> in our call to <code>separate_rows()</code>. In that case the call to <code>separate_rows()</code> would actually be <code>sep = &quot;; &quot;</code>. We will add a line of code to illustrate the impact of this change.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tmp &lt;-<span class="st"> </span><span class="kw">separate_rows</span>(pizza_1990_2012, applicants_cleaned, <span class="dt">sep =</span> <span class="st">&quot;; &quot;</span>)
 <span class="kw">tail</span>(tmp$applicants_cleaned, <span class="dv">20</span>)</code></pre></div>
 <pre><code>##  [1] &quot;Yahoo! Inc&quot;                       &quot;Clarcor Inc&quot;                     
@@ -968,7 +962,7 @@ pizza1$applicants_cleaned &lt;-<span class="st"> </span><span class="kw">str_tri
 ## [17] &quot;Brown Michael&quot;                    &quot;Urban Scott&quot;                     
 ## [19] &quot;Cole Lorin R&quot;                     &quot;Middleton Scott W&quot;</code></pre>
 <p>Note that when using <code>str_trim()</code> we use subsetting to modify the applicants column in place. There is possibly a more efficient way of doing this with pipes but this appears difficult because the data.frame needs to exist for <code>str_trim()</code> to act on in place or we end up with a vector of applicant names rather than a data.frame. A solution to this problem is provided on Stack Overflow<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
-<p>In practice, the most efficient solution in this case is to recognise that the separator for <code>separate_rows</code> is “;space”. However, that will not always be true making the tools in <code>stringr</code> invaluable. To learn more about string manipulation in R try <a href="http://r4ds.had.co.nz/strings.html">Chapter 14 of R for Data Science by Garrett Grolemund and Hadley Wickham</a>.</p>
+<p>In practice, the most efficient solution in this case is to recognise that the separator for <code>separate_rows</code> is <code>&quot;;space&quot;</code>. However, that will not always be true making the tools in <code>stringr</code> invaluable. To learn more about string manipulation in R try <a href="http://r4ds.had.co.nz/strings.html">Chapter 14 of R for Data Science by Garrett Grolemund and Hadley Wickham</a>.</p>
 <p>We can tie the steps so far together using pipes into the following simpler code that we will become the applicants table for use in the infographic. We will add a call to rename and rename applicants_cleaned to tidy up.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
 <span class="kw">library</span>(tidyr)

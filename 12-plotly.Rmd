@@ -200,7 +200,7 @@ This will open a browser window and ask you to sign up or login before being tak
 
 As this makes clear, it is easy to generate a `plotly` graph in R but we will want to dig into the `plotly` package in a little more detail. 
 
-To change colours it is helpful to note that `plotly` installs and then calls the `RColorBrewer` package (it will display in the Packages list). To see the colour palettes we first tick RColorBrewer in Packages (or library(RColorBrewer)) to load it. 
+To change colours it is helpful to note that `plotly` installs and then calls the `RColorBrewer` package (it will display in the Packages list). To see the colour palettes we first tick RColorBrewer in Packages (or `library(RColorBrewer)`) to load it. 
 
 To view the available palettes you could simply use `View(brewer.pal.info)` or the following chunk which arranges the data by the number of colours.
 
@@ -212,7 +212,7 @@ select(brewer.pal.info, 4:1) %>%
   arrange(desc(maxcolors))
 ```
 
-This indicates that the maximum number of colours in a palette is 12. Let's try Paired for illustration. This has the advantage of being colour blind friendly.
+This indicates that the maximum number of colours in a palette is 12. Let's try `Paired` for illustration. This has the advantage of being colour blind friendly.
 
 ```{r plot_colour, eval= FALSE, message=FALSE, warning=FALSE}
 library(plotly)
@@ -226,9 +226,9 @@ s1
 
 As we can see this will then produce a plot with the color palette, `plotly` will show a warning that the base palette ("Set2") has 8 colours but will then specify that it is displaying the palette that we requested. 
 
-In practice we would want to break this plot into subplots for two reasons. First, the data ranges vary widely between countries and second, it is better to ensure that colours are distinct. 
+In practice we would want to break this plot into subplots for two reasons. First, the data and value ranges vary widely between countries and second, it is better to ensure that colours are distinct. 
 
-To do this we need to run some calculations on the data. We will use functions from `dplyr` and `tidyr` to quickly tally the data grouping by the publication code. Then we will add the data to discreet groups based on the scores using `mutate()` (to add a variable) and `ntile()` to divide the countries into groups based on the number of records (n) and add this to the new variable called group. Finally we arrange the data in descending order based on the number of records. 
+To do this we need to run some calculations on the data. We will use functions from `dplyr` and `tidyr` to quickly tally the data grouping by the publication code. Then we will add the data to discreet groups based on the scores using `mutate()` (to add a variable) and `ntile()` to divide the countries into groups based on the number of records (n) and add this to the new variable called group. Finally, we arrange the data in descending order based on the number of records. 
 
 ```{r tally, message=FALSE, warning=FALSE}
 library(dplyr)

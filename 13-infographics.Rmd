@@ -166,7 +166,7 @@ library(ggplot2)
 qplot(x = pubyear, y = publications, data = pizza_total, geom = "line")
 ```
 
-![](images_foot/infogram/fig1_infographic.png)
+<!---![](images_foot/infogram/fig1_infographic.png)--->
 
 The plot reveals a data cliff in recent years. This normally reflects a lack of data for the last 2-3 years as recent documents feed through the system en route to publication. 
 
@@ -236,7 +236,7 @@ df1 <-
   print()
 ```
 
-![](images_foot/infogram/fig2_infographic_qplot.png)
+<!---![](images_foot/infogram/fig2_infographic_qplot.png)--->
 
 In the standard code we typed `df` nine times to arrive at the same result. Using pipes we typed df1 once. Of greater importance is that the use of pipes simplifies the structure of R code by introducing a basic "this" then "that" logic which makes it easier to understand.
 
@@ -352,7 +352,7 @@ The combination of spread and gather work really well to prepare data in formats
 
 ##Tidying data - Separating and Gathering
 
-In patent data we often see concatenated fields with a separator (normally a `;`). These are typically applicant names, inventor names, International Patent Classification (IPC) codes, or document numbers (priority numbers, family numbers). We need to `tidy` this data prior to data cleaning (such as cleaning names) or to prepare for analysis and visualisation. For more on the concept of tidy data read [Hadley Wickham's Tidy Data article](http://vita.had.co.nz/papers/tidy-data.pdf) . The new [R for Data Science book](http://r4ds.had.co.nz/tidy-data.html) by Garrett Grolemund and Hadley Wickham (see Chapter 12) is also strongly recommended. 
+In patent data we often see concatenated fields with a separator (normally a `;`). These are typically applicant names, inventor names, International Patent Classification (IPC) codes, or document numbers (priority numbers, family numbers). We need to `tidy` this data prior to data cleaning (such as cleaning names) or to prepare for analysis and visualisation. For more on the concept of tidy data read [Hadley Wickham's Tidy Data article](http://vita.had.co.nz/papers/tidy-data.pdf). The new [R for Data Science book](http://r4ds.had.co.nz/tidy-data.html) by Garrett Grolemund and Hadley Wickham (see Chapter 12) is also strongly recommended. 
 
 To tidy patent data we will typically need to do two things. 
 
@@ -399,7 +399,7 @@ tail(pizza1$applicants_cleaned, 20)
 
 This is a big issue because any counts that we make later on using the applicants_cleaned field will treat "Oppenheimer Alan A" and " Oppenheimer Alan A" as separate names when they should be grouped together. 
 
-We can address this in a couple of ways. One approach is to recognise that actually our separator is not a simple ";" but ";space" in our call to `separate_rows()`. In that case the call to separate_rows() would actually be `sep = "; "`. We will add a line of code to illustrate the impact of this change.
+We can address this in a couple of ways. One approach is to recognise that actually our separator is not a simple `";"` but `";space"` in our call to `separate_rows()`. In that case the call to `separate_rows()` would actually be `sep = "; "`. We will add a line of code to illustrate the impact of this change.
 
 ```{r}
 tmp <- separate_rows(pizza_1990_2012, applicants_cleaned, sep = "; ")
@@ -420,7 +420,7 @@ tail(pizza1$applicants_cleaned, 20)
 
 Note that when using `str_trim()` we use subsetting to modify the applicants column in place. There is possibly a more efficient way of doing this with pipes but this appears difficult because the data.frame needs to exist for `str_trim()` to act on in place or we end up with a vector of applicant names rather than a data.frame. A solution to this problem is provided on Stack Overflow^[http://stackoverflow.com/questions/25975827/how-to-feed-the-result-of-a-pipe-chain-magrittr-to-an-object].
 
-In practice, the most efficient solution in this case is to recognise that the separator for `separate_rows` is ";space". However, that will not always be true making the tools in `stringr` invaluable. To learn more about string manipulation in R try [Chapter 14 of R for Data Science by Garrett Grolemund and Hadley Wickham](http://r4ds.had.co.nz/strings.html).
+In practice, the most efficient solution in this case is to recognise that the separator for `separate_rows` is `";space"`. However, that will not always be true making the tools in `stringr` invaluable. To learn more about string manipulation in R try [Chapter 14 of R for Data Science by Garrett Grolemund and Hadley Wickham](http://r4ds.had.co.nz/strings.html).
 
 We can tie the steps so far together using pipes into the following simpler code that we will become the applicants table for use in the infographic. We will add a call to rename and rename applicants_cleaned to tidy up. 
 

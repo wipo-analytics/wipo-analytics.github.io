@@ -64,7 +64,8 @@ Hovering over an item inside the facet window brings up a small `edit` button th
 
 ###Custom Facets
 
-The Facet menu below brings up a custom menu with a range of options. Selecting `Custom text facet` (see below) brings up a pop up that allows for the use of code in [Open Refine Expression Language (GREL)](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Functions) to perform tasks not covered by the main menu items. This language is quite simple and can range from short snippets for finding and replacing text to more complex functions that can be reused in future. We will demonstrate the use of this function below.   
+The Facet menu below brings up a custom menu with a range of options. Selecting `Custom text facet` (see below) brings up a pop up that allows for the use of code in [Open Refine Expression Language (GREL)](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Functions) to perform tasks not covered by the main menu items. This language is quite simple and can range from short snippets for finding and replacing text to more complex functions that can be reused in future. We will demonstrate the use of this function below. 
+
 ![](images/openrefine/facet_menu.png)
 
 ###Reordering Columns

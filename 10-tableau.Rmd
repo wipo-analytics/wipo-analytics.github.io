@@ -22,7 +22,7 @@ While you are waiting for the app to download it is a good idea to select `Sign 
 
 ![](images/tableau/signup.png)
 
-This will lead you to an empty profile page
+This will lead you to an empty profile page.
 
 ![](images/tableau/profile.png)
 

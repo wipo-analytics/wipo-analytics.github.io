@@ -172,7 +172,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
 <li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
 <li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
-<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkit-ntlk-appears-to-be-the-leading-package-and-covers-almost-all-major-needs.-the-accompanying-book-natural-language-processing-with-python-may-also-be-worth-considering.-2.-the-python-textmining-package.-this-is-simpler-than-the-giant-ntlk-package-but-may-suit-your-needs."><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit (NTLK)</a> appears to be the leading package and covers almost all major needs. The accompanying book <a href="http://shop.oreilly.com/product/9780596516499.do">Natural Language Processing with Python</a> may also be worth considering. 2. The <a href="http://www.christianpeccei.com/textmining/">Python Textmining Package</a>. This is simpler than the giant NTLK package but may suit your needs.</a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit(NTLK)</a></a></li>
 <li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
@@ -610,7 +610,7 @@ s</code></pre></div>
 
 </div>
 <p>As this makes clear, it is easy to generate a <code>plotly</code> graph in R but we will want to dig into the <code>plotly</code> package in a little more detail.</p>
-<p>To change colours it is helpful to note that <code>plotly</code> installs and then calls the <code>RColorBrewer</code> package (it will display in the Packages list). To see the colour palettes we first tick RColorBrewer in Packages (or library(RColorBrewer)) to load it.</p>
+<p>To change colours it is helpful to note that <code>plotly</code> installs and then calls the <code>RColorBrewer</code> package (it will display in the Packages list). To see the colour palettes we first tick RColorBrewer in Packages (or <code>library(RColorBrewer)</code>) to load it.</p>
 <p>To view the available palettes you could simply use <code>View(brewer.pal.info)</code> or the following chunk which arranges the data by the number of colours.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RColorBrewer)
 <span class="kw">library</span>(dplyr)
@@ -653,7 +653,7 @@ brewer.pal.info$names &lt;-<span class="st"> </span><span class="kw">row.names</
 ## 33    Dark2       TRUE     qual         8
 ## 34  Pastel2      FALSE     qual         8
 ## 35     Set2       TRUE     qual         8</code></pre>
-<p>This indicates that the maximum number of colours in a palette is 12. Let’s try Paired for illustration. This has the advantage of being colour blind friendly.</p>
+<p>This indicates that the maximum number of colours in a palette is 12. Let’s try <code>Paired</code> for illustration. This has the advantage of being colour blind friendly.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
 <span class="kw">library</span>(dplyr)
 s1 &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(pcy, <span class="dt">x =</span> pubyear, <span class="dt">y =</span> n, <span class="dt">color =</span> pubcountry, <span class="dt">colors =</span> <span class="st">&quot;Paired&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>) %&gt;%
@@ -664,8 +664,8 @@ s1</code></pre></div>
 
 </div>
 <p>As we can see this will then produce a plot with the color palette, <code>plotly</code> will show a warning that the base palette (“Set2”) has 8 colours but will then specify that it is displaying the palette that we requested.</p>
-<p>In practice we would want to break this plot into subplots for two reasons. First, the data ranges vary widely between countries and second, it is better to ensure that colours are distinct.</p>
-<p>To do this we need to run some calculations on the data. We will use functions from <code>dplyr</code> and <code>tidyr</code> to quickly tally the data grouping by the publication code. Then we will add the data to discreet groups based on the scores using <code>mutate()</code> (to add a variable) and <code>ntile()</code> to divide the countries into groups based on the number of records (n) and add this to the new variable called group. Finally we arrange the data in descending order based on the number of records.</p>
+<p>In practice we would want to break this plot into subplots for two reasons. First, the data and value ranges vary widely between countries and second, it is better to ensure that colours are distinct.</p>
+<p>To do this we need to run some calculations on the data. We will use functions from <code>dplyr</code> and <code>tidyr</code> to quickly tally the data grouping by the publication code. Then we will add the data to discreet groups based on the scores using <code>mutate()</code> (to add a variable) and <code>ntile()</code> to divide the countries into groups based on the number of records (n) and add this to the new variable called group. Finally, we arrange the data in descending order based on the number of records.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
 <span class="kw">library</span>(tidyr)
 total &lt;-<span class="st"> </span><span class="kw">tally</span>(<span class="kw">group_by</span>(pcy, pubcode)) %&gt;%

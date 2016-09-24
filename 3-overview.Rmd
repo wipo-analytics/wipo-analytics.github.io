@@ -378,7 +378,9 @@ Note that many text mining packages in general focus on generating words. For no
 
 There are quite a few resources available on text mining using Python. Note that Python may well be ahead of R in terms of text mining resources (until we are proven wrong). However, note that Python and R are increasingly used together to exploit their different strengths. Here are a few resources to help you get started. 
 
-###[The Natural Language Toolkit (NTLK)](http://www.nltk.org) appears to be the leading package and covers almost all major needs. The accompanying book [Natural Language Processing with Python](http://shop.oreilly.com/product/9780596516499.do) may also be worth considering. 2. The [Python Textmining Package](http://www.christianpeccei.com/textmining/). This is simpler than the giant NTLK package but may suit your needs. 
+###[The Natural Language Toolkit(NTLK)](http://www.nltk.org) 
+
+NTLK appears to be the leading package and covers almost all major needs. The accompanying book [Natural Language Processing with Python](http://shop.oreilly.com/product/9780596516499.do) may also be worth considering. The [Python Textmining Package](http://www.christianpeccei.com/textmining/) is simpler than the giant NTLK package but may suit your needs. 
 
 ![](images/overview/ntlk.png)
 
