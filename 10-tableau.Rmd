@@ -1,6 +1,6 @@
 # (PART) Visualizing Patent Data {-}
 
-#Tableau Public [adding some text]
+#Tableau Public
 
 ##Introduction
 
