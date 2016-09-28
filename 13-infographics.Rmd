@@ -596,7 +596,7 @@ We will then see a page with some sample infographics to provide ideas to get yo
 
 ![](images/infogram/fig2_infogram_login.png)
 
-Click on one of the infograms with a graph such as Trends in Something and then click inside the graph box itself and select the edit button in the top right. 
+Click on one of the template infograms with a graph such as Amsterdam and then click inside the graph box itself and select the edit button in the top right. 
 
 ![](images/infogram/fig3_infogram_findedit.png)
 
@@ -624,6 +624,8 @@ To work with our IPC class data we will add a bar chart and load the data. To do
 4. Google word cloud. 
 
 One useful approach to developing an infographic is to start by adding the images and then add titles and text boxes to raise key points. In infogram new text boxes appear below existing boxes but can be repositioned by dragging and dropping boxes onto each other. 
+
+Infogram allows the creation of various graph types, including wordclouds and treemaps. In this way the most common concepts or phrases used in the dataset can be visualized, after they have been identified through Vantage Point or another data mining tool. URLs, pictures and videos can also be included in an Infogram Infographic and make it more appealing.
 
 One nice feature of infogram is that it is easy to share the infographic with others through a url, an embed code or on facebook or via twitter. 
 
