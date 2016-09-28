@@ -2,9 +2,9 @@
 
 #Tableau Public
 
-##Introduction
+##Introduction 
 
-In this chapter we will be analysing and visualising patent data using Tableau Public. 
+In this chapter we will be analysing and visualising patent data using Tableau Public.  [do we need something more here]
 
 Tableau Public is a free version of Tableau Desktop and provides a very good practical introduction to the use of patent data for analysis and visualisation. In many cases Tableau Public will represent the standard that other open source and free tools will need to meet. 
 
