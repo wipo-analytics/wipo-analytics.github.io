@@ -2,7 +2,7 @@
 
 #Tableau Public
 
-##Introduction [try again]
+##Introduction
 
 In this chapter we will be analysing and visualising patent data using Tableau Public. 
 
