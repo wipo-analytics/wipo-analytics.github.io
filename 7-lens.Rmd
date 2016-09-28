@@ -22,14 +22,14 @@ We used our standard query "pizza", all jurisdictions, and one document per fami
 
 Our search for pizza returned 13,714 families from a total of 29,617 publications containing the term in the full text. This approach assists with refining searches by reducing duplication. 
 
-The Lens allows users to create collections of up to 10,000 results from a search. To create a collection use the `Create Collection` button and name the collection. How you add records to a collection is not obvious and involves 2 steps.
+The Lens allows registered users to create collections of up to 10,000 results from a search.  To create a collection use the `Create Collection` button and name the collection. How you add records to a collection is not obvious and involves 2 steps.
 
 1. Check the arrow next to Document as in the image below. When the mouse hovers over the arrow a menu will pop up. Choose `Top 10k Results`.
 2. In the box displaying the name of the collection above the results press the + arrow to add the 10,000 documents to the Collection. 
 
 ![](images/lens/fig3_addtocollection.png)
 
-Once you understand this process it is easy to add documents to collections. One very nice feature of the Lens is that when a collection has been created we can share it with others using the `Share` button. Users have the option of maintaining a private collection or publicly sharing. The URL for the collection we just generated is [https://www.lens.org/lens/collection/9606](https://www.lens.org/lens/collection/9606).
+Once you understand this process it is easy to add documents to collections. The collections can be retrieved, edited and downloaded from the ' Work Area ' of the users. One very nice feature of the Lens is that when a collection has been created we can share it with others using the `Share` button. Users have the option of maintaining a private collection or publicly sharing. The URL for the collection we just generated is [https://www.lens.org/lens/collection/9606](https://www.lens.org/lens/collection/9606).
 
 We could imagine that for more restricted searches, and taking confidentiality issues into account, this could be a useful way of sharing patent data with colleagues. One useful addition would be the ability to share with groups based on email addresses or something similar (although that may be possible by choosing a private link and sharing it).
 
@@ -81,7 +81,7 @@ This suggests that Google is the top user of the word pizza in the patent system
 
 What is very useful about is that it is easy to create a [new collection](https://www.lens.org/lens/collection/9608) for an applicant of interest, to download the results or select areas of a portfolio based on a jurisdiction or technology area or to explore highly cited patents. In short, we can easily dig into the data.  
 
-Other interesting features of the chart area are references to authors, DOIs, and PubMed Ids for exploration of data extracted from the documents. This reflects the interest at the Lens in researching the relationship between basic scientific research and innovation. Accessing the literature related information requires opening a chart (for example authors) and selecting the top result and the moving into the results view. We then select one of the results such as [Voice Actions On Computing Devices](https://www.lens.org/lens/patent/US_8200847_B2/citations#c/publications) and the Citations tab. This reveals a publication from a workshop on Wireless Geographical Information Systems from 2003 as we can see below. 
+Other interesting features of the chart area are the non-patent literature data, with references to authors, DOIs, and PubMed Ids for exploration of data extracted from the documents. This reflects the interest at the Lens in researching the relationship between basic scientific research and innovation. Accessing the literature related information requires opening a chart (for example authors) and selecting the top result and the moving into the results view. We then select one of the results such as [Voice Actions On Computing Devices](https://www.lens.org/lens/patent/US_8200847_B2/citations#c/publications) and the Citations tab. This reveals a publication from a workshop on Wireless Geographical Information Systems from 2003 as we can see below. 
 
 ![](images/lens/fig9_crossref.png)
 
