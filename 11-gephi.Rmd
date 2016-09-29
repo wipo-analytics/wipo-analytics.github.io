@@ -270,7 +270,7 @@ If all goes well you will end up with an image that looks like this.
 
 Because the default size is portrait you will want to crop the image. For publication you will also want to outline the text (to fix the font across system). This can be done with the free GIMP software or paid software such as Adobe Illustrator. 
 
-Congratulations, you have now created your first Gephi network graph. 
+Congratulations, you have now created your first Gephi network graph. woo hoo!!!
 
 ##Resources
 
