@@ -11,7 +11,7 @@ description: "A practical introduction to free and open source tools for patent 
 
 ##Authorship
 
-The Manual was written by Dr. Paul Oldham from One World Analytics, with contributions from Ms. Irene Kitsara (IP Information Officer).
+The Manual was written by Dr. Paul Oldham from [One World Analytics](http://oneworldanalytics.com/), under the coordination of Ms. Irene Kitsara ([WIPO](http://www.wipo.int/portal/en/index.html)).
 
 ##Acknowledgements 
 
