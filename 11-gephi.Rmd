@@ -18,13 +18,13 @@ We will use the Excel version of the dataset in this chapter and it can be downl
 
 ##Installing Gephi
 
-Gephi is the subject of ongoing development and as with many other open source tools this has advantages and disadvantages. In the case of Gephi the issues are as follows. 
+Gephi is the subject of ongoing development and as with many other open source tools this has advantages and disadvantages. In the case of Gephi the issues are as follows:
 
 1. The latest release of Gephi (version 9.1 at the time of writing) is a considerable improvement on the previous version because it removes dependency on an old version of Java. However, the Plug Ins that make it easier to work with Gephi - notably to import data directly from Excel files - have not yet been updated. This makes it harder than it should be to import data into Gephi. 
 
 2. Version 8.2 allows you to easily import Excel files using an Add In. However, it suffers from an issue that the Java version on your machine may not be the version required by Gephi (notably for Windows and Mac users). This can be frustrating to fix although clear instructions that work are available.
 
-In this chapter we will use Version 8.2. 
+In this chapter we will use Version 0.8.2. 
 
 To install Gephi 82. for Windows use this link to directly download the [.exe](https://github.com/gephi/gephi/releases/download/v0.8.2/gephi-0.8.2-beta.setup.exe) file. To install for Mac OSX download the [.dmg](https://github.com/gephi/gephi/releases/download/v0.8.2/gephi-0.8.2-beta.dmg) file. 
 Then try installing the software. If all goes well you should see the Welcome Screen below with Welcome to Gephi when you open Gephi 8.2. If you do not see the Welcome screen or everything is grey then you need to install the version of Java that Gephi is expecting. To do that for Windows follow these [instructions](https://github.com/poldham/opensource-patent-analytics/raw/master/6_workshop_presentations/gephi_installation.pdf) to install Java 7. The instructions have been tested in two regional workshops and they work. The key to success is to uninstall Gephi if you have already installed it, install Java 7 and then reinstall Gephi v8.2.
