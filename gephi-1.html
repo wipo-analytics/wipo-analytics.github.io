@@ -297,7 +297,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>10.1</b> Installing Gephi</a></li>
 <li class="chapter" data-level="10.2" data-path="gephi-1.html"><a href="gephi-1.html#opening-gephi-and-installing-plugins"><i class="fa fa-check"></i><b>10.2</b> Opening Gephi and Installing Plugins</a></li>
 <li class="chapter" data-level="10.3" data-path="gephi-1.html"><a href="gephi-1.html#importing-a-file-to-gephi-with-the-converter-plugin"><i class="fa fa-check"></i><b>10.3</b> Importing a file to Gephi with the converter plugin</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import-spigot"><i class="fa fa-check"></i><b>10.3.1</b> Step 1. Open Gephi and Choose File &gt; Import Spigot</a></li>
+<li class="chapter" data-level="10.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import"><i class="fa fa-check"></i><b>10.3.1</b> Step 1. Open Gephi and Choose File &gt; Import</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="gephi-1.html"><a href="gephi-1.html#sizing-and-colouring-nodes"><i class="fa fa-check"></i><b>10.4</b> Sizing and Colouring Nodes</a><ul>
 <li class="chapter" data-level="10.4.1" data-path="gephi-1.html"><a href="gephi-1.html#filtering-the-data"><i class="fa fa-check"></i><b>10.4.1</b> Filtering the data</a></li>
@@ -419,7 +419,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <p>In this chapter we will focus on creating a simple network visualisation of the relationship between patent applicants (assignees). However, network visualisation can be used to visualise a range of fields and relationships, such as inventors, key words, IPC and CPC codes, and citations among other options.</p>
 <p>For this chapter we will use a dataset on drones from the <a href="https://www.lens.org/lens/search?q=%22drone%22+OR+%22drones%22&amp;predicate=%26%26&amp;l=en">Lens patent database</a>. The dataset consists of 5884 patent documents containing the terms “drone or drones” in the full text deduplicated to individual families from the full publication set. The dataset has been extensively cleaned in Vantage Point by separating out applicant and inventor names and then using fuzzy logic matching to clean up names. Very very similar results can be achieved using Open Refine as descrived in Chapter 9 of this Manual.</p>
-<p>The dataset can be downloaded from github <a href="">here</a> <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>.</p>
+<p>The dataset can be downloaded from Github in a zip file to unzip <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">here</a>.</p>
 <div id="installing-gephi" class="section level2">
 <h2><span class="header-section-number">10.1</span> Installing Gephi</h2>
 <p>You should install gephi 9.1 (the latest release) rather than an earlier version. Note that any later updates may not contain the key functionality that is needed below (as it takes a while for some of the plugins and features to catch up).</p>
@@ -452,9 +452,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="importing-a-file-to-gephi-with-the-converter-plugin" class="section level2">
 <h2><span class="header-section-number">10.3</span> Importing a file to Gephi with the converter plugin</h2>
-<p>We will concentrate on using the <code>synbio</code> patent dataset in the Excel version <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>. While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.</p>
-<div id="step-1.-open-gephi-and-choose-file-import-spigot" class="section level3">
-<h3><span class="header-section-number">10.3.1</span> Step 1. Open Gephi and Choose File &gt; Import Spigot</h3>
+<p>We will concentrate on using the <code>drones</code> patent dataset in the zipped .csv version <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">here</a> and don’t forget to unzip the file. While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.</p>
+<div id="step-1.-open-gephi-and-choose-file-import" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Step 1. Open Gephi and Choose File &gt; Import</h3>
 <p>For this to work we need to use the <code>Import</code> function under the File menu.</p>
 <div class="figure">
 <img src="images/gephi9/import.png" />
@@ -465,12 +465,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="images/gephi9/wizard.png" />
 
 </div>
-<p>Next you will be asked to select the file to use. We will use the <a href="INSERT">drones_fulltext_cleaned_5884.csv</a> file that is located on the WIPO Analytics website on GitHub.</p>
+<p>Next you will be asked to select the file to use. We will download and then unzip the <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">gephi_drones_fulltext_cleaned_5884.csv</a> file that is located on the WIPO Analytics website on GitHub.</p>
 <div class="figure">
 <img src="images/gephi9/select.png" />
 
 </div>
-<p>When you have chosen <code>Data importer(co-occurrences)</code> then choose <code>Next</code>. Make sure the column headers stays selected (unless using your own data). You will then need to choose a delimiter. In this case it is a comma but in other cases it may be a semicolon or a tab. Select the <code>synbio.xlsx</code> file that you have downloaded from <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true">here</a>.</p>
+<p>When you have chosen <code>Data importer(co-occurrences)</code> then choose <code>Next</code>. Make sure the column headers stays selected (unless using your own data). You will then need to choose a delimiter. In this case it is a comma but in other cases it may be a semicolon or a tab.</p>
 <div class="figure">
 <img src="images/figures_gephi/fig5_idelimiter.png" />
 
