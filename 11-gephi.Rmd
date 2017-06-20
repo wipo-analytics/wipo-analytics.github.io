@@ -2,6 +2,7 @@
 output:
   html_document: default
   pdf_document: default
+  word_document: default
 ---
 #Gephi
 
@@ -14,7 +15,7 @@ In this chapter we will focus on creating a simple network visualisation of the 
 
 For this chapter we will use a dataset on drones from the [Lens patent database](https://www.lens.org/lens/search?q=%22drone%22+OR+%22drones%22&predicate=%26%26&l=en). The dataset consists of 5884 patent documents containing the terms "drone or drones" in the full text deduplicated to individual families from the full publication set. The dataset has been extensively cleaned in Vantage Point by separating out applicant and inventor names and then using fuzzy logic matching to clean up names. Very very similar results can be achieved using Open Refine as descrived in Chapter 9 of this Manual. 
 
-The dataset can be downloaded from github [here]() [here](https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true). 
+The dataset can be downloaded from Github in a zip file to unzip [here](https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip). 
 
 ##Installing Gephi
 
@@ -46,9 +47,9 @@ You are good to go. While you are there you may want to check out the other plug
 
 ##Importing a file to Gephi with the converter plugin
 
-We will concentrate on using the `synbio` patent dataset in the Excel version [here](https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true). While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.
+We will concentrate on using the `drones` patent dataset in the  zipped .csv version [here](https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip) and don't forget to unzip the file. While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.
 
-###Step 1. Open Gephi and Choose File > Import Spigot
+###Step 1. Open Gephi and Choose File > Import
 
 For this to work we need to use the `Import` function under the File menu. 
 
@@ -59,14 +60,14 @@ You should now see a menu like that below. Make sure that you choose the co-occu
 
 ![](images/gephi9/wizard.png)
 
-Next you will be asked to select the file to use. We will use the [drones_fulltext_cleaned_5884.csv](INSERT) file that  is located on the WIPO Analytics website on GitHub.
+Next you will be asked to select the file to use. We will download and then unzip the [gephi_drones_fulltext_cleaned_5884.csv](https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip) file that is located on the WIPO Analytics website on GitHub.
 
 ![](images/gephi9/select.png)
 
 
 
 
-When you have chosen `Data importer(co-occurrences)` then choose `Next`. Make sure the column headers stays selected (unless using your own data). You will then need to choose a delimiter. In this case it is a comma but in other cases it may be a semicolon or a tab. Select the `synbio.xlsx` file that you have downloaded from [here](https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/synbio_patents/synbio_inventors.xlsx?raw=true).
+When you have chosen `Data importer(co-occurrences)` then choose `Next`. Make sure the column headers stays selected (unless using your own data). You will then need to choose a delimiter. In this case it is a comma but in other cases it may be a semicolon or a tab. 
 
 ![](images/figures_gephi/fig5_idelimiter.png)
 
