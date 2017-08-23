@@ -1,3 +1,9 @@
+---
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
 #Introduction
 
 This book provides a practical guide to free and open source software tools for patent analytics. The aim of the WIPO Manual on Open Source Patent Analytics is to provide a practical introduction to patent analytics without assuming prior knowledge of patents or programming languages. 

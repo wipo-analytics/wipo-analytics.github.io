@@ -119,7 +119,8 @@ The examples are there to help you. In `rplos` they presently focus on the use o
 The author of this article is a big fan of pizza. So, in the first example we will carry out a simple search for the term pizza and then specify the results we want to see using the argument `fl =` (for fields) and the number of results that we want to see using `limit = 20`. In specifying the fields we will use `c()` to combine them together.
 
 ```{r searchplos1, eval=FALSE, cache=TRUE, tidy.opts=list(width.cutoff = 40)}
-a <- searchplos(q = "algeria", fl = c("id","publication_date", "title", "abstract"), limit = 20)
+p <- searchplos(q = "pizza", fl = c("id","publication_date", "title", "abstract"), limit = 20)
+p
 ```
 
 What `searchplos()` has done in the background is to send a request to the PLOS API to bring back the id, publication_date, title and abstract for 20 records across the PLOS journals. To see the results type:
@@ -208,8 +209,9 @@ write.csv(dat, "dat.csv", row.names = FALSE)
 
 If we open this up in Excel or Open Office Calc then we will see two blank entries in the abstract fields. Blank cells can create calculation problems. Inside R we can handle this by filling in the blanks with NA as follows [2]. In this case we are subsetting into dat and then asking R to identify those cells that exactly match `==` with `""`. We then fill those cells in dat with NA (for Not Available). 
 
-```{r fillblanks, eval=FALSE, tidy=TRUE}
+```{r fillblanks, eval=FALSE, tidy=TRUE, cache=TRUE}
 dat[dat==""] <- NA
+dat
 ```
 
 We can then simply write the file as before. If we wanted to remove the NAs we have just introduced then we could use `write.csv(dat, "dat.csv", row.names = FALSE, na = "")` which will convert them back to blank spaces.
@@ -246,6 +248,7 @@ head(pizza$data)
 ```
 
 We have retrieved 20 records here using `limit = 20` (the default is 10). It is generally a good idea to start with a small number of results to test that we are getting what we expect back rather than lots of irrelevant data. What if we wanted to retrieve all of the results? Here we will need to do a bit more work using the meta field.  
+
 ##Obtaining the full number of results
 
 One way to do this is to take our original number of results and then subset in to the data and create a new object containing the value for the number of records in `numFound`. Note that the number of records for a particular query below may well have gone up by the time that you read this article. 
@@ -256,15 +259,16 @@ r <- pizza$meta$numFound
 
 To run a new search we can now insert `r` into the limit = value. This will be interpreted as the numeric value of `r` (210). 
 
-```{r pizznumFound, eval=FALSE, cache=TRUE, tidy=FALSE}
+```{r pizznumFound, eval=FALSE, cache=TRUE}
 pizza <- searchplos(q = "pizza", fl = c("id", "publication_date", "title", "abstract"), fq = 'cross_published_journal_key:PLoSONE', start = 0, limit = r)
 head(pizza$data)
 ```
 
-An alternative way of doing this is to make life a bit easier for ourselves by first running our query and setting the limit as `limit = 0`. This will only return the `meta` data. We then add the subset for number found to the end of the code as `$meta$numFound`. That will pull back the value (210) directly. 
+An alternative way of doing this is to make life a bit easier for ourselves by first running our query and setting the limit as `limit = 0`. This will only return the `meta` data. We then add the subset for number found to the end of the code as `$meta$numFound`. That will pull back the value directly. 
 
 ```{r numFoundquery, eval=FALSE, cache=TRUE, tidy=TRUE}
 r <- searchplos(q = "pizza", fq = 'cross_published_journal_key:PLoSONE', limit = 0)$meta$numFound
+r
 ```
 
 We can then run the query again using the value of `r` in limit = :
@@ -280,9 +284,10 @@ That has returned the full 210 results for PLOS ONE. We could attempt to make li
 
 ```{r crossnumFound, eval=FALSE, cache=TRUE, tidy=TRUE}
 r1 <- searchplos("pizza", limit = 0)$meta$numFound
+r1
 ```
 
-This produces 244 results. What happens now if we run our original query using the value of `r1` (244 records) but limiting the results only to PLOS ONE?
+This produces 298 results at the time of writing. What happens now if we run our original query using the value of `r1` (298 records) but limiting the results only to PLOS ONE?
 
 ```{r crosslimit, eval=FALSE, cache=TRUE, tidy=FALSE}
 pizza <- searchplos(q = "pizza", fl = c("id", "publication_date", "title", "abstract"), fq = 'cross_published_journal_key:PLoSONE', start = 0, limit = r1)
@@ -347,6 +352,7 @@ First we create the search query. Note that we use `c()`, for combine, to combin
 
 ```{r searchlist, eval=FALSE, cache=TRUE, tidy=TRUE}
 s <- c('"synthetic biology"', '"synthetic genomics"', '"synthetic genome"', '"synthetic genomes"')
+s
 ```
 
 We now want to get the maximum number of results returned by one of the search terms. This is slightly tricky because `rplos` will return a list containing four list items (one for each of our search terms). Each of those lists will contain `meta` and `data` items. What we want to do is find out which of the search terms returns the highest number of results inside `meta` in `numFound`. Then we can use that number as our limit. 
@@ -375,15 +381,17 @@ Now we can run the following code using `s` as our query (q = s) in the function
 
 ```{r countrecfun, eval=FALSE, cache=TRUE, tidy=TRUE}
 r2 <- plos_records(q = s)
+r2
 ```
 
-You should now see a number around 991 (at the time of writing). Yay! 
+You should now see a number around 1151 (at the time of writing). Yay! 
 
 Now we can use `r2` in the limit to return all of the records. We will write this in the standard way and then display a simpler way using pipes `%>%` below. Note that we use `s` as our search terms (see `q = s`) and we have used `r2` for the limit (limit = r2). Because we are calling a chunk of data this can take around a minute to run. 
 
-Note that at each step in the code below we are creating and then overwriting an object called `results`. We are also naming `results` as the first argument in each step.
+Note that at each step in the code below we are creating and then overwriting an object called `results`. We are also naming `results` as the first argument in each step. This can take a few moments to run. 
 
 ```{r, longdemo, eval=FALSE, tidy=FALSE}
+library(plyr)
 results <- lapply(s, function(x) searchplos(x, fl = c('id','author', 'publication_date', 'title', 'abstract'), limit = r2))
 results <- setNames(results, s) #add query terms to the relevant results in the list
 results <- ldply(results, "[[", 2) #extract the data into a single data.frame
@@ -392,9 +400,12 @@ results <- ldply(results, "[[", 2) #extract the data into a single data.frame
 We can make life simpler by using pipes `%>%` to simplify the code. The advantage of using pipes is that we do not have to keep creating and overwriting temporary objects (see above for `results`). The code is also much easier to read and faster. To learn more about using pipes see this article from [Sean Anderson](http://seananderson.ca/2014/09/13/dplyr-intro.html). Again the query might be a bit slow as the data is fetched back.
 
 ```{r pipedemo, eval=FALSE, cache=TRUE, tidy=FALSE}
+library(plyr)
+library(dplyr)
 results <- lapply(s, function(x) searchplos(x, fl = c('id', 'author', 'publication_date', 'title', 'abstract'), limit = r2)) %>%
     setNames(s) %>% 
     ldply("[[", 2)
+results
 ```
 
 Pipes are a relatively recent innovation in R (see the `magrittr`, `dplyr` and `tidyr` packages) and most code you will see will be written in the traditional way. However, pipes make R code faster and much easier to follow. While you will need to be familiar with regular R code to follow most existing work, pipes are becoming increasingly popular because the code is simpler and has a clearer logic (e.g. do this then that).
@@ -417,6 +428,7 @@ First we might want to tidy up by renaming a column. For example we might want t
 
 ```{r rename_rplos, cache=TRUE, eval=FALSE, tidy=TRUE}
 results <- rename(results, search_terms = .id)
+results
 ```
 
 ##Filling Blank Spaces
@@ -435,6 +447,7 @@ The `publication_date` field is a character vector. We can easily turn this into
 
 ```{r asdate, cache=TRUE, eval=FALSE, tidy=TRUE}
 results$publication_date <- as.Date(results$publication_date)
+head(results$publication_date)
 ```
 
 ##Adding columns
@@ -442,7 +455,8 @@ results$publication_date <- as.Date(results$publication_date)
 When dealing with dates we might want to simply split the `publication_date` field into three columns for year, month and day. We can do that using `separate()` from `tidyr`. 
 
 ```{r separate, cache=TRUE, eval=FALSE, tidy=TRUE}
-results <- separate(results, publication_date, c("year", "month", "day"), sep = "-", remove = FALSE) 
+results <- separate(results, publication_date, c("year", "month", "day"), sep = "-", remove = FALSE)
+head(select(results, year, month, day))
 ```
 
 Here we have specified the data (results), the column we want to separate (results) and then the three new columns that we want to create by closing them in `c()` and placing them in quotes. This creates three new columns. The `remove` argument specifies whether we want to remove the original column (the default is TRUE) or keep it. 
@@ -454,7 +468,9 @@ Because working with dates can be quite awkward (to put it mildly) it makes sens
 One feature of pulling back literature from an API for scientific literature is that the fields tend to be character fields rather than numeric. Character vectors in R are quoted with "". This can make life awkward if we want to start counting things later on. To add a count column we can use `mutate` from the `dplyr()` package to create a new column `number`. `number` is based on assigning the value 1 to the id columns using `mutate()`. We are avoiding the term count because it is the name of a function `count()`. There are other ways of doing this but this approach points to the very useful `mutate()` function in `dplyr` for adding a new variable.
 
 ```{r mutate_rplos, cache=TRUE, eval=FALSE, tidy=TRUE}
+library(dplyr)
 results <- mutate(results, number = sum(id = 1))
+head(select(results, title, number))
 ```
 
 When we view results we will now see a new column number that contains the value 1 for each entry. 
@@ -471,6 +487,7 @@ Another way of doing this, which can be used for multiple columns, is to use `se
 
 ```{r select_rplos, cache=TRUE, eval=FALSE, tidy=TRUE}
 test <- select(results, 1:8)
+length(test)
 ```
 
 We could also drop columns by position using the following (to remove column 5 and 6). This approach is useful when there are lots of columns to deal with. 
@@ -499,6 +516,7 @@ We might want to arrange our rows (which can be quite difficult to do in base R)
 
 ```{r arrange, eval=FALSE, eval=FALSE, tidy=TRUE}
 results <- arrange(results, desc(publication_date))
+head(results$publication_date)
 ```
 
 When we use `View(results)` we will see that the most recent data is at the top. We will also see that some of the titles towards the top are duplicates of the same article because they include all the terms in our search. So, the next thing we will want to do is to address duplicates. 

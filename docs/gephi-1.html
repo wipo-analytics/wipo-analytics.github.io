@@ -418,7 +418,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 </div>
 <p>In this chapter we will focus on creating a simple network visualisation of the relationship between patent applicants (assignees). However, network visualisation can be used to visualise a range of fields and relationships, such as inventors, key words, IPC and CPC codes, and citations among other options.</p>
-<p>For this chapter we will use a dataset on drones from the <a href="https://www.lens.org/lens/search?q=%22drone%22+OR+%22drones%22&amp;predicate=%26%26&amp;l=en">Lens patent database</a>. The dataset consists of 5884 patent documents containing the terms “drone or drones” in the full text deduplicated to individual families from the full publication set. The dataset has been extensively cleaned in Vantage Point by separating out applicant and inventor names and then using fuzzy logic matching to clean up names. Very very similar results can be achieved using Open Refine as descrived in Chapter 9 of this Manual.</p>
+<p>For this chapter we will use a dataset on drones from the <a href="https://www.lens.org/lens/search?q=%22drone%22+OR+%22drones%22&amp;predicate=%26%26&amp;l=en">Lens patent database</a>. The dataset consists of 5884 patent documents containing the terms “drone or drones” in the full text deduplicated to individual families from the full publication set. The dataset has been extensively cleaned in Vantage Point by separating out applicant and inventor names and then using fuzzy logic matching to clean up names. Very very similar results can be achieved using Open Refine as described in Chapter 9 of this Manual.</p>
 <p>The dataset can be downloaded from Github in a zip file to unzip <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">here</a>.</p>
 <div id="installing-gephi" class="section level2">
 <h2><span class="header-section-number">10.1</span> Installing Gephi</h2>
@@ -438,7 +438,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="images/gephi9/plugin.png" />
 
 </div>
-<p>You will see a pop up menu for the plugins. At this point you may want to press <code>Reload Catalog</code> to make sure everything is loaded. Then head to <code>Available Plugins</code>. Click on <code>name</code> to sort them alphabetically. You now want to look for a plugin called <code>Convert Excel and csv files to networks</code>. Select the check box, press <code>Install</code> and follow through the menus. Just keep pressing at the prompts and then you will need to restrart at the end.</p>
+<p>You will see a pop up menu for the plugins. At this point you may want to press <code>Reload Catalog</code> to make sure everything is loaded. Then head to <code>Available Plugins</code>. Click on <code>name</code> to sort them alphabetically. You now want to look for a plugin called <code>Convert Excel and csv files to networks</code>. Select the check box, press <code>Install</code> and follow through the menus. Just keep pressing at the prompts and then you will need to restart at the end.</p>
 <div class="figure">
 <img src="images/gephi9/install.png" />
 
@@ -465,7 +465,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="images/gephi9/wizard.png" />
 
 </div>
-<p>Next you will be asked to select the file to use. We will download and then unzip the <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">gephi_drones_fulltext_cleaned_5884.csv</a> file that is located on the WIPO Analytics website on GitHub.</p>
+<p>Next you will be asked to select the file to use. We will download and then unzip the <a href="https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip">gephi_drones_fulltext_cleaned_5884.csv</a> file that is located on the WIPO Analytics website on Git Hub.</p>
 <div class="figure">
 <img src="images/gephi9/select.png" />
 
@@ -523,7 +523,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="images/gephi9/laboratory.png" />
 
 </div>
-<p>In some cases you may have filled any blank cells in the dataset with NA (for Not Available). If this is the case NA will show up as a node on the network. You can address this type of issue in the Data Laboratory by right clicking on the NA value and then Delect. Note also that you can always exclude or combine nodes after you have laid out the network by editing in the Data Laboratory.</p>
+<p>In some cases you may have filled any blank cells in the dataset with NA (for Not Available). If this is the case NA will show up as a node on the network. You can address this type of issue in the Data Laboratory by right clicking on the NA value and then Delete. Note also that you can always exclude or combine nodes after you have laid out the network by editing in the Data Laboratory.</p>
 <p>The second part of the Data Laboratory is the Edges under Data Table in the Data Laboratory. The edges table involves a source and a target, where the source is the source node and the target is another node where there is a link between the nodes. We can see the edges table sorted alphabetically (click the source heading to sort) where the value in weight is the number of shared records.</p>
 <div class="figure">
 <img src="images/gephi9/edges.png" />
@@ -555,7 +555,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="setting-node-size" class="section level3">
 <h3><span class="header-section-number">10.4.2</span> Setting Node Size</h3>
-<p>Next we want to size the nodes. On the left, look for the Appearence tab and then with Nodes in grey choose the Ranking button. Here the minimum size is set to 20 and the maximum to 150. Note that the default setting is 10 and this is generally too small for easy visibility. Press Apply and you will see the network changes to display the size of nodes based on the frequency. You can always adjust the size of nodes later if you are unhappy with them.</p>
+<p>Next we want to size the nodes. On the left, look for the Appearance tab and then with Nodes in grey choose the Ranking button. Here the minimum size is set to 20 and the maximum to 150. Note that the default setting is 10 and this is generally too small for easy visibility. Press Apply and you will see the network changes to display the size of nodes based on the frequency. You can always adjust the size of nodes later if you are unhappy with them.</p>
 <div class="figure">
 <img src="images/gephi9/size.png" />
 
@@ -642,9 +642,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="using-the-preview-options" class="section level2">
 <h2><span class="header-section-number">10.7</span> Using the Preview Options</h2>
 <p>A more involved option for network visualisation is to move over to the Preview tab next to the Data Laboratory.</p>
-<p>The default option uses curved edges. To use this press <code>Refresh</code>. This is fine but we can’t see any labels. In the presets now try default curved. You should see something like this.</p>
-<div id="to-do" class="section level4">
-<h4><span class="header-section-number">10.7.0.1</span> <img src="images/figures_gephi/fig29_defaultcurve.png" /> TO DO</h4>
+<p>The default option uses curved edges. To use this press <code>Refresh</code>. This is fine but we can’t see any labels. In the presets now try default curved. You can play around with the different settings until you find a version that you like.</p>
 <p>The main issue that we have here is that the labels are too large and the line weigths may also be very heavy.</p>
 <p>To address the line weigth look for and check the rescale weight option under edges.</p>
 <div class="figure">
@@ -659,7 +657,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <p>That is quite an acceptable graph for seeing the larger nodes. However, note that the labels of some of the nodes are overlapping some of the other nodes. This can produce a very cluttered look. The larger the base font size the more cluttered the graph will look and the more adjustment it is likely to need.</p>
 <p>To make adjustments to this network we will use size 3. We will now need to move back and forwards between the Preview and the Overview adjusting the position of the nodes. For very complex graphs it can help to print out the preview to see what you need to adjust. Another sensible way to proceed is to mentally divide the graph into quarters and proceed clockwise quarter by quarter adjusting the nodes as you go. It is a very good idea to save your work at this point and as you go along.</p>
-<p>In the first quarter we will probably want to tidy imperial innovations. To do that move to Overview, then select the small hand in the left vertical menu for grab. Locate Imperial in the first quarter and move RIKEN down and Univ Avignon and Commissariat Energie Atomique up slightly so they are out of the way. Go back to Preview and Refresh. When doing this quarter by quarter it can be helpful to zoom in in the overview and in the Preview. For each of the overlapping nodes quarter by quarter make an adjustment periodically checking back by using Refresh in Preview and saving as you go along. Note that the aim is minor adjustments rather than major adjustments to node position (it is also possible to attempt to use Label Adjust in the Layout options but in practice this can distort the network). In the process it is also worth watching out for edges that intersect with nodes where there is no actual link and adjusting the node position. Note that this is often not possible with complex graphs and it needs to be explained that nodes may intersect with unrelated edges. Also check that any edits to labels do not contain mistakes (such as CATECH rather than CALTECH) and adjust accordingly. Typically long labels cause problems at this point.</p>
+<p>In the first and second quarter moving clockwise things look good with no overlapping labels. However, some adjustments are needed in the third quarter in the middle of the network where Campanella and Kurs are overlapping. To make the adjustment move to the Overview tab, then select the small hand in the left vertical menu for grab. Locate Campanella and move it out of the way so it is not overlapping. Be gentle. Now go back to Preview and hit Refresh. When doing this quarter by quarter it can be helpful to zoom in in the Overview and in the Preview. For each of the overlapping nodes quarter by quarter make an adjustment periodically checking back by using Refresh in Preview and saving as you go along. Note that the aim is minor adjustments rather than major adjustments to node position (it is also possible to attempt to use Label Adjust in the Layout options but in practice this can distort the network). In the process it is also worth watching out for edges that intersect with nodes where there is no actual link. In those cases adjust the node position by trying to move it to the side of the unrelated edge. Note that this is often not possible with complex graphs and you will need to explain in the text that nodes may intersect with unrelated edges. Also check that any edits to labels do not contain mistakes (such as CATECH rather than CALTECH) and adjust accordingly. Typically long labels cause problems at this point and can be edited down in the Data Laboratory.</p>
 <p>Through a series of minor adjustments in a clockwise direction you should arrive at a final network graph. Expect to spend about 20 minutes on clean up when you are familiar with Gephi depending on the number of nodes. It is worth noting that you will often need to go back to make final adjustments.</p>
 <div class="figure">
 <img src="images/gephi9/final.png" />
@@ -670,8 +668,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="images/gephi9/zoom.png" />
 
 </div>
-<p>It is quite common when you arrive at a publication quality graphic to suddenly discover a mistake in the network. For example, at the data cleaning stage you may have decided not to group two companies with very similar names. However, at the network visualization stage the network suggests that in practice the two companies are one and the same. In this case check the data and head over to the Data Laboratory to group the nodes to a single node. However, as this suggests, time spent on data cleaning and data preparation will normally reap dividends in terms of time saved later in the analysis and visualization process.</p>
-</div>
+<p>It is quite common when you arrive at a publication quality graphic to suddenly discover a mistake in the network. For example, at the data cleaning stage you may have decided not to group two companies with very similar names. However, at the network visualization stage the network suggests that in practice the two companies are one and the same. In this case check the data and head over to the Data Laboratory to group the nodes to a single node. As this suggests, time spent on data cleaning and data preparation will normally reap dividends in terms of time saved later in the analysis and visualization process.</p>
 </div>
 <div id="exporting-from-preview" class="section level2">
 <h2><span class="header-section-number">10.8</span> Exporting from Preview</h2>
