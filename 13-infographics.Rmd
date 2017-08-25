@@ -43,7 +43,7 @@ library(stringr)
 library(ggplot2)
 ```
 
-We are now ready to go. 
+We are now ready to go. Yahoo!!!
 
 ##Load a .csv file using `readr`
 
