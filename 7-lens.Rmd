@@ -1,12 +1,12 @@
-#The Lens
+# The Lens
 
-##Introduction
+## Introduction
 
 In this chapter we provide a brief introduction to [The Lens](https://www.lens.org/lens/) patent database as a free source of data for patent analytics. 
 
 The Lens is a patent database based in Australia that describes itself as "an open global cyberinfrastructure to make the innovation system more efficient and fair, more transparent and inclusive." The main way it seeks to do this is by providing access to patent information with a particular focus on sequence information as well as analysis of issues such as DNA related patent activity. An important feature of The Lens for those working on biotechnology related subjects is [PatSeq](https://www.lens.org/lens/bio).
 
-##Getting Started
+## Getting Started
 
 To get the most out of the Lens the first step is to sign up for an account from the front page.
 
@@ -55,7 +55,7 @@ When we select the download icon we can now download the 10,000 records in the c
 
 We also have an option to upload documents into a collection using the upload button and then enter comma separated identifiers. However, at the time of writing we were not able to make this very useful function work.
 
-##Additional features
+## Additional features
 
 In addition to these features, it is also important to note that data exports include a cited count that counts the number of patent/non-patent records `cited` by the applicant. 
 
@@ -65,7 +65,7 @@ While the citing documents are not included with the downloaded data it is possi
 
 As such, one possible workflow using the Lens would involve initial exploratory queries and refinement, downloading the results of a refined query for closer inspection and then selecting documents of interest to explore the backward (cited) and forward (citing) citations and generate a new dataset.
 
-##Visualisation
+## Visualisation
 
 The Lens makes good use of online visualisation options using [Highcharts](http://www.highcharts.com) and HTML5. To access the visualisations choose the small icon on the right above the `Sort by` pull down menu. 
 
@@ -87,13 +87,13 @@ Other interesting features of the chart area are references to authors, DOIs, an
 
 An impressive feature of this approach is the effort that has been made to link the citation data to the publication using [crossref](http://www.crossref.org). According to the documentation around 15 million non-patent literature citations have been linked so far. Note that one additional feature of the Lens download data is that it includes a non-patent literature citation field. For example, downloading the [google pizza portfolio](https://www.lens.org/lens/collection/9608) and a search for the citation above will reveal the citation but without the added value of the DOI. As such, the download provided the raw NPL data.  
 
-##Working with texts
+## Working with texts
 
 In common with other free databases, the Lens is not designed to allow downloads of multiple full texts. However, you can access the full text of documents, including .pdf files, and you can make notes that will be stored with a collection in your account. The image below provides an example of our ongoing efforts to understand why Google is so dominant in the results of searches for pizza in patent documents. 
 
 ![](images/lens/fig10_notes.png)
 
-##PatSeq
+## PatSeq
 
 One important focus of the development of the Lens has been DNA sequence data including an [ongoing series of articles](https://www.lens.org/about/) on the interpretation and significance of sequence data in patent activity. 
 
@@ -126,7 +126,7 @@ After processing we will see a list of results that can be downloaded in a varie
 
 As far as we could tell, while the data can be downloaded, it is not presently possible to generate a collection of documents from the results of the PatSeq Finder. 
 
-##Round Up
+## Round Up
 
 The Lens is a very useful patent database that, when you have worked out the meaning of icons, is easy to use. The ease with which collections can be shared and up to 10,000 records downloaded is a real plus for the Lens. In addition, the use of HTML5 and Highcharts makes this a highly interactive experience. The ability to use charts to drill down into the data is very welcome. The link to the `crossref` service for non-patent literature is very useful but it would be good to see this data included in some way as a field in the data downloads. 
 

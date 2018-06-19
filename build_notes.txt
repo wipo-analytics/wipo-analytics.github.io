@@ -1,0 +1,3 @@
+Notes
+
+Book is built from Master and the index.html and chapters must be on the top level.

@@ -1,12 +1,12 @@
 # (PART) Using APIs {-}
 
-#Scientific Literature with Rplos
+# Scientific Literature with Rplos
 
 ```{r opts, echo=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
-##Introduction
+## Introduction
 
 In this chapter we look at the use of the [`rplos`](https://github.com/ropensci/rplos) package from [rOpenSci](https://ropensci.org) to access the scientific literature from the [Public Library of Science](https://www.plos.org) using the [PLOS Search API](http://api.plos.org/solr/faq/).
 
@@ -32,15 +32,15 @@ We will also use this as an opportunity to introduce some of the popular package
 
 The first step is to make sure that you have R and RStudio.
 
-##Install R and RStudio
+## Install R and RStudio
 
 To get up and running you need to install a version of R for your operating system. You can do that from [here](http://cran.rstudio.com/). Then download RStudio Desktop for your operating system from [here](https://www.rstudio.com/products/rstudio/download/) using the installer for your system. Then open RStudio. 
 
-##Create A Project
+## Create A Project
 
 Projects are probably the best way of organising your work in RStudio. To create a new project select the dropdown menu in to top right where you see the blue R icon. Navigate to where you want to keep your R materials and give your project a name (e.g. rplos). Now you will be able to save you work into an rplos project folder and R will keep everything together when you save the project.  
 
-##Install Packages
+## Install Packages
 
 First we need to install some packages to help us work with the data. This list of packages are common "go to" packages for daily use.
 
@@ -70,7 +70,7 @@ library(XML)
 
 Next let's take a look at the wide range of functions that are available for searching using `rplos` by moving over to the Packages tab in RStudio and clicking on `rplos`. A very useful tutorial on using `rplos` can be found [here](https://ropensci.org/tutorials/rplos_tutorial.html) and can be cited as "Scott Chamberlain, Carl Boettiger and Karthik Ram (2015). rplos: Interface to PLOS Journals search API. R package version 0.5.0 https://github.com/ropensci/rplos". If you are already comfortable working in R you might want to head to that introductory tutorial as this article contains a lot more in the way of explanation. However, we will also add some new examples and code for working with the results to add to the resource base for `rplos`. 
 
-##Key functions in rplos
+## Key functions in rplos
 
 R is an object oriented language meaning that it works on objects such as a vector, table, list, or matrix. These are easy to create. We then apply functions to the data from `base R` or from packages we have installed for particular tasks.   
 
@@ -94,7 +94,7 @@ newobject <- function(yourdata, argument1, argument2, etc)
 
 A new object is likely to be a table or list containing data. the sign `<-` gets or passes the results of the function (such as seachplos) to the new object. To specify what we want we first include our data (`yourdata`) and then one or more arguments which control what we get, such as the number of records or the title etc. 
 
-##Data Fields in rplos
+## Data Fields in rplos
 
 There are quite a number of fields that can be searched with `rplos` or used to refine a search. We will only use a few of them. To see the range of fields type `plosfields` into the console and press Enter. 
 
@@ -104,7 +104,7 @@ plosfields
 
 For example, if we wanted to search the title, abstract and conclusions we would use these fields in building the query (see below). If we wanted to search everything but those fields we would probably use body. If we wanted to retrieve the references then we would include `reference` in the fields. In `rplos` a field is denoted by `fl =` with the fields in quotes such as `fl = "title"` and so on as we will see below.
 
-##Basic Searching using `searchplos()`, Navigating and Exporting Data
+## Basic Searching using `searchplos()`, Navigating and Exporting Data
 
 `searchplos()` is the basic `rplos` search function and returns a list of document identifiers (DOIs) or other data fields. The basic search result is a set of DOIs that can be used for further work. To get help for a function, or to find working examples, use `?` in front of the function in the console: 
 
@@ -179,7 +179,7 @@ When we type the $ a popup will appear and display two entries as tables for `me
 
 Finally, you can also see the items in your project in the Environment pane. Click on the blue arrow for `p` in the Environment pane under Values and you will see the structure of the data in `p` and some of its content. 
 
-###Creating a New Object and Writing to File
+### Creating a New Object and Writing to File
 
 Ok so we have a list with some results containing `meta` and `data`. We now want to export `data` to a .csv file that we can work with in Excel or another programme. 
 
@@ -232,7 +232,7 @@ write.csv(p, "p.csv", row.names = FALSE)
 
 We have now retrieved some data containing pizza through the PLOS API using `rplos` and we have written the data to a file as a table we can use later. We will now move on to some more sophisticated things we can do with `rplos`. 
 
-##Limit by journal
+## Limit by journal
 
 As we have seen above, PLOS contains 7 journals and in `rplos` the results for a search can be limited to specific journals such as PLOS ONE or PLOS Biology. Note that the short journal names appear to use the old format for PLOS consisting of mixed upper and lowercase characters (e.g. PLoSONE not PLOSONE). A nice easy way to find the short journal names is to use:
 
@@ -249,7 +249,7 @@ head(pizza$data)
 
 We have retrieved 20 records here using `limit = 20` (the default is 10). It is generally a good idea to start with a small number of results to test that we are getting what we expect back rather than lots of irrelevant data. What if we wanted to retrieve all of the results? Here we will need to do a bit more work using the meta field.  
 
-##Obtaining the full number of results
+## Obtaining the full number of results
 
 One way to do this is to take our original number of results and then subset in to the data and create a new object containing the value for the number of records in `numFound`. Note that the number of records for a particular query below may well have gone up by the time that you read this article. 
 
@@ -278,7 +278,7 @@ pizza <- searchplos(q = "pizza", fl = c("id", "publication_date", "title", "abst
 head(pizza$data)
 ```
 
-##Obtaining the number of records across PLOS Journals
+## Obtaining the number of records across PLOS Journals
 
 That has returned the full 210 results for PLOS ONE. We could attempt to make life even easier by first getting the results across all PLOS journals. We do this by removing the `fq =` argument limiting the data to PLOS ONE and saving the result in and object we will call `r1`. Note that the number of records will probably have gone up by the time you read this. 
 
@@ -296,7 +296,7 @@ pizza$meta$numFound
 
 The answer is that the 210 results in PLOS ONE are returned from the total of 244 across the PLOS journals. Why? The reason this works is that `searchplos()` initially pulls back all of the data from the PLOS API and then applies our entry in `fq =` as a filter. So, in reality the full 244 records are fetched and then filtered down to the 210 from PLOS ONE. In this case, this makes our lives easier because we can use the results across PLOS journals and then restrict the data. 
 
-##Writing the results and using a codebook
+## Writing the results and using a codebook
 
 We now have a total of 210 results for pizza. We can simply write the results to a .csv file.
 
@@ -308,7 +308,7 @@ As this illustrates, it is very easy to use `rplos()` and rapidly create a file 
 
 When working in R you will often create multiple tables and take multiple steps. To keep track of what you do it is a good idea to create a text file as a codebook. Use the codebook to note down the important steps you take. The idea of a codebook is taken from Jeffrey Leek's [Elements of Data Analytic Sytle](https://leanpub.com/datastyle) which provides a very accessible introduction to staying organised. To create a codebook in RStudio simply use `File > New File > Text File`. This will open a text file that can be saved with your project. The codebook allows you to recall what actions you performed on the data months or years later. It also allows others to follow and reproduce your results and is important for [reproducible research](https://ropensci.org/blog/2014/06/09/reproducibility/). 
 
-##Proximity Searching
+## Proximity Searching
 
 We will typically want to carry out a search by first retrieving a rough working set of results to get a feel for the data and then experimenting until we are happy with the data to noise ratio (see this [article](http://rsta.royalsocietypublishing.org/content/372/2031/20140065) for an example). 
 
@@ -342,7 +342,7 @@ It is also important to emphasise that when using `rplos()` it is possible to re
 
 In many cases the most useful information comes from searching using phrases and multiple terms. Unlike words, phrases can articulate concepts. This generally makes them more useful than single words for searching for information. 
 
-##Searching Using Multiple Phrases
+## Searching Using Multiple Phrases
 
 To search by phrases we start by creating an object containing our phrases and put the phrases inside double quotation marks. If we do not use double quotation marks the search will look for documents containing both words rather than the complete phrase (e.g. synthetic AND biology rather than "synthetic biology"). Note that the code below will display "" as "\" but you don't need to enter the `\`.
 
@@ -418,11 +418,11 @@ View(results)
 
 We could now simply write this to a .csv file. But there are a number of things that we might want to do first. Most of these tasks fall into the category of wrangling and tidying up data so that we can carry on working with it in R or other software such as Excel.
 
-##Tidying and Organising the Data
+## Tidying and Organising the Data
 
 Many useful data cleaning and organisational tasks can be easily performed using the `dplyr()` and `tidyr()` packages developed by Hadley Wickham at RStudio. Other important packages include `stringr()`(for working with text strings), `plyr()` and `reshape2()` (general wrangling) and `lubridate()` (for working with dates). These packages were developed by Hadley Wickham and colleagues with the specific aim of making it easier to work with data in R in a consistent way. We will mainly use `dplyr` and `tidyr` in the examples below and a very useful [RStudio cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) can help you with working with `dplyr` and `tidyr`. 
 
-###Renaming a column
+### Renaming a column
 
 First we might want to tidy up by renaming a column. For example we might want to rename `.id` to something more meaningful. We can use `rename()` from `dplyr()` to do that (see `?rename`).
 
@@ -431,7 +431,7 @@ results <- rename(results, search_terms = .id)
 results
 ```
 
-##Filling Blank Spaces
+## Filling Blank Spaces
 
 It is good practice to fill blank cells with NA for "Not Available"" to avoid calculation problems. For example, as in the earlier example, we have some blank cells in the abstract field and there may be others somewhere else. Following this [StackOverflow answer](http://r.789695.n4.nabble.com/How-to-convert-blanks-to-NA-td895155.html) we can do this easily.
 
@@ -441,7 +441,7 @@ results[results==""] <- NA
 
 If for some reason we wanted to remove the NA values we can handle that at the time of exporting to a file (see above).
 
-##Converting Dates
+## Converting Dates
 
 The `publication_date` field is a character vector. We can easily turn this into a Date format that can be used in R and drop the T00:00:00 for time information using:
 
@@ -463,7 +463,7 @@ Here we have specified the data (results), the column we want to separate (resul
 
 Because working with dates can be quite awkward (to put it mildly) it makes sense to have a range of options available to you early on in working with your data rather than having to go back to the beginning much later on. 
 
-##Add a count
+## Add a count
 
 One feature of pulling back literature from an API for scientific literature is that the fields tend to be character fields rather than numeric. Character vectors in R are quoted with "". This can make life awkward if we want to start counting things later on. To add a count column we can use `mutate` from the `dplyr()` package to create a new column `number`. `number` is based on assigning the value 1 to the id columns using `mutate()`. We are avoiding the term count because it is the name of a function `count()`. There are other ways of doing this but this approach points to the very useful `mutate()` function in `dplyr` for adding a new variable.
 
@@ -475,7 +475,7 @@ head(select(results, title, number))
 
 When we view results we will now see a new column number that contains the value 1 for each entry. 
 
-##Remove a column
+## Remove a column
 
 We will often end up with more data than we want, or create more columns than we need. The standard way to remove a column is to use the trusty `$` to select the column and assign it to NULL.
 
@@ -510,7 +510,7 @@ test <- select(results, id, 1:9)
 
 The select function is incredibly useful for rapidly organising data as we will see below. 
 
-##Arranging the Data
+## Arranging the Data
 
 We might want to arrange our rows (which can be quite difficult to do in base R). The `arrange()` function in `dplyr` makes this easy and arranges a column's values in ascending order by default. Here we will specify descending `desc()` because we want to see the most recent publications that mention our search terms at the top. 
 
@@ -521,7 +521,7 @@ head(results$publication_date)
 
 When we use `View(results)` we will see that the most recent data is at the top. We will also see that some of the titles towards the top are duplicates of the same article because they include all the terms in our search. So, the next thing we will want to do is to address duplicates. 
 
-##Dealing with Duplicates
+## Dealing with Duplicates
 
 How you deal with duplicates depends on what you are trying to achieve. If you are attempting to develop data on trends then duplicates will result in overcounting unless you take steps to count only distinct records. Duplicates of the same data will also distort text mining of the frequencies of terms. So, from that perspective duplicates are bad. On the other hand. If we are interested in the use of terms over time within an emerging area of science and technology, then we might well want to look in detail at the use of particular terms. For example, synthetic genomics is an alternative term for synthetic biology favoured by the J. Craig Venter group. We could look at whether this term is more widely used. Do synthetic biologists also use terms such as engineering biology, genome engineering or the fashionable new genome editing technique? In these cases duplicate records using terms are good because shifts in language can be mapped over time. This suggests a need for a strategy that uses different data tables to answer different questions. 
 
@@ -542,7 +542,7 @@ Next we have two main options.
 1. We can spread the duplicate results across the table
 2. We can identify and delete the duplicates.  
 
-###Spreading data using `spread()` from `tidyr`
+### Spreading data using `spread()` from `tidyr`
 
 Rather than simply deleting our duplicate DOIs, we could create new columns for each search term and its associated DOI. This will be useful because it will tell us which terms are associated with which records over time. This is easy to do with `spread()` by providing a `key` and a `value` in the arguments. In this case, we want to use `search_terms` as the `key` (column names) to spread across the table and the DOIs in the `id` column as the `value` for the rows.
 
@@ -556,7 +556,7 @@ We now have a data.frame with 1098 rows and the search terms identified in each 
 
 We have now reduced our data to unique records while preserving our search terms as reference points. The limitation of this approach is that by spreading the DOIs across 4 columns we no longer have a tidy single column of DOIs. 
 
-###Deleting Duplicates
+### Deleting Duplicates
 
 As an alternative, or complement, to spread we can use a logical TRUE/FALSE test to filter our dataset. There are a number of functions that perform logical tests in R (see also `which()`, `%in%`, `within()`). In this case the most appropriate choice is probably `duplicated()`. `duplicated()` will mark duplicate records as TRUE and non-duplicated records as FALSE. We will add a column to our data using the trusty `$` when creating the new column. 
 
@@ -592,11 +592,11 @@ write_csv(unique_results, "unique_results.csv")
 
 Ok, so we have now a dataset containing the records for a range of terms and we have come a long way. Quite a lot of this has been about what to do with PLOS data once we have accessed it in terms of turning it into tables that we can work with. In the next section we will look at how to restrict searches by section. 
 
-##Restricting searches by section
+## Restricting searches by section
 
 The default for searching with `rplos` is to search everything. This can produce many passing results and be overwhelming. There are quite a number of options for restricting searches in `rplos`.
 
-##By author
+## By author
 
 In creating the results dataset above we included the `author` field. However, there are some complexities to searching with author names and working with author data that it is important to understand. We will start by searching on author names and then look at how to process the data.
 
@@ -707,7 +707,7 @@ Let's write that data to a .csv file to explore later.
 write_csv(full_authors, "full_authors.csv")
 ```
 
-##Title search using `plostitle()`
+## Title search using `plostitle()`
 
 For a title search we can use `plostitle()`. As above you may want to count the number of records first using:
 
@@ -721,7 +721,7 @@ Then we run the search to return the number of results we would like. Here we ha
 title <- plostitle(q = "synthetic biology", fl = "title", limit = t)$data
 ```
 
-##Abstract search using `plosabstract()`
+## Abstract search using `plosabstract()`
 
 For confining the searches to abstracts we can use `plosabstract()`. We will start with a quick count of records. 
 
@@ -744,7 +744,7 @@ abstract_df <- ldply(abstract, "[", 1:2) %>%
   filter(.id == "data")
 ```
 
-##Subject Area using `plossubject()`
+## Subject Area using `plossubject()`
 
 To search by subject area use `plossubject`. The default return is 10 results of the total results. So, try starting with a search such as this to get an idea of how many results there are. In this case the query has been limited to PLOS ONE and full text articles. 
 
@@ -762,7 +762,7 @@ As noted in the documentation, the results we return from the API and the result
 
 In this case we return 740 results while, at the time of writing, PLOS ONE lists 417 articles in the [Synthetic Biology subject area](http://www.plosone.org/browse/Synthetic+biology?startPage=0&filterAuthors=&filterSubjectsDisjunction=&filterArticleTypes=&pageSize=13&filterKeyword=&filterJournals=PLoSONE&query=&ELocationId=&id=&resultView=&sortValue=&unformattedQuery=*%3A*&sortKey=Most+views%2C+all+time&filterSubjects=Synthetic%20biology&volume=&). This will merit clarification of the criteria for counts used on the PLOS website and the API returns. 
 
-##Highlighting terms and text fragments with highplos()
+## Highlighting terms and text fragments with highplos()
 
 `highplos()` is a great function for research in PLOS, particularly when combined with opening results in a browser using `highbrow()`. 
 
@@ -781,7 +781,7 @@ Note that in some cases, even though we are restricting to `doc-type:full`, we r
 
 There are two additional options (arguments) for `highplos()` that we can use. The first of these is snippets using `hl.snippets = ` and the second is `hl.fragsize =`. Both can be used in conjunction with `highbrow()`.   
 
-###Snippets using hl.snippets
+### Snippets using hl.snippets
 
 ```{r snippet, eval=FALSE, cache=TRUE, tidy=FALSE}
 snippet <- highplos(q = '"synthetic biology"', hl.fl = list("title", "abstract"), hl.snippets = 10, rows = 100) %>%
@@ -795,7 +795,7 @@ highplos(q='"synthetic biology"', hl.fl = "abstract", hl.snippets = 10, hl.merge
   highbrow()
 ```
 
-###fragment size using hl.fragsize
+### fragment size using hl.fragsize
 
 Greater control over what we are seeing is provided using the `hl.fragsize` option. This allows us to specify the number of characters (including spaces) that we want to see in relation to our target terms. 
 
@@ -815,7 +815,7 @@ highplos(q = '"synthetic biology"', hl.fl = list("title", "abstract"), hl.fragsi
 
 What is great about this is that we can easily control the amount of text that we are seeing and then select articles of interest to read straight from the browser. We can also start to think about ways to use this information for text mining to identify terms used in conjunction with synthetic biology or types of synthetic biology.
 
-##Get the full text of one or more articles
+## Get the full text of one or more articles
 
 We will finish this article by briefly demonstrating how to retrieve and save the full text of one or more articles. `rplos` uses a combination of the `XML` and the `tm` (for text mining) package. 
 
@@ -881,7 +881,7 @@ lapply(tmcorpus[1:5], as.character)
 
 For more information see the [Ingo Feinerer (2015) Introduction to the tm package](https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf) (also available in the tm documentation) from which the above is drawn. 
 
-##Writing a corpus to disk
+## Writing a corpus to disk
 
 To write a corpus we first need to create a folder where the files will be housed (otherwise they will simply be written into your project folder with everything else). 
 
@@ -895,7 +895,7 @@ writeCorpus(tmcorpus, path = "/Users/paul/Desktop/open_source_master/rplos/tm")
 
 When you look in the tm folder inside rplos (use the Files tab in RStudio) you will now see five texts with the names 1 to 5. For more details, such as naming files and specifying file types, see `?writeCorpus` and the tm package documentation.
 
-##Round Up
+## Round Up
 
 In this chapter we have focused on using the `rplos` package to access scientific articles from the Public Library of Science (PLOS). As we have seen, with short pieces of code it is easy to search and retrieve data from PLOS on a whole range of subjects whether it be pizza or synthetic biology. 
 
@@ -905,7 +905,7 @@ Perhaps the biggest challenge facing new users of R is what to do with data once
 
 In the meantime, if you would like to learn more about R try the resources below. If you would like to learn R inside R then try the very useful Swirl package (details below).
 
-##Resources
+## Resources
 
 1. [rOpenSci](https://ropensci.org/)
 2. [Winston Chang's R Cookbook](http://www.cookbook-r.com/)

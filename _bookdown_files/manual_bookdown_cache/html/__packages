@@ -5,3 +5,5 @@ RColorBrewer
 tidyr
 ggplot2
 stringr
+bookdown
+bindrcpp

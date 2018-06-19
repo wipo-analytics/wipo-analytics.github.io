@@ -1,4 +1,4 @@
-#Patent Infographics with R
+# Patent Infographics with R
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, tidy=TRUE, fig.width=12, fig.height=8, fig.align = "center", echo=TRUE, warning=FALSE, message=FALSE)
@@ -19,7 +19,7 @@ This chapter is divided into two sections.
 1. In part 1 we focus on using RStudio to prepare patent data for visualisation in infographics software using the `dplyr`, `tidyr` and `stringr` packages. This involves dealing with common problems with patent data such as concatenated fields, white space and creating counts of data fields.
 2. In part 2 we produce an infographic from the data using [infogr.am](https://infogr.am/app/#/library).
 
-##Getting Started
+## Getting Started
 
 To start with we need to ensure that RStudio and R for your operating system are installed by following the instructions on the RStudio website [here](https://www.rstudio.com/products/rstudio/download/). Do not forget to follow the link to also [install R for your operating system](https://cran.rstudio.com).
 
@@ -45,7 +45,7 @@ library(ggplot2)
 
 We are now ready to go. 
 
-##Load a .csv file using `readr`
+## Load a .csv file using `readr`
 
 We will work with the `pizza_medium_clean` dataset in the online [Github Manual repository](https://github.com/wipo-analytics/opensource-patent-analytics/tree/master/2_datasets). If manually downloading a file remember to click on the file name and select `Raw` to download the actual file. 
 
@@ -60,7 +60,7 @@ pizza <- read_csv("https://github.com/wipo-analytics/opensource-patent-analytics
 
 As an alternative to importing directly from Github download the file and in RStudio use `File > Import Dataset > From .csv`. If you experience problems with direct import of a file the File > Import Dataset approach will give you a range of easy to use controls for figuring this out (e.g. where .csv is actually a tab separated file).
 
-##Viewing Data
+## Viewing Data
 
 We can view data in a variety of ways. 
 
@@ -80,7 +80,7 @@ View(pizza)
 
 If possible use the View() command or environment. The difficulty with the console is that large amounts of data will simply stream past. 
 
-##Identifying Types of Object
+## Identifying Types of Object
 
 We often want to know what type of object we are working with and more details about the object so we know what to do later. Here are some of the most common commands for obtaining information about objects.
 
@@ -93,19 +93,19 @@ dim(pizza) ## dimensions of the object
 
 The most useful command in this list is `str()` because this allows us to access the structure of the object and see its type.
 
-```{r strpizza}
+```{r strpizza, eval=FALSE}
 str(pizza, max.level = 1)
 ```
 
 `str()` is particularly useful because we can see the names of the fields (vectors) and their type. Most patent data is a character vector with dates forming integers. 
 
-##Working with Data
+## Working with Data
 
 We will often want to select aspects of our data to focus on a specific set of columns or to create a graph. We might also want to add information, notably numeric counts. 
 
 The `dplyr` package provides a set of very handy functions for selecting, adding and counting data. The `tidyr` and `stringr` packages are sister packages that contain a range of other useful functions for working with our data. We have covered some of these in other chapters on graphing using R but will go through them quickly and then pull them together into a function that we can use across our dataset. 
 
-###Select
+### Select
 
 In this case we will start by using the `select()` function to limit the data to specific columns. We can do this using their names or their numeric position (best for large number of columns e.g. 1:31). In `dplyr`, unlike most R packages, existing character columns do not require `""`.
 
@@ -116,7 +116,7 @@ pizza_number <- select(pizza, publication_number, publication_year)
 
 We now have a new data.frame that contains two columns. One with the year and one with the publication number. Note that we have created a new object called pizza_number using `<-` and that after `select()` we have named our original data and the columns we want. A fundamental feature of select is that it will drop columns that we do not name. So it is best to create a new object using `<-` if you want to keep your original data for later work. 
 
-###Adding data with `mutate()`
+### Adding data with `mutate()`
 
 `mutate()` is a `dplyr` function that allows us to add data based on existing data in our data frame, for example to perform a calculation. In the case of patent data we normally lack a numeric field to use for counts. We can however assign a value to our publication field by using sum() and the number 1 as follows. 
 
@@ -127,7 +127,7 @@ pizza_number <- mutate(pizza_number, n = sum(publication_number = 1))
 
 When we view `pizza_number` we now have a value of 1 in the column `n` for each publication number. Note that in patent data a priority, application, publication or family number may occur multiple times and we would want to reduce the dataset to distinct records. For that we would use `n_distinct(pizza_number$publication_number)` from `dplyr` or `unique(pizza_number$publication_number)` from base R. Because the publication numbers are unique we can proceed. 
 
-###Counting data using `count()`
+### Counting data using `count()`
 
 At the moment, we have multiple instances of the same year (where a patent publication occurs in that year). We now want to calculate how many of our documents were published in each year. To do that we will use the `dplyr` function `count()`. We will use the publication_year and add `wt = ` (for weight) with `n` as the value to count.   
 
@@ -148,7 +148,7 @@ sum(pizza_total$nn)
 
 So, all is good and we can move on. The `$` sign is one of the main ways of subsetting to tell R that we want to work with a specific column (the others are "[" and "[[").
 
-###Rename a field with `rename()`
+### Rename a field with `rename()`
 
 Next we will use `rename()` from `dplyr` to rename the fields. Note that understanding which field require quote marks can take some effort. In this case renaming the character vector publication_year as "pubyear" requires quotes  while renaming the numeric vector "n" does not. 
 
@@ -157,7 +157,7 @@ library(dplyr)
 pizza_total <- rename(pizza_total, pubyear = publication_year, publications = nn) %>% print()
 ```
 
-###Make a quickplot with `qplot()`
+### Make a quickplot with `qplot()`
 
 Using the `qplot()` function in `ggplot2` we can now draw a quick line graph. Note that qplot() is unusual in R because the data (pizza_total) appears after the coordinates. We will specify that we want a line using `geom =` (if geom is left out it will be a scatter plot). This will give us an idea of what our plot might look like in our infographic and actions we might want to take on the data.  
 
@@ -176,7 +176,7 @@ We also have long tail of data with limited data from 1940 until the late 1970s.
 
 We will limit our data to specific values using the `dplyr` function `filter()`. 
 
-###Filter data using `filter()`
+### Filter data using `filter()`
 
 In contrast with `select()` which works with columns, `filter()` in `dplyr` works with rows. In this case we need to filter on the values in the pubyear column. To remove the data prior to 1990 we will use the greater than or equal to operator `>=` on the pubyear column and we will use the less than or equal to `<=` operator on the values after 2012.
 
@@ -194,7 +194,7 @@ When we print pizza_total to the console we will see that the data now covers th
 
 To see our .csv file we can head over to the Files tab and, assuming that we have created a project, the file will now appear in the list of project files. Clicking on the file name will display the raw unformatted data in RStudio. 
 
-##Simplify code with pipes `%>%`
+## Simplify code with pipes `%>%`
 
 So far we have handled the code one line at a time. But, one of the great strengths of using a programming language is that we can run multiple lines of code together. There are two basic ways that we can do this. 
 
@@ -263,7 +263,7 @@ library(ggplot2)
 qplot(x = pubyear, y = publications, data = df2, geom = "line")
 ```
 
-##Harmonising data
+## Harmonising data
 
 One challenge with creating multiple tables from a baseline dataset is keeping track of subdatasets. At the moment we have two basic objects we will be working with: 
 
@@ -295,7 +295,7 @@ In this case we start with a call to `rename()` to make this consistent with our
 
 We are now in a position to create our country trends table.
 
-##Country Trends using `spread()`
+## Country Trends using `spread()`
 
 There are two basic data formats: long and wide. Our pizza dataset is in long format because each column is a variable (e.g. `publication_country`) and each row in `publication_country` contains a country name. This is the most common and useful data format. 
 
@@ -350,7 +350,7 @@ gather(country_totals, year, n, 2:24) %>%
 
 The combination of spread and gather work really well to prepare data in formats that are expected by other software. However, one of the main issues we encounter with patent data is that our data is not tidy because various fields are concatenated.  
 
-##Tidying data - Separating and Gathering
+## Tidying data - Separating and Gathering
 
 In patent data we often see concatenated fields with a separator (normally a `;`). These are typically applicant names, inventor names, International Patent Classification (IPC) codes, or document numbers (priority numbers, family numbers). We need to `tidy` this data prior to data cleaning (such as cleaning names) or to prepare for analysis and visualisation. For more on the concept of tidy data read [Hadley Wickham's Tidy Data article](http://vita.had.co.nz/papers/tidy-data.pdf). The new [R for Data Science book](http://r4ds.had.co.nz/tidy-data.html) by Garrett Grolemund and Hadley Wickham (see Chapter 12) is also strongly recommended. 
 
@@ -389,7 +389,7 @@ pizza1 <- select(pizza1, 31, 1:30)
 
 `separate_rows()` has done a great job but one of the problems with concatenated names is extra white space around the separator. We will deal with this next.
 
-###Trimming with `stringr`
+### Trimming with `stringr`
 
 If we inspect the bottom of the column by subsetting into it using `$` we will see that a lot of the names have a leading whitespace space. This results from the separate exercise where the `;` is actually `;space`. Take a look at the last few rows of the data using `tail()`. 
 
@@ -472,7 +472,7 @@ When we inspect `applicant_count` we will see that Graphic Packaging Internation
 
 As part of our infographic we will want to explore this intriguing result in more detail. We can do this by creating a subdataset for Google using `filter()`.
 
-##Selecting applicants using `filter()`
+## Selecting applicants using `filter()`
 
 As we saw above, while `select()` functions with columns, `filter()` from `dplyr` works with rows. Here we will filter the data to select the rows in the applicants column that contain Google Inc. and then write that to a .csv for use in our infographic. Note the use of double `==` and the quotes around "Google Inc". 
 
@@ -486,7 +486,7 @@ write_csv(google, "google_1990_2012.csv")
 
 Note that the correct result for the period 1990 to 2012 for Google is 123 records from 191 records across the whole pizza dataset. The correct result will be achieved only where you use the filtered, separated and trimmed data we created in the applicants data frame.  
 
-##Generating IPC Tables
+## Generating IPC Tables
 
 In the next step we will want to generate two tables containing International Patent Classification (IPC) data. IPC codes and the Cooperative Patent Classification (CPC, not present in this dataset) provide information on the technologies involved in a patent document. The IPC is hierarchical and proceeds from the general class level to the detailed group and subgroup level. Experience reveals that the majority of patent documents receive more than one IPC code to more fully describe the technological aspects of patent documents.
 
@@ -554,7 +554,7 @@ write_csv(google_ipc_subclass, "google_ipcsubclass_1990_2012.csv")
 
 We now have the data on technology areas that we need to understand our data. The next and final step is to generate data from the text fields. 
 
-###Phrases Tables
+### Phrases Tables
 
 We will be using data from words and phrases in the titles of patent documents for use in a word cloud in our infographic. It is possible to generate this type of data in R directly using the `tm` and `NLP` packages. Our pizza dataset already contains a title field broken down into phrases using Vantagepoint software and so we will use that. We will use the field `title_nlp_multiword_phrases` as phrases are generally more informative than individual words. Once again we will use our general `patent_count()` function although experimentation may be needed to identify the number of phrases that visualise well in a word cloud. 
 
@@ -584,7 +584,7 @@ We now have the following .csv files.
 8. `Google_ipcsubclass_1990_2012`
 9. `Google_phrases-1990_2012`
 
-##Creating an infographic in infogr.am
+## Creating an infographic in infogr.am
 
 If you are starting this chapter here then download the datasets we will be using as a single zip file from the Manual repository [here](https://github.com/wipo-analytics/opensource-patent-analytics/blob/master/2_datasets/infographic/infographic.zip?raw=true) and then unzip the file. 
 
@@ -631,14 +631,10 @@ At the end of the infographic it is a good idea to provide a link where the read
 
 Our final infographic should look something like [this](https://infogr.am/trends_in_something).
 
-###Round Up
+### Round Up
 
 In this chapter we have concentrated on using R to tidy patent data in order to create an online infographic using free software. Using our trusty pizza patent data from WIPO Patentscope we walked through the process of wrangling and tidying patent data first using short lines of code that we then combined into a reusable function. As this introduction to tidying data in R has hopefully revealed, R and packages such as `dplyr`, `tidyr` and `stringr` provide very useful tools for working with patent data, and they are free and well supported. 
 
 In the final part of the chapter we used the data we had generated in RStudio to create an infographic using infogr.am that we then shared online. Infogram is just one of a number of online infographic services and it is well worth trying other services such as [easel.ly](https://www.easel.ly) to find a service that meets your needs. 
 
 As regular users of R will already know, it is already possible to produce all of these graphics (such as word clouds) directly in R using tools such as `ggplot2`, `plotly` and word clouds using packages such as `wordcloud`. Some of these topics have been covered in other chapters and for more on text mining and word clouds in R see this recent article on [R-bloggers](http://www.r-bloggers.com/building-wordclouds-in-r/). None of the infographic services we viewed appeared to offer an API that would enable a direct connection with R. There also seems to be a gap in R's packages where infographics might sit with this [2015 R-bloggers article](http://www.r-bloggers.com/r-how-to-layout-and-design-an-infographic/) providing a walk through on how to create a basic infographic. 
-
-
-
-

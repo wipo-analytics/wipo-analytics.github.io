@@ -1,6 +1,6 @@
-#Patent Analytics with Plotly
+# Patent Analytics with Plotly
 
-##Introduction
+## Introduction
 
 In this chapter we provide an introduction to the online graphing service [Plotly](http://plotly.com) to create graphics for use in patent analysis. 
 
@@ -8,7 +8,7 @@ Plotly is an online graphing service that allows you to import excel, text and o
 
 Plotly's great strength is that it produces attractive interactive graphics that can easily be shared with colleagues or made public. It also has a wide variety of graph types including contour and heat maps and is built with the very popular [D3.js](http://d3js.org) Javascript library for interactive graphics. For examples of graphics created with Plotly see the [public gallery](https://plot.ly/feed/). Plotly was founded in 2012 and is therefore quite new, however, Plotly is becoming a great tool for creating and sharing graphics. In this chapter our aim is to get you started with using Plotly online with .csv or Excel files. In the second part of the chapter we will focus on using the `plotly` package in RStudio to generate and export graphs. 
 
-##Getting Started with Plotly
+## Getting Started with Plotly
 
 We need to start out by creating an account using the Create Account Button. 
 
@@ -16,7 +16,7 @@ We need to start out by creating an account using the Create Account Button.
 
 Next we will see an invitation to take a tour (which is worth doing) and Plotly helpfully points out that we can load files from Google Drive or Dropbox. We then select the `Workspace` option to begin work.
 
-##Importing Files
+## Importing Files
 
 When you first arrive you will see a Workspace with a Grid (Plotly's term for a table or worksheet). 
 
@@ -39,7 +39,7 @@ One important point to note is that Plotly is not a data processing tool. While 
 
 We experienced a different type of problem with the simple WIPO trends data where Plotly concatenated the first row (containing labels) and the first data row into one heading row. However, in most cases import seemed to be fine. To turn a row into a heading row try right clicking the row with the headings and right clicking on `use row as col headers`. Then right click again to remove the original row. 
 
-##Creating a graphic
+## Creating a graphic
 
 We will start with the simple WIPO trends data by opening up that Grid.
 
@@ -61,7 +61,7 @@ We could also add a fit line by selecting the `FIT DATA` menu icon. This will as
 
 We can then save the plot and use the export button to save the plot in a variety of formats and sizes. It is also very easy to add annotations using the Notes icon. Confusingly, the large blue Share button only seems to save the file and despite saving the plot we were not able to locate it again. While Plotly certainly looks nice, and appears to have attractive functions it is not intuitive and the difficulties involved in importing and sharing can be frustrating and time consuming. In short, time is needed to invest in and explore the potential of this tool. 
 
-###Adding a Second Axis
+### Adding a Second Axis
 
 If we go back to our original WIPO trends data we have a percentage score for the year on year change in patent applications. We might want to show this on a plot with a second axis for the percentage. 
 
@@ -112,7 +112,7 @@ Finally, to finish off the plot we might want to add annotations using the NOTES
 
 In this case we have added a couple of markers that may help to understand trends in activity. First, we have a dip in patent applications between 2001 and 2002. One possible explanation here is that this is a knock on effect of the collapse of the dot.com bubble where share prices reached a peak in 2000, declined rapidly and recovered before declining again into 2001. Patent data typically displays lag effects and it is reasonable to think that the decline in application activity from 2001 reflects these wider economic adjustments. Similarly, there is a significant dip in applications between 2008 and 2009 that it appears reasonable to assume reflects the knock on effects of the global economic crisis of 2007-2008. Note here that these are crude way markers to assist with interpreting the graphics. We could choose to add other timeline style events or layer graphics to help understand the potential or actual relationships between wider economic activity and trends in patent applications worldwide. 
 
-##Saving and Sharing 
+## Saving and Sharing 
 
 To save the plot we simply click Save. However, it is here that one of Plotly's major strengths becomes apparent. As soon as we save the plot we can also invite others by email, we can create a public or private shareable link. For the collaborators, they must have a Plotly account already for this to work. 
 
@@ -130,7 +130,7 @@ Alternatively, surprise your friends and relatives by posting the plot on facebo
 
 In this example we have focused on developing a very simple plot using `plotly`. In practice there are a wide range of possible plotting options with a growing number of tutorials provided [here](http://help.plot.ly/).
 
-##Working with Plotly in R
+## Working with Plotly in R
 
 We are following the instructions for setting up [Plotly in R](https://plot.ly/r/getting-started/). We will be using [RStudio](https://www.rstudio.com/) for this experiment. Download RStudio for your operating system [here](https://www.rstudio.com/products/rstudio/download/) and make sure that you also install R at the same time from the link on the RStudio page [here](https://cran.rstudio.com). For Python try these [installation instructions](https://plot.ly/python/getting-started/) to get started. 
 
@@ -163,9 +163,13 @@ Sys.setenv("plotly_api_key" = "your_api_key")
 
 Next we will load a dataset of WIPO Patentscope data containing sample data on patent documents containing the word pizza organised by country and year (pcy = pizza, country, year).
 
-```{r readr, cache=TRUE}
+```{r readr, eval=FALSE, cache=TRUE}
 library(readr)
 pcy <- read_csv("https://github.com/wipo-analytics/opensource-patent-analytics/raw/master/2_datasets/pizza_medium_clean/pcy.csv")
+```
+
+```{r load_pcy, echo=FALSE, eval=TRUE}
+load("pcy.rda")
 ```
 
 Because patent data generally contains a data cliff for more recent years we will filter out recent years using `filter()` from the `dplyr` package by specifying a year that is less than or equal to 2012. To take out the long tail of limited historic data we will specify greater than or equal to 1990. 
@@ -314,7 +318,7 @@ We can also share the graph via social media, download the data, or edit the gra
 
 It is here that Plotly's potential importance as a tool for sharing data and graphics becomes apparent. It is a powerful tool. Recent updates to the R package and the introduction of dashboards demonstrates ongoing improvements to this new service. 
 
-##Round Up
+## Round Up
 
 In this chapter we have provided a brief introduction to Plotly to help you get started with using this tool for patent analytics. Plotly provides visually appealing and interactive graphics that can readily be shared with colleagues, pasted into websites and shared publicly. The availability of APIs is also a key feature of Plotly for those working in Python, R or other programmatic environments. 
 

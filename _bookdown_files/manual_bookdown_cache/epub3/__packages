@@ -1,0 +1,7 @@
+base
+dplyr
+RColorBrewer
+tidyr
+readr
+ggplot2
+stringr

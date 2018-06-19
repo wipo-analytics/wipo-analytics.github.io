@@ -1,8 +1,8 @@
 # (PART) Visualizing Patent Data {-}
 
-#Tableau Public
+# Tableau Public
 
-##Introduction
+##   Introduction
 
 In this chapter we will be analysing and visualising patent data using Tableau Public. 
 
@@ -12,7 +12,7 @@ This is a practical demonstration of the use of Tableau in patent analytics. We 
 
 This article will take you through the main features of Tableau Public and the types of analysis and visualisation that can be performed using Tableau. In the process you will be creating something very similar to this [workbook](https://public.tableau.com/profile/wipo.open.source.patent.analytics.manual#!/vizhome/pizzapatents/Overview).
 
-##Installing Tableau
+##  Installing Tableau
 
 Tableau can be installed for your operating system by visiting the [Tableau Public website](https://public.tableau.com/s/) and entering your email address as in the image below. 
 
@@ -30,7 +30,7 @@ While you are there you might want to check out the [Gallery](https://public.tab
 
 ![](images/tableau/gallery.png)
 
-##Getting Started
+##  Getting Started
 
 When you first open the application you will see a blank page. Before we load some data, note the helpful `How-to-Videos` on the right and the link to a `visualisation of the day`. There are also quite a lot of training videos [here](http://www.tableau.com/learn/training) and a very useful [community forum](http://community.tableau.com/community/forums). If you get stuck, or wonder how somebody produced a cool visualisation, this is the place to go. 
 
@@ -64,7 +64,7 @@ At the bottom of the screen we will see a worksheet number `Sheet 1` and then op
 
 For the moment we will focus on building worksheets with the data and then move into creating Dashboards and then Stories around our pizza data. 
 
-##Publication Trends
+##  Publication Trends
 
 One of the first things we normally want to do with patent data is to map trends, either in first filings, publications or family members. In the case of our pizza patents from Patentscope we have a single member of a dossier of files linked to a particular application. This data is fine for demonstration needs and we can easily map trends for this data. 
 
@@ -122,7 +122,7 @@ At this stage we might want to take a couple of actions. To make the labels more
 
 Now edit the name to IBM. As a tip note that where you discover you have missed a duplicate name in clean up (remember that we focus on good enough rather than perfect in data cleaning) it is also possible to highlight two rows, right click, look for a filing clip icon and group two entries onto a new name. However, the resulting named group must be used in all later analysis. It is also important to realise that data cleaning is not a Tableau strength, Tableau is about data analysis and exploration through visualisation. For data cleaning use a tool such as Open Refine. 
 
-##Adding New Data Sources
+##  Adding New Data Sources
 
 We will follow the same procedure that we used for applicants to add the remaining files as data sources. We will add the following four files (as they appear in the folder in alphabetical order). 
 
@@ -159,7 +159,7 @@ Add a new sheet. Then click on `ipc_subclass_detail`. Note that if you click on 
 
 At this point, if we had not trimmed the leading white space the ranked list would display indentations and there would be duplicates of the same IPC code. For that reason it is important to trim leading white space before attempting to visualise data (and this applies to all our separated fields). 
 
-##Creating an Overview Dashboard
+##  Creating an Overview Dashboard
 
 You should now have five worksheets each of which displays aspects of our core `pizza` set. We have named the sheets as follows and suggest that you might want to do the same. Note that where there is more than one sheet containing similar but distinct information it will be helpful to give them distinct names (e.g. IPC Subclass and Applicants IPC Subclasses). We might even start using less technical labels by calling the IPC something clearer like Technology Area, to aid communication with non-IP specialists
 
@@ -199,7 +199,7 @@ If all goes well you will now have a dashboard that looks more or less like this
 
 We have now done quite a lot of work and produced an Overview dashboard. It is time to save the workbook to the server before doing anything else. 
 
-##Saving, Display and Privacy Settings
+##  Saving, Display and Privacy Settings
 
 The only option for saving a Tableau Public workbook is to save it online. To save the file go to `File` and Save to Tableau Public. If you want to save the workbook as a new file (after previously saving) then choose Save As. 
 
@@ -220,7 +220,7 @@ To make sure the worksheets are visible select the check box marked `Show workbo
 
 To access this demonstration workbook go [here](https://public.tableau.com/profile/wipo.open.source.patent.analytics.manual#!/vizhome/pizzapatents/Overview).
 
-##Privacy and Security
+##  Privacy and Security
 
 As emphasised above, Tableau Public is by definition a place for publicly sharing workbooks and visualisations. It is not for sensitive data. In the past users, such as journalists, relied on what might be called 'security by obscurity' but the trend towards storing data on a Tableau public profile (the only option) makes that less of an option. If this a concern there are two actions that might potentially be considered that limit the visibility of a workbook and its wider use. Logically, the answer to any concerns about Tableau Public and sensitive information is ***not to include sensitive information in the first place***. The following are not recommendations but simply highlight the available options. 
 
@@ -237,7 +237,7 @@ As such, Tableau public is fundamentally about sharing information with others t
 
 As we can see here, Tableau generates embed codes for use on websites or for emailing as a link along with twitter and facebook.
 
-##Round Up
+##  Round Up
 
 In this chapter we have introduced the visualisation of patent data using a set of nearly 10,000 patent documents from WIPO Patentscope that mention pizza. As should by now be clear Tableau Public is a very powerful free tool for data visualisation. It requires attention to detail and care in construction but is one of the best free tools that is out there for visualisation and dashboarding. 
 

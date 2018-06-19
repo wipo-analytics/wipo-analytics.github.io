@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The WIPO Manual on Open Source Patent Analytics</title>
+  <meta name="description" content="A practical introduction to free and open source tools for patent analytics.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A practical introduction to free and open source tools for patent analytics." />
+  <meta name="github-repo" content="wipo-analytics/manual_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  
+  <meta name="twitter:description" content="A practical introduction to free and open source tools for patent analytics." />
+  
+
+
+
+<meta name="date" content="2016-01-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="datafields.html">
+<link rel="next" href="databases.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The WIPO Manual on Open Source Patent Analytics</a></li>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Approaching Patent Data</b></span></li>
+<li class="chapter" data-level="1" data-path="datafields.html"><a href="datafields.html"><i class="fa fa-check"></i><b>1</b> Datafields</a></li>
+<li class="chapter" data-level="2" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>2</b> Datasets</a></li>
+<li class="part"><span><b>II Obtaining Patent Data</b></span></li>
+<li class="chapter" data-level="3" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>3</b> Databases</a></li>
+<li class="part"><span><b>III Cleaning Patent Data</b></span><ul>
+<li class="chapter" data-level="3.1" data-path="databases.html"><a href="databases.html#install-open-refine"><i class="fa fa-check"></i><b>3.1</b> Install Open Refine</a></li>
+<li class="chapter" data-level="3.2" data-path="databases.html"><a href="databases.html#create-a-project"><i class="fa fa-check"></i><b>3.2</b> Create a Project</a></li>
+<li class="chapter" data-level="3.3" data-path="databases.html"><a href="databases.html#open-refine-basics"><i class="fa fa-check"></i><b>3.3</b> Open Refine Basics</a></li>
+</ul></li>
+<li class="part"><span><b>IV Visualizing Patent Data</b></span><ul>
+<li class="chapter" data-level="3.3.1" data-path="databases.html"><a href="databases.html#filtering-the-data"><i class="fa fa-check"></i><b>3.3.1</b> Filtering the data</a></li>
+<li class="chapter" data-level="3.3.2" data-path="databases.html"><a href="databases.html#setting-node-size"><i class="fa fa-check"></i><b>3.3.2</b> Setting Node Size</a></li>
+<li class="chapter" data-level="3.3.3" data-path="databases.html"><a href="databases.html#colouring-the-nodes"><i class="fa fa-check"></i><b>3.3.3</b> Colouring the Nodes</a></li>
+</ul></li>
+<li class="part"><span><b>V Using APIs</b></span></li>
+<li class="divider"></li>
+<li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The WIPO Manual on Open Source Patent Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="datasets" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Datasets</h1>
+<!---update the datasets locations--->
+<p>In this chapter we introduce the patent datasets developed for the Open Source Patent Analytics Project as training sets for patent analytics. The datasets will be used in the walkthroughs. The datasets will grow over time but we will briefly introduce them and explain how to access them.</p>
+<p>The datasets are housed at the project <a href="https://github.com/wipo-analytics/opensource-patent-analytics/tree/master/2_datasets">GitHub repository</a>. To download individual files click on the link and then select raw to download the file.</p>
+<p>##The datasets</p>
+<p>The datasets are intended to illustrate the range of possibilities for patent data including some of the challenges that may be encountered in cleaning and analysing patent data. They are also drawn from different sources.</p>
+<p>###Pizza patent datasets</p>
+<p>Almost everyone likes pizza and it is easy to search a patent database for the term “pizza”. It is also an area of patent activity that encompasses a wide range of technologies such as pizza ovens, pizza boxes, pizza cutters and pizza toppings etc. It is therefore useful for demonstrating ways of interrogating patent data for particular topics.</p>
+<ol style="list-style-type: decimal">
+<li><code>pizza_small</code> is a very small 26 row dataset created by downloading the first page of results from the <a href="http://worldwide.espacenet.com/?locale=en_EP">European Patent Office espacenet database</a> for a smart search on “pizza”. It’s a quick and easy test dataset.</li>
+<li><code>pizza_medium</code> was created from a sample of data from a search of the <a href="http://www.wipo.int/patentscope/en/">WIPO Patentscope database</a> for the term “pizza” and contains 9,996 rows of data. It is intended to illustrate the data format from Patentscope and to allow work on a medium sized dataset. Note that the format varies from the espacenet format and presents different challenges.
+An important feature of Patentscope data from a statistical standpoint is that the field marked <code>publication_number</code> in the original data lacks a two letter kind code and is therefore an <code>application_number</code>.</li>
+<li>The <code>pizza_medium_clean</code> dataset is a precleaned version of the <code>pizza_medium</code> dataset. Specifically, the applicants and inventors field have already been cleaned along with corrupted characters and other common cleaning tasks. This makes it easier to work with the data and this dataset is the core dataset in the Manual. As above, note that the Patentscope publication_number field more properly refers to an application number in the absence of a kind code.</li>
+<li><code>pizza_sliced</code> is a set of five .csv files for a search of pizza on <a href="http://worldwide.espacenet.com/searchResults?ST=singleline&amp;locale=en_EP&amp;submitted=true&amp;DB=worldwide.espacenet.com&amp;query=pizza&amp;Submit=Search">espacenet</a>. It is designed to illustrate issues involved in loading multiple files into R. It also illustrates problems with character corruption and the importance of pre-cleaning data before analysis.</li>
+<li><code>pizza_lens_1000</code> is a raw dataset of 1000 records including the term pizza downloaded from <a href="https://www.lens.org/lens/">The Lens</a> database. The dataset has not been cleaned.</li>
+</ol>
+<p>###Patent Landscape Reports datasets</p>
+<p>Three datasets are drawn from the <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/">WIPO Patent Landscape Reports</a>. The datasets address different topics, present a variety of fields and formats and are different sizes. Each dataset is linked to a detailed patent landscape report that provides an insight into approaches to patent analytics.</p>
+<ol style="list-style-type: decimal">
+<li><code>ewaste</code> presents the results of research for a <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/ewaste.html">report</a> on patent activity for electronic waste recycling and its implications for developing countries.</li>
+<li><code>solar_cooking</code> presents the data supporting a <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/solar_cooking.html">report</a> on technologies that use solar energy as the source for cooking and pasteurizing food.</li>
+<li><code>ritonavir</code> presents the data for a patent <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/ritonavir.html">report</a> on patent activity for the HIV antiretroviral drug Ritonavir in the field of pharmaceuticals. The dataset illustrates specific activity around issues such as dosage and also the problem of ‘evergreening’ in patent activity.</li>
+</ol>
+<p>###Other datasets</p>
+<ol style="list-style-type: decimal">
+<li><code>wipo</code> is a single Excel sheet of data on trends in patent applications and growth rates from the <a href="http://www.wipo.int/ipstats/en/wipi/">WIPO World Intellectual Property Indicators - 2014 Edition</a>. The data is used for simple graphing in tools such as R and illustrates the need to skip rows when reading data into analytics tools.</li>
+<li><code>WIPO_sequence_data</code>. This dataset contains a small sample of the sequence data from the year 2000 available free of charge from the <a href="https://patentscope.wipo.int/search/en/sequences.jsf">WIPO Patentscope database</a>. This dataset can be used to explore analysis of patent sequence data.</li>
+<li><a href="https://github.com/poldham/opensource-patent-analytics/tree/master/2_datasets/synbio_patents">Synthetic biology</a>. This is a sample of data from Thomson Innovation developed by Paul Oldham for research on patent activity involving synthetic biology. The data has been extensively cleaned in VantagePoint from Search Technology Inc. and is intended to illustrate the use of data from a commercial patent database.</li>
+</ol>
+<p>###Round Up</p>
+<p>The datasets section of the project provides a series of useful training sets from a variety of sources and displaying a variety of features. These are open access datasets that can be used to test different approaches but please credit their sources. More datasets may be added to the online version of the Manual in due course. We are particularly interested in sample data from STN, QuestelOrbit, PATSTAT or other data providers that can be used as training sets.</p>
+
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="datafields.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="databases.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

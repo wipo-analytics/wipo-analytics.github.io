@@ -1,6 +1,6 @@
 # (PART) Cleaning Patent Data{-}
 
-#Open Refine
+# Open Refine
 
 Cleaning patent data is one of the most challenging and time consuming tasks involved in patent analysis. In this chapter we will cover. 
 
@@ -42,11 +42,11 @@ Click `create project` in the top right of the bar as the next step.
 
 A few basic features of Open Refine will soon have you working smoothly. Here is a quick tour. 
 
-###Open Refine runs in a browser
+### Open Refine runs in a browser
 
 Open Refine is an application that lives on your computer but runs in a browser. However, it does not require an internet connection and it does not lose your work if you close the browser. 
 
-###Open Refine works on columns. 
+### Open Refine works on columns. 
 
 At the top of each column is a pull down menu. Be ready to use these menus quite a lot. In particular, you will often use the `Edit cells > Common tranforms` as shown below for functions such as trimming white space.
 
@@ -54,7 +54,7 @@ At the top of each column is a pull down menu. Be ready to use these menus quite
 
 Other important menus are `Edit column`, immediately below `Edit cells`, for copying or splitting columns into new columns. 
 
-###Open Refine works with Facets. 
+### Open Refine works with Facets. 
 
 The term `facet` may initially be confusing but basically calls up a window that arranges the items in a column for inspection, sorting, and editing as we can see below. This is important because it becomes possible to identify problems and address them. It also becomes possible to apply a variety of clustering algorithms to clean up the data. Note that the size of the facet window can be adjusted by dragging the bottom of the window as we have done in this image.
 
@@ -62,19 +62,19 @@ The term `facet` may initially be confusing but basically calls up a window that
 
 Hovering over an item inside the facet window brings up a small `edit` button that allows editing, such as removing <i> and </i> from the title.
 
-###Custom Facets
+### Custom Facets
 
 The Facet menu below brings up a custom menu with a range of options. Selecting `Custom text facet` (see below) brings up a pop up that allows for the use of code in [Open Refine Expression Language (GREL)](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Functions) to perform tasks not covered by the main menu items. This language is quite simple and can range from short snippets for finding and replacing text to more complex functions that can be reused in future. We will demonstrate the use of this function below. 
 
 ![](images/openrefine/facet_menu.png)
 
-###Reordering Columns
+### Reordering Columns
 
 There are two options for reordering columns. The first is to select the column menu then `Edit column > Move column to beginning`. The second option, shown below, is to select the `All` drop down menu in the first column and then `Edit columns > Re-order/remove columns`. In the pop up menu of fields drag the desired field to the top of the list. In this case we have dragged the `priority_date` column to the top of the list. It will now appear as the first data column. 
 
 ![](images/openrefine/reorder_columns.png)
 
-###Undo and Redo
+### Undo and Redo
 
 Open Refine keeps track of each action and allows you to go back several steps or to the beginning. This is particularly helpful when testing whether a particular approach to cleaning (e.g. splitting columns or using a snippet of code) will meet your needs. In particular it means you can explore and test approaches while not worrying about losing your previous work.
 
@@ -82,14 +82,14 @@ Open Refine keeps track of each action and allows you to go back several steps o
 
 However, it can be important to plan the steps in your clean up operation to avoid problems at later stages. It may help to use a notepad as a checklist (see below). The main issue that can arise is where cleanup moves forward several steps without being fully completed in an earlier step. In some cases this can require returning to that earlier step, restarting and repeating earlier steps. As you become more familiar with Open Refine it will be easier to work out an appropriate sequence for your workflow. 
 
-###Exporting 
+### Exporting 
 
 When a clean up exercise is completed a file can be exported in a variety for formats. When working with patent data expect to create more than one file (e.g. core, applicants, inventors, IPC) to allow for analysis of aspects of the data in other tools. In this chapter we will create two files. 
 
 1. A cleaned version of the original data
 2. An applicants file that separates the data by each applicant. 
 
-##Basic Cleaning
+## Basic Cleaning
 
 This is the first step in working with a dataset and it will make sense to perform some basic cleaning tasks before going any further. The Pizza Medium dataset that we are working with in this article is raw in the sense that the only cleaning so far has been to remove the two empty rows at the head of the data table and to fill blank cells with NA values. The reason that it makes sense to do some basic cleaning before working with applicant, inventor or IPC data is that new datasets will be generated by this process. 
 
@@ -110,7 +110,7 @@ Additional actions:
 
 We will generally approach these tasks in each column and steps 6 and 7 will not always apply. The creation of a codebook will allow you to keep a note of all the steps taken to clean up a dataset. The codebook should be saved with the cleaned dataset (e.g. in the same folder) as a reference point if you need to do further work or if colleagues want to understand the transformation steps.
 
-###Changing case
+### Changing case
 
 The first column in our Patentscope pizza dataset is the publication number. To inspect what is happening and needs to be cleaned in this column we will first select the column menu and choose `text facet` from the dropdown. This will generate the side menu panel that we can see below containing the data. We can then inspect the column for problems. 
 
@@ -122,11 +122,11 @@ When we scroll down the side panel we can see that some publication numbers have
 
 If we scroll down all the publication numbers will have been converted to upper case. This will make it easier to extract the publication country codes at a later stage. 
 
-###Regularise case
+### Regularise case
 
 For the other text columns it is sensible to repeat the common transformations step and select `to titlecase`. Note that this will generally work well for the title field but may not always work as well on concatenated fields such as applicants and inventor names. Repeat this step following the separation of these concatenated fields (see below on applicants). If the abstract or claims were present we would not regularise those text fields. 
 
-###Remove leading and trailing whitespace
+### Remove leading and trailing whitespace
 
 To remove leading and trailing white space in a column we select `Edit cells > Common transforms > Trim` leading and trailing white space across the columns. 
 
@@ -134,7 +134,7 @@ To remove leading and trailing white space in a column we select `Edit cells > C
 
 Note that following the splitting of concatenated cells with multiple entries such as the applicants and the inventors fields it is a good idea to repeat the trim exercise when the process is complete to avoid potential leading white space at the start of the new name entries. 
 
-###Add Columns
+### Add Columns
 
 We can also add columns by selecting the column menu and  `Edit Column > Add column based on this column`. In this case we have added a column called publication_date. 
 
@@ -148,7 +148,7 @@ We can then rename these columns using the edit `Edit Column > Rename this colum
 
 ![](images/openrefine/rename_column.png)
 
-###Address Encoding and related problems
+### Address Encoding and related problems
 
 The [Recipes](https://github.com/OpenRefine/OpenRefine/wiki/Recipes) section of the documentation provides helpful tips and example code for dealing with encoding and related problems that are reproduced here:
 
@@ -184,7 +184,7 @@ Within this particular dataset, we found that these quick tips did not work (pre
 
 This is not a very satisfactory solution because it requires inspection of the dataset to identify the specific character problems and then replacing the value. That will be time consuming. 
 
-###Reformatting dates
+### Reformatting dates
 
 One problem we may encounter is that the standard date definition on patent documents (e.g. 21.08.2009) may not be recognised as a date field in our analysis software because dates can be ambiguous from the perspective of software code. For example, how should 08/12/2009 or 12/08/2009 be interpreted? 
 
@@ -206,7 +206,7 @@ To find other simple codes visit the [Open Refine Recipes page](https://github.c
 
 We will now focus on extracting information from some of the columns before saving the dataset and moving on. 
 
-###Access additional information
+### Access additional information
 
 There are a range of pieces of information that are hidden in data inside columns. For example, Patentscope data does not contain a publication country field. In particular, note that Patentscope merges all publications for an application record into one dossier. So we are only seeing one record for a set of documents (in Patentscope the wider dossier for a record is accessible through the Documents section of the website). This is very helpful in reducing duplication but it is important to bear in mind that we are not seeing the wider family in our data table. However, we can work with the information at the front of the publication number in the Patentscope records using a very simple code and create a new column (as above) based on the values returned as below.
 
@@ -218,7 +218,7 @@ substring(value, 0, 2)
 
 Note here that the code begins counting from 0 (e.g. 0, 1 = U, 2 = S). The first part of the code looks in the value field. 0 tells the code to begin counting from 0 and the 2 tells it to read the two characters from 0. We could change these values, e.g to 1 and 4 to capture only a chunk of a number. 
 
-##Fill blank cells
+## Fill blank cells
 
 Filling blank cells with a value (NA for Not Available) to prevent calculation problems with analysis tools later can be performed by selecting each column, creating a text facet, scrolling down to the bottom of the facet choosing `(blank)`, edit and then entering NA for the value. 
 
@@ -226,23 +226,23 @@ Filling blank cells with a value (NA for Not Available) to prevent calculation p
 
 Note that this is somewhat time consuming (until a more rapid method is found) but has the benefit of being accurate. It is generally faster to open the file in Excel (or Open Office) and use find and replace with the find box left blank and NA in the replace field across the data table. For that reason, blank cells should not appear in the dataset you are using in this article. However, in later steps below we will be generating blank cells by splitting the applicant and inventor field. It is therefore important to know this procedure.  
 
-##Renaming columns
+## Renaming columns
 
 At this stage we have a set of columns that are mixed between the original sentence case and the additions in lower case with no spaces such as `publication_number`. This is a matter of personal preference but it is generally a good idea to regularise the case of all columns to make them easy to remember. In this case we will also add the word `original` to the columns to distinguish between those created by cleaning the data and those we have created.  
 
-##Exporting Data
+## Exporting Data
 
 When we are happy that we have worked through the core cleaning steps it is a good idea to export the new core dataset. It is important to do this before the steps described below because it preserves a copy of the core dataset that can be used for separation (or splitting activities) on applicants, inventors, IPC etc. during the next steps. It is important that this `clean` dataset is as clean as is reasonably possible before moving on. The reason for this is that ***any noise or problems will multiply*** when we move on to the next steps. This may require a major rerun of the cleaning steps on later files created for applicants or inventors. Therefore make sure that you are happy that the data is as clean as is reasonably possible at this stage. Then choose export from the menu and the desired format (preferably `.csv` or `.tab` if using analytics tools later). 
 
 ![](images/openrefine/export_core.png)
 
-##Splitting Applicants
+## Splitting Applicants
 
 This article was inspired by a [very useful tutorial](http://www.patinformatics.com/blog/patent-assignee-cleanup-using-google-refine-open-refine-text-facets-and-clustering/) on cleaning assignee names with Google Refine by Anthony Trippe. Anthony is also the author of the forthcoming [WIPO Guidelines for Preparing Patent Landscape Reports](http://www.wipo.int/patentscope/en/programs/patent_landscapes/) and the [Patentinformatics LLC](http://www.patinformatics.com) website has played a pioneering role in promoting patent analytics. We will take this example forward using the our sample pizza patent dataset so that it can be visualised in a range of tools. If you have not done so already, you can download the dataset [here](https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/pizza_medium/pizza_medium.csv?raw=true).  
 
 We actually have two options here and we will go through them so that you can work out your needs in a particular situation. Note that you can use Undo in Google Refine to go back to the point immediately before you tested these approaches. However, if you have followed the data cleaning steps above, make sure that you have already exported a copy of the main dataset. 
 
-###Situation 1 - First Applicants
+### Situation 1 - First Applicants
 
 As discussed by Anthony Tripp we could split the applicant column into separate columns by choosing, `Applicants > Edit column > Split into several columns`. 
 
@@ -260,7 +260,7 @@ At this point, we could begin the clustering process to start cleaning the names
 
 However, if we wanted to perform detailed applicant analysis for an area of technology, we would need to adopt a different approach. 
 
-###Situation 2 - All Applicants
+### Situation 2 - All Applicants
 
 One of the real strengths of Open Refine is that it is very easy to separate applicant and inventor names into individual rows. Instead of choosing Edit column we now choose `Edit cells` and then `split multi-valued cells`. 
 
@@ -325,7 +325,7 @@ This measure is too lax and is grouping together companies that should not be gr
 
 At this point it is worth noting that the original 9,368 clusters have been reduced to 7,875 and if we sort on the count in the main window then Google is starting to emerge as the top applicant across our set of 10,000 records. 
 
-###Phonetic Fingerprint (Metaphone 3) clustering 
+### Phonetic Fingerprint (Metaphone 3) clustering 
 
 As we can see below, Metaphone 3 clustering produces 413 looser clusters with false positive matches on International Business Machines but positive matches on Cooperative Verkoop. 
 
@@ -345,7 +345,7 @@ In practice, selection of items at this stage feeds into the next stage of clean
 
 ![](images/openrefine/applicants_cologne.png)
 
-###Levenshtein Edit Distance
+### Levenshtein Edit Distance
 
 The final steps in the process focus on Nearest Neighbour matches for our reduced number of clusters. Note that this may take some time to run (e.g. 10-15 minutes for the +7,000 clusters in this case). The results are displayed below 
 
@@ -353,11 +353,11 @@ The final steps in the process focus on Nearest Neighbour matches for our reduce
 
 In some cases the default settings matched individual names on different initials, but in the majority of cases the clusters appeared valid and were accepted. In this case particular caution is required on the names of individuals and browsing the results to check the accuracy of matches. 
 
-###PPM
+### PPM
 
 The PPM step is the final logarithm but took so long that we decided to abandon it relative to the likely gains. 
 
-###Preparing for export
+### Preparing for export
 
 In practice, the cleaning process will generate a new data table for export that focuses on the characteristics of applicants. To prepare for export with the cleaned group of applicant names there will be a choice on whether to retain the publication number as the single key, or, whether to use the fill down process illustrated above across the columns of the dataset. It is important to note that caution is required in the blanket use of fill down. 
 
@@ -366,13 +366,13 @@ It is also important to bear in mind that the dataset that has been created cont
 1. Rerun Common transforms > to title case, to regularise any names that may have been omitted in the first round and rerun trim whitespace for any spaces arising from the splitting of names. 
 2. Rerun facets on each column, select blank at the end of the facet panel and fill with NA. Alternatively, do this immediately following export. 
 
-##Round Up
+## Round Up
 
 In this chapter we have covered the main features of basic data cleaning using Open Refine. As should now be clear, while it requires an investment in familiarisation it is a powerful tool for cleaning up small to medium sized patent datasets such as our 10,000 pizza patent records. However, a degree of patience, caution and forward planning is required to create an effective workflow using this tool. It is likely that further investments of time (such as the use of regular expressions in GREL) would improve cleaning tasks prior to analysis. 
 
 Open Refine is also probably the easiest to use free tool for separating and cleaning applicant and inventor names without programming knowledge. For that reason alone, while noting the caveats highlighted above, Open Refine is a very valuable tool in the open source patent analytics toolbox. 
 
-##Useful Resources
+## Useful Resources
 
 The [Open Refine website](http://openrefine.org) has links to lots of useful resources including video walkthroughs
 

@@ -4,7 +4,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-#Introduction
+# Introduction
 
 This book provides a practical guide to free and open source software tools for patent analytics. The aim of the WIPO Manual on Open Source Patent Analytics is to provide a practical introduction to patent analytics without assuming prior knowledge of patents or programming languages. 
 
@@ -18,7 +18,8 @@ The Manual builds on the experience generated in the development of the [WIPO Pa
 Patent data is important because it is a valuable source of technical information that can inform decision-making on whether or not to pursue a particular avenue of research and development, whether to license a particular technology, or whether to pursue product development in particular markets. Patent data is also important in economic and policy terms because it provides a key indicator and insight into trends in science and technology. Patent data is commonly used by organisations such as the [OECD](http://www.oecd.org/sti/inno/oecdpatentdatabases.htm), [EUROSTAT](http://ec.europa.eu/eurostat/statistics-explained/index.php/Patent_statistics) and others to report on trends in research and development. Researchers increasingly use patent data to investigate new and emerging areas of science and technology such as genome editing or climate change adaptation technologies. 
 
 Patent activity can also be controversial. Important controversies over the last 20 years include DNA patents, software patents, patents on business methods, the rise of patent 'trolls' and the implications of the internationalisation of patent activity for developing countries. The free software and open source movements (based on the flexibilities in copyright law) are in part a response to the controversies that have arisen around proprietary software models involving copyright and patents and a desire to do things differently. This has led to new models for sharing data, cooperation in innovation and new business models. In particular, a wide range of open source and free software tools are now available for research and analysis. This Manual provides an overview of the available tools for patent analysis and explores a small number in greater depth. 
-##Structure
+
+## Structure
 
 We will focus on answering two main questions: 
 
@@ -37,15 +38,15 @@ As a project focusing on open source and free tools, all data and tools develope
 
 We will now take a quick look at the background to the topics. 
 
-###An Overview of Open Source and Free Software Tools
+### An Overview of Open Source and Free Software Tools
 
 We start the Manual with a core Overview chapter that reviews the ever growing number of open source and free software tools that are available for different steps in the patent analytics process. The sheer number of relevant tools is almost overwhelming and one feature of open source tools is that they all require investments of valuable time to learn how they work. In some cases this may require acquiring programming skills. To assist with decision-making on whether or not to invest in a particular tool we conclude the Overview with a list of 12 questions that you may want to consider. By far the most important of these questions, and the guiding principle informing our selection of tools for the Manual, is: Does this work for me?
 
-###Approaching Patent Data
+### Approaching Patent Data
 
 In preparing the Manual we assumed no prior knowledge of the patent system or open source tools. To help you get started a chapter on patent data fields provides a brief introduction to the structure of patent documents and the main data fields that are used in patent analytics. 
 
-###Obtaining Patent Data
+### Obtaining Patent Data
 
 One major challenge in understanding the implications of patent activity, either in fields such as climate change technologies, software, or pharmaceuticals, is accessing and understanding patent data. 
 
@@ -55,7 +56,7 @@ In the case of the United States it is possible to bulk download the entire USPT
 
 As we will see, the key problem confronting patent analysts using free tools is obtaining patent data in the quantity and with the coverage needed, and with the desired fields for analytics purposes. The Manual will walk through the different information services and go into detail on those free services that are the most useful for patent analytics. 
 
-###Cleaning and Tidying Patent Data
+### Cleaning and Tidying Patent Data
 
 Anyone familiar with working with data will know that the majority of the work is taken up with cleaning data prior to analysis. In particular data from different patent databases typically involves different cleaning challenges. Most of these challenges involve cleaning inventor and applicant names or cleaning text fields prior to analysis. 
 
@@ -68,7 +69,7 @@ In working with the Manual we suggest that you might find the following resource
 
 We suggest that you take a look at these papers because they contain core ideas for effective approaches to working with patent data. 
 
-###Analysing and Visualizing Patent Data
+### Analysing and Visualizing Patent Data
 
 The core questions in patent analysis are: who, what, where, when, how, and with what? The way in which we approach these questions will depend on the goal of the patent analysis. However, in almost all circumstances realising that goal will depend on combinations of answers to the core questions. The visualization of patent data is an essential feature of modern patent analysis. Put simply, humans are better at absorbing visual information than columns and rows of numbers or large numbers of texts. 
 
@@ -76,7 +77,7 @@ Two core chapters in the Manual address the visualization of patent data using d
 
 Looking beyond patent analysis and visualization, within the core Manual we include a chapter on how RStudio can be used to access the scientific literature using packages developed by [ropensci](http://ropensci.org) for accessing the Public Library of Science `rplos` as an introduction to accessing the wider scientific literature using packages such as `fulltext`.
 
-###Sharing Data and The Writing of the Manual
+### Sharing Data and The Writing of the Manual
 
 In writing this Manual we decided at an early stage to use free and open source tools. Our tool of choice was [RStudio](http://www.rstudio.com) because it allowed us to write the Manual in markdown (rmarkdown), including images and graphs generated from code, and then easily export the results to Word, .pdf and html. We were also able to easily create a home for the Manual on [Github](https://github.com/) and to use [jekyll](https://jekyllrb.com/) to release earlier versions of chapters as articles as they were written. As we moved the Manual into its final version we were able to take advantage of the new [bookdown package](https://bookdown.org) within the mid-2016 [preview version of RStudio](https://www.rstudio.com/products/rstudio/download/preview/) to turn the Manual into the electronic book you are reading. All of this was free. The only requirement was investment acquiring the knowledge to use the tools. 
 

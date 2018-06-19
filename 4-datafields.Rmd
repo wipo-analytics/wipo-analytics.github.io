@@ -4,7 +4,7 @@
 
 This chapter provides a walk through of patent data fields for those who are completely new to patent analytics or want to understand the workings of patent data a little bit better. A video version of the walk through is available [here](https://youtu.be/RDPlIUB0_QE?list=PLsZOGmKUMi56dAuqSEHjVWkxEf3MbXlQG) and the slide deck is available for download in [.pdf](https://github.com/poldham/opensource-patent-analytics/raw/master/3_obtaining_patent_data/understanding_data_fields/patent_data_fields_OM.pdf), [powerpoint](https://github.com/poldham/opensource-patent-analytics/raw/master/3_obtaining_patent_data/understanding_data_fields/patent_data_fields_OM.pptx) and [apple keynote](https://github.com/poldham/opensource-patent-analytics/raw/master/3_obtaining_patent_data/understanding_data_fields/patent_data_fields_OM.key) from [GitHub](https://github.com/poldham/opensource-patent-analytics/tree/master/3_obtaining_patent_data/understanding_data_fields). This chapter goes into greater depth on each data field and their use in patent analysis. 
 
-##What is a Patent?
+## What is a Patent?
 
 A patent can be described in two main ways:
 
@@ -13,7 +13,7 @@ A patent can be described in two main ways:
 
 Understanding the structure of patent documents and data fields is the essential foundation of patent analytics. However, for those who are new to the patent system it is worth highlighting the key features of patents as a form of intellectual property right. 
 
-##As a form of intellectual property right
+## As a form of intellectual property right
 1. A patent is a temporary grant of an exclusive right to a patentee to prevent others from making, using, offering for sale, or importing, a patented invention without their consent, in a country where a patent is in force.
 2. Patent rights are territorial rights - they are only valid in the territory of the country where granted. 
 3. Patents are typically granted for a period of 20 years from the filing data of an application but may be opposed or revoked.
@@ -23,7 +23,7 @@ Understanding the structure of patent documents and data fields is the essential
     + Involve an inventive step
     + Be susceptible to industrial application or useful.
 
-##Patents as a type of document
+## Patents as a type of document
 For patent analytics we need to concentrate on patents as a form of document and to understand:
 
 1. The structure of patent documents and their data fields.
@@ -31,7 +31,7 @@ For patent analytics we need to concentrate on patents as a form of document and
 
 In this chapter we deal with the basics of patent documents and their data fields. 
 
-##Basic Data Types
+## Basic Data Types
 
 When performing patent analysis we are dealing with data of seven different types:
 
@@ -45,13 +45,13 @@ When performing patent analysis we are dealing with data of seven different type
 
 We will walk through each of these fields using a patent application for synthetic genomes from the J. Craig Venter Institute as an example. In the electronic version each of the titles for the images are hyperlinked to their sources to make it easy to explore the data as you go through them. 
 
-###[Synthetic Genomes](http://www.nature.com/nature/journal/v473/n7347/full/473403a.html)
+### [Synthetic Genomes](http://www.nature.com/nature/journal/v473/n7347/full/473403a.html)
 
 Synthetic biology (and synthetic genomics) began to hit the international headlines with the news in 2010 that members of the J. Craig Venter Institute had successfully synthesised the genome of a Mycoides microbe and transplanted the genome into the empty cell of another Mycoides that then `booted up`. This led to considerable excitement about the creation of artificial life and is part of the story of the growing prominence of synthetic biology. For our purposes it is an interesting example for walking through standard patent data fields. 
 
 ![](images/datafields/synthetic_genomes_nature_news.png)
 
-###[Original Front Page](http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Original Front Page](http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 What we see below is the front page of an international [Patent Cooperation Treaty(PCT)](http://www.wipo.int/pct/en/) application from the [J. Craig Venter Institute](http://www.jcvi.org/cms/home/) on Synthetic Genomes. The PCT allows applicants to submit a single application for potential consideration in up to 148 other countries that are Parties to the PCT based on decisions made by applicants and examination decisions in individual countries and regions. The front page (or biblio) displays the data fields that are typically used in patent analysis. 
 
@@ -71,7 +71,7 @@ One important lesson from understanding patent date fields is that **patent data
 
 We will address other data fields below. For now note the applicant and inventor information including address and other useful information for patent analysis on the front page (fields 71 and 72). Also, note the [International Patent Classification](http://www.wipo.int/classifications/ipc/en/) data as an indicator of technology areas expressed through alphanumeric codes (e.g. [C07H21/04](http://web2.wipo.int/ipcpub/#refresh=symbol&notion=scheme&version=20150101&symbol=C07H0021040000) which tells us that the claimed invention involves nucleic acids). We also see text fields (for text mining) in the title and abstract and finally we have an image with information on DNA cassettes forming part of the invention. 
 
-###[espacenet Front Page](http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [espacenet Front Page](http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 Here we can see the same information in the front page for the record in the [espacenet](http://worldwide.espacenet.com/?locale=en_EP) database. [espacenet](http://worldwide.espacenet.com/?locale=en_EP) is easily accessible and popular. Even when using commercial tools espacenet is often the fastest way to look up or check information. For a brief overview see these [videos](https://www.youtube.com/playlist?list=PLsZOGmKUMi55SmfBRlNCSq_ZmxLHz16fO) and the [interactive espacenet assistant](http://application.epo.org/wbt/espacenet/).
 
@@ -81,7 +81,7 @@ In this case we see data in the form that will typically come back from a patent
 
 Other things to note are that the Applicant and Inventor fields include country code information (e.g US) using standard two letter country codes. While this information is not always available (notably for filings purely on the national level) this data is very useful in patent analytics for identifying cross country collaborations between inventors and applicants. However, be aware that for statistical use it is important to calculate the number of records that possess this country information or to use only those jurisdictions where this data is recorded.  
 
-###[Description](http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Description](http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 The description section (also called the specification) contains details on: 
 
@@ -97,7 +97,7 @@ However, when working with data in the description note that it is often noisy a
 
 It is therefore important to carefully consider and test search queries for text fields such as the Title, Abstract, Description and Claims to avoid being overwhelmed by irrelevant results. 
 
-###[Claims](http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Claims](http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 The claims section of a patent document is commonly regarded as the most important part of the document because it tells us what the applicant is actually claiming as an invention. What is claimed in a patent application must be supported by the description. For example, one could not insert a section of Jane Austen's "Pride and Prejudice" into the description for a synthetic genomes applications and expect it to go forward. Furthermore, in countries such as the United States, patent claims are interpreted (constructed) in light of the contents of the description (see this informative [2009 article by Dan Burk and Mark Lemley](http://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=1202&context=penn_law_review) on debates in the US). 
 
@@ -125,7 +125,7 @@ Claims can be divided into independent and dependent claims and they form a clai
 
 One final note on patent claims for patent analysis is that claims may be cancelled or may be modified in particular jurisdictions. In some cases an examiner may determine that there is more than one invention in the application. This can lead to the application being divided into separate applications linked to the original application (although rules vary on this). As such, depending on the type of analysis required it can be important to trace through applications into different jurisdictions. This is where the patent family comes in. 
 
-###[Family Members](http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Family Members](http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 In the discussion above we noted that when a patent is filed for the first time anywhere in the world it becomes the priority filing or, as the authors tend to call it, first filing. The priority filing also becomes the **parent** for any follow on publications in that country or another country (applications and grants, including administrative publications such as search reports or corrected documents). The priority filing is therefore the founder of a **patent family** and the later documents are children who are **family members**. Because this can lead to quite a lot of confusion let's look at this example. 
 
@@ -158,7 +158,7 @@ This simple approach to understanding a patent family is also very useful when t
 
 The above approach will allow you to successfully count thousands or millions of patent documents in a way that makes sense to you and to others. However, bear in mind that in some cases a patent may have more than one priority parent. This appears to be particularly true for software patents. That is we are confronted by a "many to many" relationship rather than a simpler "one to many" relationship between the priority documents and family members. Additional measures would therefore be needed to develop counts to address this aspect of the data.  
 
-###[Cited](http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Cited](http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 Patent applicants can be said to be "standing on the shoulders of giants" to borrow from the work of the economist [Suzanne Scotchmer](http://socrates.berkeley.edu/~scotch/giants.pdf) on patents. For our purposes, judgements about novelty and inventive step during examination are based on assessments of the existing patent literature (what others have previously claimed) and what is called the Non-Patent Literature (NPL), including scientific publications and other materials constituting "prior art". The existence of prior art may mean that a patent application cannot proceed or that applicants will need to limit what they claim to the aspects of the invention that do not exist in the prior art. This information is recorded in the Cited documents field in databases such as espacenet. 
 
@@ -179,7 +179,7 @@ In practice, applicants may use citations to adjust their claims and as such cit
 
 When reviewing cited patent and non-patent literature note that a cited patent document (which may be an application or a grant) may not fall directly into the field of invention of interest. For example, a particular feature of a claimed invention in one technology field (such as military optics) may affect developments in another field (such as medical optics) or be apparently completely unrelated except for a specific technical aspect. 
 
-###[Citing](http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Citing](http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 Citing data is the opposite of cited data. One useful way to think of this is that cited data means back citations while citing data means forward citations. Citing data or forward citations are later patent applications that cite our reference document as follows. 
 
@@ -191,7 +191,7 @@ Forward citations provide information on the applicants who are being affected b
 
 In broader terms, forward citing data can inform patent landscape analysis on the development of a particular field (such as synthetic biology), while bearing in mind that patent activity in one field may have spill over effects in other apparently unrelated areas of technology. 
 
-###[Legal Status](http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
+### [Legal Status](http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&NR=2008024129A2&KC=A2&FT=D&ND=5&date=20080228&DB=EPODOC&locale=en_EP)
 
 As discussed above, patent kind codes at the end of publication numbers provide an indication of the publication level and type of patent document. In cases where this involves specific kind codes (e.g. B) this is often an indicator of a patent grant. However, to gain additional insights we need to review the legal status data as below.
 
@@ -221,7 +221,7 @@ Data within the register can be particularly useful for exploring the history an
 
 Within Europe it is quite easy to consult register detail. To assist with accessing registry information in other countries WIPO has recently launched a [Patent Register Portal](http://www.wipo.int/branddb/portal/portal.jsp) to simplify the task of locating the patent register in countries of interest. 
 
-##Round Up
+## Round Up
 
 In this chapter we have walked through some of the most important patent data fields using a single example and the espacenet database. As can now be appreciated a basic understanding of patent data fields opens ups a lot of additional information about a single document of interest.   
 

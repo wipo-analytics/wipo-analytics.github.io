@@ -1,10 +1,4 @@
----
-output:
-  html_document: default
-  pdf_document: default
-  word_document: default
----
-#Gephi
+# Gephi
 
 <!---update dataset links--->
 This chapter focuses on visualising patent data in networks using the open source software [Gephi](http://gephi.github.io). Gephi is one of a growing number of free network analysis and visualisation tools with others including [Cytoscape](http://www.cytoscape.org), [Tulip](http://tulip.labri.fr/TulipDrupal/), [GraphViz](http://www.graphviz.org), [Pajek](http://mrvar.fdv.uni-lj.si/pajek/) for Windows, and [VOSviewer](http://www.vosviewer.com/Home) to name but a few. In addition, network visualisation packages are available for R and Python. We have chosen to focus on Gephi because it is a good all round network visualisation tool that is quite easy to use and to learn. 
@@ -17,7 +11,7 @@ For this chapter we will use a dataset on drones from the [Lens patent database]
 
 The dataset can be downloaded from Github in a zip file to unzip [here](https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip). 
 
-##Installing Gephi
+## Installing Gephi
 
 You should install gephi 9.1 (the latest release) rather than an earlier version. Note that any later updates may not contain the key functionality that is needed below (as it takes a while for some of the plugins and features to catch up). 
 
@@ -25,7 +19,7 @@ To install for your operating system follow these [instructions](https://gephi.o
 
 After you have finished this chapter you may want to follow the [Quick start guide](https://gephi.github.io/tutorials/gephi-tutorial-quick_start.pdf) although we will cover those topics in the article. The [Learn section](http://gephi.github.io/users/) of the website provides additional tutorials. 
 
-##Opening Gephi and Installing Plugins
+## Opening Gephi and Installing Plugins
 
 When you have installed Gephi, open it and you should see the following welcome screen. 
 
@@ -45,11 +39,11 @@ You will need to restart Gephi for it to take effect but if you return to the Pl
 
 You are good to go. While you are there you may want to check out the other plugins to get an idea of what is available. For more on the conversion plugin see this description [Excel/csv converter to network plugin](https://marketplace.gephi.org/plugin/excel-csv-converter-to-network/). 
 
-##Importing a file to Gephi with the converter plugin
+## Importing a file to Gephi with the converter plugin
 
 We will concentrate on using the `drones` patent dataset in the  zipped .csv version [here](https://github.com/wipo-analytics/drones_data/raw/master/use_me/gephi/gephi_drones_fulltext_cleaned_5884.csv.zip) and don't forget to unzip the file. While Gephi works with .csv files, the import plugin includes a timeline option that only works with Excel. For that reason we will use the Excel version.
 
-###Step 1. Open Gephi and Choose File > Import
+### Step 1. Open Gephi and Choose File > Import
 
 For this to work we need to use the `Import` function under the File menu. 
 
@@ -131,7 +125,7 @@ Again, note that it is possible to export the edges set and import a set. Also n
 
 Most of the time we can simply proceed with laying out the network without paying much attention to the data laboratory. However, it is important to become familiar with the data laboratory to avoid unexpected problems or to spot corruption in the data.
 
-##Sizing and Colouring Nodes
+## Sizing and Colouring Nodes
 
 When we look at the `Overview` screen we have quite a wide range of options. We will start on the upper right with the Statistics panel. 
 ![](images/gephi9/statistics.png)
@@ -145,7 +139,7 @@ Whereas Modularity Class identifies communities (particularly in large networks)
 
 If we run Modularity Class as in the figure a pop up message will inform us that there are 246 communities in the network. Given that there are only 362 nodes this suggests a weakly connected network made up of small individual clusters. 
 
-### Filtering the data
+###  Filtering the data
 
 We have a total of 5,265 nodes which is quite dense. After running the modularity class algorithm above, we will now move over to the Filters tab next to Statistics. Our aim here is to reduce the size of the network
 
@@ -155,13 +149,13 @@ Open the Filters menu and choose Attributes. That will open a set of Folders and
 
 ![](images/gephi9/filter.png)
 
-### Setting Node Size
+###  Setting Node Size
 
 Next we want to size the nodes. On the left, look for the Appearance tab and then with Nodes in grey choose the Ranking button. Here the minimum size is set to 20 and the maximum to 150. Note that the default setting is 10 and this is generally too small for easy visibility. Press Apply and you will see the network changes to display the size of nodes based on the frequency. You can always adjust the size of nodes later if you are unhappy with them. 
 
 ![](images/gephi9/size.png)
 
-### Colouring the Nodes
+###  Colouring the Nodes
 
 To colour the nodes choose the small palette icon next to the size icon. We now have choices on Unique (simply grey), Partition or Ranking. In this case we will choose Ranking and frequency. Note that a range of colour palettes can be accessed by clicking on the small icon to the right of the colour bar under ranking. When you have found a palette that you like then click Apply.  
 
@@ -172,7 +166,7 @@ An alternative way of colouring the graph in earlier versions of gephi was to pa
 
 There are a range of other options for colouring nodes including a colour plugin that will detect if a column with a colour value is present in the imported data. This can be very useful if you have colour coded categories of data prior to importing to gephi.   
 
-##Laying out the Graph
+## Laying out the Graph
 
 In the bottom left panel called Layout in the figure above there are a range of network visualisation options with more that can be imported from the plugin menus. Among the most useful are Fruchterman-Reingold, Force Atlas, OpenOrd and Circular with specialist plugins for georeferenced layouts that are well worth experimenting with. 
 
@@ -203,13 +197,13 @@ While the difference is very minor in this case we have at least moved the nodes
 ![](images/gephi9/noverlap_laidout.png)
 
 
-#### Save your work
+### Save your work
 
 At this stage we will save our work. One feature of Gephi as a Java programme is that there is no undo option. As a result it is a good idea to save work at a point where you are fairly happy with the layout as it stands. 
 
 Go to File and choose Save As and give the file name a `.gephi` extension. Do not forget to do this or gephi will not know how to read the file. If all goes well the file will save. On some occasions Java may throw an exception and you will basically have to start again. That is one reason to save work in Gephi regularly because it is a beta programme and subject to the predilections of Java on your computer. 
 
-##Adding Labels
+## Adding Labels
 
 The next step is to add some labels. In the bottom menu bar there are a range of options. What we want is the small grey triangle on the right of this menu bar that will open up a new bar. Click in the triangle and you will see a set of options. Choose labels and then at the far left check the `Node` box. We will not see any labels yet. 
 
@@ -242,7 +236,7 @@ If you pursuing this option you may also want to adjust the font or the colour a
 
 Screenshots can be a very useful step in exploring data or sharing data internally. For publication quality graphics you will need to move over to using the Preview Options and engage in the `gephi shuffle` to progressively clean up the network for a publication quality graphic. 
 
-##Using the Preview Options
+## Using the Preview Options
 
 A more involved option for network visualisation is to move over to the Preview tab next to the Data Laboratory. 
 
@@ -276,7 +270,7 @@ The basic principle here is that each node should have a readable label when you
 
 It is quite common when you arrive at a publication quality graphic to suddenly discover a mistake in the network. For example, at the data cleaning stage you may have decided not to group two companies with very similar names. However, at the network visualization stage the network suggests that in practice the two companies are one and the same. In this case check the data and head over to the Data Laboratory to group the nodes to a single node. As this suggests, time spent on data cleaning and data preparation will normally reap dividends in terms of time saved later in the analysis and visualization process. 
 
-##Exporting from Preview
+## Exporting from Preview
 
 At this stage we will want to do a final check and then export the data. Arriving at a publication quality export can in fact be the most time consuming and troublesome aspect of using Gephi. Before going any further save your work.
 
@@ -299,7 +293,7 @@ Because the default size is portrait you will want to crop the image. For public
 
 Congratulations, you have now created your first Gephi network graph. 
 
-##Resources
+## Resources
 
 1.  [Gephi website](http://gephi.github.io/)
 2. [Gephi github repository](https://github.com/gephi/gephi)
