@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>The WIPO Manual on Open Source Patent Analytics</title>
   <meta name="description" content="A practical introduction to free and open source tools for patent analytics.">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
   <meta property="og:type" content="book" />
@@ -49,41 +49,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -110,67 +138,69 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>0.5</b> Disclaimer</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.0.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.0.1</b> An Overview of Open Source and Free Software Tools</a></li>
-<li class="chapter" data-level="1.0.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.0.2</b> Approaching Patent Data</a></li>
-<li class="chapter" data-level="1.0.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.0.3</b> Obtaining Patent Data</a></li>
-<li class="chapter" data-level="1.0.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.0.4</b> Cleaning and Tidying Patent Data</a></li>
-<li class="chapter" data-level="1.0.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.0.5</b> Analysing and Visualizing Patent Data</a></li>
-<li class="chapter" data-level="1.0.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.0.6</b> Sharing Data and The Writing of the Manual</a></li>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i><b>1.1</b> Structure</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.1.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.1.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.1.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.1.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.1.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.1.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>2</b> An Overview of Tools</a><ul>
 <li class="chapter" data-level="2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>2.1</b> General Tools</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <a href="https://www.openoffice.org">Open Office</a></a></li>
-<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></a></li>
-<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></a></li>
+<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <span>Open Office</span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <span>Google Sheets</span></a></li>
+<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <span>Google Fusion Tables</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>2.2</b> Cleaning Tools</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <a href="http://openrefine.org">Open Refine</a> (formerly Google Refine)</a></li>
+<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <span>Open Refine</span> (formerly Google Refine)</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>2.3</b> Data Mining</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <a href="http://www.rstudio.com">RStudio</a></a></li>
-<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <a href="https://rapidminer.com/products/studio/">RapidMiner Studio</a></a></li>
-<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <a href="http://www.knime.org">KNIME</a></a></li>
+<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <span>RStudio</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <span>RapidMiner Studio</span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <span>KNIME</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>2.4</b> Data visualization</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <a href="https://developers.google.com/chart/interactive/docs/gallery">Google Charts</a></a></li>
-<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <span>Google Charts</span></a></li>
+<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <span>Tableau Public</span></a></li>
 <li class="chapter" data-level="2.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.4.3</b> R and RStudio</a></li>
 <li class="chapter" data-level="2.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>2.4.4</b> Shiny</a></li>
-<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <a href="http://www-01.ibm.com/software/analytics/many-eyes/">IBM Many Eyes</a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <span>IBM Many Eyes</span></a></li>
 <li class="chapter" data-level="2.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>2.4.6</b> Other visualization Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>2.5</b> Network Visualization</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <a href="https://gephi.github.io">Gephi</a></a></li>
-<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <a href="http://nodexl.codeplex.com">NodeXL</a></a></li>
-<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a></a></li>
-<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a></a></li>
-<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <a href="http://www.vosviewer.com/Home">VOS Viewer</a></a></li>
-<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <a href="http://www.hiveplot.net">Hive Plots</a></a></li>
+<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <span>Gephi</span></a></li>
+<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <span>NodeXL</span></a></li>
+<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <span>Cytoscape</span></a></li>
+<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <span>Pajek</span></a></li>
+<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <span>VOS Viewer</span></a></li>
+<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <span>Hive Plots</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>2.6</b> Infographics</a></li>
 <li class="chapter" data-level="2.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>2.7</b> Geographical Mapping</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <a href="http://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a></a></li>
-<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <a href="http://leafletjs.com">Leaflet</a></a></li>
-<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
-<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <a href="http://www.qgis.org/en/site/">QGIS</a></a></li>
-<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <a href="http://www.geonames.org">Geonames.org</a>.</a></li>
-<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <a href="http://icharts.net/product/web-data-visualization">iCharts</a></a></li>
-<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <a href="http://openlayers.org">OpenLayers3</a></a></li>
-<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <a href="https://cartodb.com/gallery/">CartoDB</a></a></li>
-<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <a href="http://d3js.org">d3.js</a></a></li>
-<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <a href="http://www.highcharts.com">Highcharts</a></a></li>
-<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <a href="https://datawrapper.de">Datawrapper</a></a></li>
-<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <a href="https://plot.ly/feed/">Plotly</a></a></li>
+<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <span>OpenStreetMap</span></a></li>
+<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <span>Leaflet</span></a></li>
+<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <span>QGIS</span></a></li>
+<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <span>Geonames.org</span>.</a></li>
+<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <span>iCharts</span></a></li>
+<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <span>OpenLayers3</span></a></li>
+<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <span>CartoDB</span></a></li>
+<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <span>d3.js</span></a></li>
+<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <span>Highcharts</span></a></li>
+<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <span>Datawrapper</span></a></li>
+<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <span>Plotly</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>2.8</b> Text Mining</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Jigsaw Visual Analytics</a></a></li>
-<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a></a></li>
+<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <span>Jigsaw Visual Analytics</span></a></li>
+<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <span>Weka</span></a></li>
 <li class="chapter" data-level="2.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>2.8.3</b> Word Trees</a></li>
-<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <a href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Word Trees</a> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
-<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <span>Google Word Trees</span> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <span>KH Coder</span>: free software allowing quantitative content analysis/text mining.</a></li>
 <li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
 <li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
-<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit(NTLK)</a></a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <span>The Natural Language Toolkit(NTLK)</span></a></li>
 <li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
@@ -183,18 +213,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>3.2</b> As a form of intellectual property right</a></li>
 <li class="chapter" data-level="3.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>3.3</b> Patents as a type of document</a></li>
 <li class="chapter" data-level="3.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>3.4</b> Basic Data Types</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <a href="http://www.nature.com/nature/journal/v473/n7347/full/473403a.html">Synthetic Genomes</a></a></li>
-<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <a href="http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Original Front Page</a></a></li>
-<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">espacenet Front Page</a></a></li>
-<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <a href="http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Description</a></a></li>
-<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <a href="http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Claims</a></a></li>
-<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Family Members</a></a></li>
-<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <a href="http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Cited</a></a></li>
-<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <a href="http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Citing</a></a></li>
-<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Legal Status</a></a></li>
+<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <span>Synthetic Genomes</span></a></li>
+<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <span>Original Front Page</span></a></li>
+<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <span>espacenet Front Page</span></a></li>
+<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <span>Description</span></a></li>
+<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <span>Claims</span></a></li>
+<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <span>Family Members</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <span>Cited</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <span>Citing</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <span>Legal Status</span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#patent-registers"><i class="fa fa-check"></i><b>3.5</b> Patent Registers</a></li>
-<li class="chapter" data-level="3.6" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.6</b> Round Up</a></li>
+<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.5</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>4</b> Datasets</a><ul>
 <li class="chapter" data-level="4.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>4.1</b> The datasets</a><ul>
@@ -208,27 +237,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>5</b> Databases</a><ul>
 <li class="chapter" data-level="5.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>5.2</b> The Databases</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <a href="https://www.lens.org/lens/">The Lens</a></a></li>
-<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <a href="https://patentscope.wipo.int/search/en/search.jsf">Patentscope</a></a></li>
-<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <a href="http://worldwide.espacenet.com/?locale=en_EP">espacenet</a></a></li>
-<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <a href="http://lp.espacenet.com">LATIPAT</a></a></li>
-<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <a href="http://www.epo.org/searching/free/ops.html">EPO Open Patent Services</a></a></li>
-<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <a href="http://www.patentsview.org/web/">USPTO Patents View</a></a></li>
-<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <a href="http://www.google.com/patents">Google Patents</a></a></li>
-<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <a href="https://www.google.com/patents/related">Google Prior Art Finder</a></a></li>
-<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <a href="https://www.google.com/googlebooks/uspto.html">Google USPTO Bulk download</a></a></li>
-<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <a href="http://www.freepatentsonline.com">Free Patents Online</a></a></li>
-<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <a href="http://www.dpma.de/english/service/e-services/depatisnet/">DEPATISnet</a></a></li>
-<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <a href="http://www.oecd.org/sti/inno/oecdpatentdatabases.htm">OECD Patent Databases</a></a></li>
-<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <a href="https://www.epo.org/searching-for-patents/business/patstat.html">EPO World Patent Statistical Database</a></a></li>
+<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <span>The Lens</span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <span>Patentscope</span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <span>espacenet</span></a></li>
+<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <span>LATIPAT</span></a></li>
+<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <span>EPO Open Patent Services</span></a></li>
+<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <span>USPTO Patents View</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <span>Google Patents</span></a></li>
+<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <span>Google Prior Art Finder</span></a></li>
+<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <span>Google USPTO Bulk download</span></a></li>
+<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <span>Free Patents Online</span></a></li>
+<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <span>DEPATISnet</span></a></li>
+<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <span>OECD Patent Databases</span></a></li>
+<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <span>EPO World Patent Statistical Database</span></a></li>
 <li class="chapter" data-level="5.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>5.2.14</b> Other data sources</a></li>
+<li class="chapter" data-level="5.2.15" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.2.15</b> <span>Patent2Net</span> in Python</a></li>
+<li class="chapter" data-level="5.2.16" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.2.16</b> <span>Python EPO OPS Client</span> by Gsong</a></li>
+<li class="chapter" data-level="5.2.17" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.2.17</b> <span>Fung Institute Patent Server</span> for USPTO data in JSON</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="databases.html"><a href="databases.html#tools-for-accessing-patent-data"><i class="fa fa-check"></i><b>5.3</b> Tools for Accessing Patent Data</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.3.1</b> <a href="https://github.com/Patent2net/Patent2Net">Patent2Net</a> in Python</a></li>
-<li class="chapter" data-level="5.3.2" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.3.2</b> <a href="https://github.com/55minutes/python-epo-ops-client">Python EPO OPS Client</a> by Gsong</a></li>
-<li class="chapter" data-level="5.3.3" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.3.3</b> <a href="https://github.com/funginstitute/patentserver">Fung Institute Patent Server</a> for USPTO data in JSON</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="databases.html"><a href="databases.html#round-up-3"><i class="fa fa-check"></i><b>5.4</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>6</b> The Lens</a><ul>
 <li class="chapter" data-level="6.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
@@ -237,7 +263,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>6.4</b> Visualisation</a></li>
 <li class="chapter" data-level="6.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>6.5</b> Working with texts</a></li>
 <li class="chapter" data-level="6.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>6.6</b> PatSeq</a></li>
-<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-4"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
+<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-3"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>7</b> Patentscope</a><ul>
 <li class="chapter" data-level="7.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
@@ -247,7 +273,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>7.5</b> Downloading Results</a></li>
 <li class="chapter" data-level="7.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>7.6</b> Cross Lingual Searching</a></li>
 <li class="chapter" data-level="7.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>7.7</b> Sequence Data</a></li>
-<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-5"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
+<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-4"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
 </ul></li>
 <li class="part"><span><b>III Cleaning Patent Data</b></span></li>
 <li class="chapter" data-level="8" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>8</b> Open Refine</a><ul>
@@ -282,7 +308,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="8.8.5" data-path="open-refine.html"><a href="open-refine.html#ppm"><i class="fa fa-check"></i><b>8.8.5</b> PPM</a></li>
 <li class="chapter" data-level="8.8.6" data-path="open-refine.html"><a href="open-refine.html#preparing-for-export"><i class="fa fa-check"></i><b>8.8.6</b> Preparing for export</a></li>
 </ul></li>
-<li class="chapter" data-level="8.9" data-path="open-refine.html"><a href="open-refine.html#round-up-6"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
+<li class="chapter" data-level="8.9" data-path="open-refine.html"><a href="open-refine.html#round-up-5"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
 <li class="chapter" data-level="8.10" data-path="open-refine.html"><a href="open-refine.html#useful-resources"><i class="fa fa-check"></i><b>8.10</b> Useful Resources</a></li>
 </ul></li>
 <li class="part"><span><b>IV Visualizing Patent Data</b></span></li>
@@ -295,7 +321,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>9.6</b> Creating an Overview Dashboard</a></li>
 <li class="chapter" data-level="9.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>9.7</b> Saving, Display and Privacy Settings</a></li>
 <li class="chapter" data-level="9.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>9.8</b> Privacy and Security</a></li>
-<li class="chapter" data-level="9.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-7"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
+<li class="chapter" data-level="9.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-6"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>10</b> Gephi</a><ul>
 <li class="chapter" data-level="10.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>10.1</b> Installing Gephi</a></li>
@@ -308,7 +334,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.4.2" data-path="gephi-1.html"><a href="gephi-1.html#setting-node-size"><i class="fa fa-check"></i><b>10.4.2</b> Setting Node Size</a></li>
 <li class="chapter" data-level="10.4.3" data-path="gephi-1.html"><a href="gephi-1.html#colouring-the-nodes"><i class="fa fa-check"></i><b>10.4.3</b> Colouring the Nodes</a></li>
 </ul></li>
-<li class="chapter" data-level="10.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>10.5</b> Laying out the Graph</a></li>
+<li class="chapter" data-level="10.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>10.5</b> Laying out the Graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="gephi-1.html"><a href="gephi-1.html#save-your-work"><i class="fa fa-check"></i><b>10.5.1</b> Save your work</a></li>
+</ul></li>
 <li class="chapter" data-level="10.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>10.6</b> Adding Labels</a></li>
 <li class="chapter" data-level="10.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>10.7</b> Using the Preview Options</a></li>
 <li class="chapter" data-level="10.8" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>10.8</b> Exporting from Preview</a></li>
@@ -323,7 +351,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>11.5</b> Saving and Sharing</a></li>
 <li class="chapter" data-level="11.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>11.6</b> Working with Plotly in R</a></li>
-<li class="chapter" data-level="11.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-8"><i class="fa fa-check"></i><b>11.7</b> Round Up</a></li>
+<li class="chapter" data-level="11.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-7"><i class="fa fa-check"></i><b>11.7</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>12</b> Patent Infographics with R</a><ul>
 <li class="chapter" data-level="12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>12.1</b> Getting Started</a></li>
@@ -349,7 +377,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>12.11.1</b> Phrases Tables</a></li>
 </ul></li>
 <li class="chapter" data-level="12.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>12.12</b> Creating an infographic in infogr.am</a><ul>
-<li class="chapter" data-level="12.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-9"><i class="fa fa-check"></i><b>12.12.1</b> Round Up</a></li>
+<li class="chapter" data-level="12.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-8"><i class="fa fa-check"></i><b>12.12.1</b> Round Up</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>V Using APIs</b></span></li>
@@ -374,27 +402,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="13.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>13.15</b> Filling Blank Spaces</a></li>
 <li class="chapter" data-level="13.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>13.16</b> Converting Dates</a></li>
-<li class="chapter" data-level="13.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#adding-columns"><i class="fa fa-check"></i><b>13.17</b> Adding columns</a></li>
-<li class="chapter" data-level="13.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>13.18</b> Add a count</a></li>
-<li class="chapter" data-level="13.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>13.19</b> Remove a column</a></li>
-<li class="chapter" data-level="13.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>13.20</b> Arranging the Data</a></li>
-<li class="chapter" data-level="13.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>13.21</b> Dealing with Duplicates</a><ul>
-<li class="chapter" data-level="13.21.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>13.21.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
-<li class="chapter" data-level="13.21.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>13.21.2</b> Deleting Duplicates</a></li>
+<li class="chapter" data-level="13.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>13.17</b> Add a count</a></li>
+<li class="chapter" data-level="13.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>13.18</b> Remove a column</a></li>
+<li class="chapter" data-level="13.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>13.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="13.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>13.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="13.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>13.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="13.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>13.20.2</b> Deleting Duplicates</a></li>
 </ul></li>
-<li class="chapter" data-level="13.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>13.22</b> Restricting searches by section</a></li>
-<li class="chapter" data-level="13.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>13.23</b> By author</a></li>
-<li class="chapter" data-level="13.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>13.24</b> Title search using <code>plostitle()</code></a></li>
-<li class="chapter" data-level="13.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>13.25</b> Abstract search using <code>plosabstract()</code></a></li>
-<li class="chapter" data-level="13.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>13.26</b> Subject Area using <code>plossubject()</code></a></li>
-<li class="chapter" data-level="13.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>13.27</b> Highlighting terms and text fragments with highplos()</a><ul>
-<li class="chapter" data-level="13.27.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>13.27.1</b> Snippets using hl.snippets</a></li>
-<li class="chapter" data-level="13.27.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>13.27.2</b> fragment size using hl.fragsize</a></li>
+<li class="chapter" data-level="13.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>13.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="13.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>13.22</b> By author</a></li>
+<li class="chapter" data-level="13.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>13.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="13.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>13.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="13.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>13.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="13.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>13.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="13.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>13.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="13.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>13.26.2</b> fragment size using hl.fragsize</a></li>
 </ul></li>
-<li class="chapter" data-level="13.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>13.28</b> Get the full text of one or more articles</a></li>
-<li class="chapter" data-level="13.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>13.29</b> Writing a corpus to disk</a></li>
-<li class="chapter" data-level="13.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-10"><i class="fa fa-check"></i><b>13.30</b> Round Up</a></li>
-<li class="chapter" data-level="13.31" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>13.31</b> Resources</a></li>
+<li class="chapter" data-level="13.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>13.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="13.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>13.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="13.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-9"><i class="fa fa-check"></i><b>13.29</b> Round Up</a></li>
+<li class="chapter" data-level="13.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>13.30</b> Resources</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
@@ -417,7 +444,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="an-overview-of-tools" class="section level1">
-<h1><span class="header-section-number">Chapter2</span> An Overview of Tools</h1>
+<h1><span class="header-section-number">Chapter 2</span> An Overview of Tools</h1>
 <p>This chapter provides an overview of the open source and free software tools that are available for patent analytics. The aim of the chapter is to serve as a quick reference guide for some of the main tools in the tool kit. We will go into some of these tools in more depth elsewhere in the WIPO Manual on Open Source Patent Analytics and leave you to explore the rest of the tools for yourself.</p>
 <p>Before we start it is important to note that we cover only a fraction of the available tools that are out there. We have simply tried to identify some of the most accessible and useful tools. Data mining and visualization are growing rapidly to the point that it is easy to be overwhelmed by the range of choices. The good news is that there are some very high quality free and open source tools out there. The difficulty lies in identifying those that will best serve your specific needs relative to your background and the time available to acquire some programming skills. That decision will be up to you. However, to avoid frustration it will be important to recognise that the different tools take time to master. In some cases, such as R and Python, there are lots of free resources out there to help you take the first steps into programming. In making a decision about a tool to use, think carefully about the level of support that is already out there. Try to use a tool with an active and preferably large community of users. That way, when you get stuck, there will be someone out there who has run into similar issues who will be able to help. Sites such as <a href="http://stackoverflow.com">Stack Overflow</a> are excellent for finding solutions to problems.</p>
 <p>This chapter is divided into 8 sections:</p>
@@ -446,27 +473,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="google-sheets" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> <a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></h3>
 <p>Google Sheets require a free Google account and those who are comfortable with Excel may wonder why it is worth switching. However, Google Sheets can be shared online with others and there are a large number of free add ons that could be used to assist with cleaning data such as Split Names or Remove duplicates as shown below.</p>
-<div class="figure">
-<img src="images/overview/google_sheets_addon.png" />
-
-</div>
+<p><img src="images/overview/google_sheets_addon.png" /></p>
 </div>
 <div id="google-fusion-tables" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></h3>
 <p>Fusion Tables are similar to Google Sheets but can work with millions of records. However, it is worth trying with smaller datasets to see if Fusion Tables suit your needs.</p>
-<div class="figure">
-<img src="images/overview/Fusion-Tables.png" />
-
-</div>
+<p><img src="images/overview/Fusion-Tables.png" /></p>
 <p>Fusion Tables appear very much like a spreadsheet. However, the Table also contains a <code>cards</code> feature which allows each record to be seen as a whole and easily filtered. The cards can be much easier to work with than the standard row format where information in a record can be difficult to take in. Fusion Tables also attempts to use geocoded data to draw a Google Map as we can see in the second image below for the publication country from a sample patent dataset.</p>
-<div class="figure">
-<img src="images/overview/Fusion-Tables-Cards.png" />
-
-</div>
-<div class="figure">
-<img src="images/overview/Fusion-Tables-Map.png" />
-
-</div>
+<p><img src="images/overview/Fusion-Tables-Cards.png" /></p>
+<p><img src="images/overview/Fusion-Tables-Map.png" /></p>
 </div>
 </div>
 <div id="cleaning-tools" class="section level2">
@@ -475,10 +490,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">2.2.1</span> <a href="http://openrefine.org">Open Refine</a> (formerly Google Refine)</h3>
 <p>A fundamental rule of data analysis and visualization is: <code>rubbish in = rubbish out</code>. If your data has not been cleaned in the first place, do not be surprised if the results of analysis or visualization are rubbish.</p>
 <p>An in depth chapter is available <a href="http://poldham.github.io/openrefine-patent-cleaning/">here</a> on the use of <a href="http://openrefine.org">Open Refine</a>, formerly Google Refine, for cleaning patent data. For patent analytics Open Refine is an important free tool for cleaning applicant and inventor names.</p>
-<div class="figure">
-<img src="images/openrefine/OpenRefine-download.png" />
-
-</div>
+<p><img src="images/openrefine/OpenRefine-download.png" /></p>
 <p>A number of platforms provide data cleaning facilities and it is possible to do quite a lot of basic cleaning in either Open Office or Excel. Open Refine is the most accessible tool for timely cleaning of patent name fields. In particular, it is very useful for splitting and cleaning thousands of patent applicant and inventor names.</p>
 </div>
 </div>
@@ -488,10 +500,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="rstudio" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> <a href="http://www.rstudio.com">RStudio</a></h3>
 <p>A very powerful tool for working with data and visualising data using R and then writing about it (this chapter, and the wider Manual, is entirely written in Rmarkdown with RStudio). While the learning curve with R can be intimidating a great deal of effort goes in to making R accessible through <a href="http://www.rstudio.com/resources/training/online-learning/">tutorials</a> such as those on <a href="https://www.datacamp.com">DataCamp</a>, <a href="http://www.rstudio.com/resources/webinars/">webinars</a>, <a href="http://www.r-bloggers.com">R-Bloggers</a> and <a href="http://stackoverflow.com/questions/tagged/r">Stack Overflow</a> and free university courses such as the well known John Hopkins University R Programming Course on <a href="https://www.coursera.org/course/rprog">Coursera</a>. Indeed, as with Python, there is so much support for users at different levels that it is hard ever to feel alone when using R and RStudio.</p>
-<div class="figure">
-<img src="images/overview/RStudio.png" />
-
-</div>
+<p><img src="images/overview/RStudio.png" /></p>
 <p>To get started with R download RStudio for your platform by <a href="https://www.rstudio.com/products/rstudio/download/">following these instructions</a> and making sure to install R from the link provided.</p>
 <p>If you are completely new to R then <a href="https://www.datacamp.com/">DataCamp</a> is a good place to start. The free John Hopkins University <a href="https://www.coursera.org/course/rprog">R Programming Course on Coursera</a> is also very good. The John Hopkins University course is accompanied by the Swirl tutorial package that can be installed using `install.packages(“swirl”) when you have installed R. This is a real asset when getting started.</p>
 <p>In developing this Manual we mainly focused on developing resources with R. However, we would emphasise that Python may also be important for your needs. For a recent discussion on the strengths and weaknesses of R and Python see this <a href="http://www.r-bloggers.com/choosing-r-or-python-for-data-analysis-an-infographic/">Datacamp article on the <code>Data Science Wars</code> and accompanying excellent infographic</a>.</p>
@@ -499,18 +508,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="rapidminer-studio" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> <a href="https://rapidminer.com/products/studio/">RapidMiner Studio</a></h3>
 <p>Comes with a free service and a variety of tiered paid plans. RapidMiner focuses on machine learning, data mining, text mining and analytics.</p>
-<div class="figure">
-<img src="images/overview/RapidMiner.png" />
-
-</div>
+<p><img src="images/overview/RapidMiner.png" /></p>
 </div>
 <div id="knime" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> <a href="http://www.knime.org">KNIME</a></h3>
 <p>An open platform for data mining.</p>
-<div class="figure">
-<img src="images/overview/KNIME.png" />
-
-</div>
+<p><img src="images/overview/KNIME.png" /></p>
 <p>Other data mining tools (such as <a href="http://www.cs.waikato.ac.nz/ml/weka/">WEKA</a> and <a href="http://www.nltk.org">NLTK</a> in Python are covered below). If you would like to explore other data mining software try this <a href="http://www.predictiveanalyticstoday.com/top-free-data-mining-software/">article</a> for some ideas.</p>
 </div>
 </div>
@@ -529,18 +532,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>For an overview of using Google Charts in R then see the <code>GoogleVis</code> package and its examples <a href="http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf">here</a></li>
 <li>For an overview using Google Charts with Python see the <a href="https://code.google.com/p/google-chartwrapper/">google-chartwrapper</a> or <a href="http://python-google-charts.readthedocs.org/en/latest/#">Python Google Charts</a></li>
 </ul>
-<div class="figure">
-<img src="images/overview/google_sheets_addon.png" />
-
-</div>
+<p><img src="images/overview/google_sheets_addon.png" /></p>
 </div>
 <div id="tableau-public" class="section level3">
 <h3><span class="header-section-number">2.4.2</span> <a href="https://public.tableau.com/s/">Tableau Public</a></h3>
 <p>An in depth chapter on getting started with patent analysis and visualization using Tableau Public is available <a href="http://poldham.github.io/tableau-patents/">here</a>. When your patent data has been cleaned, Tableau Public is a powerful way of developing interactive dashboards and maps with your data and combining it with other data sources. Bear in mind that Tableau Public data is, by definition, public and it should not be used with sensitive data.</p>
-<div class="figure">
-<img src="images/tableau/dashboard_completed.png" />
-
-</div>
+<p><img src="images/tableau/dashboard_completed.png" /></p>
 <p>The workbook can be viewed online <a href="https://public.tableau.com/profile/wipo.open.source.patent.analytics.manual#!/">here</a>.</p>
 </div>
 <div id="r-and-rstudio" class="section level3">
@@ -558,25 +555,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="shiny" class="section level3">
 <h3><span class="header-section-number">2.4.4</span> Shiny</h3>
 <p>Shiny from <a href="(http://www.rstudio.com/)">RStudio</a> is a web application framework for R. What that means is that you can output tables and visual data from R such as those from the tools mentioned above to the web.</p>
-<div class="figure">
-<img src="images/overview/Shiny.png" />
-
-</div>
+<p><img src="images/overview/Shiny.png" /></p>
 <p><a href="http://shiny.rstudio.com">Shiny apps</a> for R users allows for the creation of online interactive apps (upto 5 for free). See the <a href="http://shiny.rstudio.com/gallery/">Gallery</a> for examples. See <a href="http://www.r-bloggers.com/search/shiny">RBloggers</a> for more examples and tutorials.</p>
 <p><a href="http://vnijs.github.io/radiant/index.html">Radiant</a> is a browser based platform for business analytics in R. It is based on Shiny (above) but is specifically business focused.</p>
-<div class="figure">
-<img src="images/overview/Radiant.png" />
-
-</div>
+<p><img src="images/overview/Radiant.png" /></p>
 <p>For a series of starter videos on Radiant see <a href="http://vnijs.github.io/radiant/tutorials.html">here</a>.</p>
 </div>
 <div id="ibm-many-eyes" class="section level3">
 <h3><span class="header-section-number">2.4.5</span> <a href="http://www-01.ibm.com/software/analytics/many-eyes/">IBM Many Eyes</a></h3>
 <p>You need to Register for a free account to really understand what this is about, <a href="http://www-969.ibm.com/software/analytics/manyeyes/">try this page</a> and select register in the top right.</p>
-<div class="figure">
-<img src="images/overview/manyeyes.png" />
-
-</div>
+<p><img src="images/overview/manyeyes.png" /></p>
 </div>
 <div id="other-visualization-tools" class="section level3">
 <h3><span class="header-section-number">2.4.6</span> Other visualization Tools</h3>
@@ -603,77 +591,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: decimal">
 <li>Visualising networks of applicants and inventors in a particular field or scientific researchers. An example of this type of work for synthetic biology is <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034368">here</a> for a network of approximately 2,000 authors of articles on synthetic biology.</li>
 </ol>
-<div class="figure">
-<img src="images/overview/synbio.png" />
-
-</div>
+<p><img src="images/overview/synbio.png" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Visualising areas of technology and their relationships using the International Patent Classification and the Cooperative Patent Classification (CPC). Previous work at WIPO pioneered the use of large scale patent network analysis to identify the <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/animal_gr.html">patent landscape for animal genetic resources</a>.</li>
 </ol>
 <p>The image below displays a network map of Cooperative Patent Classification Codes and International Patent Classification codes for 10s of thousands of patent documents that contain references to a range of farm animals (cows, pigs, sheep etc.). The dots are CPC/IPC codes describing areas of technology. The clusters show tightly linked documents that share the same codes that can then be described as ‘modules’ or clusters. The authors of the landscape report on animal genetic resources used this network as an exploratory tool to extract and examine the documents in the cluster for relevance. Distant clusters, such as Cooking equipment and Animal Husbandry (housing of animals etc.), were discarded. The authors later used network mapping to explore and classify the individual clusters.</p>
-<div class="figure">
-<img src="images/overview/animals.png" />
-
-</div>
+<p><img src="images/overview/animals.png" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Visualising networks of key terms in patent documents and their relationships with other terms as part of the exploration and refinement of analysis. In this case the authors have clustered similar terms onto each other using word stemming to understand the contents of the new breeds of animals cluster above in relation to animal breeding.</li>
 </ol>
-<div class="figure">
-<img src="images/overview/breeds_cluster.png" />
-
-</div>
+<p><img src="images/overview/breeds_cluster.png" /></p>
 <p>As such, network visualization can be seen as both an exploratory tool for defining the object of interest and as the end result (e.g. a defined network of actors in a specific area).</p>
 <div id="gephi" class="section level3">
 <h3><span class="header-section-number">2.5.1</span> <a href="https://gephi.github.io">Gephi</a></h3>
 <p>Gephi is Java based open source network generating software. It can cope with large datasets (depending on your computer) to produce powerful visualizations.</p>
-<div class="figure">
-<img src="images/overview/Gephi.png" />
-
-</div>
+<p><img src="images/overview/Gephi.png" /></p>
 <p>One issue that may be encountered, particularly by Mac users, is problems with installing the right Java version. This problem appears to have been solved with the latest release Version 0.9.</p>
 <p>To create <code>.gexf</code> network files in R try the <a href="http://cran.r-project.org/web/packages/rgexf/index.html">gexf</a> package and example code and source code <a href="https://bitbucket.org/gvegayon/rgexf/wiki/Home">here</a>. In Python try the <a href="https://github.com/paulgirard/pygexf">pygexf</a> library and for anything else such as Java, Javascript C++ and Perl see <a href="http://gexf.net/format/">gexf.net</a>.</p>
 </div>
 <div id="nodexl" class="section level3">
 <h3><span class="header-section-number">2.5.2</span> <a href="http://nodexl.codeplex.com">NodeXL</a></h3>
 <p>For die hard Excel users, <a href="http://nodexl.codeplex.com">NodeXL</a> is a plug in that can be used to visualise networks. It works well.</p>
-<div class="figure">
-<img src="images/overview/NodeXL.png" />
-
-</div>
+<p><img src="images/overview/NodeXL.png" /></p>
 </div>
 <div id="cytoscape" class="section level3">
 <h3><span class="header-section-number">2.5.3</span> <a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a></h3>
 <p><a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a> is another network visualization programme. It was originally designed for the visualization of biological networks and interactions but, as with so many other bioinformatics tools, can be applied to a wider range of visualization tasks.</p>
-<div class="figure">
-<img src="images/overview/cytoscape.png" />
-
-</div>
+<p><img src="images/overview/cytoscape.png" /></p>
 <p>We mainly have experience with using Gephi (above) but Cytoscape is well worth exploring. Cytoscape works with Windows, Mac and Linux.</p>
 </div>
 <div id="pajek" class="section level3">
 <h3><span class="header-section-number">2.5.4</span> <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a></h3>
 <p>This is one of the oldest and most established of the free network tools and is Windows only (or run via a Virtual Machine). It is widely used in bibliometrics and can handle large datasets. It is a matter of personal preference but tools such as Gephi may be superseding Pajek because they are more flexible. However, Pajek may possibly have an edge in precision, ease of reproducibility and the important ability to easily save work that Gephi can lack as a Beta programme.</p>
-<div class="figure">
-<img src="images/overview/Pajek.png" />
-
-</div>
+<p><img src="images/overview/Pajek.png" /></p>
 <p>Data can also be exported from Pajek to Gephi for those who prefer the look and feel of Gephi.</p>
 </div>
 <div id="vos-viewer" class="section level3">
 <h3><span class="header-section-number">2.5.5</span> <a href="http://www.vosviewer.com/Home">VOS Viewer</a></h3>
 <p>VOS Viewer from Leiden University is similar to Gephi and Cytoscape but also presents different types of landscape (as opposed to pure network node and edge visuals). The latest version can also speak to both Gephi and Cytoscape. It is worth testing for different visual display options and its ability to handle Web of Science and Scopus bibliographic data.</p>
-<div class="figure">
-<img src="images/overview/VOSviewer.png" />
-
-</div>
+<p><img src="images/overview/VOSviewer.png" /></p>
 </div>
 <div id="hive-plots" class="section level3">
 <h3><span class="header-section-number">2.5.6</span> <a href="http://www.hiveplot.net">Hive Plots</a></h3>
 <p>We are not entirely sure what to make of Hive Plots. However, we have a lot of sympathy with the aims. The aim of network visualization should be to clarify the complex… not “wow, look, I made something that looks like spaghetti” (although that is normally part of the process). So, we find Hive Plots developed by Martin Krzywinski at the Genome Sciences Center at the BC Cancer Agency interesting.</p>
-<div class="figure">
-<img src="images/overview/HivePlots.png" />
-
-</div>
+<p><img src="images/overview/HivePlots.png" /></p>
 <p>Designed for large networks there are packages for Hive plots in Python through <a href="https://pypi.python.org/pypi/pyveplot/">pyveplot</a> and <a href="https://github.com/ericmjl/hiveplot">hiveplot</a>. For R there is <a href="http://academic.depauw.edu/~hanson/HiveR/HiveR.html">HiveR</a> with documentation available on CRAN <a href="http://cran.r-project.org/web/packages/HiveR/index.html">here</a>.</p>
 <p>In closing this discussion of network mapping tools it is also important to note that network visualizations need to be exported as images. This means that there are additional requirements for image handling software. Open source tools such as <a href="http://www.gimp.org">The GNU Image Manipulation Program or GIMP</a> are perfectly adequate and easy to use for image handling. Where using labels particular attention should be paid to outlining the text to ensure consistency of display across different computers. These kinds of tasks can be performed in tools such as GIMP.</p>
 <p>For other sources of network visualization see <a href="http://opendata-tools.org/en/visualization/">FlowingData</a>. Also try <a href="http://www.visualcomplexity.com/vc/">Visual Complexity</a> and <a href="http://www.visualisingdata.com/index.php/resources/">visualising data</a> for sources of inspiration.</p>
@@ -698,106 +659,67 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="openstreetmap" class="section level3">
 <h3><span class="header-section-number">2.7.1</span> <a href="http://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a></h3>
 <p>Rightly popular.</p>
-<div class="figure">
-<img src="images/overview/OpenStreetMap.png" />
-
-</div>
+<p><img src="images/overview/OpenStreetMap.png" /></p>
 </div>
 <div id="leaflet" class="section level3">
 <h3><span class="header-section-number">2.7.2</span> <a href="http://leafletjs.com">Leaflet</a></h3>
 <p>A very popular Open Source JavaScript library for interactive maps</p>
-<div class="figure">
-<img src="images/overview/Leaflet.png" />
-
-</div>
+<p><img src="images/overview/Leaflet.png" /></p>
 <p>Accessible through an API. R users could use the <code>leafletr</code> package with tutorials and walk throughs available at <a href="http://www.r-bloggers.com/?s=leaflet">R-bloggers</a>. For Python users try <code>folium</code> <a href="https://github.com/python-visualization/folium">here</a> or <a href="https://pypi.python.org/pypi/folium">here</a>.</p>
 </div>
 <div id="tableau-public-1" class="section level3">
 <h3><span class="header-section-number">2.7.3</span> <a href="https://public.tableau.com/s/">Tableau Public</a></h3>
 <p>Already mentioned above. Tableau Public uses Open Street Map to create a powerful combination of interactive graphs that can be linked to maps geocoded at various levels of detail. See an example <a href="https://public.tableau.com/profile/poldham#!/vizhome/SyntheticBiologyScientificLandscape/SyntheticBiologyTrends">here</a> for the scientific literature on synthetic biology.</p>
 <p>Tableau Public is probably the easiest way to get started with creating your own maps with patent data. The map below was produced using custom geocoding and connecting the data to publication country and the titles of scientific publications.</p>
-<div class="figure">
-<img src="images/overview/tableaumap.png" />
-
-</div>
+<p><img src="images/overview/tableaumap.png" /></p>
 <p>To view the interactive version try this <a href="http://public.tableau.com/profile/poldham#!/vizhome/SyntheticBiologyScientificLandscape/SyntheticBiologyTrends">page</a>. It is possible to easily create simple yet effective maps in Tableau Public.</p>
 </div>
 <div id="qgis" class="section level3">
 <h3><span class="header-section-number">2.7.4</span> <a href="http://www.qgis.org/en/site/">QGIS</a></h3>
 <p>A very popular and sophisticated software package running on all major platforms.</p>
-<div class="figure">
-<img src="images/overview/QGIS.png" />
-
-</div>
+<p><img src="images/overview/QGIS.png" /></p>
 <p>Using QGIS Oldham and Hall et al mapped the worldwide geographical locations of marine scientific research and patent documents making reference to deep sea locations such as hydrothermal vents (see <a href="https://www.researchgate.net/publication/273139809_Valuing_the_Deep_Marine_Genetic_Resources_in_Areas_Beyond_National_Jurisdiction">Valuing the Deep</a>). This is a low resolution QGIS map of scientific research locations in the oceans based on text mining of the scientific literature.</p>
-<div class="figure">
-<img src="images/overview/valuing1.png" />
-
-</div>
+<p><img src="images/overview/valuing1.png" /></p>
 </div>
 <div id="geonames.org." class="section level3">
 <h3><span class="header-section-number">2.7.5</span> <a href="http://www.geonames.org">Geonames.org</a>.</h3>
 <p>Not a mapping programme, instead geonames is an incredibly useful database of georeferenced place names from around the world along with a RESTful <a href="http://www.geonames.org/export/web-services.html">web service</a>. If you need to obtain the georeferenced data for a large number of places then this should be your first stop. geonames can be accessed in R using the <a href="https://cran.r-project.org/web/packages/geonames/geonames.pdf"><code>geonames</code></a> along with client libraries for Python, Ruby, PHP and others.</p>
-<div class="figure">
-<img src="images/overview/GeoNames.png" />
-
-</div>
+<p><img src="images/overview/GeoNames.png" /></p>
 </div>
 <div id="icharts" class="section level3">
 <h3><span class="header-section-number">2.7.6</span> <a href="http://icharts.net/product/web-data-visualization">iCharts</a></h3>
 <p>A Free and Premium data visualization service:</p>
-<div class="figure">
-<img src="images/overview/icharts.png" />
-
-</div>
+<p><img src="images/overview/icharts.png" /></p>
 </div>
 <div id="openlayers3" class="section level3">
 <h3><span class="header-section-number">2.7.7</span> <a href="http://openlayers.org">OpenLayers3</a></h3>
 <p>OpenLayers3 allows you to add your own layers to OpenStreetMap and other data sources and may come in very useful if you are seeking to create your own layers. It also has an API and tutorials.</p>
-<div class="figure">
-<img src="images/overview/OpenLayer.png" />
-
-</div>
+<p><img src="images/overview/OpenLayer.png" /></p>
 </div>
 <div id="cartodb" class="section level3">
 <h3><span class="header-section-number">2.7.8</span> <a href="https://cartodb.com/gallery/">CartoDB</a></h3>
 <p>Free and paid accounts with a nice looking gallery of examples</p>
-<div class="figure">
-<img src="images/overview/CartoDB.png" />
-
-</div>
+<p><img src="images/overview/CartoDB.png" /></p>
 </div>
 <div id="d3.js" class="section level3">
 <h3><span class="header-section-number">2.7.9</span> <a href="http://d3js.org">d3.js</a></h3>
 <p>A javascript library for manipulating data and documents. This is the library behind some of the other frequently mentioned visualization tools on the web.</p>
-<div class="figure">
-<img src="images/overview/D3.png" />
-
-</div>
+<p><img src="images/overview/D3.png" /></p>
 </div>
 <div id="highcharts" class="section level3">
 <h3><span class="header-section-number">2.7.10</span> <a href="http://www.highcharts.com">Highcharts</a></h3>
 <p>Free for non-commercial use with a variety of pricing plans.</p>
-<div class="figure">
-<img src="images/overview/highcharts.png" />
-
-</div>
+<p><img src="images/overview/highcharts.png" /></p>
 </div>
 <div id="datawrapper" class="section level3">
 <h3><span class="header-section-number">2.7.11</span> <a href="https://datawrapper.de">Datawrapper</a></h3>
 <p>An entirely open source service for creating charts and maps with your data. Widely used by big newspapers and so the graphics will seem familiar. Either create an account or fork the source from Github <a href="https://github.com/datawrapper/datawrapper">here</a>. There is a free option and a set of pricing plans.</p>
-<div class="figure">
-<img src="images/overview/Datawrapper.png" />
-
-</div>
+<p><img src="images/overview/Datawrapper.png" /></p>
 </div>
 <div id="plotly" class="section level3">
 <h3><span class="header-section-number">2.7.12</span> <a href="https://plot.ly/feed/">Plotly</a></h3>
 <p>Free and with an API with clients for R, Python and Matlab, Plotly is an increasingly popular free service that uses the D3.js library mentioned above with the enterprise version used by companies such as Google. Plotly is increasingly popular and has a range of API clients for Python, Matlab, R, Node.js, and Excel. Plotly’s ease of use and access from a range of environments are big reasons for its growing success.</p>
-<div class="figure">
-<img src="images/overview/Plotly.png" />
-
-</div>
+<p><img src="images/overview/Plotly.png" /></p>
 </div>
 </div>
 <div id="text-mining" class="section level2">
@@ -806,18 +728,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="jigsaw-visual-analytics" class="section level3">
 <h3><span class="header-section-number">2.8.1</span> <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Jigsaw Visual Analytics</a></h3>
 <p>For exploring and understanding document collections.</p>
-<div class="figure">
-<img src="images/overview/Jigsaw.png" />
-
-</div>
+<p><img src="images/overview/Jigsaw.png" /></p>
 </div>
 <div id="weka" class="section level3">
 <h3><span class="header-section-number">2.8.2</span> <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a></h3>
 <p>Java based text mining software.</p>
-<div class="figure">
-<img src="images/overview/Weka.png" />
-
-</div>
+<p><img src="images/overview/Weka.png" /></p>
 </div>
 <div id="word-trees" class="section level3">
 <h3><span class="header-section-number">2.8.3</span> Word Trees</h3>
@@ -825,22 +741,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript." class="section level3">
 <h3><span class="header-section-number">2.8.4</span> <a href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Word Trees</a> on the Google Developers site provides instructions for generating word trees using Javascript.</h3>
-<div class="figure">
-<img src="images/overview/Word-Trees.png" />
-
-</div>
+<p><img src="images/overview/Word-Trees.png" /></p>
 <p>and <a href="https://www.jasondavies.com/wordtree/">Jason Davies</a> tree creator.</p>
-<div class="figure">
-<img src="images/overview/Word-Tree-Davies.png" />
-
-</div>
+<p><img src="images/overview/Word-Tree-Davies.png" /></p>
 </div>
 <div id="kh-coder-free-software-allowing-quantitative-content-analysistext-mining." class="section level3">
 <h3><span class="header-section-number">2.8.5</span> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</h3>
-<div class="figure">
-<img src="images/overview/KHCoder.png" />
-
-</div>
+<p><img src="images/overview/KHCoder.png" /></p>
 </div>
 <div id="r-and-the-tm-package" class="section level3">
 <h3><span class="header-section-number">2.8.6</span> R and the <code>tm</code> package</h3>
@@ -855,10 +762,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="the-natural-language-toolkitntlk" class="section level3">
 <h3><span class="header-section-number">2.8.8</span> <a href="http://www.nltk.org">The Natural Language Toolkit(NTLK)</a></h3>
 <p>NTLK appears to be the leading package and covers almost all major needs. The accompanying book <a href="http://shop.oreilly.com/product/9780596516499.do">Natural Language Processing with Python</a> may also be worth considering. The <a href="http://www.christianpeccei.com/textmining/">Python Textmining Package</a> is simpler than the giant NTLK package but may suit your needs.</p>
-<div class="figure">
-<img src="images/overview/ntlk.png" />
-
-</div>
+<p><img src="images/overview/ntlk.png" /></p>
 <p>This <a href="http://textminingonline.com/dive-into-nltk-part-i-getting-started-with-nltk">detailed tutorial</a> may be helpful for those wanting to get started with the NTLK package in Python.</p>
 </div>
 <div id="other-text-mining-resources" class="section level3">
@@ -923,17 +827,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -957,9 +862,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>The WIPO Manual on Open Source Patent Analytics</title>
   <meta name="description" content="A practical introduction to free and open source tools for patent analytics.">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
   <meta property="og:type" content="book" />
@@ -49,41 +49,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -110,67 +138,69 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>0.5</b> Disclaimer</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.0.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.0.1</b> An Overview of Open Source and Free Software Tools</a></li>
-<li class="chapter" data-level="1.0.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.0.2</b> Approaching Patent Data</a></li>
-<li class="chapter" data-level="1.0.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.0.3</b> Obtaining Patent Data</a></li>
-<li class="chapter" data-level="1.0.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.0.4</b> Cleaning and Tidying Patent Data</a></li>
-<li class="chapter" data-level="1.0.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.0.5</b> Analysing and Visualizing Patent Data</a></li>
-<li class="chapter" data-level="1.0.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.0.6</b> Sharing Data and The Writing of the Manual</a></li>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i><b>1.1</b> Structure</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.1.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.1.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.1.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.1.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.1.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.1.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>2</b> An Overview of Tools</a><ul>
 <li class="chapter" data-level="2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>2.1</b> General Tools</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <a href="https://www.openoffice.org">Open Office</a></a></li>
-<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></a></li>
-<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></a></li>
+<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <span>Open Office</span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <span>Google Sheets</span></a></li>
+<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <span>Google Fusion Tables</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>2.2</b> Cleaning Tools</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <a href="http://openrefine.org">Open Refine</a> (formerly Google Refine)</a></li>
+<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <span>Open Refine</span> (formerly Google Refine)</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>2.3</b> Data Mining</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <a href="http://www.rstudio.com">RStudio</a></a></li>
-<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <a href="https://rapidminer.com/products/studio/">RapidMiner Studio</a></a></li>
-<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <a href="http://www.knime.org">KNIME</a></a></li>
+<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <span>RStudio</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <span>RapidMiner Studio</span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <span>KNIME</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>2.4</b> Data visualization</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <a href="https://developers.google.com/chart/interactive/docs/gallery">Google Charts</a></a></li>
-<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
+<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <span>Google Charts</span></a></li>
+<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <span>Tableau Public</span></a></li>
 <li class="chapter" data-level="2.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.4.3</b> R and RStudio</a></li>
 <li class="chapter" data-level="2.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>2.4.4</b> Shiny</a></li>
-<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <a href="http://www-01.ibm.com/software/analytics/many-eyes/">IBM Many Eyes</a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <span>IBM Many Eyes</span></a></li>
 <li class="chapter" data-level="2.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>2.4.6</b> Other visualization Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>2.5</b> Network Visualization</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <a href="https://gephi.github.io">Gephi</a></a></li>
-<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <a href="http://nodexl.codeplex.com">NodeXL</a></a></li>
-<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <a href="http://www.cytoscape.org/what_is_cytoscape.html">Cytoscape</a></a></li>
-<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <a href="http://mrvar.fdv.uni-lj.si/pajek/">Pajek</a></a></li>
-<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <a href="http://www.vosviewer.com/Home">VOS Viewer</a></a></li>
-<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <a href="http://www.hiveplot.net">Hive Plots</a></a></li>
+<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <span>Gephi</span></a></li>
+<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <span>NodeXL</span></a></li>
+<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <span>Cytoscape</span></a></li>
+<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <span>Pajek</span></a></li>
+<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <span>VOS Viewer</span></a></li>
+<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <span>Hive Plots</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>2.6</b> Infographics</a></li>
 <li class="chapter" data-level="2.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>2.7</b> Geographical Mapping</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <a href="http://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a></a></li>
-<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <a href="http://leafletjs.com">Leaflet</a></a></li>
-<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <a href="https://public.tableau.com/s/">Tableau Public</a></a></li>
-<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <a href="http://www.qgis.org/en/site/">QGIS</a></a></li>
-<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <a href="http://www.geonames.org">Geonames.org</a>.</a></li>
-<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <a href="http://icharts.net/product/web-data-visualization">iCharts</a></a></li>
-<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <a href="http://openlayers.org">OpenLayers3</a></a></li>
-<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <a href="https://cartodb.com/gallery/">CartoDB</a></a></li>
-<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <a href="http://d3js.org">d3.js</a></a></li>
-<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <a href="http://www.highcharts.com">Highcharts</a></a></li>
-<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <a href="https://datawrapper.de">Datawrapper</a></a></li>
-<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <a href="https://plot.ly/feed/">Plotly</a></a></li>
+<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <span>OpenStreetMap</span></a></li>
+<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <span>Leaflet</span></a></li>
+<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <span>QGIS</span></a></li>
+<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <span>Geonames.org</span>.</a></li>
+<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <span>iCharts</span></a></li>
+<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <span>OpenLayers3</span></a></li>
+<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <span>CartoDB</span></a></li>
+<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <span>d3.js</span></a></li>
+<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <span>Highcharts</span></a></li>
+<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <span>Datawrapper</span></a></li>
+<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <span>Plotly</span></a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>2.8</b> Text Mining</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <a href="http://www.cc.gatech.edu/gvu/ii/jigsaw/">Jigsaw Visual Analytics</a></a></li>
-<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a></a></li>
+<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <span>Jigsaw Visual Analytics</span></a></li>
+<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <span>Weka</span></a></li>
 <li class="chapter" data-level="2.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>2.8.3</b> Word Trees</a></li>
-<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <a href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Word Trees</a> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
-<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <a href="http://sourceforge.net/projects/khc/?source=directory">KH Coder</a>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <span>Google Word Trees</span> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <span>KH Coder</span>: free software allowing quantitative content analysis/text mining.</a></li>
 <li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
 <li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
-<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <a href="http://www.nltk.org">The Natural Language Toolkit(NTLK)</a></a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <span>The Natural Language Toolkit(NTLK)</span></a></li>
 <li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
@@ -183,18 +213,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>3.2</b> As a form of intellectual property right</a></li>
 <li class="chapter" data-level="3.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>3.3</b> Patents as a type of document</a></li>
 <li class="chapter" data-level="3.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>3.4</b> Basic Data Types</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <a href="http://www.nature.com/nature/journal/v473/n7347/full/473403a.html">Synthetic Genomes</a></a></li>
-<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <a href="http://worldwide.espacenet.com/publicationDetails/originalDocument?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Original Front Page</a></a></li>
-<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <a href="http://worldwide.espacenet.com/publicationDetails/biblio?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">espacenet Front Page</a></a></li>
-<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <a href="http://worldwide.espacenet.com/publicationDetails/description;jsessionid=2kCKJqOvMF0Te-kUiu5GaPA9.espacenet_levelx_prod_2?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Description</a></a></li>
-<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <a href="http://worldwide.espacenet.com/publicationDetails/claims?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Claims</a></a></li>
-<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadocPatentFamily?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Family Members</a></a></li>
-<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <a href="http://worldwide.espacenet.com/publicationDetails/citedDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Cited</a></a></li>
-<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <a href="http://worldwide.espacenet.com/publicationDetails/citingDocuments?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Citing</a></a></li>
-<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <a href="http://worldwide.espacenet.com/publicationDetails/inpadoc?CC=WO&amp;NR=2008024129A2&amp;KC=A2&amp;FT=D&amp;ND=5&amp;date=20080228&amp;DB=EPODOC&amp;locale=en_EP">Legal Status</a></a></li>
+<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <span>Synthetic Genomes</span></a></li>
+<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <span>Original Front Page</span></a></li>
+<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <span>espacenet Front Page</span></a></li>
+<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <span>Description</span></a></li>
+<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <span>Claims</span></a></li>
+<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <span>Family Members</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <span>Cited</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <span>Citing</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <span>Legal Status</span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#patent-registers"><i class="fa fa-check"></i><b>3.5</b> Patent Registers</a></li>
-<li class="chapter" data-level="3.6" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.6</b> Round Up</a></li>
+<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.5</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>4</b> Datasets</a><ul>
 <li class="chapter" data-level="4.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>4.1</b> The datasets</a><ul>
@@ -208,27 +237,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>5</b> Databases</a><ul>
 <li class="chapter" data-level="5.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
 <li class="chapter" data-level="5.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>5.2</b> The Databases</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <a href="https://www.lens.org/lens/">The Lens</a></a></li>
-<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <a href="https://patentscope.wipo.int/search/en/search.jsf">Patentscope</a></a></li>
-<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <a href="http://worldwide.espacenet.com/?locale=en_EP">espacenet</a></a></li>
-<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <a href="http://lp.espacenet.com">LATIPAT</a></a></li>
-<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <a href="http://www.epo.org/searching/free/ops.html">EPO Open Patent Services</a></a></li>
-<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <a href="http://www.patentsview.org/web/">USPTO Patents View</a></a></li>
-<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <a href="http://www.google.com/patents">Google Patents</a></a></li>
-<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <a href="https://www.google.com/patents/related">Google Prior Art Finder</a></a></li>
-<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <a href="https://www.google.com/googlebooks/uspto.html">Google USPTO Bulk download</a></a></li>
-<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <a href="http://www.freepatentsonline.com">Free Patents Online</a></a></li>
-<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <a href="http://www.dpma.de/english/service/e-services/depatisnet/">DEPATISnet</a></a></li>
-<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <a href="http://www.oecd.org/sti/inno/oecdpatentdatabases.htm">OECD Patent Databases</a></a></li>
-<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <a href="https://www.epo.org/searching-for-patents/business/patstat.html">EPO World Patent Statistical Database</a></a></li>
+<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <span>The Lens</span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <span>Patentscope</span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <span>espacenet</span></a></li>
+<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <span>LATIPAT</span></a></li>
+<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <span>EPO Open Patent Services</span></a></li>
+<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <span>USPTO Patents View</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <span>Google Patents</span></a></li>
+<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <span>Google Prior Art Finder</span></a></li>
+<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <span>Google USPTO Bulk download</span></a></li>
+<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <span>Free Patents Online</span></a></li>
+<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <span>DEPATISnet</span></a></li>
+<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <span>OECD Patent Databases</span></a></li>
+<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <span>EPO World Patent Statistical Database</span></a></li>
 <li class="chapter" data-level="5.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>5.2.14</b> Other data sources</a></li>
+<li class="chapter" data-level="5.2.15" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.2.15</b> <span>Patent2Net</span> in Python</a></li>
+<li class="chapter" data-level="5.2.16" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.2.16</b> <span>Python EPO OPS Client</span> by Gsong</a></li>
+<li class="chapter" data-level="5.2.17" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.2.17</b> <span>Fung Institute Patent Server</span> for USPTO data in JSON</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="databases.html"><a href="databases.html#tools-for-accessing-patent-data"><i class="fa fa-check"></i><b>5.3</b> Tools for Accessing Patent Data</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.3.1</b> <a href="https://github.com/Patent2net/Patent2Net">Patent2Net</a> in Python</a></li>
-<li class="chapter" data-level="5.3.2" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.3.2</b> <a href="https://github.com/55minutes/python-epo-ops-client">Python EPO OPS Client</a> by Gsong</a></li>
-<li class="chapter" data-level="5.3.3" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.3.3</b> <a href="https://github.com/funginstitute/patentserver">Fung Institute Patent Server</a> for USPTO data in JSON</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="databases.html"><a href="databases.html#round-up-3"><i class="fa fa-check"></i><b>5.4</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>6</b> The Lens</a><ul>
 <li class="chapter" data-level="6.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
@@ -237,7 +263,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>6.4</b> Visualisation</a></li>
 <li class="chapter" data-level="6.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>6.5</b> Working with texts</a></li>
 <li class="chapter" data-level="6.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>6.6</b> PatSeq</a></li>
-<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-4"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
+<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-3"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>7</b> Patentscope</a><ul>
 <li class="chapter" data-level="7.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
@@ -247,7 +273,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>7.5</b> Downloading Results</a></li>
 <li class="chapter" data-level="7.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>7.6</b> Cross Lingual Searching</a></li>
 <li class="chapter" data-level="7.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>7.7</b> Sequence Data</a></li>
-<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-5"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
+<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-4"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
 </ul></li>
 <li class="part"><span><b>III Cleaning Patent Data</b></span></li>
 <li class="chapter" data-level="8" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>8</b> Open Refine</a><ul>
@@ -282,7 +308,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="8.8.5" data-path="open-refine.html"><a href="open-refine.html#ppm"><i class="fa fa-check"></i><b>8.8.5</b> PPM</a></li>
 <li class="chapter" data-level="8.8.6" data-path="open-refine.html"><a href="open-refine.html#preparing-for-export"><i class="fa fa-check"></i><b>8.8.6</b> Preparing for export</a></li>
 </ul></li>
-<li class="chapter" data-level="8.9" data-path="open-refine.html"><a href="open-refine.html#round-up-6"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
+<li class="chapter" data-level="8.9" data-path="open-refine.html"><a href="open-refine.html#round-up-5"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
 <li class="chapter" data-level="8.10" data-path="open-refine.html"><a href="open-refine.html#useful-resources"><i class="fa fa-check"></i><b>8.10</b> Useful Resources</a></li>
 </ul></li>
 <li class="part"><span><b>IV Visualizing Patent Data</b></span></li>
@@ -295,7 +321,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>9.6</b> Creating an Overview Dashboard</a></li>
 <li class="chapter" data-level="9.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>9.7</b> Saving, Display and Privacy Settings</a></li>
 <li class="chapter" data-level="9.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>9.8</b> Privacy and Security</a></li>
-<li class="chapter" data-level="9.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-7"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
+<li class="chapter" data-level="9.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-6"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>10</b> Gephi</a><ul>
 <li class="chapter" data-level="10.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>10.1</b> Installing Gephi</a></li>
@@ -308,7 +334,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.4.2" data-path="gephi-1.html"><a href="gephi-1.html#setting-node-size"><i class="fa fa-check"></i><b>10.4.2</b> Setting Node Size</a></li>
 <li class="chapter" data-level="10.4.3" data-path="gephi-1.html"><a href="gephi-1.html#colouring-the-nodes"><i class="fa fa-check"></i><b>10.4.3</b> Colouring the Nodes</a></li>
 </ul></li>
-<li class="chapter" data-level="10.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>10.5</b> Laying out the Graph</a></li>
+<li class="chapter" data-level="10.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>10.5</b> Laying out the Graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="gephi-1.html"><a href="gephi-1.html#save-your-work"><i class="fa fa-check"></i><b>10.5.1</b> Save your work</a></li>
+</ul></li>
 <li class="chapter" data-level="10.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>10.6</b> Adding Labels</a></li>
 <li class="chapter" data-level="10.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>10.7</b> Using the Preview Options</a></li>
 <li class="chapter" data-level="10.8" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>10.8</b> Exporting from Preview</a></li>
@@ -323,7 +351,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>11.5</b> Saving and Sharing</a></li>
 <li class="chapter" data-level="11.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>11.6</b> Working with Plotly in R</a></li>
-<li class="chapter" data-level="11.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-8"><i class="fa fa-check"></i><b>11.7</b> Round Up</a></li>
+<li class="chapter" data-level="11.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-7"><i class="fa fa-check"></i><b>11.7</b> Round Up</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>12</b> Patent Infographics with R</a><ul>
 <li class="chapter" data-level="12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>12.1</b> Getting Started</a></li>
@@ -349,7 +377,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>12.11.1</b> Phrases Tables</a></li>
 </ul></li>
 <li class="chapter" data-level="12.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>12.12</b> Creating an infographic in infogr.am</a><ul>
-<li class="chapter" data-level="12.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-9"><i class="fa fa-check"></i><b>12.12.1</b> Round Up</a></li>
+<li class="chapter" data-level="12.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-8"><i class="fa fa-check"></i><b>12.12.1</b> Round Up</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>V Using APIs</b></span></li>
@@ -374,27 +402,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="13.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>13.15</b> Filling Blank Spaces</a></li>
 <li class="chapter" data-level="13.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>13.16</b> Converting Dates</a></li>
-<li class="chapter" data-level="13.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#adding-columns"><i class="fa fa-check"></i><b>13.17</b> Adding columns</a></li>
-<li class="chapter" data-level="13.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>13.18</b> Add a count</a></li>
-<li class="chapter" data-level="13.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>13.19</b> Remove a column</a></li>
-<li class="chapter" data-level="13.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>13.20</b> Arranging the Data</a></li>
-<li class="chapter" data-level="13.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>13.21</b> Dealing with Duplicates</a><ul>
-<li class="chapter" data-level="13.21.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>13.21.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
-<li class="chapter" data-level="13.21.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>13.21.2</b> Deleting Duplicates</a></li>
+<li class="chapter" data-level="13.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>13.17</b> Add a count</a></li>
+<li class="chapter" data-level="13.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>13.18</b> Remove a column</a></li>
+<li class="chapter" data-level="13.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>13.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="13.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>13.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="13.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>13.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="13.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>13.20.2</b> Deleting Duplicates</a></li>
 </ul></li>
-<li class="chapter" data-level="13.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>13.22</b> Restricting searches by section</a></li>
-<li class="chapter" data-level="13.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>13.23</b> By author</a></li>
-<li class="chapter" data-level="13.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>13.24</b> Title search using <code>plostitle()</code></a></li>
-<li class="chapter" data-level="13.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>13.25</b> Abstract search using <code>plosabstract()</code></a></li>
-<li class="chapter" data-level="13.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>13.26</b> Subject Area using <code>plossubject()</code></a></li>
-<li class="chapter" data-level="13.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>13.27</b> Highlighting terms and text fragments with highplos()</a><ul>
-<li class="chapter" data-level="13.27.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>13.27.1</b> Snippets using hl.snippets</a></li>
-<li class="chapter" data-level="13.27.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>13.27.2</b> fragment size using hl.fragsize</a></li>
+<li class="chapter" data-level="13.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>13.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="13.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>13.22</b> By author</a></li>
+<li class="chapter" data-level="13.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>13.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="13.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>13.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="13.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>13.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="13.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>13.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="13.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>13.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="13.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>13.26.2</b> fragment size using hl.fragsize</a></li>
 </ul></li>
-<li class="chapter" data-level="13.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>13.28</b> Get the full text of one or more articles</a></li>
-<li class="chapter" data-level="13.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>13.29</b> Writing a corpus to disk</a></li>
-<li class="chapter" data-level="13.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-10"><i class="fa fa-check"></i><b>13.30</b> Round Up</a></li>
-<li class="chapter" data-level="13.31" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>13.31</b> Resources</a></li>
+<li class="chapter" data-level="13.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>13.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="13.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>13.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="13.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-9"><i class="fa fa-check"></i><b>13.29</b> Round Up</a></li>
+<li class="chapter" data-level="13.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>13.30</b> Resources</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
@@ -417,7 +444,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="patent-analytics-with-plotly" class="section level1">
-<h1><span class="header-section-number">Chapter11</span> Patent Analytics with Plotly</h1>
+<h1><span class="header-section-number">Chapter 11</span> Patent Analytics with Plotly</h1>
 <div id="introduction-5" class="section level2">
 <h2><span class="header-section-number">11.1</span> Introduction</h2>
 <p>In this chapter we provide an introduction to the online graphing service <a href="http://plotly.com">Plotly</a> to create graphics for use in patent analysis.</p>
@@ -427,25 +454,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="getting-started-with-plotly" class="section level2">
 <h2><span class="header-section-number">11.2</span> Getting Started with Plotly</h2>
 <p>We need to start out by creating an account using the Create Account Button.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig1_plotly.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig1_plotly.png" /></p>
 <p>Next we will see an invitation to take a tour (which is worth doing) and Plotly helpfully points out that we can load files from Google Drive or Dropbox. We then select the <code>Workspace</code> option to begin work.</p>
 </div>
 <div id="importing-files" class="section level2">
 <h2><span class="header-section-number">11.3</span> Importing Files</h2>
 <p>When you first arrive you will see a Workspace with a Grid (Plotly’s term for a table or worksheet).</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig2_workspace.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig2_workspace.png" /></p>
 <p>In the workspace you will see an Import Icon that provides a range of options for importing data. Don’t import anything yet! You can also copy data from a file and paste it into the Grid.</p>
 <p>At the time of writing, the reason not to use these options at the moment is that while the data may import fine first time, in other cases it will not. Using the options on this page you will receive no information if an import fails. We also encountered problems with saving data that had been pasted into the worksheet (even where it appeared to work). To avoid potential frustration head over to <code>Organize</code>.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig3_import.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig3_import.png" /></p>
 <p>From the Organize page select the New button and then Upload. Now select your local file. When you upload the file a status message will display and if all goes well then you will see a completed message. If not a red message will display informing you that there has been a problem (how you fix these problems is unclear).</p>
 <p>For this experiment we used two datasets from the <a href="https://github.com/wipo-analytics/opensource-patent-analytics/tree/master/2_datasets">Open Source Patent Analytics Manual data repository</a>. When using the Github repository click on the file of interest until you see a <code>View Raw</code> message. Then right click to download the data file from there. You can download them for your own use directly from the following links.</p>
 <ol style="list-style-type: decimal">
@@ -458,97 +476,52 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="creating-a-graphic" class="section level2">
 <h2><span class="header-section-number">11.4</span> Creating a graphic</h2>
 <p>We will start with the simple WIPO trends data by opening up that Grid.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig5_grid.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig5_grid.png" /></p>
 <p>Note here that in the Grid we have options to select the x or y axis for plotting. There is also an Options menu that we will come back to.</p>
 <p>The Type of plot can be changed by selecting the drop down menu as we can see below.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig6_gtype.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig6_gtype.png" /></p>
 <p>Sticking with a line graph, when we create the plot we can add a title and then change the theme (in this case to Catherine).</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig7_line.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig7_line.png" /></p>
 <p>We could also add a fit line by selecting the <code>FIT DATA</code> menu icon. This will ask you to create a fit and then you have a range of preset functions or you can add your own. Here we have simply chosen the default Linear fit.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig8_fit.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig8_fit.png" /></p>
 <p>We can then save the plot and use the export button to save the plot in a variety of formats and sizes. It is also very easy to add annotations using the Notes icon. Confusingly, the large blue Share button only seems to save the file and despite saving the plot we were not able to locate it again. While Plotly certainly looks nice, and appears to have attractive functions it is not intuitive and the difficulties involved in importing and sharing can be frustrating and time consuming. In short, time is needed to invest in and explore the potential of this tool.</p>
 <div id="adding-a-second-axis" class="section level3">
 <h3><span class="header-section-number">11.4.1</span> Adding a Second Axis</h3>
 <p>If we go back to our original WIPO trends data we have a percentage score for the year on year change in patent applications. We might want to show this on a plot with a second axis for the percentage.</p>
 <p>To do that in the Grid view select the button “choose as y” in the Growth-rate column to add a second item for the y axis.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig9_secondy.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig9_secondy.png" /></p>
 <p>When we choose Line plot we will now see the two sets of data with the percentage trailing on the bottom. We now need to create a second y axis on the right and assign the percentage data to that.</p>
 <p>To do this select the Traces icon and a menu will pop up showing the data traces. The drop down menu under Traces will show Applications, so, select Growth Rate % from the drop down menu. Then where you see Lines/Markers select the dot. This will prevent the percentage scores displaying as a line.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig11_addaxis.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig11_addaxis.png" /></p>
 <p>Next, in the same panel under <code>Axes</code> select <code>New Axis/Subplot</code> and a new screen will pop up. We have some choices here but will simply choose to create a new axis on the right.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig11_addyaxis.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig11_addyaxis.png" /></p>
 <p>The result will look something like this.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig12_result1.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig12_result1.png" /></p>
 <p>Our issue now is equalising the axes and changing the size of the points for the percentage scores. Finally we can add a title.</p>
 <p>Before we go any further let’s note that we have a significant minus axis value of -3.6% in 2009 when patent applications declined. There is also a minus value in 2002.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_dip.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_dip.png" /></p>
 <p>If we wanted to retain these values we would probably want to turn off the second set of grid lines. We would also want to resize the points.</p>
 <p>To turn off the grid lines on the second y axis Click on the Axes icon in the main menu on the left. Then from the <code>All Axes</code> drop down under Axes select Y Axis 2. Then click the Lines submenu icon and turn Lines and Grid lines to OFF. Also turn the Zero line to OFF unless you want to retain it.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_turnoffgrid.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_turnoffgrid.png" /></p>
 <p>To resize the points we need to go back to the Traces main menu on the left and select Growth Rate from the list of Traces. Then choose the Style tab and change the marker size to something larger such as 8.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_resizepoint.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_resizepoint.png" /></p>
 <p>To finish off the graphic we will want to add some labels. We can simply type in the Axis labels and a title into the text boxes provided. By choosing the Legend icon we could turn the legend on or off. Note that while this graph could be seen as self explanatory it may not be for the reader. We can also simply drag the axes labels to a different position.</p>
 <p>It is possible that we would want to remove the negative values from the plot (in that case the values would need to be explained in the accompanying text). To do that select <code>Axes</code>, then <code>Y Axis2</code> then in <code>Autorange</code> choose <code>Non-negative</code> to show only values greater than zero on the plot.</p>
 <p>If we wished we could also apply a fit line by choosing the Fit Data icon. We will choose Linear.<br />
 <img src="images/plotlyfigs/fig13_final.png" /></p>
 <p>Finally, to finish off the plot we might want to add annotations using the NOTES icon. Simply click on the plus sign in the pop up menu for a new annotation and then select the arrow and text and move it into the position you want.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_final_annotated.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_final_annotated.png" /></p>
 <p>In this case we have added a couple of markers that may help to understand trends in activity. First, we have a dip in patent applications between 2001 and 2002. One possible explanation here is that this is a knock on effect of the collapse of the dot.com bubble where share prices reached a peak in 2000, declined rapidly and recovered before declining again into 2001. Patent data typically displays lag effects and it is reasonable to think that the decline in application activity from 2001 reflects these wider economic adjustments. Similarly, there is a significant dip in applications between 2008 and 2009 that it appears reasonable to assume reflects the knock on effects of the global economic crisis of 2007-2008. Note here that these are crude way markers to assist with interpreting the graphics. We could choose to add other timeline style events or layer graphics to help understand the potential or actual relationships between wider economic activity and trends in patent applications worldwide.</p>
 </div>
 </div>
 <div id="saving-and-sharing" class="section level2">
 <h2><span class="header-section-number">11.5</span> Saving and Sharing</h2>
 <p>To save the plot we simply click Save. However, it is here that one of Plotly’s major strengths becomes apparent. As soon as we save the plot we can also invite others by email, we can create a public or private shareable link. For the collaborators, they must have a Plotly account already for this to work.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_email.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_email.png" /></p>
 <p>The next option is to share a link. Note here that the default is to share a private link. To change that select the lock icon. The private link is particularly well suited for patent professionals.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_privatelink.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_privatelink.png" /></p>
 <p>You could also grab an embed code to embed the plot in a web page</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig13_embed.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig13_embed.png" /></p>
 <p>Alternatively, surprise your friends and relatives by posting the plot on facebook or share with a wider audience on Twitter.</p>
 <p>In this example we have focused on developing a very simple plot using <code>plotly</code>. In practice there are a wide range of possible plotting options with a growing number of tutorials provided <a href="http://help.plot.ly/">here</a>.</p>
 </div>
@@ -556,72 +529,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">11.6</span> Working with Plotly in R</h2>
 <p>We are following the instructions for setting up <a href="https://plot.ly/r/getting-started/">Plotly in R</a>. We will be using <a href="https://www.rstudio.com/">RStudio</a> for this experiment. Download RStudio for your operating system <a href="https://www.rstudio.com/products/rstudio/download/">here</a> and make sure that you also install R at the same time from the link on the RStudio page <a href="https://cran.rstudio.com">here</a>. For Python try these <a href="https://plot.ly/python/getting-started/">installation instructions</a> to get started.</p>
 <p>In RStudio first we need to install the <code>plotly</code> package. We will also install some other helpful packages for working with data in R. Either select the Packages tab in RStudio and type <code>plotly</code> and install, or type the following in the console and press Enter.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;plotly&quot;</span>) <span class="co"># the main event</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;readr&quot;</span>) <span class="co"># import csv files</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) <span class="co"># wrangle data</span>
-<span class="kw">install.packages</span>(<span class="st">&quot;tidyr&quot;</span>) <span class="co"># tidy data</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;plotly&quot;</span>) <span class="co"># the main event</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;readr&quot;</span>) <span class="co"># import csv files</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) <span class="co"># wrangle data</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw">install.packages</span>(<span class="st">&quot;tidyr&quot;</span>) <span class="co"># tidy data</span></a></code></pre></div>
 <p>Then load the libraries.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-<span class="kw">library</span>(readr)
-<span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(tidyr)</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw">library</span>(readr)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw">library</span>(tidyr)</a></code></pre></div>
 <p>We now need to set our credentials for the API. When logged in to <code>plotly</code> follow <a href="https://plot.ly/settings/api">this link</a> to obtain your API key. Note also that you can obtain a streaming API token on the same page. Streaming will update a graphic from inside RStudio.</p>
 <p>When you have obtained your token use the following command to store your username and the API key in your environment.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Sys.setenv</span>(<span class="st">&quot;plotly_username&quot;</span> =<span class="st"> &quot;your_plotly_username&quot;</span>)
-<span class="kw">Sys.setenv</span>(<span class="st">&quot;plotly_api_key&quot;</span> =<span class="st"> &quot;your_api_key&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">Sys.setenv</span>(<span class="st">&quot;plotly_username&quot;</span> =<span class="st"> &quot;your_plotly_username&quot;</span>)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">Sys.setenv</span>(<span class="st">&quot;plotly_api_key&quot;</span> =<span class="st"> &quot;your_api_key&quot;</span>)</a></code></pre></div>
 <p>Next we will load a dataset of WIPO Patentscope data containing sample data on patent documents containing the word pizza organised by country and year (pcy = pizza, country, year).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readr)
-pcy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://github.com/wipo-analytics/opensource-patent-analytics/raw/master/2_datasets/pizza_medium_clean/pcy.csv&quot;</span>)</code></pre></div>
-<pre><code>## Parsed with column specification:
-## cols(
-##   pubcountry = col_character(),
-##   pubcode = col_character(),
-##   pubyear = col_integer(),
-##   n = col_integer()
-## )</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">library</span>(readr)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">pcy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://github.com/wipo-analytics/opensource-patent-analytics/raw/master/2_datasets/pizza_medium_clean/pcy.csv&quot;</span>)</a></code></pre></div>
 <p>Because patent data generally contains a data cliff for more recent years we will filter out recent years using <code>filter()</code> from the <code>dplyr</code> package by specifying a year that is less than or equal to 2012. To take out the long tail of limited historic data we will specify greater than or equal to 1990.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-pcy &lt;-<span class="st"> </span><span class="kw">filter</span>(pcy, pubyear <span class="op">&gt;=</span><span class="st"> </span><span class="dv">1990</span>, pubyear <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2012</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">print</span>()</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">pcy &lt;-<span class="st"> </span><span class="kw">filter</span>(pcy, pubyear <span class="op">&gt;=</span><span class="st"> </span><span class="dv">1990</span>, pubyear <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2012</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span><span class="kw">print</span>()</a></code></pre></div>
 <pre><code>## # A tibble: 223 x 4
 ##    pubcountry pubcode pubyear     n
-##         &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt;
-##  1     Canada      CA    1990    19
-##  2     Canada      CA    1991    49
-##  3     Canada      CA    1992    66
-##  4     Canada      CA    1993    59
-##  5     Canada      CA    1994    50
-##  6     Canada      CA    1995    39
-##  7     Canada      CA    1996    36
-##  8     Canada      CA    1997    45
-##  9     Canada      CA    1998    46
-## 10     Canada      CA    1999    47
+##    &lt;chr&gt;      &lt;chr&gt;     &lt;int&gt; &lt;int&gt;
+##  1 Canada     CA         1990    19
+##  2 Canada     CA         1991    49
+##  3 Canada     CA         1992    66
+##  4 Canada     CA         1993    59
+##  5 Canada     CA         1994    50
+##  6 Canada     CA         1995    39
+##  7 Canada     CA         1996    36
+##  8 Canada     CA         1997    45
+##  9 Canada     CA         1998    46
+## 10 Canada     CA         1999    47
 ## # ... with 213 more rows</code></pre>
 <p>To create the plot in <code>plotly</code> we use the <code>plot_ly()</code> function. We will specify the dataset, the x and y axis and then the colour for the country data (known as a trace in <code>plotly</code> language). We will then add a title using the <code>%&gt;%</code> pipe operator for “this” then “that”. To specify the visual we want we specify the mode as “lines”&quot; (try “markers” for a scatter plot).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-s &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(pcy, <span class="dt">x =</span> pubyear, <span class="dt">y =</span> n, <span class="dt">color =</span> pubcountry, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">layout</span>(<span class="dt">title =</span> <span class="st">&quot;Patenscope Pizza Patent Trends&quot;</span>)
-s</code></pre></div>
-<div class="figure">
-<img src="images/plotlyfigs/fig16_plotlys.png" />
-
-</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">s &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(pcy, <span class="dt">x =</span> pubyear, <span class="dt">y =</span> n, <span class="dt">color =</span> pubcountry, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">  </span><span class="kw">layout</span>(<span class="dt">title =</span> <span class="st">&quot;Patenscope Pizza Patent Trends&quot;</span>)</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">s</a></code></pre></div>
+<p><img src="images/plotlyfigs/fig16_plotlys.png" /></p>
 <p>Our data has more entries than there are colours in the default color palette. Plotly will record a warning on the number of colours but we can now clearly see a plot. If we have entered our credentials for the API (above) we can also push the graph online along with the data for further editing or to share with others.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-<span class="kw">plotly_POST</span>(s)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="kw">plotly_POST</span>(s)</a></code></pre></div>
 <p>This will open a browser window and ask you to sign up or login before being taken to the graph.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig17_plotlys_post.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig17_plotlys_post.png" /></p>
 <p>As this makes clear, it is easy to generate a <code>plotly</code> graph in R but we will want to dig into the <code>plotly</code> package in a little more detail.</p>
 <p>To change colours it is helpful to note that <code>plotly</code> installs and then calls the <code>RColorBrewer</code> package (it will display in the Packages list). To see the colour palettes we first tick RColorBrewer in Packages (or <code>library(RColorBrewer)</code>) to load it.</p>
 <p>To view the available palettes you could simply use <code>View(brewer.pal.info)</code> or the following chunk which arranges the data by the number of colours.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RColorBrewer)
-<span class="kw">library</span>(dplyr)
-brewer.pal.info<span class="op">$</span>names &lt;-<span class="st"> </span><span class="kw">row.names</span>(brewer.pal.info)
-<span class="kw">select</span>(brewer.pal.info, <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(maxcolors))</code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">library</span>(RColorBrewer)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">brewer.pal.info<span class="op">$</span>names &lt;-<span class="st"> </span><span class="kw">row.names</span>(brewer.pal.info)</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="kw">select</span>(brewer.pal.info, <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(maxcolors))</a></code></pre></div>
 <pre><code>##       names colorblind category maxcolors
 ## 1    Paired       TRUE     qual        12
 ## 2      Set3      FALSE     qual        12
@@ -659,128 +619,117 @@ brewer.pal.info<span class="op">$</span>names &lt;-<span class="st"> </span><spa
 ## 34  Pastel2      FALSE     qual         8
 ## 35     Set2       TRUE     qual         8</code></pre>
 <p>This indicates that the maximum number of colours in a palette is 12. Let’s try <code>Paired</code> for illustration. This has the advantage of being colour blind friendly.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-<span class="kw">library</span>(dplyr)
-s1 &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(pcy, <span class="dt">x =</span> pubyear, <span class="dt">y =</span> n, <span class="dt">color =</span> pubcountry, <span class="dt">colors =</span> <span class="st">&quot;Paired&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">layout</span>(<span class="dt">title =</span> <span class="st">&quot;Pizza Patent trends&quot;</span>)
-s1</code></pre></div>
-<div class="figure">
-<img src="images/plotlyfigs/fig18_plotlys.png" />
-
-</div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">s1 &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(pcy, <span class="dt">x =</span> pubyear, <span class="dt">y =</span> n, <span class="dt">color =</span> pubcountry, <span class="dt">colors =</span> <span class="st">&quot;Paired&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4"><span class="st">  </span><span class="kw">layout</span>(<span class="dt">title =</span> <span class="st">&quot;Pizza Patent trends&quot;</span>)</a>
+<a class="sourceLine" id="cb16-5" data-line-number="5">s1</a></code></pre></div>
+<p><img src="images/plotlyfigs/fig18_plotlys.png" /></p>
 <p>As we can see this will then produce a plot with the color palette, <code>plotly</code> will show a warning that the base palette (“Set2”) has 8 colours but will then specify that it is displaying the palette that we requested.</p>
 <p>In practice we would want to break this plot into subplots for two reasons. First, the data and value ranges vary widely between countries and second, it is better to ensure that colours are distinct.</p>
 <p>To do this we need to run some calculations on the data. We will use functions from <code>dplyr</code> and <code>tidyr</code> to quickly tally the data grouping by the publication code. Then we will add the data to discreet groups based on the scores using <code>mutate()</code> (to add a variable) and <code>ntile()</code> to divide the countries into groups based on the number of records (n) and add this to the new variable called group. Finally, we arrange the data in descending order based on the number of records.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(tidyr)
-total &lt;-<span class="st"> </span><span class="kw">tally</span>(<span class="kw">group_by</span>(pcy, pubcode)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ntile</span>(nn, <span class="dv">3</span>)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">rename</span>(<span class="dt">records =</span> nn) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(records)) 
-total</code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">library</span>(tidyr)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">total &lt;-<span class="st"> </span><span class="kw">tally</span>(<span class="kw">group_by</span>(pcy, pubcode)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ntile</span>(nn, <span class="dv">3</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="st">  </span><span class="kw">rename</span>(<span class="dt">records =</span> nn) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(records)) </a>
+<a class="sourceLine" id="cb17-7" data-line-number="7">total</a></code></pre></div>
 <pre><code>## # A tibble: 16 x 3
 ##    pubcode records group
-##      &lt;chr&gt;   &lt;int&gt; &lt;int&gt;
-##  1      US    3835     3
-##  2      WO    1366     3
-##  3      CA    1186     3
-##  4      EP    1074     3
-##  5      KR     307     3
-##  6      JP     205     2
-##  7      DE      83     2
-##  8      ZA      66     2
-##  9      CN      60     2
-## 10      IL      29     2
-## 11      MX      23     1
-## 12      RU      10     1
-## 13      PT       9     1
-## 14      EA       4     1
-## 15      ES       3     1
-## 16      SG       2     1</code></pre>
+##    &lt;chr&gt;     &lt;int&gt; &lt;int&gt;
+##  1 US         3835     3
+##  2 WO         1366     3
+##  3 CA         1186     3
+##  4 EP         1074     3
+##  5 KR          307     3
+##  6 JP          205     2
+##  7 DE           83     2
+##  8 ZA           66     2
+##  9 CN           60     2
+## 10 IL           29     2
+## 11 MX           23     1
+## 12 RU           10     1
+## 13 PT            9     1
+## 14 EA            4     1
+## 15 ES            3     1
+## 16 SG            2     1</code></pre>
 <p>When we view total we now see that countries have been divided into 3 groups based on their number of records. Groups 1 and 2 are unlikely to provide a meaningful graph and group 1 in particular could be dropped. However, we could usefully display this information as a bar chart using <code>plot_ly</code> and selecting <code>type = &quot;bar&quot;</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-<span class="kw">library</span>(dplyr)
-total_bar &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(total, <span class="dt">x =</span> pubcode , <span class="dt">y =</span> records, <span class="dt">type =</span> <span class="st">&quot;bar&quot;</span>)
-total_bar</code></pre></div>
-<div class="figure">
-<img src="images/plotlyfigs/fig19_plotlybar.png" />
-
-</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3">total_bar &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(total, <span class="dt">x =</span> pubcode , <span class="dt">y =</span> records, <span class="dt">type =</span> <span class="st">&quot;bar&quot;</span>)</a>
+<a class="sourceLine" id="cb19-4" data-line-number="4">total_bar</a></code></pre></div>
+<p><img src="images/plotlyfigs/fig19_plotlybar.png" /></p>
 <p>Having divided our data into three groups it would now be useful to plot them separately. Here we face the problem that our original data in pcy displays values by year while total displays the total number of records and group. We need first to add the group identifiers to the pcy table. To do that we will modify total to drop the count of records in <code>records</code> using the <code>dplyr</code> <code>select()</code> function. Then we will use <code>left_join()</code> to join the <code>total</code> and <code>total_group</code> tables together. Note that the function will use the shared field “pubcode” for joining.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-total_group &lt;-<span class="st"> </span><span class="kw">select</span>(total, pubcode, group) 
-total_group</code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">total_group &lt;-<span class="st"> </span><span class="kw">select</span>(total, pubcode, group) </a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">total_group</a></code></pre></div>
 <pre><code>## # A tibble: 16 x 2
 ##    pubcode group
-##      &lt;chr&gt; &lt;int&gt;
-##  1      US     3
-##  2      WO     3
-##  3      CA     3
-##  4      EP     3
-##  5      KR     3
-##  6      JP     2
-##  7      DE     2
-##  8      ZA     2
-##  9      CN     2
-## 10      IL     2
-## 11      MX     1
-## 12      RU     1
-## 13      PT     1
-## 14      EA     1
-## 15      ES     1
-## 16      SG     1</code></pre>
+##    &lt;chr&gt;   &lt;int&gt;
+##  1 US          3
+##  2 WO          3
+##  3 CA          3
+##  4 EP          3
+##  5 KR          3
+##  6 JP          2
+##  7 DE          2
+##  8 ZA          2
+##  9 CN          2
+## 10 IL          2
+## 11 MX          1
+## 12 RU          1
+## 13 PT          1
+## 14 EA          1
+## 15 ES          1
+## 16 SG          1</code></pre>
 <p>Then we join the two tables and rename <code>n</code> to <code>records</code> for graphing.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-total_grouped &lt;-<span class="st"> </span><span class="kw">left_join</span>(pcy, total_group) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">rename</span>(<span class="dt">records =</span> n)</code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">total_grouped &lt;-<span class="st"> </span><span class="kw">left_join</span>(pcy, total_group) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="st">  </span><span class="kw">rename</span>(<span class="dt">records =</span> n)</a></code></pre></div>
 <pre><code>## Joining, by = &quot;pubcode&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">total_grouped</code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">total_grouped</a></code></pre></div>
 <pre><code>## # A tibble: 223 x 5
 ##    pubcountry pubcode pubyear records group
-##         &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt;   &lt;int&gt; &lt;int&gt;
-##  1     Canada      CA    1990      19     3
-##  2     Canada      CA    1991      49     3
-##  3     Canada      CA    1992      66     3
-##  4     Canada      CA    1993      59     3
-##  5     Canada      CA    1994      50     3
-##  6     Canada      CA    1995      39     3
-##  7     Canada      CA    1996      36     3
-##  8     Canada      CA    1997      45     3
-##  9     Canada      CA    1998      46     3
-## 10     Canada      CA    1999      47     3
+##    &lt;chr&gt;      &lt;chr&gt;     &lt;int&gt;   &lt;int&gt; &lt;int&gt;
+##  1 Canada     CA         1990      19     3
+##  2 Canada     CA         1991      49     3
+##  3 Canada     CA         1992      66     3
+##  4 Canada     CA         1993      59     3
+##  5 Canada     CA         1994      50     3
+##  6 Canada     CA         1995      39     3
+##  7 Canada     CA         1996      36     3
+##  8 Canada     CA         1997      45     3
+##  9 Canada     CA         1998      46     3
+## 10 Canada     CA         1999      47     3
 ## # ... with 213 more rows</code></pre>
 <p>The next step is to generate a set of three plots corresponding with our three groups. We will call them pizza3, pizza2 and pizza1 and use the full publication country name in <code>pubcountry</code> as the colour for the lines.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-<span class="kw">library</span>(dplyr)
-pizza3 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">3</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>)
-pizza2 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>)
-pizza1 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">markers =</span> <span class="st">&quot;lines&quot;</span>)</code></pre></div>
-<p>We now have a total of four draft plots, total_bar and pizza 3 to 1 for our groups. Plotly will allow us to display plots side by side. Note that this can create quite a crunched display in RStudio and is best viewed by selecting the small <code>show in new window</code> button in the RStudio Viewer. <!---add names to subplots---></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-sub &lt;-<span class="st"> </span><span class="kw">subplot</span>(total_bar, pizza3, pizza2, pizza1)
-sub
-<span class="kw">plotly_POST</span>(sub)</code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">pizza3 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">3</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>)</a>
+<a class="sourceLine" id="cb26-5" data-line-number="5">pizza2 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-6" data-line-number="6"><span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">mode =</span> <span class="st">&quot;lines&quot;</span>)</a>
+<a class="sourceLine" id="cb26-7" data-line-number="7">pizza1 &lt;-<span class="st"> </span><span class="kw">filter</span>(total_grouped, group <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-8" data-line-number="8"><span class="st">  </span><span class="kw">plot_ly</span>(<span class="dt">x =</span> pubyear, <span class="dt">y =</span> records, <span class="dt">color =</span> pubcountry, <span class="dt">type =</span> <span class="st">&quot;lines&quot;</span>, <span class="dt">markers =</span> <span class="st">&quot;lines&quot;</span>)</a></code></pre></div>
+<p>We now have a total of four draft plots, total_bar and pizza 3 to 1 for our groups. Plotly will allow us to display plots side by side. Note that this can create quite a crunched display in RStudio and is best viewed by selecting the small <code>show in new window</code> button in the RStudio Viewer.
+<!---add names to subplots---></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2">sub &lt;-<span class="st"> </span><span class="kw">subplot</span>(total_bar, pizza3, pizza2, pizza1)</a>
+<a class="sourceLine" id="cb27-3" data-line-number="3">sub</a>
+<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="kw">plotly_POST</span>(sub)</a></code></pre></div>
 <p>You will now see an image that looks a lot like this.</p>
-<div class="figure">
-<img src="images/plotlyfigs/fig20_plotlymulti.png" />
-
-</div>
+<p><img src="images/plotlyfigs/fig20_plotlymulti.png" /></p>
 <p>The figure reveals no coherent trend for the countries in Group 1 on the right and it makes sense to drop this data. Group 2 is potentially more interesting but the low overall numbers and the spikes for data for Japan suggests very low activity and a lack of complete data. Furthermore, ideally we would want to allocate different colours to the different names in our trends panels (probably by allocating different palettes) which could take considerable time relative to the gains in terms of displaying low frequency data. We will let the bar chart do that work and finish with a simple two plot graphic to send to <code>plotly</code> online.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plotly)
-sub1 &lt;-<span class="st"> </span><span class="kw">subplot</span>(total_bar, pizza3)
-<span class="kw">plotly_POST</span>(sub1)</code></pre></div>
-<div class="figure">
-<img src="images/plotlyfigs/fig21_plotlymulti_online.png" />
-
-</div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">library</span>(plotly)</a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">sub1 &lt;-<span class="st"> </span><span class="kw">subplot</span>(total_bar, pizza3)</a>
+<a class="sourceLine" id="cb28-3" data-line-number="3"><span class="kw">plotly_POST</span>(sub1)</a></code></pre></div>
+<p><img src="images/plotlyfigs/fig21_plotlymulti_online.png" /></p>
 <p>It is then easy to edit the labels and make final adjustments online.</p>
 <p>We can also share the graph via social media, download the data, or edit the graph. Note that the default setting for a graph sent via the API appears to be public (with no obvious way to change that).</p>
 <p>It is here that Plotly’s potential importance as a tool for sharing data and graphics becomes apparent. It is a powerful tool. Recent updates to the R package and the introduction of dashboards demonstrates ongoing improvements to this new service.</p>
 </div>
-<div id="round-up-8" class="section level2">
+<div id="round-up-7" class="section level2">
 <h2><span class="header-section-number">11.7</span> Round Up</h2>
 <p>In this chapter we have provided a brief introduction to Plotly to help you get started with using this tool for patent analytics. Plotly provides visually appealing and interactive graphics that can readily be shared with colleagues, pasted into websites and shared publicly. The availability of APIs is also a key feature of Plotly for those working in Python, R or other programmatic environments.</p>
 <p>However, Plotly can also be confusing. For example, we found it hard to understand why particular datasets would not upload correctly (when they can easily be read in Tableau). We also found it hard to understand the format that the data needed to be in to plot correctly. So, Plotly can be somewhat frustrating although it has very considerable potential for sharing appealing graphics. The recent addition of <a href="https://plot.ly/dashboards/">dashboards</a> is also a promising development. Finally, for R users, the <code>plotly</code> package now closely integrates with the very popular <code>ggplot2</code> package through the ggplotly() function which allows for the creation of interactive <code>ggplot2</code> graphics.</p>
@@ -805,17 +754,18 @@ sub1 &lt;-<span class="st"> </span><span class="kw">subplot</span>(total_bar, pi
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -839,9 +789,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
