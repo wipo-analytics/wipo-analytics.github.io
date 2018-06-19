@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The WIPO Manual on Open Source Patent Analytics</title>
+  <meta name="description" content="A practical introduction to free and open source tools for patent analytics.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A practical introduction to free and open source tools for patent analytics." />
+  <meta name="github-repo" content="wipo-analytics/manual_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The WIPO Manual on Open Source Patent Analytics" />
+  
+  <meta name="twitter:description" content="A practical introduction to free and open source tools for patent analytics." />
+  
+
+
+
+<meta name="date" content="2016-01-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="patentscope-1.html">
+<link rel="next" href="tableau-public-2.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The WIPO Manual on Open Source Patent Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Frontmatter</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#authorship"><i class="fa fa-check"></i><b>0.1</b> Authorship</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>0.2</b> Acknowledgements</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#further-information"><i class="fa fa-check"></i><b>0.3</b> Further information</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#conditions-of-use"><i class="fa fa-check"></i><b>0.4</b> Conditions of use</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>0.5</b> Disclaimer</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i><b>1.1</b> Structure</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.1.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.1.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.1.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.1.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.1.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.1.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>2</b> An Overview of Tools</a><ul>
+<li class="chapter" data-level="2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>2.1</b> General Tools</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <span>Open Office</span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <span>Google Sheets</span></a></li>
+<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <span>Google Fusion Tables</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>2.2</b> Cleaning Tools</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <span>Open Refine</span> (formerly Google Refine)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>2.3</b> Data Mining</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <span>RStudio</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <span>RapidMiner Studio</span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <span>KNIME</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>2.4</b> Data visualization</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <span>Google Charts</span></a></li>
+<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.4.3</b> R and RStudio</a></li>
+<li class="chapter" data-level="2.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>2.4.4</b> Shiny</a></li>
+<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <span>IBM Many Eyes</span></a></li>
+<li class="chapter" data-level="2.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>2.4.6</b> Other visualization Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>2.5</b> Network Visualization</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <span>Gephi</span></a></li>
+<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <span>NodeXL</span></a></li>
+<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <span>Cytoscape</span></a></li>
+<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <span>Pajek</span></a></li>
+<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <span>VOS Viewer</span></a></li>
+<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <span>Hive Plots</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>2.6</b> Infographics</a></li>
+<li class="chapter" data-level="2.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>2.7</b> Geographical Mapping</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <span>OpenStreetMap</span></a></li>
+<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <span>Leaflet</span></a></li>
+<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <span>QGIS</span></a></li>
+<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <span>Geonames.org</span>.</a></li>
+<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <span>iCharts</span></a></li>
+<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <span>OpenLayers3</span></a></li>
+<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <span>CartoDB</span></a></li>
+<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <span>d3.js</span></a></li>
+<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <span>Highcharts</span></a></li>
+<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <span>Datawrapper</span></a></li>
+<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <span>Plotly</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>2.8</b> Text Mining</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <span>Jigsaw Visual Analytics</span></a></li>
+<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <span>Weka</span></a></li>
+<li class="chapter" data-level="2.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>2.8.3</b> Word Trees</a></li>
+<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <span>Google Word Trees</span> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <span>KH Coder</span>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
+<li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <span>The Natural Language Toolkit(NTLK)</span></a></li>
+<li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
+<li class="chapter" data-level="2.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-checklist"><i class="fa fa-check"></i><b>2.10</b> The Checklist</a></li>
+<li class="chapter" data-level="2.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#credits"><i class="fa fa-check"></i><b>2.11</b> Credits</a></li>
+</ul></li>
+<li class="part"><span><b>I Approaching Patent Data</b></span></li>
+<li class="chapter" data-level="3" data-path="datafields.html"><a href="datafields.html"><i class="fa fa-check"></i><b>3</b> Datafields</a><ul>
+<li class="chapter" data-level="3.1" data-path="datafields.html"><a href="datafields.html#what-is-a-patent"><i class="fa fa-check"></i><b>3.1</b> What is a Patent?</a></li>
+<li class="chapter" data-level="3.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>3.2</b> As a form of intellectual property right</a></li>
+<li class="chapter" data-level="3.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>3.3</b> Patents as a type of document</a></li>
+<li class="chapter" data-level="3.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>3.4</b> Basic Data Types</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <span>Synthetic Genomes</span></a></li>
+<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <span>Original Front Page</span></a></li>
+<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <span>espacenet Front Page</span></a></li>
+<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <span>Description</span></a></li>
+<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <span>Claims</span></a></li>
+<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <span>Family Members</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <span>Cited</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <span>Citing</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <span>Legal Status</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.5</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>4</b> Datasets</a><ul>
+<li class="chapter" data-level="4.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>4.1</b> The datasets</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="datasets.html"><a href="datasets.html#pizza-patent-datasets"><i class="fa fa-check"></i><b>4.1.1</b> Pizza patent datasets</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datasets.html"><a href="datasets.html#patent-landscape-reports-datasets"><i class="fa fa-check"></i><b>4.1.2</b> Patent Landscape Reports datasets</a></li>
+<li class="chapter" data-level="4.1.3" data-path="datasets.html"><a href="datasets.html#other-datasets"><i class="fa fa-check"></i><b>4.1.3</b> Other datasets</a></li>
+<li class="chapter" data-level="4.1.4" data-path="datasets.html"><a href="datasets.html#round-up-2"><i class="fa fa-check"></i><b>4.1.4</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Obtaining Patent Data</b></span></li>
+<li class="chapter" data-level="5" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>5</b> Databases</a><ul>
+<li class="chapter" data-level="5.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>5.2</b> The Databases</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <span>The Lens</span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <span>Patentscope</span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <span>espacenet</span></a></li>
+<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <span>LATIPAT</span></a></li>
+<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <span>EPO Open Patent Services</span></a></li>
+<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <span>USPTO Patents View</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <span>Google Patents</span></a></li>
+<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <span>Google Prior Art Finder</span></a></li>
+<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <span>Google USPTO Bulk download</span></a></li>
+<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <span>Free Patents Online</span></a></li>
+<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <span>DEPATISnet</span></a></li>
+<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <span>OECD Patent Databases</span></a></li>
+<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <span>EPO World Patent Statistical Database</span></a></li>
+<li class="chapter" data-level="5.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>5.2.14</b> Other data sources</a></li>
+<li class="chapter" data-level="5.2.15" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.2.15</b> <span>Patent2Net</span> in Python</a></li>
+<li class="chapter" data-level="5.2.16" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.2.16</b> <span>Python EPO OPS Client</span> by Gsong</a></li>
+<li class="chapter" data-level="5.2.17" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.2.17</b> <span>Fung Institute Patent Server</span> for USPTO data in JSON</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>6</b> The Lens</a><ul>
+<li class="chapter" data-level="6.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="the-lens-1.html"><a href="the-lens-1.html#getting-started"><i class="fa fa-check"></i><b>6.2</b> Getting Started</a></li>
+<li class="chapter" data-level="6.3" data-path="the-lens-1.html"><a href="the-lens-1.html#additional-features"><i class="fa fa-check"></i><b>6.3</b> Additional features</a></li>
+<li class="chapter" data-level="6.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>6.4</b> Visualisation</a></li>
+<li class="chapter" data-level="6.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>6.5</b> Working with texts</a></li>
+<li class="chapter" data-level="6.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>6.6</b> PatSeq</a></li>
+<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-3"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>7</b> Patentscope</a><ul>
+<li class="chapter" data-level="7.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="patentscope-1.html"><a href="patentscope-1.html#collections-to-search"><i class="fa fa-check"></i><b>7.2</b> Collections to Search</a></li>
+<li class="chapter" data-level="7.3" data-path="patentscope-1.html"><a href="patentscope-1.html#simple-search"><i class="fa fa-check"></i><b>7.3</b> Simple Search</a></li>
+<li class="chapter" data-level="7.4" data-path="patentscope-1.html"><a href="patentscope-1.html#results"><i class="fa fa-check"></i><b>7.4</b> Results</a></li>
+<li class="chapter" data-level="7.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>7.5</b> Downloading Results</a></li>
+<li class="chapter" data-level="7.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>7.6</b> Cross Lingual Searching</a></li>
+<li class="chapter" data-level="7.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>7.7</b> Sequence Data</a></li>
+<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-4"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
+</ul></li>
+<li class="part"><span><b>III Cleaning Patent Data</b></span></li>
+<li class="chapter" data-level="8" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>8</b> Open Refine</a><ul>
+<li class="chapter" data-level="8.1" data-path="open-refine.html"><a href="open-refine.html#install-open-refine"><i class="fa fa-check"></i><b>8.1</b> Install Open Refine</a></li>
+<li class="chapter" data-level="8.2" data-path="open-refine.html"><a href="open-refine.html#create-a-project"><i class="fa fa-check"></i><b>8.2</b> Create a Project</a></li>
+<li class="chapter" data-level="8.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-basics"><i class="fa fa-check"></i><b>8.3</b> Open Refine Basics</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="open-refine.html"><a href="open-refine.html#open-refine-runs-in-a-browser"><i class="fa fa-check"></i><b>8.3.1</b> Open Refine runs in a browser</a></li>
+<li class="chapter" data-level="8.3.2" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-on-columns."><i class="fa fa-check"></i><b>8.3.2</b> Open Refine works on columns.</a></li>
+<li class="chapter" data-level="8.3.3" data-path="open-refine.html"><a href="open-refine.html#open-refine-works-with-facets."><i class="fa fa-check"></i><b>8.3.3</b> Open Refine works with Facets.</a></li>
+<li class="chapter" data-level="8.3.4" data-path="open-refine.html"><a href="open-refine.html#custom-facets"><i class="fa fa-check"></i><b>8.3.4</b> Custom Facets</a></li>
+<li class="chapter" data-level="8.3.5" data-path="open-refine.html"><a href="open-refine.html#reordering-columns"><i class="fa fa-check"></i><b>8.3.5</b> Reordering Columns</a></li>
+<li class="chapter" data-level="8.3.6" data-path="open-refine.html"><a href="open-refine.html#undo-and-redo"><i class="fa fa-check"></i><b>8.3.6</b> Undo and Redo</a></li>
+<li class="chapter" data-level="8.3.7" data-path="open-refine.html"><a href="open-refine.html#exporting"><i class="fa fa-check"></i><b>8.3.7</b> Exporting</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="open-refine.html"><a href="open-refine.html#basic-cleaning"><i class="fa fa-check"></i><b>8.4</b> Basic Cleaning</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="open-refine.html"><a href="open-refine.html#changing-case"><i class="fa fa-check"></i><b>8.4.1</b> Changing case</a></li>
+<li class="chapter" data-level="8.4.2" data-path="open-refine.html"><a href="open-refine.html#regularise-case"><i class="fa fa-check"></i><b>8.4.2</b> Regularise case</a></li>
+<li class="chapter" data-level="8.4.3" data-path="open-refine.html"><a href="open-refine.html#remove-leading-and-trailing-whitespace"><i class="fa fa-check"></i><b>8.4.3</b> Remove leading and trailing whitespace</a></li>
+<li class="chapter" data-level="8.4.4" data-path="open-refine.html"><a href="open-refine.html#add-columns"><i class="fa fa-check"></i><b>8.4.4</b> Add Columns</a></li>
+<li class="chapter" data-level="8.4.5" data-path="open-refine.html"><a href="open-refine.html#address-encoding-and-related-problems"><i class="fa fa-check"></i><b>8.4.5</b> Address Encoding and related problems</a></li>
+<li class="chapter" data-level="8.4.6" data-path="open-refine.html"><a href="open-refine.html#reformatting-dates"><i class="fa fa-check"></i><b>8.4.6</b> Reformatting dates</a></li>
+<li class="chapter" data-level="8.4.7" data-path="open-refine.html"><a href="open-refine.html#access-additional-information"><i class="fa fa-check"></i><b>8.4.7</b> Access additional information</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="open-refine.html"><a href="open-refine.html#fill-blank-cells"><i class="fa fa-check"></i><b>8.5</b> Fill blank cells</a></li>
+<li class="chapter" data-level="8.6" data-path="open-refine.html"><a href="open-refine.html#renaming-columns"><i class="fa fa-check"></i><b>8.6</b> Renaming columns</a></li>
+<li class="chapter" data-level="8.7" data-path="open-refine.html"><a href="open-refine.html#exporting-data"><i class="fa fa-check"></i><b>8.7</b> Exporting Data</a></li>
+<li class="chapter" data-level="8.8" data-path="open-refine.html"><a href="open-refine.html#splitting-applicants"><i class="fa fa-check"></i><b>8.8</b> Splitting Applicants</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="open-refine.html"><a href="open-refine.html#situation-1---first-applicants"><i class="fa fa-check"></i><b>8.8.1</b> Situation 1 - First Applicants</a></li>
+<li class="chapter" data-level="8.8.2" data-path="open-refine.html"><a href="open-refine.html#situation-2---all-applicants"><i class="fa fa-check"></i><b>8.8.2</b> Situation 2 - All Applicants</a></li>
+<li class="chapter" data-level="8.8.3" data-path="open-refine.html"><a href="open-refine.html#phonetic-fingerprint-metaphone-3-clustering"><i class="fa fa-check"></i><b>8.8.3</b> Phonetic Fingerprint (Metaphone 3) clustering</a></li>
+<li class="chapter" data-level="8.8.4" data-path="open-refine.html"><a href="open-refine.html#levenshtein-edit-distance"><i class="fa fa-check"></i><b>8.8.4</b> Levenshtein Edit Distance</a></li>
+<li class="chapter" data-level="8.8.5" data-path="open-refine.html"><a href="open-refine.html#ppm"><i class="fa fa-check"></i><b>8.8.5</b> PPM</a></li>
+<li class="chapter" data-level="8.8.6" data-path="open-refine.html"><a href="open-refine.html#preparing-for-export"><i class="fa fa-check"></i><b>8.8.6</b> Preparing for export</a></li>
+</ul></li>
+<li class="chapter" data-level="8.9" data-path="open-refine.html"><a href="open-refine.html#round-up-5"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
+<li class="chapter" data-level="8.10" data-path="open-refine.html"><a href="open-refine.html#useful-resources"><i class="fa fa-check"></i><b>8.10</b> Useful Resources</a></li>
+</ul></li>
+<li class="part"><span><b>IV Visualizing Patent Data</b></span></li>
+<li class="chapter" data-level="9" data-path="tableau-public-2.html"><a href="tableau-public-2.html"><i class="fa fa-check"></i><b>9</b> Tableau Public</a><ul>
+<li class="chapter" data-level="9.1" data-path="tableau-public-2.html"><a href="tableau-public-2.html#introduction-4"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="tableau-public-2.html"><a href="tableau-public-2.html#installing-tableau"><i class="fa fa-check"></i><b>9.2</b> Installing Tableau</a></li>
+<li class="chapter" data-level="9.3" data-path="tableau-public-2.html"><a href="tableau-public-2.html#getting-started-1"><i class="fa fa-check"></i><b>9.3</b> Getting Started</a></li>
+<li class="chapter" data-level="9.4" data-path="tableau-public-2.html"><a href="tableau-public-2.html#publication-trends"><i class="fa fa-check"></i><b>9.4</b> Publication Trends</a></li>
+<li class="chapter" data-level="9.5" data-path="tableau-public-2.html"><a href="tableau-public-2.html#adding-new-data-sources"><i class="fa fa-check"></i><b>9.5</b> Adding New Data Sources</a></li>
+<li class="chapter" data-level="9.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>9.6</b> Creating an Overview Dashboard</a></li>
+<li class="chapter" data-level="9.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>9.7</b> Saving, Display and Privacy Settings</a></li>
+<li class="chapter" data-level="9.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>9.8</b> Privacy and Security</a></li>
+<li class="chapter" data-level="9.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-6"><i class="fa fa-check"></i><b>9.9</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>10</b> Gephi</a><ul>
+<li class="chapter" data-level="10.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>10.1</b> Installing Gephi</a></li>
+<li class="chapter" data-level="10.2" data-path="gephi-1.html"><a href="gephi-1.html#opening-gephi-and-installing-plugins"><i class="fa fa-check"></i><b>10.2</b> Opening Gephi and Installing Plugins</a></li>
+<li class="chapter" data-level="10.3" data-path="gephi-1.html"><a href="gephi-1.html#importing-a-file-to-gephi-with-the-converter-plugin"><i class="fa fa-check"></i><b>10.3</b> Importing a file to Gephi with the converter plugin</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import"><i class="fa fa-check"></i><b>10.3.1</b> Step 1. Open Gephi and Choose File &gt; Import</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="gephi-1.html"><a href="gephi-1.html#sizing-and-colouring-nodes"><i class="fa fa-check"></i><b>10.4</b> Sizing and Colouring Nodes</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="gephi-1.html"><a href="gephi-1.html#filtering-the-data"><i class="fa fa-check"></i><b>10.4.1</b> Filtering the data</a></li>
+<li class="chapter" data-level="10.4.2" data-path="gephi-1.html"><a href="gephi-1.html#setting-node-size"><i class="fa fa-check"></i><b>10.4.2</b> Setting Node Size</a></li>
+<li class="chapter" data-level="10.4.3" data-path="gephi-1.html"><a href="gephi-1.html#colouring-the-nodes"><i class="fa fa-check"></i><b>10.4.3</b> Colouring the Nodes</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>10.5</b> Laying out the Graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="gephi-1.html"><a href="gephi-1.html#save-your-work"><i class="fa fa-check"></i><b>10.5.1</b> Save your work</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>10.6</b> Adding Labels</a></li>
+<li class="chapter" data-level="10.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>10.7</b> Using the Preview Options</a></li>
+<li class="chapter" data-level="10.8" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>10.8</b> Exporting from Preview</a></li>
+<li class="chapter" data-level="10.9" data-path="gephi-1.html"><a href="gephi-1.html#resources"><i class="fa fa-check"></i><b>10.9</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Patent Analytics with Plotly</a><ul>
+<li class="chapter" data-level="11.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#introduction-5"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#getting-started-with-plotly"><i class="fa fa-check"></i><b>11.2</b> Getting Started with Plotly</a></li>
+<li class="chapter" data-level="11.3" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#importing-files"><i class="fa fa-check"></i><b>11.3</b> Importing Files</a></li>
+<li class="chapter" data-level="11.4" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#creating-a-graphic"><i class="fa fa-check"></i><b>11.4</b> Creating a graphic</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#adding-a-second-axis"><i class="fa fa-check"></i><b>11.4.1</b> Adding a Second Axis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>11.5</b> Saving and Sharing</a></li>
+<li class="chapter" data-level="11.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>11.6</b> Working with Plotly in R</a></li>
+<li class="chapter" data-level="11.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-7"><i class="fa fa-check"></i><b>11.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>12</b> Patent Infographics with R</a><ul>
+<li class="chapter" data-level="12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>12.1</b> Getting Started</a></li>
+<li class="chapter" data-level="12.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#load-a-.csv-file-using-readr"><i class="fa fa-check"></i><b>12.2</b> Load a .csv file using <code>readr</code></a></li>
+<li class="chapter" data-level="12.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#viewing-data"><i class="fa fa-check"></i><b>12.3</b> Viewing Data</a></li>
+<li class="chapter" data-level="12.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#identifying-types-of-object"><i class="fa fa-check"></i><b>12.4</b> Identifying Types of Object</a></li>
+<li class="chapter" data-level="12.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#working-with-data"><i class="fa fa-check"></i><b>12.5</b> Working with Data</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#select"><i class="fa fa-check"></i><b>12.5.1</b> Select</a></li>
+<li class="chapter" data-level="12.5.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#adding-data-with-mutate"><i class="fa fa-check"></i><b>12.5.2</b> Adding data with <code>mutate()</code></a></li>
+<li class="chapter" data-level="12.5.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#counting-data-using-count"><i class="fa fa-check"></i><b>12.5.3</b> Counting data using <code>count()</code></a></li>
+<li class="chapter" data-level="12.5.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#rename-a-field-with-rename"><i class="fa fa-check"></i><b>12.5.4</b> Rename a field with <code>rename()</code></a></li>
+<li class="chapter" data-level="12.5.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#make-a-quickplot-with-qplot"><i class="fa fa-check"></i><b>12.5.5</b> Make a quickplot with <code>qplot()</code></a></li>
+<li class="chapter" data-level="12.5.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#filter-data-using-filter"><i class="fa fa-check"></i><b>12.5.6</b> Filter data using <code>filter()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#simplify-code-with-pipes"><i class="fa fa-check"></i><b>12.6</b> Simplify code with pipes <code>%&gt;%</code></a></li>
+<li class="chapter" data-level="12.7" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#harmonising-data"><i class="fa fa-check"></i><b>12.7</b> Harmonising data</a></li>
+<li class="chapter" data-level="12.8" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#country-trends-using-spread"><i class="fa fa-check"></i><b>12.8</b> Country Trends using <code>spread()</code></a></li>
+<li class="chapter" data-level="12.9" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#tidying-data---separating-and-gathering"><i class="fa fa-check"></i><b>12.9</b> Tidying data - Separating and Gathering</a><ul>
+<li class="chapter" data-level="12.9.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#trimming-with-stringr"><i class="fa fa-check"></i><b>12.9.1</b> Trimming with <code>stringr</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.10" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#selecting-applicants-using-filter"><i class="fa fa-check"></i><b>12.10</b> Selecting applicants using <code>filter()</code></a></li>
+<li class="chapter" data-level="12.11" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#generating-ipc-tables"><i class="fa fa-check"></i><b>12.11</b> Generating IPC Tables</a><ul>
+<li class="chapter" data-level="12.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>12.11.1</b> Phrases Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="12.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>12.12</b> Creating an infographic in infogr.am</a><ul>
+<li class="chapter" data-level="12.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-8"><i class="fa fa-check"></i><b>12.12.1</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Using APIs</b></span></li>
+<li class="chapter" data-level="13" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html"><i class="fa fa-check"></i><b>13</b> Scientific Literature with Rplos</a><ul>
+<li class="chapter" data-level="13.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#introduction-6"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-r-and-rstudio"><i class="fa fa-check"></i><b>13.2</b> Install R and RStudio</a></li>
+<li class="chapter" data-level="13.3" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#create-a-project-1"><i class="fa fa-check"></i><b>13.3</b> Create A Project</a></li>
+<li class="chapter" data-level="13.4" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-packages"><i class="fa fa-check"></i><b>13.4</b> Install Packages</a></li>
+<li class="chapter" data-level="13.5" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#key-functions-in-rplos"><i class="fa fa-check"></i><b>13.5</b> Key functions in rplos</a></li>
+<li class="chapter" data-level="13.6" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#data-fields-in-rplos"><i class="fa fa-check"></i><b>13.6</b> Data Fields in rplos</a></li>
+<li class="chapter" data-level="13.7" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#basic-searching-using-searchplos-navigating-and-exporting-data"><i class="fa fa-check"></i><b>13.7</b> Basic Searching using <code>searchplos()</code>, Navigating and Exporting Data</a><ul>
+<li class="chapter" data-level="13.7.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#creating-a-new-object-and-writing-to-file"><i class="fa fa-check"></i><b>13.7.1</b> Creating a New Object and Writing to File</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#limit-by-journal"><i class="fa fa-check"></i><b>13.8</b> Limit by journal</a></li>
+<li class="chapter" data-level="13.9" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-full-number-of-results"><i class="fa fa-check"></i><b>13.9</b> Obtaining the full number of results</a></li>
+<li class="chapter" data-level="13.10" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-number-of-records-across-plos-journals"><i class="fa fa-check"></i><b>13.10</b> Obtaining the number of records across PLOS Journals</a></li>
+<li class="chapter" data-level="13.11" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-the-results-and-using-a-codebook"><i class="fa fa-check"></i><b>13.11</b> Writing the results and using a codebook</a></li>
+<li class="chapter" data-level="13.12" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#proximity-searching"><i class="fa fa-check"></i><b>13.12</b> Proximity Searching</a></li>
+<li class="chapter" data-level="13.13" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#searching-using-multiple-phrases"><i class="fa fa-check"></i><b>13.13</b> Searching Using Multiple Phrases</a></li>
+<li class="chapter" data-level="13.14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#tidying-and-organising-the-data"><i class="fa fa-check"></i><b>13.14</b> Tidying and Organising the Data</a><ul>
+<li class="chapter" data-level="13.14.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#renaming-a-column"><i class="fa fa-check"></i><b>13.14.1</b> Renaming a column</a></li>
+</ul></li>
+<li class="chapter" data-level="13.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>13.15</b> Filling Blank Spaces</a></li>
+<li class="chapter" data-level="13.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>13.16</b> Converting Dates</a></li>
+<li class="chapter" data-level="13.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>13.17</b> Add a count</a></li>
+<li class="chapter" data-level="13.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>13.18</b> Remove a column</a></li>
+<li class="chapter" data-level="13.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>13.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="13.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>13.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="13.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>13.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="13.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>13.20.2</b> Deleting Duplicates</a></li>
+</ul></li>
+<li class="chapter" data-level="13.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>13.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="13.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>13.22</b> By author</a></li>
+<li class="chapter" data-level="13.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>13.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="13.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>13.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="13.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>13.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="13.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>13.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="13.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>13.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="13.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>13.26.2</b> fragment size using hl.fragsize</a></li>
+</ul></li>
+<li class="chapter" data-level="13.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>13.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="13.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>13.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="13.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-9"><i class="fa fa-check"></i><b>13.29</b> Round Up</a></li>
+<li class="chapter" data-level="13.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>13.30</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The WIPO Manual on Open Source Patent Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="open-refine" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Open Refine</h1>
+<p>Cleaning patent data is one of the most challenging and time consuming tasks involved in patent analysis. In this chapter we will cover.</p>
+<ol style="list-style-type: decimal">
+<li>Basic data cleaning using Open Refine</li>
+<li>Separating a patent dataset on applicant names and cleaning the names.</li>
+<li>Exporting a dataset from Open Refine at different stages in the cleaning process.</li>
+</ol>
+<p><a href="http://openrefine.org">Open Refine</a> is an open source tool for working with all types of messy data. It started life as Google Refine but has since migrated to Open Refine. It is a programme that runs in a browser on your computer but does not require an internet connection. It is a key tool in the open source patent analysis tool kit and includes extensions and the use of custom code for particular custom tasks. In this article we will cover some of the basics that are most relevant to patent analysis and then move on to more detailed work to clean patent applicant names.</p>
+<p>The reason that patent analysts should use Open Refine is that it is the easiest to use and most efficient free tool for cleaning patent data without programming knowledge. It is far superior to attempting the same cleaning tasks in Excel or Open Office. The terminology that is used can take some getting used to, but it is possible to develop efficient workflows for cleaning and reshaping data using Open Refine and to create and reuse custom codes needed for specific tasks.</p>
+<p>In this chapter we use Open Refine to clean up a raw dataset from WIPO Patentscope containing nearly 10,000 raw records that make some kind of reference to the word <code>pizza</code> in the whole text. To follow this chapter using one of our training sets, download it from the Github repository <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/pizza_medium/pizza_medium.csv?raw=true">here</a> or use your own dataset.</p>
+<div id="install-open-refine" class="section level2">
+<h2><span class="header-section-number">8.1</span> Install Open Refine</h2>
+<p>To install Open Refine visit the Open Refine <a href="http://openrefine.org">website</a> and <a href="http://openrefine.org/download.html">download</a> the software for your operating system:</p>
+<p><img src="images/openrefine/OpenRefine-2015-06-01%2012-18-34.png" /></p>
+<p>From the download page select your operating system. Note the extensions towards the bottom of the page for future reference.</p>
+<p><img src="images/openrefine/OpenRefine-download.png" /></p>
+<p>At the time of writing, when you download Open Refine it actually downloads and installs as Google Refine (reflecting its history) and so that is the application you will need to look for and open.</p>
+</div>
+<div id="create-a-project" class="section level2">
+<h2><span class="header-section-number">8.2</span> Create a Project</h2>
+<p>We will use the Patentscope Pizza Medium file that can be downloaded from the repository <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/pizza_medium/pizza_medium.csv?raw=true">here</a>.</p>
+<p><img src="images/openrefine/create_project.png" /></p>
+<p>The file will load and then attempt to guess the column separator. Choose <code>.csv.</code> Note that a wide range of files can be imported and that there are additional options such as storing blank cells as nulls that are selected by default. In the dataset that you will load we have prefilled blank cells with <code>NA</code> values to avoid potential problems using fill down in Open Refine discussed below.</p>
+<p><img src="images/openrefine/create_project2.png" /></p>
+<p>Click <code>create project</code> in the top right of the bar as the next step.</p>
+</div>
+<div id="open-refine-basics" class="section level2">
+<h2><span class="header-section-number">8.3</span> Open Refine Basics</h2>
+<p>A few basic features of Open Refine will soon have you working smoothly. Here is a quick tour.</p>
+<div id="open-refine-runs-in-a-browser" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Open Refine runs in a browser</h3>
+<p>Open Refine is an application that lives on your computer but runs in a browser. However, it does not require an internet connection and it does not lose your work if you close the browser.</p>
+</div>
+<div id="open-refine-works-on-columns." class="section level3">
+<h3><span class="header-section-number">8.3.2</span> Open Refine works on columns.</h3>
+<p>At the top of each column is a pull down menu. Be ready to use these menus quite a lot. In particular, you will often use the <code>Edit cells &gt; Common tranforms</code> as shown below for functions such as trimming white space.</p>
+<p><img src="images/openrefine/menu_basics.png" /></p>
+<p>Other important menus are <code>Edit column</code>, immediately below <code>Edit cells</code>, for copying or splitting columns into new columns.</p>
+</div>
+<div id="open-refine-works-with-facets." class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Open Refine works with Facets.</h3>
+<p>The term <code>facet</code> may initially be confusing but basically calls up a window that arranges the items in a column for inspection, sorting, and editing as we can see below. This is important because it becomes possible to identify problems and address them. It also becomes possible to apply a variety of clustering algorithms to clean up the data. Note that the size of the facet window can be adjusted by dragging the bottom of the window as we have done in this image.</p>
+<p><img src="images/openrefine/facet_menu.png" /></p>
+<p>Hovering over an item inside the facet window brings up a small <code>edit</code> button that allows editing, such as removing <i> and </i> from the title.</p>
+</div>
+<div id="custom-facets" class="section level3">
+<h3><span class="header-section-number">8.3.4</span> Custom Facets</h3>
+<p>The Facet menu below brings up a custom menu with a range of options. Selecting <code>Custom text facet</code> (see below) brings up a pop up that allows for the use of code in <a href="https://github.com/OpenRefine/OpenRefine/wiki/GREL-Functions">Open Refine Expression Language (GREL)</a> to perform tasks not covered by the main menu items. This language is quite simple and can range from short snippets for finding and replacing text to more complex functions that can be reused in future. We will demonstrate the use of this function below.</p>
+<p><img src="images/openrefine/facet_menu.png" /></p>
+</div>
+<div id="reordering-columns" class="section level3">
+<h3><span class="header-section-number">8.3.5</span> Reordering Columns</h3>
+<p>There are two options for reordering columns. The first is to select the column menu then <code>Edit column &gt; Move column to beginning</code>. The second option, shown below, is to select the <code>All</code> drop down menu in the first column and then <code>Edit columns &gt; Re-order/remove columns</code>. In the pop up menu of fields drag the desired field to the top of the list. In this case we have dragged the <code>priority_date</code> column to the top of the list. It will now appear as the first data column.</p>
+<p><img src="images/openrefine/reorder_columns.png" /></p>
+</div>
+<div id="undo-and-redo" class="section level3">
+<h3><span class="header-section-number">8.3.6</span> Undo and Redo</h3>
+<p>Open Refine keeps track of each action and allows you to go back several steps or to the beginning. This is particularly helpful when testing whether a particular approach to cleaning (e.g. splitting columns or using a snippet of code) will meet your needs. In particular it means you can explore and test approaches while not worrying about losing your previous work.</p>
+<p><img src="images/openrefine/undo_redo.png" /></p>
+<p>However, it can be important to plan the steps in your clean up operation to avoid problems at later stages. It may help to use a notepad as a checklist (see below). The main issue that can arise is where cleanup moves forward several steps without being fully completed in an earlier step. In some cases this can require returning to that earlier step, restarting and repeating earlier steps. As you become more familiar with Open Refine it will be easier to work out an appropriate sequence for your workflow.</p>
+</div>
+<div id="exporting" class="section level3">
+<h3><span class="header-section-number">8.3.7</span> Exporting</h3>
+<p>When a clean up exercise is completed a file can be exported in a variety for formats. When working with patent data expect to create more than one file (e.g. core, applicants, inventors, IPC) to allow for analysis of aspects of the data in other tools. In this chapter we will create two files.</p>
+<ol style="list-style-type: decimal">
+<li>A cleaned version of the original data</li>
+<li>An applicants file that separates the data by each applicant.</li>
+</ol>
+</div>
+</div>
+<div id="basic-cleaning" class="section level2">
+<h2><span class="header-section-number">8.4</span> Basic Cleaning</h2>
+<p>This is the first step in working with a dataset and it will make sense to perform some basic cleaning tasks before going any further. The Pizza Medium dataset that we are working with in this article is raw in the sense that the only cleaning so far has been to remove the two empty rows at the head of the data table and to fill blank cells with NA values. The reason that it makes sense to do some basic cleaning before working with applicant, inventor or IPC data is that new datasets will be generated by this process.</p>
+<p>Bear in mind that Open Refine is not the fastest programme and make sure that you allocate sufficient time for the clean up tasks and are prepared to be patient while the programme runs algorithms to process the data. Note that Open Refine will save your work and you can return to it later.</p>
+<p>When working with Open Refine we will typically be working on one column at a time. However, the key <code>checklist</code> for cleaning steps is:</p>
+<ol style="list-style-type: decimal">
+<li>Make sure you have a back up of the original file. Creating a <code>.zip</code> file and marking it with the name <code>raw</code> can help to preserve the original.</li>
+<li>Open and save a text file as a <code>code book</code> to write down the steps taken in cleaning the data (e.g. pizza_codebook.txt).</li>
+<li>Regularise characters (e.g. title, lowercase, uppercase).</li>
+<li>Remove leading and trailing white space.</li>
+<li>Address encoding and related problems.</li>
+</ol>
+<p>Additional actions:</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Transform dates</li>
+<li>Access additional information and create new columns and/or rows.</li>
+</ol>
+<p>We will generally approach these tasks in each column and steps 6 and 7 will not always apply. The creation of a codebook will allow you to keep a note of all the steps taken to clean up a dataset. The codebook should be saved with the cleaned dataset (e.g. in the same folder) as a reference point if you need to do further work or if colleagues want to understand the transformation steps.</p>
+<div id="changing-case" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Changing case</h3>
+<p>The first column in our Patentscope pizza dataset is the publication number. To inspect what is happening and needs to be cleaned in this column we will first select the column menu and choose <code>text facet</code> from the dropdown. This will generate the side menu panel that we can see below containing the data. We can then inspect the column for problems.</p>
+<p><img src="images/openrefine/cleaning_pubno_createfacet.png" /></p>
+<p>When we scroll down the side panel we can see that some publication numbers have a lowercase country code (in this case <code>ea</code> rather than <code>EA</code> for Eurasian Patent Organization using the <a href="http://www.wipo.int/pct/guide/en/gdvol1/annexes/annexk/ax_k.pdf">WIPO standardized country codes</a>). To address this we select the column menu <code>Edit cells &gt; Common transforms &gt; to Uppercase</code>.</p>
+<p><img src="images/openrefine/cleaning_pubno_totitlecase.png" /></p>
+<p>If we scroll down all the publication numbers will have been converted to upper case. This will make it easier to extract the publication country codes at a later stage.</p>
+</div>
+<div id="regularise-case" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> Regularise case</h3>
+<p>For the other text columns it is sensible to repeat the common transformations step and select <code>to titlecase</code>. Note that this will generally work well for the title field but may not always work as well on concatenated fields such as applicants and inventor names. Repeat this step following the separation of these concatenated fields (see below on applicants). If the abstract or claims were present we would not regularise those text fields.</p>
+</div>
+<div id="remove-leading-and-trailing-whitespace" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> Remove leading and trailing whitespace</h3>
+<p>To remove leading and trailing white space in a column we select <code>Edit cells &gt; Common transforms &gt; Trim</code> leading and trailing white space across the columns.</p>
+<p><img src="images/openrefine/title_trailingwhitespace.png" /></p>
+<p>Note that following the splitting of concatenated cells with multiple entries such as the applicants and the inventors fields it is a good idea to repeat the trim exercise when the process is complete to avoid potential leading white space at the start of the new name entries.</p>
+</div>
+<div id="add-columns" class="section level3">
+<h3><span class="header-section-number">8.4.4</span> Add Columns</h3>
+<p>We can also add columns by selecting the column menu and <code>Edit Column &gt; Add column based on this column</code>. In this case we have added a column called publication_date.</p>
+<p><img src="images/openrefine/add_column_publicationyear.png" /></p>
+<p>We have a number of options with respect to dates (see below). In this case we want to separate out the date information into separate columns. To do that we can use <code>Edit column &gt; Split into several columns</code>. We can also choose the separator for the split, in this case <code>.</code> and whether to keep or delete the source column. In this case we selected to retain the original column and created three new date related columns. We could as necessary then delete the date and month column if we only needed the year field.</p>
+<p><img src="images/openrefine/split_date.png" /></p>
+<p>We can then rename these columns using the edit <code>Edit Column &gt; Rename this column</code>. Note that in this case the use of lowercase and underscores marks out columns we are creating or editing as a flag for internal use informing us that this is a column that we have created. At a later stage we will rename the original fields to mark them as original.</p>
+<p><img src="images/openrefine/rename_column.png" /></p>
+</div>
+<div id="address-encoding-and-related-problems" class="section level3">
+<h3><span class="header-section-number">8.4.5</span> Address Encoding and related problems</h3>
+<p>The <a href="https://github.com/OpenRefine/OpenRefine/wiki/Recipes">Recipes</a> section of the documentation provides helpful tips and example code for dealing with encoding and related problems that are reproduced here:</p>
+<ol style="list-style-type: decimal">
+<li>corrupted characters. This arises from aggregation of data from different sources. In Patentscope the data is converted to UTF8. However, if problems are encountered select <code>Edit cells &gt; Transform</code> and try entering the following.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">value.reinterpret</span>(<span class="st">&quot;utf-8&quot;</span>)</a></code></pre></div>
+<p>It may be necessary to explore and test other sets which can be identified <a href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html">here</a>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Escape html/XML characters e.g. &amp;amp</li>
+</ol>
+<p>The most likely source of patent data is XML but to be on the safe side the following should escape (remove) html and XML code appearing in the text.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">value.unescape</span>(<span class="st">&quot;html&quot;</span>)<span class="kw">.unescape</span>(<span class="st">&quot;xml&quot;</span>)</a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Question marks</li>
+</ol>
+<p>Question marks often show up for characters that cannot be represented are a sign of encoding problems. In addition non-breaking spaces may be represented as <code>&amp;nbsp</code> (Unicode(16)). To find a Unicode value go to <code>Edit cells &gt; Transform</code> and then enter unicode(value) which will transform all the characters to unicode numbers. From there you can look up the problem.</p>
+<p>A quick fix is proposed in the documentation that may work in some circumstances.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">split</span>(<span class="kw">escape</span>(value,<span class="st">&#39;xml&#39;</span>),<span class="st">&quot;&amp;#160;&quot;</span>)[<span class="dv">0</span>]</a></code></pre></div>
+<p>Within this particular dataset, we found that these quick tips did not work (presumably because the text had already been converted to UTF-8). However, if all else fails an alternative is to simply find and replace in Transform as in the example below.</p>
+<p><img src="images/openrefine/replace_encoding.png" /></p>
+<p>This is not a very satisfactory solution because it requires inspection of the dataset to identify the specific character problems and then replacing the value. That will be time consuming.</p>
+</div>
+<div id="reformatting-dates" class="section level3">
+<h3><span class="header-section-number">8.4.6</span> Reformatting dates</h3>
+<p>One problem we may encounter is that the standard date definition on patent documents (e.g. 21.08.2009) may not be recognised as a date field in our analysis software because dates can be ambiguous from the perspective of software code. For example, how should 08/12/2009 or 12/08/2009 be interpreted?</p>
+<p>Alternatively, as in this case, the decimal points may not be correctly interpreted as signifying a date in some software (e.g. R). We might anticipate this and transform the data into a more recognisable form such as 21/08/2009. A very simple way to do this is by using a replace function. In this case we select the menu for the <code>publication_date</code> field and then <code>Edit cells &gt; Transform</code>.</p>
+<p><img src="images/openrefine/transform.png" /></p>
+<p>This produces a menu where we enter a simple GREL replace code.</p>
+<p><img src="images/openrefine/transform_replace_date.png" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">replace</span>(value, <span class="st">&#39;.&#39;</span>, <span class="st">&#39;/&#39;</span>)</a></code></pre></div>
+<p>This simple replace code is basically the same as find and replace in Excel or Open Office. In addition, we can see the consequences of the choice in the panel before we run the command. This is extremely useful for spotting problems. For example, if attempting to split a field on a comma we may discover that there are multiple commas in a cell (see the <code>Priority Data</code> field for this). By testing the code in the panel we could then work to find a solution or edit the offending texts in the main facet panel.</p>
+<p>To find other simple codes visit the <a href="https://github.com/OpenRefine/OpenRefine/wiki/Recipes">Open Refine Recipes page</a>.</p>
+<p>We will now focus on extracting information from some of the columns before saving the dataset and moving on.</p>
+</div>
+<div id="access-additional-information" class="section level3">
+<h3><span class="header-section-number">8.4.7</span> Access additional information</h3>
+<p>There are a range of pieces of information that are hidden in data inside columns. For example, Patentscope data does not contain a publication country field. In particular, note that Patentscope merges all publications for an application record into one dossier. So we are only seeing one record for a set of documents (in Patentscope the wider dossier for a record is accessible through the Documents section of the website). This is very helpful in reducing duplication but it is important to bear in mind that we are not seeing the wider family in our data table. However, we can work with the information at the front of the publication number in the Patentscope records using a very simple code and create a new column (as above) based on the values returned as below.</p>
+<p><img src="images/openrefine/publication_country.png" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">substring</span>(value, <span class="dv">0</span>, <span class="dv">2</span>)</a></code></pre></div>
+<p>Note here that the code begins counting from 0 (e.g. 0, 1 = U, 2 = S). The first part of the code looks in the value field. 0 tells the code to begin counting from 0 and the 2 tells it to read the two characters from 0. We could change these values, e.g to 1 and 4 to capture only a chunk of a number.</p>
+</div>
+</div>
+<div id="fill-blank-cells" class="section level2">
+<h2><span class="header-section-number">8.5</span> Fill blank cells</h2>
+<p>Filling blank cells with a value (NA for Not Available) to prevent calculation problems with analysis tools later can be performed by selecting each column, creating a text facet, scrolling down to the bottom of the facet choosing <code>(blank)</code>, edit and then entering NA for the value.</p>
+<p><img src="images/openrefine/blank_na_facets.png" /></p>
+<p>Note that this is somewhat time consuming (until a more rapid method is found) but has the benefit of being accurate. It is generally faster to open the file in Excel (or Open Office) and use find and replace with the find box left blank and NA in the replace field across the data table. For that reason, blank cells should not appear in the dataset you are using in this article. However, in later steps below we will be generating blank cells by splitting the applicant and inventor field. It is therefore important to know this procedure.</p>
+</div>
+<div id="renaming-columns" class="section level2">
+<h2><span class="header-section-number">8.6</span> Renaming columns</h2>
+<p>At this stage we have a set of columns that are mixed between the original sentence case and the additions in lower case with no spaces such as <code>publication_number</code>. This is a matter of personal preference but it is generally a good idea to regularise the case of all columns to make them easy to remember. In this case we will also add the word <code>original</code> to the columns to distinguish between those created by cleaning the data and those we have created.</p>
+</div>
+<div id="exporting-data" class="section level2">
+<h2><span class="header-section-number">8.7</span> Exporting Data</h2>
+<p>When we are happy that we have worked through the core cleaning steps it is a good idea to export the new core dataset. It is important to do this before the steps described below because it preserves a copy of the core dataset that can be used for separation (or splitting activities) on applicants, inventors, IPC etc. during the next steps. It is important that this <code>clean</code> dataset is as clean as is reasonably possible before moving on. The reason for this is that <strong><em>any noise or problems will multiply</em></strong> when we move on to the next steps. This may require a major rerun of the cleaning steps on later files created for applicants or inventors. Therefore make sure that you are happy that the data is as clean as is reasonably possible at this stage. Then choose export from the menu and the desired format (preferably <code>.csv</code> or <code>.tab</code> if using analytics tools later).</p>
+<p><img src="images/openrefine/export_core.png" /></p>
+</div>
+<div id="splitting-applicants" class="section level2">
+<h2><span class="header-section-number">8.8</span> Splitting Applicants</h2>
+<p>This article was inspired by a <a href="http://www.patinformatics.com/blog/patent-assignee-cleanup-using-google-refine-open-refine-text-facets-and-clustering/">very useful tutorial</a> on cleaning assignee names with Google Refine by Anthony Trippe. Anthony is also the author of the forthcoming <a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/">WIPO Guidelines for Preparing Patent Landscape Reports</a> and the <a href="http://www.patinformatics.com">Patentinformatics LLC</a> website has played a pioneering role in promoting patent analytics. We will take this example forward using the our sample pizza patent dataset so that it can be visualised in a range of tools. If you have not done so already, you can download the dataset <a href="https://github.com/poldham/opensource-patent-analytics/blob/master/2_datasets/pizza_medium/pizza_medium.csv?raw=true">here</a>.</p>
+<p>We actually have two options here and we will go through them so that you can work out your needs in a particular situation. Note that you can use Undo in Google Refine to go back to the point immediately before you tested these approaches. However, if you have followed the data cleaning steps above, make sure that you have already exported a copy of the main dataset.</p>
+<div id="situation-1---first-applicants" class="section level3">
+<h3><span class="header-section-number">8.8.1</span> Situation 1 - First Applicants</h3>
+<p>As discussed by Anthony Tripp we could split the applicant column into separate columns by choosing, <code>Applicants &gt; Edit column &gt; Split into several columns</code>.</p>
+<p><img src="images/openrefine/split_applicants_columns.png" /></p>
+<p>We then need to select the separator. In this case (and normally with patent data), it is <code>;</code>.</p>
+<p><img src="images/openrefine/split_selectseparator.png" /></p>
+<p>This will produce a set of 18 columns.</p>
+<p><img src="images/openrefine/split_columns.png" /></p>
+<p>At this point, we could begin the clustering process to start cleaning the names that is discussed in situation 2. However, the disadvantage with this is that with this size of dataset we would need to do this 18 times in the absence of an easy way of combining the columns into a single column (applicants) with a name on each row. We might want to use this approach in circumstances where we are not focusing on the applicants and are happy to accept the first name in the list as the first applicant. In that case we would simply be reducing the applicant field to one applicant. Bear in mind that the first applicant listed in the series of names may not always be the first applicant as listed on an application and may not be an organisation name. Bearing these caveats in mind, we might also use this approach to reduce the concatenated inventors field to one inventor. For general purposes that would be clean and simple for visualisation purposes.</p>
+<p>However, if we wanted to perform detailed applicant analysis for an area of technology, we would need to adopt a different approach.</p>
+</div>
+<div id="situation-2---all-applicants" class="section level3">
+<h3><span class="header-section-number">8.8.2</span> Situation 2 - All Applicants</h3>
+<p>One of the real strengths of Open Refine is that it is very easy to separate applicant and inventor names into individual rows. Instead of choosing Edit column we now choose <code>Edit cells</code> and then <code>split multi-valued cells</code>.</p>
+<p><img src="images/openrefine/split_multivaluedcells.png" /></p>
+<p>In the pop up menu choose <code>;</code> as the separator rather than the default comma.</p>
+<p>We now have a dataset with 15,884 rows as we can see below.</p>
+<p><img src="images/openrefine/split_multivaluedcells2.png" /></p>
+<p>The advantage of this is that all our individual applicant names are now in a single column. However, note that the rest of the data has not been copied to the new rows. We will come back to this but as a precaution it is sensible to fill down on the publication number column as the key that links the individual applicants to the record. So let’s do that for peace of mind by selecting <code>publication number &gt; edit cells &gt; fill down</code>.</p>
+<p><img src="images/openrefine/split_filldown.png" /></p>
+<p>We should now have a column filled with the publication number values for each applicant as our key. Note here that there is a need for caution in using <code>fill down</code> in Open Refine as discussed in detail <a href="http://googlerefine.blogspot.co.uk/2012/03/fill-down-right-and-secure-way.html">here</a>. Basically, fill down is not performed by record, it simply fills down. That can mean that data becomes mixed up. This is another reason why it is important to fill blank values with NA either before starting work in Open Refine or as one of the initial clean up steps. Using NA early on will help prevent refine from filling down blank cells with the values of another record.</p>
+<p>If you have not already done so above to assist the clean up process, and as general good practice, transform the mixed case in the applicants field to a single case type. To do that select <code>Applicants &gt; Edit Cells &gt; Common Transformations &gt; To titlecase</code>.</p>
+<p><img src="images/openrefine/applicants_titlecase.png" /></p>
+<p>We now move back to the applicants and select <code>Facet &gt; Text Facet</code>.</p>
+<p><img src="images/openrefine/applicants_textfacet.png" /></p>
+<p>What we will see (with Applicants moved to the first column by selecting <code>Applicants &gt; Edit Column &gt; Move column to beginning</code>) is a new side window with 9,368 choices.</p>
+<p><img src="images/openrefine/applicants1.png" /></p>
+<p>The cluster button will trigger a set of six clean up algorithms with user choices along the way. It is well worth reading the <a href="https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth">documentation</a> on these steps to decide what will best fit your needs in future. These cleaning steps proceed from the strict to the lax in terms of matching criteria. The following is a brief summary of the details provided in the documentation page:</p>
+<ol style="list-style-type: decimal">
+<li>Fingerprinting. This method is the least likely in the set to produce false positives (and that is particularly important for East Asian names in patent data). It involves a series of steps including removing trailing white space, using all lowercase, removing punctuation and control characters, splitting into tokens on white space, splitting and joining and normalising to ASCII.</li>
+<li>N-Gram Fingerprint. This is similar but uses n-grams (a sequence of characters or multiple sequences of characters) that are chunked, sorted and rejoined and normalised to ASCII text. The documentation highlights that this can produce more false positives but is food for finding clusters missed by fingerprinting.</li>
+<li>Phonetic Fingerprint. This transforms tokens into the way they are pronounced and produces different fingerprints to methods 2 &amp; 3.</li>
+<li>Nearest Neighbour Methods. This is a distance method but can be very very slow.</li>
+<li>Levenshtein Distance. This famous algorithm measures the minimal number of edits that are required to change one string into another (and for this reason is widely known as edit distance). Typically, this will spot typological and spelling errors not spotted by the earlier approaches.</li>
+<li>PPM a particular use of Kolmogorov complexity as described in this <a href="http://arxiv.org/abs/cs/0111054">article</a> that is implemented in Open Refine as <code>Prediction by Partial Matching</code>.</li>
+</ol>
+<p>It is important to gain an insight into these methods because they may affect the results you receive. In particular, caution is required on East Asian names where cultural naming traditions produce a lot of false positive matches on the same name for persons who are actually distinct persons (synonyms or “lumping” in the literature). This can have very dramatic impacts on the results of patent analysis for inventor names because it will treat all persons sharing the name <code>Smith, John</code> or <code>Wang, Wei</code> as the same person, when in practice they are multiple individual people.</p>
+<p>We will now walk through each algorithm to view the results.</p>
+<p><img src="images/openrefine/cluster_step1.png" /></p>
+<p>This identifies 1187 clusters dominated by hidden characters in the applicants field (typically appearing after the name). At this stage we need to make some decisions about whether or not to accept or reject the proposed merger by checking the <code>Merge?</code> boxes.</p>
+<p>This step was particularly good at producing a match on variant names and name reversals as we can see here.</p>
+<p><img src="images/openrefine/applicants2.png" /></p>
+<p>It pays to manually inspect the data before accepting it. One important option here is to use the slider on <code>Choices in Cluster</code> to move the range up or down and then make a decision about the appropriate cut off point. Then use select all in the bottom left for results you are happy with followed by <code>Merge Selected &amp; Re-Cluster</code>. In the next step we can change the keying function dropdown to Ngram-fingerprint.</p>
+<p><img src="images/openrefine/applicants-ngramfingerprint2.png" /></p>
+<p>This produces 98 clusters which inspection suggests are very accurate. The issues to watch out for here (and throughout) are very similar names for companies that may not be the same company (such as Ltd. and Inc.) or distinct divisions of the same company. It is also important, when working with inventor names, not to assume that the same name is the same inventor in the absence of other match criteria, or that apparently minor variations in initials (e.g. Smith, John A and Smith, John B) are the same person because they may well not be.</p>
+<p>To see these potential problems in action try reducing the N-gram size to 1. At this point we see the following.</p>
+<p><img src="images/openrefine/ngram1_problems.png" /></p>
+<p>This measure is too lax and is grouping together companies that should not be grouped. In contrast increasing the N-gram value to 3 or 4 will tighten the cluster. We will select all on N-gram 2 and proceed to the next step.</p>
+<p>At this point it is worth noting that the original 9,368 clusters have been reduced to 7,875 and if we sort on the count in the main window then Google is starting to emerge as the top applicant across our set of 10,000 records.</p>
+</div>
+<div id="phonetic-fingerprint-metaphone-3-clustering" class="section level3">
+<h3><span class="header-section-number">8.8.3</span> Phonetic Fingerprint (Metaphone 3) clustering</h3>
+<p>As we can see below, Metaphone 3 clustering produces 413 looser clusters with false positive matches on International Business Machines but positive matches on Cooperative Verkoop.</p>
+<p><img src="images/openrefine/applicants_metaphone3.png" /></p>
+<p>At this point we could either manually review the 413 clusters and select as appropriate or change the settings to reduce the number of clusters using the <code>Choices in Clusters</code> slider until we see something manageable for manual review. At this stage we might also want to use the <code>browse this cluster</code> function that appears on hovering over a particular selection, to review the data (see the second entry in the image below).</p>
+<p><img src="images/openrefine/applicants_browsecluster.png" /></p>
+<p>In this case we are attempting to ascertain whether the Korea Institute of Oriental Medicine should be grouped with the Korea Institute of Science and Technology (which appears unlikely). If we open the browser function we can review the entries for shared characteristics as possible match criteria.</p>
+<p><img src="images/openrefine/applicants_browsecluster1.png" /></p>
+<p>For example, if the applicants shared inventors and/or the same title we may want to record this record in the larger grouping (remembering that we have exported the original cleaned up data). Or, as is more likely, we might want to capture most members of the group and remove the Korea Institute of Oriental Medicine. However, how to do this is not at all obvious.</p>
+<p>In practice, selection of items at this stage feeds into the next stage of cleaning using the Cologne-phonetic algorithm. As we can see below, this algorithm identified 271 clusters that were almost entirely clustered on the names of individuals with a limited number of accurate hits.</p>
+<p><img src="images/openrefine/applicants_cologne.png" /></p>
+</div>
+<div id="levenshtein-edit-distance" class="section level3">
+<h3><span class="header-section-number">8.8.4</span> Levenshtein Edit Distance</h3>
+<p>The final steps in the process focus on Nearest Neighbour matches for our reduced number of clusters. Note that this may take some time to run (e.g. 10-15 minutes for the +7,000 clusters in this case). The results are displayed below</p>
+<p><img src="images/openrefine/applicants_levenshtein.png" /></p>
+<p>In some cases the default settings matched individual names on different initials, but in the majority of cases the clusters appeared valid and were accepted. In this case particular caution is required on the names of individuals and browsing the results to check the accuracy of matches.</p>
+</div>
+<div id="ppm" class="section level3">
+<h3><span class="header-section-number">8.8.5</span> PPM</h3>
+<p>The PPM step is the final logarithm but took so long that we decided to abandon it relative to the likely gains.</p>
+</div>
+<div id="preparing-for-export" class="section level3">
+<h3><span class="header-section-number">8.8.6</span> Preparing for export</h3>
+<p>In practice, the cleaning process will generate a new data table for export that focuses on the characteristics of applicants. To prepare for export with the cleaned group of applicant names there will be a choice on whether to retain the publication number as the single key, or, whether to use the fill down process illustrated above across the columns of the dataset. It is important to note that caution is required in the blanket use of fill down.</p>
+<p>It is also important to bear in mind that the dataset that has been created contains many more rows than the original version. Prior to exporting we would therefore suggest two steps:</p>
+<ol style="list-style-type: decimal">
+<li>Rerun Common transforms &gt; to title case, to regularise any names that may have been omitted in the first round and rerun trim whitespace for any spaces arising from the splitting of names.</li>
+<li>Rerun facets on each column, select blank at the end of the facet panel and fill with NA. Alternatively, do this immediately following export.</li>
+</ol>
+</div>
+</div>
+<div id="round-up-5" class="section level2">
+<h2><span class="header-section-number">8.9</span> Round Up</h2>
+<p>In this chapter we have covered the main features of basic data cleaning using Open Refine. As should now be clear, while it requires an investment in familiarisation it is a powerful tool for cleaning up small to medium sized patent datasets such as our 10,000 pizza patent records. However, a degree of patience, caution and forward planning is required to create an effective workflow using this tool. It is likely that further investments of time (such as the use of regular expressions in GREL) would improve cleaning tasks prior to analysis.</p>
+<p>Open Refine is also probably the easiest to use free tool for separating and cleaning applicant and inventor names without programming knowledge. For that reason alone, while noting the caveats highlighted above, Open Refine is a very valuable tool in the open source patent analytics toolbox.</p>
+</div>
+<div id="useful-resources" class="section level2">
+<h2><span class="header-section-number">8.10</span> Useful Resources</h2>
+<p>The <a href="http://openrefine.org">Open Refine website</a> has links to lots of useful resources including video walkthroughs</p>
+<p><a href="https://github.com/OpenRefine/OpenRefine/wiki/Recipes">Open Refine Wiki Recipes</a></p>
+<p><a href="http://googlerefine.blogspot.co.uk">Open Refine Tips and Tricks</a></p>
+<p><a href="http://stackoverflow.com/questions/tagged/openrefine">Stack Overflow questions on Open Refine</a></p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="patentscope-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tableau-public-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
