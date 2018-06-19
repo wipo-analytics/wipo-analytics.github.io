@@ -3,3 +3,5 @@ readr
 dplyr
 RColorBrewer
 tidyr
+ggplot2
+stringr
