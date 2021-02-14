@@ -1,0 +1,95 @@
+# Flourish
+
+## Introduction
+
+[Flourish](https://flourish.studio/) is a visualization platform and tool allowing to easily turn our data into maps, charts and interactive stories.
+
+
+![](images/flourish/fig1_front.png)
+
+`Flourish` is somehow similar to `Tableau` in terms that it makes it very easy to try different visualizations based on the same clean data input by just dragging column variables to axes, assigning features and parameters to characterise them, and selecting the output chart types that best fit. We can save the visualizations we create as images and also as HTML; but this tool also allows us to create stories, that is, animated sequences of visualizations were it is also possible to insert slides with images, text paragraphs, etc.
+
+
+## Creating animated bar charts with Flourish
+
+Imagine that we want to represent top patent applicants throughout the years. 
+We could make an animated chart to see how these ranks evolve. 
+Let's do it.
+
+
+What we do is go strait away to the template we want to use in Flourish (in this case [this bar chart race template](https://app.flourish.studio/@flourish/bar-chart-race)) and select `create visualization` to create a new one based on this.
+
+![](images/flourish/fig2_barchartrace.png)
+
+
+
+To use Flourish it is necessary to register and create an account. The free version includes some restrictions, such as the option to publish privately, but most of the features for creating visualizations are available.
+
+
+### Preparing our data
+
+First thing we need to do is accommodate our data so there is a row for each applicant we want to represent. 
+Data should look like this:
+
+![](images/flourish/fig3_csvformat.png)
+
+The first column should contain the name of each applicant and then all subsequent columns should represent the time periods (those will be years in our case). The data inside each cell will be the number of published patents by an applicant that year.
+
+
+#### Obtaining patent data
+
+We have done a search in EPO's Patstat and Global Patent Index (GPI) service. We looked for patents on home heath care. We obtained csv files containing stats regarding number of patents by year for top applicants during the last 20 years.
+
+Let's read it:
+
+```{r, warning=FALSE, message=FALSE, comment=FALSE}
+library(tidyverse) # we load tidyverse package for data manipulation
+
+applicants_years <- read_delim("data/epo_gpi_home_health_care_applicant_years.csv", ";", skip = 12) #we skip first 12 rows we do not want
+applicants_years
+```
+
+
+We realize that this data comes in a different format: we have year in rows and applicant names in columns; therefore we need to transpose this data to have it in the desired format, that is: applicants as rows and years as columns.
+
+We can do that for example in R by using the `rownames_to_column` and `pivot` functions
+
+```{r, warning=FALSE, message=FALSE, comment=FALSE}
+applicants_years_to_flourish <- applicants_years %>% 
+    rownames_to_column() %>% #first step is converting rownames to a column so we have a reference we can lean on
+    pivot_longer(-rowname, 'variable', "value") %>% #next we put all our data in a long dataframe with a column with all variables and a column with all corresponding values
+    pivot_wider(variable, rowname) #finally we transpose taking all new rownames as columns (wide format)
+applicants_years_to_flourish
+```
+
+
+#### Uptoading our data into Flourish
+
+Our patent data finally looks ready. It has the format that Flourish will accept to create our barchart race visualization, so we can now save this data into a CSV file to load it into Flourish.
+
+```{r, warning=FALSE, message=FALSE, comment=FALSE}
+
+write.csv(applicants_years_to_flourish, "applicants_years_to_flourish.csv", col.names = FALSE)
+```
+
+
+We will go to the Flourish template for creating bar chart races in Flourish and though the available `upload data` button we will upload our own CSV data into Flourish. Flourish will quickly recognize our data.
+
+![](images/flourish/fig4_importcsv.png)
+
+We have to make sure that we add all columns containing values that are relevant to our bar chart race visualization to the "Values" setting.  We can still change and adjust some data such as column names or removing columns in case there is some bits of data that we do not want, etc. For example, we just edit and name `Applicant` the column containing all applicant names.
+
+![](images/flourish/fig5_importcsv.png)
+
+
+Our data imported well so now just by going into the `Preview` tab, we should be able to see it in action. 
+
+
+### Preview, tweeking and publihing
+
+The preview of our chart will appear to the left hand side of the screen. In the right we have full control of all parameters to tweak the styles of this visualization (labels, sizes, animation time, etc.).
+
+All changes we do are saved automatically and our animation updates. It will appear published in our public account (this is the default setup option) or we can share it, make it private or embed it anywhere, given that we have associated privileges (upgraded account options). 
+
+![](images/flourish/fig6_visualization.png)
+

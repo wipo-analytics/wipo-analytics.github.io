@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Patentscope | The WIPO Manual on Open Source Patent Analytics</title>
+  <meta name="description" content="A practical introduction to free and open source tools for patent analytics." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Patentscope | The WIPO Manual on Open Source Patent Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A practical introduction to free and open source tools for patent analytics." />
+  <meta name="github-repo" content="wipo-analytics/manual_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Patentscope | The WIPO Manual on Open Source Patent Analytics" />
+  
+  <meta name="twitter:description" content="A practical introduction to free and open source tools for patent analytics." />
+  
+
+
+
+<meta name="date" content="2016-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-lens-1.html"/>
+<link rel="next" href="tableau-public-2.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The WIPO Manual on Open Source Patent Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Frontmatter</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#authorship"><i class="fa fa-check"></i><b>0.1</b> Authorship</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>0.2</b> Acknowledgements</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#further-information"><i class="fa fa-check"></i><b>0.3</b> Further information</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#conditions-of-use"><i class="fa fa-check"></i><b>0.4</b> Conditions of use</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>0.5</b> Disclaimer</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i><b>1.1</b> Structure</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#an-overview-of-open-source-and-free-software-tools"><i class="fa fa-check"></i><b>1.1.1</b> An Overview of Open Source and Free Software Tools</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#approaching-patent-data"><i class="fa fa-check"></i><b>1.1.2</b> Approaching Patent Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#obtaining-patent-data"><i class="fa fa-check"></i><b>1.1.3</b> Obtaining Patent Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#cleaning-and-tidying-patent-data"><i class="fa fa-check"></i><b>1.1.4</b> Cleaning and Tidying Patent Data</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#analysing-and-visualizing-patent-data"><i class="fa fa-check"></i><b>1.1.5</b> Analysing and Visualizing Patent Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="introduction.html"><a href="introduction.html#sharing-data-and-the-writing-of-the-manual"><i class="fa fa-check"></i><b>1.1.6</b> Sharing Data and The Writing of the Manual</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html"><i class="fa fa-check"></i><b>2</b> An Overview of Tools</a><ul>
+<li class="chapter" data-level="2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#general-tools"><i class="fa fa-check"></i><b>2.1</b> General Tools</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-office"><i class="fa fa-check"></i><b>2.1.1</b> <span>Open Office</span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-sheets"><i class="fa fa-check"></i><b>2.1.2</b> <span>Google Sheets</span></a></li>
+<li class="chapter" data-level="2.1.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-fusion-tables"><i class="fa fa-check"></i><b>2.1.3</b> <span>Google Fusion Tables</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cleaning-tools"><i class="fa fa-check"></i><b>2.2</b> Cleaning Tools</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#open-refine-formerly-google-refine"><i class="fa fa-check"></i><b>2.2.1</b> <span>Open Refine</span> (formerly Google Refine)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-mining"><i class="fa fa-check"></i><b>2.3</b> Data Mining</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rstudio"><i class="fa fa-check"></i><b>2.3.1</b> <span>RStudio</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#rapidminer-studio"><i class="fa fa-check"></i><b>2.3.2</b> <span>RapidMiner Studio</span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#knime"><i class="fa fa-check"></i><b>2.3.3</b> <span>KNIME</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#data-visualization"><i class="fa fa-check"></i><b>2.4</b> Data visualization</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-charts"><i class="fa fa-check"></i><b>2.4.1</b> <span>Google Charts</span></a></li>
+<li class="chapter" data-level="2.4.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public"><i class="fa fa-check"></i><b>2.4.2</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.4.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.4.3</b> R and RStudio</a></li>
+<li class="chapter" data-level="2.4.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#shiny"><i class="fa fa-check"></i><b>2.4.4</b> Shiny</a></li>
+<li class="chapter" data-level="2.4.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#ibm-many-eyes"><i class="fa fa-check"></i><b>2.4.5</b> <span>IBM Many Eyes</span></a></li>
+<li class="chapter" data-level="2.4.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-visualization-tools"><i class="fa fa-check"></i><b>2.4.6</b> Other visualization Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#network-visualization"><i class="fa fa-check"></i><b>2.5</b> Network Visualization</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#gephi"><i class="fa fa-check"></i><b>2.5.1</b> <span>Gephi</span></a></li>
+<li class="chapter" data-level="2.5.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#nodexl"><i class="fa fa-check"></i><b>2.5.2</b> <span>NodeXL</span></a></li>
+<li class="chapter" data-level="2.5.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cytoscape"><i class="fa fa-check"></i><b>2.5.3</b> <span>Cytoscape</span></a></li>
+<li class="chapter" data-level="2.5.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#pajek"><i class="fa fa-check"></i><b>2.5.4</b> <span>Pajek</span></a></li>
+<li class="chapter" data-level="2.5.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#vos-viewer"><i class="fa fa-check"></i><b>2.5.5</b> <span>VOS Viewer</span></a></li>
+<li class="chapter" data-level="2.5.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#hive-plots"><i class="fa fa-check"></i><b>2.5.6</b> <span>Hive Plots</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#infographics"><i class="fa fa-check"></i><b>2.6</b> Infographics</a></li>
+<li class="chapter" data-level="2.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geographical-mapping"><i class="fa fa-check"></i><b>2.7</b> Geographical Mapping</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openstreetmap"><i class="fa fa-check"></i><b>2.7.1</b> <span>OpenStreetMap</span></a></li>
+<li class="chapter" data-level="2.7.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#leaflet"><i class="fa fa-check"></i><b>2.7.2</b> <span>Leaflet</span></a></li>
+<li class="chapter" data-level="2.7.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#tableau-public-1"><i class="fa fa-check"></i><b>2.7.3</b> <span>Tableau Public</span></a></li>
+<li class="chapter" data-level="2.7.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#qgis"><i class="fa fa-check"></i><b>2.7.4</b> <span>QGIS</span></a></li>
+<li class="chapter" data-level="2.7.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#geonames.org."><i class="fa fa-check"></i><b>2.7.5</b> <span>Geonames.org</span>.</a></li>
+<li class="chapter" data-level="2.7.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#icharts"><i class="fa fa-check"></i><b>2.7.6</b> <span>iCharts</span></a></li>
+<li class="chapter" data-level="2.7.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#openlayers3"><i class="fa fa-check"></i><b>2.7.7</b> <span>OpenLayers3</span></a></li>
+<li class="chapter" data-level="2.7.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#cartodb"><i class="fa fa-check"></i><b>2.7.8</b> <span>CartoDB</span></a></li>
+<li class="chapter" data-level="2.7.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#d3.js"><i class="fa fa-check"></i><b>2.7.9</b> <span>d3.js</span></a></li>
+<li class="chapter" data-level="2.7.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#highcharts"><i class="fa fa-check"></i><b>2.7.10</b> <span>Highcharts</span></a></li>
+<li class="chapter" data-level="2.7.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#datawrapper"><i class="fa fa-check"></i><b>2.7.11</b> <span>Datawrapper</span></a></li>
+<li class="chapter" data-level="2.7.12" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#plotly"><i class="fa fa-check"></i><b>2.7.12</b> <span>Plotly</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#text-mining"><i class="fa fa-check"></i><b>2.8</b> Text Mining</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#jigsaw-visual-analytics"><i class="fa fa-check"></i><b>2.8.1</b> <span>Jigsaw Visual Analytics</span></a></li>
+<li class="chapter" data-level="2.8.2" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#weka"><i class="fa fa-check"></i><b>2.8.2</b> <span>Weka</span></a></li>
+<li class="chapter" data-level="2.8.3" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#word-trees"><i class="fa fa-check"></i><b>2.8.3</b> Word Trees</a></li>
+<li class="chapter" data-level="2.8.4" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#google-word-trees-on-the-google-developers-site-provides-instructions-for-generating-word-trees-using-javascript."><i class="fa fa-check"></i><b>2.8.4</b> <span>Google Word Trees</span> on the Google Developers site provides instructions for generating word trees using Javascript.</a></li>
+<li class="chapter" data-level="2.8.5" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#kh-coder-free-software-allowing-quantitative-content-analysistext-mining."><i class="fa fa-check"></i><b>2.8.5</b> <span>KH Coder</span>: free software allowing quantitative content analysis/text mining.</a></li>
+<li class="chapter" data-level="2.8.6" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#r-and-the-tm-package"><i class="fa fa-check"></i><b>2.8.6</b> R and the <code>tm</code> package</a></li>
+<li class="chapter" data-level="2.8.7" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#python-and-text-mining"><i class="fa fa-check"></i><b>2.8.7</b> Python and Text Mining</a></li>
+<li class="chapter" data-level="2.8.8" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-natural-language-toolkitntlk"><i class="fa fa-check"></i><b>2.8.8</b> <span>The Natural Language Toolkit(NTLK)</span></a></li>
+<li class="chapter" data-level="2.8.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#other-text-mining-resources"><i class="fa fa-check"></i><b>2.8.9</b> Other text mining resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#round-up"><i class="fa fa-check"></i><b>2.9</b> Round Up</a></li>
+<li class="chapter" data-level="2.10" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#the-checklist"><i class="fa fa-check"></i><b>2.10</b> The Checklist</a></li>
+<li class="chapter" data-level="2.11" data-path="an-overview-of-tools.html"><a href="an-overview-of-tools.html#credits"><i class="fa fa-check"></i><b>2.11</b> Credits</a></li>
+</ul></li>
+<li class="part"><span><b>I Approaching Patent Data</b></span></li>
+<li class="chapter" data-level="3" data-path="datafields.html"><a href="datafields.html"><i class="fa fa-check"></i><b>3</b> Datafields</a><ul>
+<li class="chapter" data-level="3.1" data-path="datafields.html"><a href="datafields.html#what-is-a-patent"><i class="fa fa-check"></i><b>3.1</b> What is a Patent?</a></li>
+<li class="chapter" data-level="3.2" data-path="datafields.html"><a href="datafields.html#as-a-form-of-intellectual-property-right"><i class="fa fa-check"></i><b>3.2</b> As a form of intellectual property right</a></li>
+<li class="chapter" data-level="3.3" data-path="datafields.html"><a href="datafields.html#patents-as-a-type-of-document"><i class="fa fa-check"></i><b>3.3</b> Patents as a type of document</a></li>
+<li class="chapter" data-level="3.4" data-path="datafields.html"><a href="datafields.html#basic-data-types"><i class="fa fa-check"></i><b>3.4</b> Basic Data Types</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="datafields.html"><a href="datafields.html#synthetic-genomes"><i class="fa fa-check"></i><b>3.4.1</b> <span>Synthetic Genomes</span></a></li>
+<li class="chapter" data-level="3.4.2" data-path="datafields.html"><a href="datafields.html#original-front-page"><i class="fa fa-check"></i><b>3.4.2</b> <span>Original Front Page</span></a></li>
+<li class="chapter" data-level="3.4.3" data-path="datafields.html"><a href="datafields.html#espacenet-front-page"><i class="fa fa-check"></i><b>3.4.3</b> <span>espacenet Front Page</span></a></li>
+<li class="chapter" data-level="3.4.4" data-path="datafields.html"><a href="datafields.html#description"><i class="fa fa-check"></i><b>3.4.4</b> <span>Description</span></a></li>
+<li class="chapter" data-level="3.4.5" data-path="datafields.html"><a href="datafields.html#claims"><i class="fa fa-check"></i><b>3.4.5</b> <span>Claims</span></a></li>
+<li class="chapter" data-level="3.4.6" data-path="datafields.html"><a href="datafields.html#family-members"><i class="fa fa-check"></i><b>3.4.6</b> <span>Family Members</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="datafields.html"><a href="datafields.html#cited"><i class="fa fa-check"></i><b>3.4.7</b> <span>Cited</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="datafields.html"><a href="datafields.html#citing"><i class="fa fa-check"></i><b>3.4.8</b> <span>Citing</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="datafields.html"><a href="datafields.html#legal-status"><i class="fa fa-check"></i><b>3.4.9</b> <span>Legal Status</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="datafields.html"><a href="datafields.html#round-up-1"><i class="fa fa-check"></i><b>3.5</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datasets.html"><a href="datasets.html"><i class="fa fa-check"></i><b>4</b> Datasets</a><ul>
+<li class="chapter" data-level="4.1" data-path="datasets.html"><a href="datasets.html#the-datasets"><i class="fa fa-check"></i><b>4.1</b> The datasets</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="datasets.html"><a href="datasets.html#pizza-patent-datasets"><i class="fa fa-check"></i><b>4.1.1</b> Pizza patent datasets</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datasets.html"><a href="datasets.html#patent-landscape-reports-datasets"><i class="fa fa-check"></i><b>4.1.2</b> Patent Landscape Reports datasets</a></li>
+<li class="chapter" data-level="4.1.3" data-path="datasets.html"><a href="datasets.html#other-datasets"><i class="fa fa-check"></i><b>4.1.3</b> Other datasets</a></li>
+<li class="chapter" data-level="4.1.4" data-path="datasets.html"><a href="datasets.html#round-up-2"><i class="fa fa-check"></i><b>4.1.4</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Obtaining Patent Data</b></span></li>
+<li class="chapter" data-level="5" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>5</b> Databases</a><ul>
+<li class="chapter" data-level="5.1" data-path="databases.html"><a href="databases.html#introduction-1"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="databases.html"><a href="databases.html#the-databases"><i class="fa fa-check"></i><b>5.2</b> The Databases</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="databases.html"><a href="databases.html#the-lens"><i class="fa fa-check"></i><b>5.2.1</b> <span>The Lens</span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="databases.html"><a href="databases.html#patentscope"><i class="fa fa-check"></i><b>5.2.2</b> <span>Patentscope</span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="databases.html"><a href="databases.html#espacenet"><i class="fa fa-check"></i><b>5.2.3</b> <span>espacenet</span></a></li>
+<li class="chapter" data-level="5.2.4" data-path="databases.html"><a href="databases.html#latipat"><i class="fa fa-check"></i><b>5.2.4</b> <span>LATIPAT</span></a></li>
+<li class="chapter" data-level="5.2.5" data-path="databases.html"><a href="databases.html#epo-open-patent-services"><i class="fa fa-check"></i><b>5.2.5</b> <span>EPO Open Patent Services</span></a></li>
+<li class="chapter" data-level="5.2.6" data-path="databases.html"><a href="databases.html#uspto-patents-view"><i class="fa fa-check"></i><b>5.2.6</b> <span>USPTO Patents View</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="databases.html"><a href="databases.html#google-patents"><i class="fa fa-check"></i><b>5.2.7</b> <span>Google Patents</span></a></li>
+<li class="chapter" data-level="5.2.8" data-path="databases.html"><a href="databases.html#google-prior-art-finder"><i class="fa fa-check"></i><b>5.2.8</b> <span>Google Prior Art Finder</span></a></li>
+<li class="chapter" data-level="5.2.9" data-path="databases.html"><a href="databases.html#google-uspto-bulk-download"><i class="fa fa-check"></i><b>5.2.9</b> <span>Google USPTO Bulk download</span></a></li>
+<li class="chapter" data-level="5.2.10" data-path="databases.html"><a href="databases.html#free-patents-online"><i class="fa fa-check"></i><b>5.2.10</b> <span>Free Patents Online</span></a></li>
+<li class="chapter" data-level="5.2.11" data-path="databases.html"><a href="databases.html#depatisnet"><i class="fa fa-check"></i><b>5.2.11</b> <span>DEPATISnet</span></a></li>
+<li class="chapter" data-level="5.2.12" data-path="databases.html"><a href="databases.html#oecd-patent-databases"><i class="fa fa-check"></i><b>5.2.12</b> <span>OECD Patent Databases</span></a></li>
+<li class="chapter" data-level="5.2.13" data-path="databases.html"><a href="databases.html#epo-world-patent-statistical-database"><i class="fa fa-check"></i><b>5.2.13</b> <span>EPO World Patent Statistical Database</span></a></li>
+<li class="chapter" data-level="5.2.14" data-path="databases.html"><a href="databases.html#other-data-sources"><i class="fa fa-check"></i><b>5.2.14</b> Other data sources</a></li>
+<li class="chapter" data-level="5.2.15" data-path="databases.html"><a href="databases.html#patent2net-in-python"><i class="fa fa-check"></i><b>5.2.15</b> <span>Patent2Net</span> in Python</a></li>
+<li class="chapter" data-level="5.2.16" data-path="databases.html"><a href="databases.html#python-epo-ops-client-by-gsong"><i class="fa fa-check"></i><b>5.2.16</b> <span>Python EPO OPS Client</span> by Gsong</a></li>
+<li class="chapter" data-level="5.2.17" data-path="databases.html"><a href="databases.html#fung-institute-patent-server-for-uspto-data-in-json"><i class="fa fa-check"></i><b>5.2.17</b> <span>Fung Institute Patent Server</span> for USPTO data in JSON</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-lens-1.html"><a href="the-lens-1.html"><i class="fa fa-check"></i><b>6</b> The Lens</a><ul>
+<li class="chapter" data-level="6.1" data-path="the-lens-1.html"><a href="the-lens-1.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="the-lens-1.html"><a href="the-lens-1.html#getting-started"><i class="fa fa-check"></i><b>6.2</b> Getting Started</a></li>
+<li class="chapter" data-level="6.3" data-path="the-lens-1.html"><a href="the-lens-1.html#additional-features"><i class="fa fa-check"></i><b>6.3</b> Additional features</a></li>
+<li class="chapter" data-level="6.4" data-path="the-lens-1.html"><a href="the-lens-1.html#visualisation"><i class="fa fa-check"></i><b>6.4</b> Visualisation</a></li>
+<li class="chapter" data-level="6.5" data-path="the-lens-1.html"><a href="the-lens-1.html#working-with-texts"><i class="fa fa-check"></i><b>6.5</b> Working with texts</a></li>
+<li class="chapter" data-level="6.6" data-path="the-lens-1.html"><a href="the-lens-1.html#patseq"><i class="fa fa-check"></i><b>6.6</b> PatSeq</a></li>
+<li class="chapter" data-level="6.7" data-path="the-lens-1.html"><a href="the-lens-1.html#round-up-3"><i class="fa fa-check"></i><b>6.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="patentscope-1.html"><a href="patentscope-1.html"><i class="fa fa-check"></i><b>7</b> Patentscope</a><ul>
+<li class="chapter" data-level="7.1" data-path="patentscope-1.html"><a href="patentscope-1.html#introduction-3"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="patentscope-1.html"><a href="patentscope-1.html#collections-to-search"><i class="fa fa-check"></i><b>7.2</b> Collections to Search</a></li>
+<li class="chapter" data-level="7.3" data-path="patentscope-1.html"><a href="patentscope-1.html#simple-search"><i class="fa fa-check"></i><b>7.3</b> Simple Search</a></li>
+<li class="chapter" data-level="7.4" data-path="patentscope-1.html"><a href="patentscope-1.html#results"><i class="fa fa-check"></i><b>7.4</b> Results</a></li>
+<li class="chapter" data-level="7.5" data-path="patentscope-1.html"><a href="patentscope-1.html#downloading-results"><i class="fa fa-check"></i><b>7.5</b> Downloading Results</a></li>
+<li class="chapter" data-level="7.6" data-path="patentscope-1.html"><a href="patentscope-1.html#cross-lingual-searching"><i class="fa fa-check"></i><b>7.6</b> Cross Lingual Searching</a></li>
+<li class="chapter" data-level="7.7" data-path="patentscope-1.html"><a href="patentscope-1.html#sequence-data"><i class="fa fa-check"></i><b>7.7</b> Sequence Data</a></li>
+<li class="chapter" data-level="7.8" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-4"><i class="fa fa-check"></i><b>7.8</b> Round Up</a></li>
+</ul></li>
+<li class="part"><span><b>III Cleaning Patent Data</b></span><ul>
+<li class="chapter" data-level="7.9" data-path="patentscope-1.html"><a href="patentscope-1.html#install-open-refine"><i class="fa fa-check"></i><b>7.9</b> Install Open Refine</a></li>
+<li class="chapter" data-level="7.10" data-path="patentscope-1.html"><a href="patentscope-1.html#create-a-project"><i class="fa fa-check"></i><b>7.10</b> Create a Project</a></li>
+<li class="chapter" data-level="7.11" data-path="patentscope-1.html"><a href="patentscope-1.html#open-refine-basics"><i class="fa fa-check"></i><b>7.11</b> Open Refine Basics</a><ul>
+<li class="chapter" data-level="7.11.1" data-path="patentscope-1.html"><a href="patentscope-1.html#open-refine-runs-in-a-browser"><i class="fa fa-check"></i><b>7.11.1</b> Open Refine runs in a browser</a></li>
+<li class="chapter" data-level="7.11.2" data-path="patentscope-1.html"><a href="patentscope-1.html#open-refine-works-on-columns."><i class="fa fa-check"></i><b>7.11.2</b> Open Refine works on columns.</a></li>
+<li class="chapter" data-level="7.11.3" data-path="patentscope-1.html"><a href="patentscope-1.html#open-refine-works-with-facets."><i class="fa fa-check"></i><b>7.11.3</b> Open Refine works with Facets.</a></li>
+<li class="chapter" data-level="7.11.4" data-path="patentscope-1.html"><a href="patentscope-1.html#custom-facets"><i class="fa fa-check"></i><b>7.11.4</b> Custom Facets</a></li>
+<li class="chapter" data-level="7.11.5" data-path="patentscope-1.html"><a href="patentscope-1.html#reordering-columns"><i class="fa fa-check"></i><b>7.11.5</b> Reordering Columns</a></li>
+<li class="chapter" data-level="7.11.6" data-path="patentscope-1.html"><a href="patentscope-1.html#undo-and-redo"><i class="fa fa-check"></i><b>7.11.6</b> Undo and Redo</a></li>
+<li class="chapter" data-level="7.11.7" data-path="patentscope-1.html"><a href="patentscope-1.html#exporting"><i class="fa fa-check"></i><b>7.11.7</b> Exporting</a></li>
+</ul></li>
+<li class="chapter" data-level="7.12" data-path="patentscope-1.html"><a href="patentscope-1.html#basic-cleaning"><i class="fa fa-check"></i><b>7.12</b> Basic Cleaning</a><ul>
+<li class="chapter" data-level="7.12.1" data-path="patentscope-1.html"><a href="patentscope-1.html#changing-case"><i class="fa fa-check"></i><b>7.12.1</b> Changing case</a></li>
+<li class="chapter" data-level="7.12.2" data-path="patentscope-1.html"><a href="patentscope-1.html#regularise-case"><i class="fa fa-check"></i><b>7.12.2</b> Regularise case</a></li>
+<li class="chapter" data-level="7.12.3" data-path="patentscope-1.html"><a href="patentscope-1.html#remove-leading-and-trailing-whitespace"><i class="fa fa-check"></i><b>7.12.3</b> Remove leading and trailing whitespace</a></li>
+<li class="chapter" data-level="7.12.4" data-path="patentscope-1.html"><a href="patentscope-1.html#add-columns"><i class="fa fa-check"></i><b>7.12.4</b> Add Columns</a></li>
+<li class="chapter" data-level="7.12.5" data-path="patentscope-1.html"><a href="patentscope-1.html#address-encoding-and-related-problems"><i class="fa fa-check"></i><b>7.12.5</b> Address Encoding and related problems</a></li>
+<li class="chapter" data-level="7.12.6" data-path="patentscope-1.html"><a href="patentscope-1.html#reformatting-dates"><i class="fa fa-check"></i><b>7.12.6</b> Reformatting dates</a></li>
+<li class="chapter" data-level="7.12.7" data-path="patentscope-1.html"><a href="patentscope-1.html#access-additional-information"><i class="fa fa-check"></i><b>7.12.7</b> Access additional information</a></li>
+</ul></li>
+<li class="chapter" data-level="7.13" data-path="patentscope-1.html"><a href="patentscope-1.html#fill-blank-cells"><i class="fa fa-check"></i><b>7.13</b> Fill blank cells</a></li>
+<li class="chapter" data-level="7.14" data-path="patentscope-1.html"><a href="patentscope-1.html#renaming-columns"><i class="fa fa-check"></i><b>7.14</b> Renaming columns</a></li>
+<li class="chapter" data-level="7.15" data-path="patentscope-1.html"><a href="patentscope-1.html#exporting-data"><i class="fa fa-check"></i><b>7.15</b> Exporting Data</a></li>
+<li class="chapter" data-level="7.16" data-path="patentscope-1.html"><a href="patentscope-1.html#splitting-applicants"><i class="fa fa-check"></i><b>7.16</b> Splitting Applicants</a><ul>
+<li class="chapter" data-level="7.16.1" data-path="patentscope-1.html"><a href="patentscope-1.html#situation-1---first-applicants"><i class="fa fa-check"></i><b>7.16.1</b> Situation 1 - First Applicants</a></li>
+<li class="chapter" data-level="7.16.2" data-path="patentscope-1.html"><a href="patentscope-1.html#situation-2---all-applicants"><i class="fa fa-check"></i><b>7.16.2</b> Situation 2 - All Applicants</a></li>
+<li class="chapter" data-level="7.16.3" data-path="patentscope-1.html"><a href="patentscope-1.html#phonetic-fingerprint-metaphone-3-clustering"><i class="fa fa-check"></i><b>7.16.3</b> Phonetic Fingerprint (Metaphone 3) clustering</a></li>
+<li class="chapter" data-level="7.16.4" data-path="patentscope-1.html"><a href="patentscope-1.html#levenshtein-edit-distance"><i class="fa fa-check"></i><b>7.16.4</b> Levenshtein Edit Distance</a></li>
+<li class="chapter" data-level="7.16.5" data-path="patentscope-1.html"><a href="patentscope-1.html#ppm"><i class="fa fa-check"></i><b>7.16.5</b> PPM</a></li>
+<li class="chapter" data-level="7.16.6" data-path="patentscope-1.html"><a href="patentscope-1.html#preparing-for-export"><i class="fa fa-check"></i><b>7.16.6</b> Preparing for export</a></li>
+</ul></li>
+<li class="chapter" data-level="7.17" data-path="patentscope-1.html"><a href="patentscope-1.html#round-up-5"><i class="fa fa-check"></i><b>7.17</b> Round Up</a></li>
+<li class="chapter" data-level="7.18" data-path="patentscope-1.html"><a href="patentscope-1.html#useful-resources"><i class="fa fa-check"></i><b>7.18</b> Useful Resources</a></li>
+</ul></li>
+<li class="part"><span><b>IV Visualizing Patent Data</b></span></li>
+<li class="chapter" data-level="8" data-path="tableau-public-2.html"><a href="tableau-public-2.html"><i class="fa fa-check"></i><b>8</b> Tableau Public</a><ul>
+<li class="chapter" data-level="8.1" data-path="tableau-public-2.html"><a href="tableau-public-2.html#introduction-4"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="tableau-public-2.html"><a href="tableau-public-2.html#installing-tableau"><i class="fa fa-check"></i><b>8.2</b> Installing Tableau</a></li>
+<li class="chapter" data-level="8.3" data-path="tableau-public-2.html"><a href="tableau-public-2.html#getting-started-1"><i class="fa fa-check"></i><b>8.3</b> Getting Started</a></li>
+<li class="chapter" data-level="8.4" data-path="tableau-public-2.html"><a href="tableau-public-2.html#publication-trends"><i class="fa fa-check"></i><b>8.4</b> Publication Trends</a></li>
+<li class="chapter" data-level="8.5" data-path="tableau-public-2.html"><a href="tableau-public-2.html#adding-new-data-sources"><i class="fa fa-check"></i><b>8.5</b> Adding New Data Sources</a></li>
+<li class="chapter" data-level="8.6" data-path="tableau-public-2.html"><a href="tableau-public-2.html#creating-an-overview-dashboard"><i class="fa fa-check"></i><b>8.6</b> Creating an Overview Dashboard</a></li>
+<li class="chapter" data-level="8.7" data-path="tableau-public-2.html"><a href="tableau-public-2.html#saving-display-and-privacy-settings"><i class="fa fa-check"></i><b>8.7</b> Saving, Display and Privacy Settings</a></li>
+<li class="chapter" data-level="8.8" data-path="tableau-public-2.html"><a href="tableau-public-2.html#privacy-and-security"><i class="fa fa-check"></i><b>8.8</b> Privacy and Security</a></li>
+<li class="chapter" data-level="8.9" data-path="tableau-public-2.html"><a href="tableau-public-2.html#round-up-6"><i class="fa fa-check"></i><b>8.9</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="gephi-1.html"><a href="gephi-1.html"><i class="fa fa-check"></i><b>9</b> Gephi</a><ul>
+<li class="chapter" data-level="9.1" data-path="gephi-1.html"><a href="gephi-1.html#installing-gephi"><i class="fa fa-check"></i><b>9.1</b> Installing Gephi</a></li>
+<li class="chapter" data-level="9.2" data-path="gephi-1.html"><a href="gephi-1.html#opening-gephi-and-installing-plugins"><i class="fa fa-check"></i><b>9.2</b> Opening Gephi and Installing Plugins</a></li>
+<li class="chapter" data-level="9.3" data-path="gephi-1.html"><a href="gephi-1.html#importing-a-file-to-gephi-with-the-converter-plugin"><i class="fa fa-check"></i><b>9.3</b> Importing a file to Gephi with the converter plugin</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="gephi-1.html"><a href="gephi-1.html#step-1.-open-gephi-and-choose-file-import"><i class="fa fa-check"></i><b>9.3.1</b> Step 1. Open Gephi and Choose File &gt; Import</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="gephi-1.html"><a href="gephi-1.html#sizing-and-colouring-nodes"><i class="fa fa-check"></i><b>9.4</b> Sizing and Colouring Nodes</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="gephi-1.html"><a href="gephi-1.html#filtering-the-data"><i class="fa fa-check"></i><b>9.4.1</b> Filtering the data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="gephi-1.html"><a href="gephi-1.html#setting-node-size"><i class="fa fa-check"></i><b>9.4.2</b> Setting Node Size</a></li>
+<li class="chapter" data-level="9.4.3" data-path="gephi-1.html"><a href="gephi-1.html#colouring-the-nodes"><i class="fa fa-check"></i><b>9.4.3</b> Colouring the Nodes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="gephi-1.html"><a href="gephi-1.html#laying-out-the-graph"><i class="fa fa-check"></i><b>9.5</b> Laying out the Graph</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="gephi-1.html"><a href="gephi-1.html#save-your-work"><i class="fa fa-check"></i><b>9.5.1</b> Save your work</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="gephi-1.html"><a href="gephi-1.html#adding-labels"><i class="fa fa-check"></i><b>9.6</b> Adding Labels</a></li>
+<li class="chapter" data-level="9.7" data-path="gephi-1.html"><a href="gephi-1.html#using-the-preview-options"><i class="fa fa-check"></i><b>9.7</b> Using the Preview Options</a></li>
+<li class="chapter" data-level="9.8" data-path="gephi-1.html"><a href="gephi-1.html#exporting-from-preview"><i class="fa fa-check"></i><b>9.8</b> Exporting from Preview</a></li>
+<li class="chapter" data-level="9.9" data-path="gephi-1.html"><a href="gephi-1.html#resources"><i class="fa fa-check"></i><b>9.9</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html"><i class="fa fa-check"></i><b>10</b> Patent Analytics with Plotly</a><ul>
+<li class="chapter" data-level="10.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#introduction-5"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#getting-started-with-plotly"><i class="fa fa-check"></i><b>10.2</b> Getting Started with Plotly</a></li>
+<li class="chapter" data-level="10.3" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#importing-files"><i class="fa fa-check"></i><b>10.3</b> Importing Files</a></li>
+<li class="chapter" data-level="10.4" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#creating-a-graphic"><i class="fa fa-check"></i><b>10.4</b> Creating a graphic</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#adding-a-second-axis"><i class="fa fa-check"></i><b>10.4.1</b> Adding a Second Axis</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#saving-and-sharing"><i class="fa fa-check"></i><b>10.5</b> Saving and Sharing</a></li>
+<li class="chapter" data-level="10.6" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#working-with-plotly-in-r"><i class="fa fa-check"></i><b>10.6</b> Working with Plotly in R</a></li>
+<li class="chapter" data-level="10.7" data-path="patent-analytics-with-plotly.html"><a href="patent-analytics-with-plotly.html#round-up-7"><i class="fa fa-check"></i><b>10.7</b> Round Up</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html"><i class="fa fa-check"></i><b>11</b> Patent Infographics with R</a><ul>
+<li class="chapter" data-level="11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#getting-started-2"><i class="fa fa-check"></i><b>11.1</b> Getting Started</a></li>
+<li class="chapter" data-level="11.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#load-a-.csv-file-using-readr"><i class="fa fa-check"></i><b>11.2</b> Load a .csv file using <code>readr</code></a></li>
+<li class="chapter" data-level="11.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#viewing-data"><i class="fa fa-check"></i><b>11.3</b> Viewing Data</a></li>
+<li class="chapter" data-level="11.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#identifying-types-of-object"><i class="fa fa-check"></i><b>11.4</b> Identifying Types of Object</a></li>
+<li class="chapter" data-level="11.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#working-with-data"><i class="fa fa-check"></i><b>11.5</b> Working with Data</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#select"><i class="fa fa-check"></i><b>11.5.1</b> Select</a></li>
+<li class="chapter" data-level="11.5.2" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#adding-data-with-mutate"><i class="fa fa-check"></i><b>11.5.2</b> Adding data with <code>mutate()</code></a></li>
+<li class="chapter" data-level="11.5.3" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#counting-data-using-count"><i class="fa fa-check"></i><b>11.5.3</b> Counting data using <code>count()</code></a></li>
+<li class="chapter" data-level="11.5.4" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#rename-a-field-with-rename"><i class="fa fa-check"></i><b>11.5.4</b> Rename a field with <code>rename()</code></a></li>
+<li class="chapter" data-level="11.5.5" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#make-a-quickplot-with-qplot"><i class="fa fa-check"></i><b>11.5.5</b> Make a quickplot with <code>qplot()</code></a></li>
+<li class="chapter" data-level="11.5.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#filter-data-using-filter"><i class="fa fa-check"></i><b>11.5.6</b> Filter data using <code>filter()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#simplify-code-with-pipes"><i class="fa fa-check"></i><b>11.6</b> Simplify code with pipes <code>%&gt;%</code></a></li>
+<li class="chapter" data-level="11.7" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#harmonising-data"><i class="fa fa-check"></i><b>11.7</b> Harmonising data</a></li>
+<li class="chapter" data-level="11.8" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#country-trends-using-spread"><i class="fa fa-check"></i><b>11.8</b> Country Trends using <code>spread()</code></a></li>
+<li class="chapter" data-level="11.9" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#tidying-data---separating-and-gathering"><i class="fa fa-check"></i><b>11.9</b> Tidying data - Separating and Gathering</a><ul>
+<li class="chapter" data-level="11.9.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#trimming-with-stringr"><i class="fa fa-check"></i><b>11.9.1</b> Trimming with <code>stringr</code></a></li>
+</ul></li>
+<li class="chapter" data-level="11.10" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#selecting-applicants-using-filter"><i class="fa fa-check"></i><b>11.10</b> Selecting applicants using <code>filter()</code></a></li>
+<li class="chapter" data-level="11.11" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#generating-ipc-tables"><i class="fa fa-check"></i><b>11.11</b> Generating IPC Tables</a><ul>
+<li class="chapter" data-level="11.11.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#phrases-tables"><i class="fa fa-check"></i><b>11.11.1</b> Phrases Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.12" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#creating-an-infographic-in-infogr.am"><i class="fa fa-check"></i><b>11.12</b> Creating an infographic in infogr.am</a><ul>
+<li class="chapter" data-level="11.12.1" data-path="patent-infographics-with-r.html"><a href="patent-infographics-with-r.html#round-up-8"><i class="fa fa-check"></i><b>11.12.1</b> Round Up</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Using APIs</b></span></li>
+<li class="chapter" data-level="12" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html"><i class="fa fa-check"></i><b>12</b> Scientific Literature with Rplos</a><ul>
+<li class="chapter" data-level="12.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#introduction-6"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-r-and-rstudio"><i class="fa fa-check"></i><b>12.2</b> Install R and RStudio</a></li>
+<li class="chapter" data-level="12.3" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#create-a-project-1"><i class="fa fa-check"></i><b>12.3</b> Create A Project</a></li>
+<li class="chapter" data-level="12.4" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#install-packages"><i class="fa fa-check"></i><b>12.4</b> Install Packages</a></li>
+<li class="chapter" data-level="12.5" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#key-functions-in-rplos"><i class="fa fa-check"></i><b>12.5</b> Key functions in rplos</a></li>
+<li class="chapter" data-level="12.6" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#data-fields-in-rplos"><i class="fa fa-check"></i><b>12.6</b> Data Fields in rplos</a></li>
+<li class="chapter" data-level="12.7" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#basic-searching-using-searchplos-navigating-and-exporting-data"><i class="fa fa-check"></i><b>12.7</b> Basic Searching using <code>searchplos()</code>, Navigating and Exporting Data</a><ul>
+<li class="chapter" data-level="12.7.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#creating-a-new-object-and-writing-to-file"><i class="fa fa-check"></i><b>12.7.1</b> Creating a New Object and Writing to File</a></li>
+</ul></li>
+<li class="chapter" data-level="12.8" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#limit-by-journal"><i class="fa fa-check"></i><b>12.8</b> Limit by journal</a></li>
+<li class="chapter" data-level="12.9" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-full-number-of-results"><i class="fa fa-check"></i><b>12.9</b> Obtaining the full number of results</a></li>
+<li class="chapter" data-level="12.10" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#obtaining-the-number-of-records-across-plos-journals"><i class="fa fa-check"></i><b>12.10</b> Obtaining the number of records across PLOS Journals</a></li>
+<li class="chapter" data-level="12.11" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-the-results-and-using-a-codebook"><i class="fa fa-check"></i><b>12.11</b> Writing the results and using a codebook</a></li>
+<li class="chapter" data-level="12.12" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#proximity-searching"><i class="fa fa-check"></i><b>12.12</b> Proximity Searching</a></li>
+<li class="chapter" data-level="12.13" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#searching-using-multiple-phrases"><i class="fa fa-check"></i><b>12.13</b> Searching Using Multiple Phrases</a></li>
+<li class="chapter" data-level="12.14" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#tidying-and-organising-the-data"><i class="fa fa-check"></i><b>12.14</b> Tidying and Organising the Data</a><ul>
+<li class="chapter" data-level="12.14.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#renaming-a-column"><i class="fa fa-check"></i><b>12.14.1</b> Renaming a column</a></li>
+</ul></li>
+<li class="chapter" data-level="12.15" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#filling-blank-spaces"><i class="fa fa-check"></i><b>12.15</b> Filling Blank Spaces</a></li>
+<li class="chapter" data-level="12.16" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#converting-dates"><i class="fa fa-check"></i><b>12.16</b> Converting Dates</a></li>
+<li class="chapter" data-level="12.17" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#add-a-count"><i class="fa fa-check"></i><b>12.17</b> Add a count</a></li>
+<li class="chapter" data-level="12.18" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#remove-a-column"><i class="fa fa-check"></i><b>12.18</b> Remove a column</a></li>
+<li class="chapter" data-level="12.19" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#arranging-the-data"><i class="fa fa-check"></i><b>12.19</b> Arranging the Data</a></li>
+<li class="chapter" data-level="12.20" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#dealing-with-duplicates"><i class="fa fa-check"></i><b>12.20</b> Dealing with Duplicates</a><ul>
+<li class="chapter" data-level="12.20.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#spreading-data-using-spread-from-tidyr"><i class="fa fa-check"></i><b>12.20.1</b> Spreading data using <code>spread()</code> from <code>tidyr</code></a></li>
+<li class="chapter" data-level="12.20.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#deleting-duplicates"><i class="fa fa-check"></i><b>12.20.2</b> Deleting Duplicates</a></li>
+</ul></li>
+<li class="chapter" data-level="12.21" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#restricting-searches-by-section"><i class="fa fa-check"></i><b>12.21</b> Restricting searches by section</a></li>
+<li class="chapter" data-level="12.22" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#by-author"><i class="fa fa-check"></i><b>12.22</b> By author</a></li>
+<li class="chapter" data-level="12.23" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#title-search-using-plostitle"><i class="fa fa-check"></i><b>12.23</b> Title search using <code>plostitle()</code></a></li>
+<li class="chapter" data-level="12.24" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#abstract-search-using-plosabstract"><i class="fa fa-check"></i><b>12.24</b> Abstract search using <code>plosabstract()</code></a></li>
+<li class="chapter" data-level="12.25" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#subject-area-using-plossubject"><i class="fa fa-check"></i><b>12.25</b> Subject Area using <code>plossubject()</code></a></li>
+<li class="chapter" data-level="12.26" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#highlighting-terms-and-text-fragments-with-highplos"><i class="fa fa-check"></i><b>12.26</b> Highlighting terms and text fragments with highplos()</a><ul>
+<li class="chapter" data-level="12.26.1" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#snippets-using-hl.snippets"><i class="fa fa-check"></i><b>12.26.1</b> Snippets using hl.snippets</a></li>
+<li class="chapter" data-level="12.26.2" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#fragment-size-using-hl.fragsize"><i class="fa fa-check"></i><b>12.26.2</b> fragment size using hl.fragsize</a></li>
+</ul></li>
+<li class="chapter" data-level="12.27" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#get-the-full-text-of-one-or-more-articles"><i class="fa fa-check"></i><b>12.27</b> Get the full text of one or more articles</a></li>
+<li class="chapter" data-level="12.28" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#writing-a-corpus-to-disk"><i class="fa fa-check"></i><b>12.28</b> Writing a corpus to disk</a></li>
+<li class="chapter" data-level="12.29" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#round-up-9"><i class="fa fa-check"></i><b>12.29</b> Round Up</a></li>
+<li class="chapter" data-level="12.30" data-path="scientific-literature-with-rplos.html"><a href="scientific-literature-with-rplos.html#resources-1"><i class="fa fa-check"></i><b>12.30</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The WIPO Manual on Open Source Patent Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="patentscope-1" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Patentscope</h1>
+<div id="introduction-3" class="section level2">
+<h2><span class="header-section-number">7.1</span> Introduction</h2>
+<p><a href="https://patentscope.wipo.int/search/en/search.jsf">Patentscope</a> is the WIPO public access database. It includes coverage of the Patent Cooperation Treaty applications (administered by WIPO) and a <a href="https://patentscope.wipo.int/search/en/help/data_coverage.jsf">wide range of other countries</a> including the European Patent Office, USPTO and Japan totalling 51 million patent documents including 2.8 million PCT applications.</p>
+<p>In this article we cover the basics of using Patentscope to search for and download up to 10,000 records. A detailed <a href="http://www.wipo.int/edocs/pubdocs/en/patents/434/wipo_pub_l434_08.pdf">User’s Guide</a> provides more details on specific features. A set of <a href="https://patentscope.wipo.int/search/en/tutorial.jsf">video tutorials</a> are also available. When compared with other free services Patentscope has the following main strengths.</p>
+<ol style="list-style-type: decimal">
+<li>Full text search in the description and claims of PCT applications on the day of publication and patent applications from a wide range of other countries including the United States, Japan, China and the European Patent Office among others.</li>
+<li>Download up to 10,000 records</li>
+<li>Expand search terms into multiple other languages using <code>Cross Lingual Expansion</code> or <a href="https://patentscope.wipo.int/search/en/clir/clir.jsf?new=true">CLIR</a></li>
+<li>Simple, Advanced and Combined Field searching</li>
+<li>Accessible in multiple languages and a <a href="https://www3.wipo.int/patentscope/translate/translate.jsf?interfaceLanguage=en">WIPO Translate</a> text function</li>
+<li><a href="https://patentscope.wipo.int/search/mobile/index.jsf">Mobile version</a> and <a href="http://www.wipo.int/patentscope/en/news/pctdb/2015/news_0002.html">https:</a> access</li>
+<li><a href="https://patentscope.wipo.int/search/en/sequences.jsf">Sequence listing downloads</a></li>
+<li>Green technologies through the <a href="http://www.wipo.int/classifications/ipc/en/est/">IPC Green Inventory</a></li>
+<li>Different types of graphical analysis of results lists on the fly using the Options menu.</li>
+</ol>
+<p>To get the most out of Patentscope it is a good idea to consult the two detailed guides and the video tutorials:</p>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.wipo.int/edocs/pubdocs/en/patents/434/wipo_pub_l434_08.pdf">Patentscope Search: The User’s Guide</a>.</li>
+<li>Patentscope CLIR for the Cross-Lingual Information Retrieval Tool <a href="https://patentscope.wipo.int/search/help/en/CLIR_DOC.pdf">here</a>.</li>
+<li><a href="https://patentscope.wipo.int/search/en/tutorial.jsf">Patentscope video tutorials</a></li>
+</ol>
+<p>If you would like to download patent or sequence data you will need to register for a free account. To register for a free account go <a href="https://patentscope.wipo.int/search/en/reg/registration.jsf">here</a>.</p>
+</div>
+<div id="collections-to-search" class="section level2">
+<h2><span class="header-section-number">7.2</span> Collections to Search</h2>
+<p>Perhaps the best place to start is with the collections we will be searching. Those can be accessed under the Options menu on the main menu and then the tab reading <a href="https://patentscope.wipo.int/search/en/reg/registration.jsf">office</a>.</p>
+<p><img src="images/patentscope/collections.png" /></p>
+<p>We can see here that Patentscope provides access to the Patent Cooperation Treaty collection, regional collections such as the ARIPO and the European Patent Office and national collections such as the United States, Japan and Others. The ability to search and retrieve data from the LATIPAT collection will be particularly useful for researchers in Latin America and could be linked to analysis using the espacenet version of <a href="http://lp.espacenet.com">LATIPAT</a>. If you are only interested in particular collections, this is the place to change the settings.</p>
+</div>
+<div id="simple-search" class="section level2">
+<h2><span class="header-section-number">7.3</span> Simple Search</h2>
+<p>We can select a range of different fields for search. In this case we have selected full text from the drop down menu for a simple search on the term pizza.</p>
+<p><img src="images/patentscope/simplesearch.png" /></p>
+<p>Note that Patentscope groups documents for the same application into a record or dossier and that we are seeing the document that is the key for the record. The other documents in the dossier for the record can be accessed by clicking the document number and selecting the Documents menu as in this <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2014047700&amp;recNum=2&amp;tab=PCTDocuments&amp;maxRec=25177&amp;office=&amp;prevFilter=&amp;sortOption=Relevance&amp;queryString=ALLTXT%3A%28pizza%29">example</a>.</p>
+<p>For more details on using simple search see the <code>Simple Search</code> <a href="https://patentscope.wipo.int/search/en/tutorial.jsf">video tutorial</a>. Videos are also available on the use of Field Combinations for constructing searches and Advanced Search.</p>
+</div>
+<div id="results" class="section level2">
+<h2><span class="header-section-number">7.4</span> Results</h2>
+<p>When we arrive at the results page we can see that we have 24,614 results with our query displaying as searching <code>AllTXT</code> and all languages. We then have an RSS button to copy the feed over to an RSS feeder for updates.</p>
+<p><img src="images/patentscope/patentscopsesimple_pizza.png" /></p>
+<p>There is also a query tree button that displays results by language and terms in the relevant sections of the document. We can see an example of this for a more complex query below.</p>
+<p><img src="images/patentscope/query_tree.png" /></p>
+<p>A video tutorial is also available for the <a href="https://patentscope.wipo.int/search/en/tutorial.jsf">Search result list</a></p>
+</div>
+<div id="downloading-results" class="section level2">
+<h2><span class="header-section-number">7.5</span> Downloading Results</h2>
+<p>The two excel icons at the end of the menu allow a user to download either the short list (first icon) or the second list as a <code>.xls</code> file. To see these icons you must be logged in with a user account or they will not display.</p>
+<p><img src="images/patentscope/pizzaexporting.png" /></p>
+<p>When we download these results we will receive an <code>.xls</code> sheet with up to 10,000 entries with a couple of header rows that show the query. Note that each record in the Excel sheet is hyperlinked to the corresponding record in Patentscope.</p>
+<p><img src="images/patentscope/results.png" /></p>
+<p>We will go into the use of this data, including with Tableau Public and other tools, in some depth and there are a few things to note here. The first is that the hyperlinked publication number does not possess a kind code (A1, B1 etc.). This only matters in the sense that the number will retrieve multiple documents in other databases linked to the Patentscope number. A second point to note is that Patentscope data is <code>raw</code> in the sense that it is data as it comes from the data providers and is not processed. That means that there can be encoding issues that we will come back to later on in the discussions on data cleaning.</p>
+<p>What is very useful about Patentscope is that we can actually obtain quite a significant volume of data on a topic of interest. While this article has simply downloaded the first 10,000 results, to obtain the full result set it would be easy enough to limit the data by year and download the data as a series of sets that can be combined later (e.g. three sets).</p>
+<p>To do this we need to visit the Field Combination Page. Here we will start by putting our query in English All to gain the total number of results. Then we will restrict the data by the publication data field using <code>[]</code> and period between dates (as DD.MM.YYYY). An example is shown below.</p>
+<p><img src="images/tools/wipo_settings.png" /></p>
+<p>This will helpfully show the total results for the query (although it can take some time) and we can run and then download results for each year limited segment.</p>
+<p><img src="images/tools/wipo_results.png" /></p>
+<p>When working with multiple downloads it is a good idea to write down the total number of results and then the results for each date limited segment to ensure that the data adds up to what you would expect. Some experimentation may also be needed with the field settings using the Boolean AND/OR operators.</p>
+</div>
+<div id="cross-lingual-searching" class="section level2">
+<h2><span class="header-section-number">7.6</span> Cross Lingual Searching</h2>
+<p>One challenge in patent searching is the use of different expressions in different languages for the same query. Patentscope presents a very useful solution to this through cross-lingual searching. From the pull down menu select <code>Cross Lingual Expansion</code>, then enter the search terms and press go. The tool will now generate search terms in multiple languages.</p>
+<p><img src="images/patentscope/pizzacrosslingual.png" /></p>
+<p>To go further with this tool use either the slider settings (precision vs. recall). For example, if we were to insert the search term “synthetic biology” and move recall to the top level (4), we would generate the following query.</p>
+<p><code>"FP:((EN_TI:("synthetic biology" OR "biologic synthetic") OR EN_AB:("synthetic biology" OR "biologic synthetic")) OR (DE_TI:("synthetische Biologie" OR "synthetischen biologischen" OR "biologische synthetische" OR "Biologische synthetische") OR DE_AB:("synthetische Biologie" OR "synthetischen biologischen" OR "biologische synthetische" OR "Biologische synthetische")) OR (ES_TI:("biológicas sintéticas") OR ES_AB:("biológicas sintéticas")) OR (FR_TI:("biologie synthétique" OR "biologie synthéthique") OR FR_AB:("biologie synthétique" OR "biologie synthéthique")) OR (JA_TI:("生物合成" OR "合成生体" OR "の生物学的合成") OR JA_AB:("生物合成" OR "合成生体" OR "の生物学的合成")) OR (ZH_TI:("合成生物") OR ZH_AB:("合成生物")))"</code></p>
+<p>If supervised mode is selected from the <code>Expansion mode</code> drop down, it becomes possible to select technology areas for the generation of terminology. While we haven’t worked through this in detail that could be very helpful for domain specific query generation. All in all, this is one of the most original and powerful tools that Patentscope has to offer. A detailed <code>.pdf</code> guide to using CLIR is available <a href="https://patentscope.wipo.int/search/help/en/CLIR_DOC.pdf">here</a>.</p>
+</div>
+<div id="sequence-data" class="section level2">
+<h2><span class="header-section-number">7.7</span> Sequence Data</h2>
+<p>A third major feature of Patentscope is access to DNA and amino acid sequence listings filed with PCT Applications. This data can be accessed and downloaded for individual records <a href="https://patentscope.wipo.int/search/en/sequences.jsf">here</a>.</p>
+<p><img src="images/patentscope/sequencesearching.png" /></p>
+<p>A sample record from the lists can be seen below as a plain text file. Note that some issues may arise with reconciling the plain text file with the WIPO publication number (WO etc.) and this merits careful attention if using this data.</p>
+<p><img src="images/patentscope/pctseq.png" /></p>
+<p>Registered account holders can also use the <code>ftp anonymous download</code> service from the same page. This provides access to the sequence data by year as can be seen below.</p>
+<p><img src="images/patentscope/sequenceftp.png" /></p>
+<p>If using the anonymous ftp service note that the recent data is measured in gigabytes, so do not try to download this data over a weak WIFI connection, a gated connection or to your phone(!). Nevertheless, the open accessibility of this data is important. For other sequence data sources you may be interested in the European Bioinformatics Institute resources <a href="http://www.ebi.ac.uk/patentdata">here</a> and for the US by document number <a href="http://seqdata.uspto.gov/">here</a> and until March 2015 at the DNA Patent Database <a href="https://dnapatents.georgetown.edu/">here</a>. Also important is the Lens <code>Patseq</code> tool <a href="https://www.lens.org/lens/bio/sequence">here</a>.</p>
+</div>
+<div id="round-up-4" class="section level2">
+<h2><span class="header-section-number">7.8</span> Round Up</h2>
+<p>WIPO Patentscope is a powerful tool for gaining access to a significant amount of patent data on a topic of interest. The ability to download 10,000 or more records at a time cannot be beaten by other free tools. The <code>Cross Lingual Searching</code> tool appears to be unique and valuable. Free access to bulk download of sequence data is likely to keep bioinformaticians happy for quite a long time.</p>
+<p>One way of thinking about the role of Patentscope in patent analytics is as a resource that can be combined with other data tools. For example, if we wanted to obtain the abstracts, descriptions or claims of PCT documents in Patentscope then we might use the Patenscope numbers to retrieve data from EPO Open Patent Services or Google Patents using R or Python or other tools. That is, in this case Patentscope overcomes the limitations of search results from other tools but allows for the targeted use of other tools to retrieve more information. The <code>Cross Lingual Searching</code> tool could also be particularly useful for trying to identify and later acquire patent documents from other jurisdictions where a company or organisation may be seeking to operate or to expand patent landscape analysis into jurisdictions with non-Roman alphabets.</p>
+<p>The main difficulties that arise from using Patentscope can stem from occasional noise in the data. Patenscope does not clean the data provided from the individual collections with the exception of checking for typological errors in priority numbers and IPC codes. In addition, all text is transformed into UTF-8. However, as is common when dealing with diverse data sources, the results are not always perfect. In addition, because Patentscope data is drawn from a wide range of languages users may need to update their font libraries if large numbers of unusual characters appear in the data (such as installing the Asian language pack for Windows). In practice, as is common with most patent data sources, this can mean significant time is required to clean up the data. Having said this, no other free database tool allows us to download as much data in table form for analysis. As we will see, it is possible to do a lot with Patentscope data.</p>
+
+</div>
+</div>
+
+
+
+<div id="install-open-refine" class="section level2">
+<h2><span class="header-section-number">7.9</span> Install Open Refine</h2>
+</div>
+<div id="create-a-project" class="section level2">
+<h2><span class="header-section-number">7.10</span> Create a Project</h2>
+</div>
+<div id="open-refine-basics" class="section level2">
+<h2><span class="header-section-number">7.11</span> Open Refine Basics</h2>
+<div id="open-refine-runs-in-a-browser" class="section level3">
+<h3><span class="header-section-number">7.11.1</span> Open Refine runs in a browser</h3>
+</div>
+<div id="open-refine-works-on-columns." class="section level3">
+<h3><span class="header-section-number">7.11.2</span> Open Refine works on columns.</h3>
+</div>
+<div id="open-refine-works-with-facets." class="section level3">
+<h3><span class="header-section-number">7.11.3</span> Open Refine works with Facets.</h3>
+</div>
+<div id="custom-facets" class="section level3">
+<h3><span class="header-section-number">7.11.4</span> Custom Facets</h3>
+</div>
+<div id="reordering-columns" class="section level3">
+<h3><span class="header-section-number">7.11.5</span> Reordering Columns</h3>
+</div>
+<div id="undo-and-redo" class="section level3">
+<h3><span class="header-section-number">7.11.6</span> Undo and Redo</h3>
+</div>
+<div id="exporting" class="section level3">
+<h3><span class="header-section-number">7.11.7</span> Exporting</h3>
+</div>
+</div>
+<div id="basic-cleaning" class="section level2">
+<h2><span class="header-section-number">7.12</span> Basic Cleaning</h2>
+<div id="changing-case" class="section level3">
+<h3><span class="header-section-number">7.12.1</span> Changing case</h3>
+</div>
+<div id="regularise-case" class="section level3">
+<h3><span class="header-section-number">7.12.2</span> Regularise case</h3>
+</div>
+<div id="remove-leading-and-trailing-whitespace" class="section level3">
+<h3><span class="header-section-number">7.12.3</span> Remove leading and trailing whitespace</h3>
+</div>
+<div id="add-columns" class="section level3">
+<h3><span class="header-section-number">7.12.4</span> Add Columns</h3>
+</div>
+<div id="address-encoding-and-related-problems" class="section level3">
+<h3><span class="header-section-number">7.12.5</span> Address Encoding and related problems</h3>
+</div>
+<div id="reformatting-dates" class="section level3">
+<h3><span class="header-section-number">7.12.6</span> Reformatting dates</h3>
+</div>
+<div id="access-additional-information" class="section level3">
+<h3><span class="header-section-number">7.12.7</span> Access additional information</h3>
+</div>
+</div>
+<div id="fill-blank-cells" class="section level2">
+<h2><span class="header-section-number">7.13</span> Fill blank cells</h2>
+</div>
+<div id="renaming-columns" class="section level2">
+<h2><span class="header-section-number">7.14</span> Renaming columns</h2>
+</div>
+<div id="exporting-data" class="section level2">
+<h2><span class="header-section-number">7.15</span> Exporting Data</h2>
+</div>
+<div id="splitting-applicants" class="section level2">
+<h2><span class="header-section-number">7.16</span> Splitting Applicants</h2>
+<div id="situation-1---first-applicants" class="section level3">
+<h3><span class="header-section-number">7.16.1</span> Situation 1 - First Applicants</h3>
+</div>
+<div id="situation-2---all-applicants" class="section level3">
+<h3><span class="header-section-number">7.16.2</span> Situation 2 - All Applicants</h3>
+</div>
+<div id="phonetic-fingerprint-metaphone-3-clustering" class="section level3">
+<h3><span class="header-section-number">7.16.3</span> Phonetic Fingerprint (Metaphone 3) clustering</h3>
+</div>
+<div id="levenshtein-edit-distance" class="section level3">
+<h3><span class="header-section-number">7.16.4</span> Levenshtein Edit Distance</h3>
+</div>
+<div id="ppm" class="section level3">
+<h3><span class="header-section-number">7.16.5</span> PPM</h3>
+</div>
+<div id="preparing-for-export" class="section level3">
+<h3><span class="header-section-number">7.16.6</span> Preparing for export</h3>
+</div>
+</div>
+<div id="round-up-5" class="section level2">
+<h2><span class="header-section-number">7.17</span> Round Up</h2>
+</div>
+<div id="useful-resources" class="section level2">
+<h2><span class="header-section-number">7.18</span> Useful Resources</h2>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-lens-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tableau-public-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

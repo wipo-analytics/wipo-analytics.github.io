@@ -238,8 +238,8 @@ To do this we need to run some calculations on the data. We will use functions f
 library(dplyr)
 library(tidyr)
 total <- tally(group_by(pcy, pubcode)) %>%
-  mutate(group = ntile(nn, 3)) %>%
-  rename(records = nn) %>% 
+  mutate(group = ntile(n, 3)) %>%
+  rename(records = n) %>% 
   arrange(desc(records)) 
 total
 ```

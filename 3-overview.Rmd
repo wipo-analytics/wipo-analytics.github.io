@@ -366,9 +366,15 @@ and [Jason Davies](https://www.jasondavies.com/wordtree/) tree creator.
 
 ![](images/overview/KHCoder.png)
 
-### R and the `tm` package
+### R and Text Mining 
 
-The `tm` package in R (e.g. using RStudio) provides access to a range of text mining tools. For an introduction from the package developers see [here](http://cran.r-project.org/web/packages/tm/vignettes/tm.pdf). A number of very useful tutorials are also available for text mining on [R-bloggers](http://www.r-bloggers.com/?s=text+mining). For a step by step approach see [Graham Williams (2014) Hands-On Data Science with R Text Mining](http://onepager.togaware.com/TextMiningO.pdf).
+There are several packages for carrying Natural Language Processing tasks and text mining in R (`tm`, `tidytext`, `quanteda`, and others). 
+
+The `tm` package provides access to a range of text mining tools. For an introduction from the package developers see [here](http://cran.r-project.org/web/packages/tm/vignettes/tm.pdf). A number of very useful tutorials are also available for text mining on [R-bloggers](http://www.r-bloggers.com/?s=text+mining). For a step by step approach see [Graham Williams (2014) Hands-On Data Science with R Text Mining](http://onepager.togaware.com/TextMiningO.pdf).
+
+The `tidytext` package, builds on and `tm` and applies tidyverse principles to dealing with text (it treats text as tabular structures of individual words). See the [Tidytextmining](https://www.tidytextmining.com/) book by Julia Silge and David Robinson for more information.
+
+The `quanteda` (Quantitative Analyisis of Textual Data) package is another package for doing text mining in R created by Kenneth Benoit and supported by the European Research Council grant ERC-2011-StG 283794-QUANTESS.
 
 For a recent overview of text mining tools in R see [Fridolin Wild's (2014) CRAN Task View: Natural Language Processing](http://cran.r-project.org/web/views/NaturalLanguageProcessing.html) listing the various packages and their uses. 
 
