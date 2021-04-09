@@ -1,9 +1,0 @@
-bookdown::gitbook:
-  css: style.css
-  config:
-    toc:
-      before: |
-        <li><a href="./">The WIPO Manual on Open Source Patent Analytics</a></li>
-      after: |
-        <li><a href="https://github.com/wipo-analytics/wipo-analytics.github.io" target="blank">Published with bookdown</a></li>
-in_header: google_analytics.html
