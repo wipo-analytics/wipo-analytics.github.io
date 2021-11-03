@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>WIPO Patent Analytics</title>
+    <link>https://wipo-analytics.github.io/</link>
+    <atom:link href="https://wipo-analytics.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    <description>A resource hub for open patent analytics
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>elasticsearch</title>
+      <dc:creator>Enric Escorsa</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2021-04-09-elasticsearch</link>
+      <description>Learn to use the Elasticsearch with patent data.</description>
+      <guid>https://wipo-analytics.github.io/posts/2021-04-09-elasticsearch</guid>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/2021-04-09-elasticsearch/images/elastic/fig1_front.PNG" medium="image" type="image/png" width="921" height="226"/>
+    </item>
+    <item>
+      <title>flourish</title>
+      <dc:creator>Enric Escorsa</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2021-04-09-flourish</link>
+      <description>Visualise patent data with flourish.</description>
+      <guid>https://wipo-analytics.github.io/posts/2021-04-09-flourish</guid>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/2021-04-09-flourish/images/flourish/fig1_front.png" medium="image" type="image/png" width="1146" height="579"/>
+    </item>
+    <item>
+      <title>Using the Patentsview API in R</title>
+      <dc:creator>Enric Escorsa</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2021-04-09-patentsview</link>
+      <description>Learn how to use the USPTO Patentsview API in R.</description>
+      <guid>https://wipo-analytics.github.io/posts/2021-04-09-patentsview</guid>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/2021-04-09-patentsview/images/patentsview/fig1_front.PNG" medium="image" type="image/png" width="925" height="604"/>
+    </item>
+  </channel>
+</rss>

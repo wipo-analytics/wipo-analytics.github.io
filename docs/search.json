@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this Site",
+      "description": "This is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics) and Enric Escorsa (enrics affiliation goes here).",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-11-03T11:35:46+00:00"
+    },
+    {
+      "path": "index.html",
+      "title": "WIPO Analytics",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-11-03T11:35:46+00:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

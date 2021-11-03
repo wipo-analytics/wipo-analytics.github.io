@@ -1,0 +1,25 @@
+#name: "wipo"
+title: "WIPO Patent Analytics"
+description: | 
+  A resource hub for open patent analytics
+base_url: https://wipo-analytics.github.io/
+repository_url: https://github.com/wipo-analytics
+creative_commons: CC BY
+output_dir: "docs"
+includes:
+  in_header: header.html
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Manual"
+      href:  https://wipo-analytics.github.io/manual/   
+    - text: "Handbook"
+      href:  https://wipo-analytics.github.io/handbook/
+    - text: "Datasets"
+      href:  https://wipo-analytics.github.io/
+    - text: "Presentations"
+      href:  https://github.com/wipo-analytics/presentations  
+output: distill::distill_article

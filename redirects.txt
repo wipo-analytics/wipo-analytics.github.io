@@ -1,0 +1,14 @@
+https://wipo-analytics.github.io/manual/ # index redirect
+https://wipo-analytics.github.io/manual/introduction.html
+https://wipo-analytics.github.io/manual/an-overview-of-tools.html
+https://wipo-analytics.github.io/manual/datafields.html
+https://wipo-analytics.github.io/manual/datasets.html
+https://wipo-analytics.github.io/manual/databases.html
+https://wipo-analytics.github.io/manual/the-lens-1.html
+https://wipo-analytics.github.io/manual/patentscope-1.html
+https://wipo-analytics.github.io/manual/open-refine.html
+https://wipo-analytics.github.io/manual/tableau-public-2.html
+https://wipo-analytics.github.io/manual/gephi-1.html
+https://wipo-analytics.github.io/manual/patent-analytics-with-plotly.html
+https://wipo-analytics.github.io/manual/patent-infographics-with-r.html
+https://wipo-analytics.github.io/manual/scientific-literature-with-rplos.html
