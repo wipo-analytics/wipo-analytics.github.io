@@ -6,8 +6,6 @@ base_url: https://wipo-analytics.github.io/
 repository_url: https://github.com/wipo-analytics
 creative_commons: CC BY
 output_dir: "docs"
-includes:
-  in_header: header.html
 navbar:
   right:
     - text: "Home"
@@ -22,4 +20,7 @@ navbar:
       href:  https://wipo-analytics.github.io/
     - text: "Presentations"
       href:  https://github.com/wipo-analytics/presentations  
-output: distill::distill_article
+output: 
+  distill::distill_article:   
+    includes:     
+      in_header: header.html
