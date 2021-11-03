@@ -5,7 +5,7 @@ description: |
 author:
   - name: Enric Escorsa
     url: https://github.com/wipo-analytics
-date: 04-09-2021
+date: Sys.Date()
 output:
   distill::distill_article:
     self_contained: false
@@ -28,7 +28,7 @@ knitr::include_graphics("images/patentsview/fig1_front.png")
 
 `Patentsview` is openly available through the web and enables the discovery and exploitation of US patent data in a visual, convenient way.
 
-It makes it particularly easy to check out which are the most patented technologies, the main patent assignees within each technology area and the most prolific inventors. All these relationships, the associated locations and the data can be interactively explored and compared. 
+It makes it particularly easy to check out the most patented technologies, the main patent assignees within each technology area and the most prolific inventors. All these relationships, the associated locations and the data can be interactively explored and compared. 
 
 There is also an associated [API](https://api.patentsview.org/doc.html) for developers to personalise queries and download the corresponding patent data.
 

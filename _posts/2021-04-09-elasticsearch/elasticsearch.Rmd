@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-[Elastic Search](https://www.elastic.co/) is an open source data management platform that is interesting primarily because of its rapid ingestion and indexing of different data types and its fast, powerful search capabilities. It is based on [Lucene](https://lucene.apache.org/), that is an open source search library developed by Apache,  that enables indexing and searching throughout all textual elements in our data, and it does that nearly in real time. 
+[Elastic Search](https://www.elastic.co/) is an open source data management platform that is interesting primarily because of its rapid ingestion and indexing of different data types and its fast, powerful search capabilities. It is based on [Lucene](https://lucene.apache.org/), an open source search library developed by Apache,  that enables indexing and searching throughout all textual elements in our data, and it does that nearly in real time. 
 
 Elastic also includes specific modules such as [Kibana](https://www.elastic.co/en/kibana) for data visualization; With Kibana we can create and personalize dashboards from our searches and analysis.
 

@@ -5,7 +5,7 @@ description: |
 author:
   - name: Enric Escorsa
     url: https://github.com/wipo-analytics
-date: 04-09-2021
+date: Sys.Date()
 output:
   distill::distill_article:
     self_contained: false
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 knitr::include_graphics("images/flourish/fig1_front.png")
 ```
 
-`Flourish` is somehow similar to `Tableau` in terms that it makes it very easy to try different visualizations based on the same clean data input by just dragging column variables to axes, assigning features and parameters to characterise them, and selecting the output chart types that best fit. We can save the visualizations we create as images and also as HTML; but this tool also allows us to create stories, that is, animated sequences of visualizations were it is also possible to insert slides with images, text paragraphs, etc.
+`Flourish` is similar to `Tableau` in terms that it makes it very easy to try different visualizations based on the same clean data input by just dragging column variables to axes, assigning features and parameters to characterise them, and selecting the output chart types that best fit. We can save the visualizations we create as images and also as HTML; but this tool also allows us to create stories, that is, animated sequences of visualizations were it is also possible to insert slides with images, text paragraphs, etc.
 
 
 ## Creating animated bar charts with Flourish
