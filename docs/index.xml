@@ -7,7 +7,16 @@
     <description>A resource hub for open patent analytics
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>PatentsView Bulk Data</title>
+      <dc:creator>Paul Oldham</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</link>
+      <description>Learn how to download bulk US patent data from PatentsView with R.</description>
+      <guid>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</guid>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data/images/pv_bulk.png" medium="image" type="image/png" width="3234" height="2812"/>
+    </item>
     <item>
       <title>elasticsearch</title>
       <dc:creator>Enric Escorsa</dc:creator>
