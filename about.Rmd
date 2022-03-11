@@ -8,4 +8,4 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-This is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics) and Lakshmi Supriya (WIPO).
+This is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics) and Lakshmi Supriya (WIPO), Christine Gacuiri (Amband).
