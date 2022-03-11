@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Process - STEPS
+
+1. In Git PULL to get latest version
+2. Make sure you are in your branch
+3. Make changes
+4. Commit and push on your branch
+5. Make pull request
+6. Merge to Master if you are sure it will not break anything
+7. Otherwise request review
