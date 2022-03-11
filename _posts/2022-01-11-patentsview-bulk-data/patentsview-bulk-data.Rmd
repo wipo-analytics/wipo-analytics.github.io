@@ -6,7 +6,7 @@ author:
   - name: Paul Oldham
     url: https://github.com/wipo-analytics
     orcid_id: 0000-0002-1013-4390
-date: 01-11-2022
+date: 11-01-2022
 bibliography: references.bib
 output:
   distill::distill_article:

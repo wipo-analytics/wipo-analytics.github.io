@@ -9,7 +9,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Process - STEPS
 
-1. In Git PULL to get latest version
+1. In Git make sure you are in master brach
+2. PULL to get latest version of master
+3. Create a new branch for the work you are about to do. Give the branch a name jazz_api, jazz_sql
 2. Make sure you are in your branch
 3. Make changes
 4. Commit and push on your branch

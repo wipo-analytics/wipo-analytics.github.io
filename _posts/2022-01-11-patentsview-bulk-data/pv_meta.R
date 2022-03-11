@@ -1,3 +1,28 @@
+#' Import Metadata for 
+#'
+#' @param type grant or pregrant table
+#' @param dest destination folder
+#'
+#' @return data.frame
+#' @export
+#' @importFrom usethis ui_info
+#' @importFrom usethis ui_stop
+#' @importFrom rvest html_element
+#' @importFrom rvest html_table
+#' @importFrom rvest read_html
+#' @importFrom rvest html_nodes
+#' @importFrom rvest html_attr
+#' @importFrom dplyr mutate
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr filter
+#' @importFrom dplyr select
+#' @importFrom janitor clean_names
+#' @importFrom stringr str_trim
+#' @importFrom stringr str_remove_all
+#' @importFrom stringr str_detect
+#' @importFrom tidyr separate
+#' @importFrom glue glue
+#' @examples
 pv_meta <- function(type = NULL, dest = NULL) {
   
   if(!is.null(dest)) {

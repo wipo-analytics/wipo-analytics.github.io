@@ -18,6 +18,22 @@
       <media:content url="https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data/images/pv_bulk.png" medium="image" type="image/png" width="3234" height="2812"/>
     </item>
     <item>
+      <title>Visualising Nobel Prizes and Gender using API data</title>
+      <dc:creator>Jasmine Kindness</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/howtoapi</link>
+      <description>Follow along as we call data from the Nobel API, convert it from JSON, and visualise it to learn more about the gender distribution of Nobel Prize recipients</description>
+      <guid>https://wipo-analytics.github.io/posts/howtoapi</guid>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Import Bulk PatentsView Data with R</title>
+      <dc:creator>Paul Oldham</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2022-01-13-patentsview-import-bulk-data</link>
+      <description>Importing USPTO PatentsView Data Download Files with R.</description>
+      <guid>https://wipo-analytics.github.io/posts/2022-01-13-patentsview-import-bulk-data</guid>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>elasticsearch</title>
       <dc:creator>Enric Escorsa</dc:creator>
       <link>https://wipo-analytics.github.io/posts/2021-04-09-elasticsearch</link>
