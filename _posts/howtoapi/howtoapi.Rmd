@@ -1,0 +1,190 @@
+---
+title: "Visualising Nobel Prizes and Gender using API data"
+description: |
+  Follow along as we call data from the Nobel API, convert it from JSON, and visualise it to learn more about the gender distribution of Nobel Prize recipients
+author:
+  - name: Jasmine Kindness 
+    url: 
+    affiliation: One World Analytics
+    affiliation_url: oneworldanalytics.com
+date: Sys.date()
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+Female representation in STEM fields has markedly increased over the last 100 years. But with more women entering these fields, have they been able to succeed at the same rate as their male counterparts? The Nobel Prize is one of the most prestigious prizes practitioners of their field can attain. In this post we will explore whether the proportion of female to male Nobel prize winners has changed over time. To do this we will collect data on Nobel Prize winners from the Nobel API, then transform, clean and visualise it.
+
+#### APIs
+
+API is an acronym for application programming interface. APIs essentially allow computers or computer programs to talk to each other, without the need for the user to understand how they work. We will collect our data by submitting GET requests to the Nobel API. A GET request is used to request data from a resource such as a remote server. 
+
+#### GET requests
+
+Let's quickly go over what's going on inside the GET request we're using in our function. First we make an initial `GET()` request to the Nobel API to check the connection, using the httr package. The response to the GET request, saved as nobelresp, will include our data and metadata about the data and the request itself. For example, the status_code indicates whether the API considers our GET request to be successful. A status code of 200 indicates a success. A full list of status codes can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). We can also check the status code more explicitly by calling `http_status()` on nobelresp. 
+
+Including a limit in your get request will limit the amount of results you receive. The Nobel API only allows users to retrieve 25 results at a time. This means that: 
+
+GET("http://api.nobelprize.org/2.1/laureates?limit=25") 
+
+and 
+
+GET("http://api.nobelprize.org/2.1/laureates") 
+
+will produce the same result.
+
+
+```{r, eval=FALSE}
+
+# Load the packages
+library(httr)
+library(jsonlite)
+
+# Make a call to the API and store the result in nobelresp
+nobelresp <- GET("http://api.nobelprize.org/2.1/laureates?limit=25")
+
+# Check status of http request, 200 indicates success
+http_status(nobelresp)
+
+```
+
+We can view the content of nobelresp in text format by calling `content(nobelresp, "text")`. Our content is currently in JSON format and we want to convert it into a data frame. The first step is to convert it into a list using ` fromJSON()` from the `jsonlite` package. 
+
+```{r, eval=FALSE}
+
+# Convert the result from JSON to a list that we can access in R
+
+content(nobelresp, "text") %>% fromJSON()
+```
+
+This produces a list of length 3. The first item in the list, laureates, is our data frame with 25 results from the Nobel API. If you access the list via `save$laureates` you will see that this data frame barely covers all the 'A' names. There are still lots more to get! 
+
+The Nobel API only allows users to request 25 results at a time. You can access the next results by including an offset in your `GET()` request, for example, to get the next set of results now that we have 25 results, we would use an offset of 25, 50, 75 etc. Our `GET()` request with an offset would look like this: GET("http://api.nobelprize.org/2.1/laureates?offset=25"). 
+
+At the time of writing, the Nobel laureates dataset has 968 observations. To manually get them all using offsets we would have to make 39 separate GET requests! We would also have 39 data frames to manage. This approach is time consuming and error prone, so we are going to write a for loop to create each `GET()` request with offsets, retrieve the results and append them to a data frame.
+
+```{r, eval=FALSE}
+
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+# Our initial GET() request, we get the first batch of results, 
+# access the content in text form, and finally we access our data frame 
+# which is stored in a list titled 'laureates'.
+newdata <- GET("http://api.nobelprize.org/2.1/laureates?limit=25")
+data <- content(newdata, "text") %>% fromJSON()
+df <- data$laureates
+
+# The start of our for loop which iterates over a sequence starting at 25, 
+# ending at 950 with an increase of 25 each iteration.
+for (i in seq(25, 950, by = 25))
+
+{
+
+# We create a character string adding our latest offset to the end of our GET() 
+# request and execute the GET() request, saving the result in resp
+  resp <- GET(
+    paste0("http://api.nobelprize.org/2.1/laureates?offset=", i))
+
+# We transform the result, as shown previously
+  newdata <- content(resp, "text") %>% fromJSON()
+  
+# We bind the newest batch of results to our data frame df, we are using 
+# columns 1-14 since some of the results are of variable column length 
+# which would cause the function to fail
+  df <- bind_rows(df[,1:14], newdata$laureates[,1:14])
+
+# Finally, we tell our system to sleep for 3 seconds. Many APIs will not allow 
+# you to send multiple requests at once which risks overwhelming the server. 
+# This is how we handle api requests politely.  
+  Sys.sleep(3)
+
+}
+```
+
+Great! Our resulting data frame should have 968 rows, or the total number of distinct Nobel laureates. Next we will prepare our data for visualisation, before visualising our results to examine the differences between male and female Nobel laureates.
+
+```{r, eval=FALSE}
+
+# Load our packages
+library(tidyr)
+
+# At present one of our columns is actually a list, we first unnest this list so we
+# can access the contents
+df <- df %>% unnest(nobelPrizes, names_repair = "unique")
+
+# We don't need all the columns for our purposes so we will delete some
+df <- subset(df, select = -c(sameAs, affiliations, links...12, links...24, residences, birth, death))
+
+# Finally, a quirk of converting JSON data into a data frame is that some matrices are 
+stored in a single column in the larger dataframe. To deal with this we will call data.frame
+# over each column of df.
+df <- do.call(data.frame, df)
+
+df %>%
+  unnest(nobelPrizes, names_repair = "unique") %>%
+  subset(df, select = -c(sameAs, affiliations, links...12, links...24, residences, birth, death))
+
+# Our data are yearly and since not many prizes are given out per year, we will group 
+# the results into decades using a for loop. This for loop alters the awardYear column, 
+# replacing the values in each decade with the decade in which they occurred, 
+# for example, any values between 1900 and 1909 become 1900.
+
+for (year in seq(1900, 2020, by = 10)) {
+  
+df <- df %>% mutate(awardYear = replace(awardYear, awardYear >= year & awardYear <= (year + 9), year))
+
+}
+
+# There are some NA values in our dataset, since these don't tell us any information
+# about Nobel Prizes, we will eliminate these, leaving only results where gender is 
+# listed as either "female" or "male"
+df <- df %>% drop_na(gender)
+ 
+ #filter(gender == "female" | gender == "male")
+
+# Running this tells us that out of a total of 968 individual prize recipients, only 53 have been women
+# That's barely 6%!
+df %>% filter(gender == "female") %>% count()
+
+# There are many different categories and these would be difficult to visualise.
+# To simplify things we are going to refer to all Nobel Prizes which are not 
+# "The Nobel Peace Prize" or "The Nobel Prize in Literature" as "The Sciences"
+df$categoryFullName.en[df$categoryFullName.en != "The Nobel Peace Prize" & 
+                    df$categoryFullName.en != "The Nobel Prize in Literature"] <- "The Sciences"
+
+# Now we group by year and prize category, and we count how many women
+# and men won each prize for each decade
+out <- df %>% group_by(awardYear, categoryFullName.en) %>% count(gender)
+
+```
+
+Now that our data is in the format that we want, we're ready to visualise it using ggplot.
+
+``` {r, eval = FALSE}
+# Great! Now we are ready to visualise our data.
+
+library(ggplot2)
+
+# We turn our genders into a factor to control 
+# the order in which they appear in our stacked bar chart
+# Here we initialise the levels
+ levs <-  c("male", "female")
+ 
+# Below we plot our data
+ ggplot(out, aes(x = as.numeric(awardYear), y = n, fill = factor(gender, levels = levs))) + 
+ geom_bar(position = 'stack', stat='identity') + 
+# Facet the plot by Nobel Prize type. 
+ facet_wrap(~ factor(categoryFullName.en)) +
+# Here we specify colour choice
+ scale_fill_manual("legend", values = c("female" = "orange", "male" = "blue")) +
+ xlab("Decade") + 
+ ylab("Number of Recipients")
+```
+
+![This is our final plot](~/howtoapi/_posts/howtoapi/howtoapi_files/plot.png)
+
+And there you have it! As we can see, the amount of recipients shows an upward trend, this is because it is increasingly common for a Nobel Prize to have multiple recipients, particularly in the sciences. The drop in data for 2020 onward reflects the fact that this decade isn't over yet! In general, the amount of women winning Nobel Prizes per decade has remained low, with no definitive trend. Increases have been seen more recently, however female recipients for Nobel Prizes in the sciences actually decreased from the 2000's to the 2010's.
+
+Thank you for following along with this tutorial. We hope you found it useful!
