@@ -1,27 +1,31 @@
 ---
-title: "Visualising Nobel Prizes and Gender using API data"
+title: "Handling and visualising JSON data from an API in R"
 description: |
-  Follow along as we call data from the Nobel API, convert it from JSON, and visualise it to learn more about the gender distribution of Nobel Prize recipients
+  Follow along as we request data from the Nobel Prize API, convert it from JSON and visualise it to gain insight about the gender distribution of Nobel Prize recipients
 author:
   - name: Jasmine Kindness 
     url: 
     affiliation: One World Analytics
     affiliation_url: oneworldanalytics.com
-date: Sys.date()
+date: 03/11/2022
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-Female representation in STEM fields has markedly increased over the last 100 years. But with more women entering these fields, have they been able to succeed at the same rate as their male counterparts? The Nobel Prize is one of the most prestigious prizes practitioners of their field can attain. In this post we will explore whether the proportion of female to male Nobel prize winners has changed over time. To do this we will collect data on Nobel Prize winners from the Nobel API, then transform, clean and visualise it.
+Female representation in STEM fields has markedly increased over the last 100 years. But with more women entering these fields, have they been able to succeed at the same rate as their male counterparts? 
+
+The Nobel Prize is one of the most prestigious prizes practitioners of their field can attain. In this post we will explore whether the proportion of female to male Nobel prize winners has changed over time. 
+
+To do this we will collect data on Nobel Prize winners from the Nobel API, then transform, clean and visualise it.
 
 #### APIs
 
-API is an acronym for application programming interface. APIs essentially allow computers or computer programs to talk to each other, without the need for the user to understand how they work. We will collect our data by submitting GET requests to the Nobel API. A GET request is used to request data from a resource such as a remote server. 
+API is an acronym for application programming interface. APIs are code that essentially allow computers or computer programs to communicate with each other, without the need for the user to understand how they work. We will collect our data by submitting GET requests to the Nobel API. 
 
 #### GET requests
 
-Let's quickly go over what's going on inside the GET request we're using in our function. First we make an initial `GET()` request to the Nobel API to check the connection, using the httr package. The response to the GET request, saved as nobelresp, will include our data and metadata about the data and the request itself. For example, the status_code indicates whether the API considers our GET request to be successful. A status code of 200 indicates a success. A full list of status codes can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). We can also check the status code more explicitly by calling `http_status()` on nobelresp. 
+A HTTP GET request is used to request content from a resource such as a remote server. Let's quickly go over what's going on inside the GET request we're using in our function. First we make an initial `GET()` request to the Nobel API to check the connection, using the httr package. The response to the GET request, saved as nobelresp, will include our data and metadata about the data and the request itself. For example, the status_code indicates whether a HTTP request has been successfully completed. A status code of 200 indicates a success. A full list of status codes can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). We can also check the status code more explicitly by calling `http_status()` on nobelresp. 
 
 Including a limit in your get request will limit the amount of results you receive. The Nobel API only allows users to retrieve 25 results at a time. This means that: 
 
