@@ -1,0 +1,175 @@
+---
+title: "Using PostgreSQL with RStudio and DBI"
+description: |
+  Using DBI to connect to and query PostgreSQL databases
+author:
+  - name: Jasmine Kindness
+    url: 
+    affiliation: One World Analytics
+    affiliation_url: oneworldanalytics.com
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+### Connecting to Database from DBI
+
+To connect to a PostgreSQL database from inside RStudio, you will need a database interface (DBI) and a DBIdriver. 
+
+We will be using the DBI package for our database interface and RPostgreSQL as our DBI driver. 
+
+The DBI package separates the connection to a database management system (DBMS) into a front end and a back end with a connection in the middle. In this case PostgreSQL is our DBMS.
+
+DBI functions produce DBI objects which can be used for any DBMS, and RPostgreSQL communicates with the specific DBMS that we will be using.
+
+Below we will cover how to establish a connection to a PostgreSQL database with DBI and RPostgreSQL, before diving into some basic DBI queries we can use to query PostgreSQL databases. 
+
+This post assumes that you already have your own PostgreSQL database. If you're not sure how to set one up, you can follow our tutorial on getting started with PostgreSQL here££££
+
+### Setting up the connection
+
+First load your packages:
+
+``` {r, eval=FALSE}
+library(DBI)
+library(RPostgreSQL)
+```
+
+
+Next, set up the DBI PostgreSQL driver:
+
+``` {r, eval=FALSE}
+drv <- DBI::dbDriver("PostgreSQL")
+```
+
+Finally, set up the connection to your PostgreSQL database.
+
+``` {r, eval=FALSE}
+pw <- "password"
+con <- dbConnect(drv, dbname = "dbname",
+                  host = "localhost", port = 5432,
+                  user = "username", password = pw)
+
+# You can also disconnect from a database using:
+dbDisconnect(con)
+```
+
+- We store our database connection as con.
+- The dbname is the name of your database. 
+- The host will be "localhost" if the database is on your machine, it you're using a remote server, it will point there. 
+- PostgreSQL normally listens on port 5432, although in some circumstances it may be elsewhere. 
+- If the user isn't the default user - postgres - then it must be a user created in PostgreSQL.
+- If the database is password protected, use that password. 
+- For demonstration purposes we have initialised a password here, however for security reasons it is not normally recommended to set a password up in this way.
+
+
+Your connection is set up, you can check whether it works by calling the following to list all tables in the database:
+
+``` {r, eval=FALSE}
+r dbListTables(con)
+```
+
+It works! Now we're ready to query our database in RStudio.
+
+### Using DBI to query our database
+
+Below we cover some basic DBI queries which will come in handy when querying your database:
+
+``` {r, eval=FALSE, warnings=FALSE, message=FALSE}
+
+dbListTables(con)
+
+# To list remote tables
+
+dbListFields(con, "tablename") 
+
+# To list field names of a remote table
+
+dbReadTable(con, "tablename")
+
+#To read a table from postgres into R
+# (the R object will have the same name in your environment as it does in postgres)
+
+dbCreateTable(con, "newname")
+
+# To create a table in your database
+
+dbAppendTable(con, "tablename", values)
+
+# To insert new rows into a table
+
+dbRemoveTable(con "tablename")
+
+# To remove a table from the database
+
+```
+
+A useful feature of working with PostgreSQL in RStudio is that it's easier to write tables to PostgreSQL than it is in postgres itself, say by writing from a csv file saved on disk.
+
+``` {r, eval=FALSE}
+# To write a table from your R environment to postgres:
+
+dbWriteTable(con, "table", tablenameinpostgres) 
+
+# Use overwrite = TRUE to overwrite existing tables 
+
+```
+
+There are a few things to note when writing tables to PostgreSQL:
+
+1. Remember to use data.frame() on your tables before attempting to write them to Postgres. It will not recognise tibbles etc. 
+2. Always check the data types of each column of your tables. Postgres will not accept some data types.
+3. Always check the columns and contents of columns after you have written a table to Postgres. For example, PostgreSQL does not accept list columns, but writing them will not throw an error. The field will be there, but it will be empty.
+
+### SQL Queries in RStudio
+
+You can also use standard PostgreSQL syntax to build queries using RStudio. A full breakdown of SQL queries is beyond the scope of this post, but you can find more information on writing SELECT statements  (here)[https://www.postgresql.org/docs/8.4/tutorial-select.html]. You can also find more on joins between tables (here)[https://www.postgresql.org/docs/8.4/tutorial-join.html].
+
+``` {r, eval=FALSE}
+
+dbGetQuery(con, "STATEMENT")
+
+# Executes a query and retrieves the data
+
+dbGetQuery(con, "SELECT * FROM table WHERE column != 4")
+
+# Example
+```
+
+### Using functions to write queries
+
+You can also write functions to generate SQL queries for you. This is extremely useful when you want to be able to generate queries without writing them manually, such as when you wish to pass parameters to a query in a parameterized report.
+
+This function constructs our query as a character string using the paste0 function. Constructing character strings with quotation marks inside them is tricky. To handle this we use dQuote() for double quotation marks and shQuote() for single quotation marks. 
+
+``` {r, eval=FALSE}
+# initialise the function
+queryfunc <- function(parameter, table, column1, column2 = "") {
+select <- "select "
+comma <- ", "
+parameter <- shQuote(parameter))
+from <- " from "
+where <- " where "
+like <- " like "
+colon <- ";"
+qry <- paste0(select, dQuote(column1, FALSE),
+              from, table, where, column2, 
+              like, 
+              parameter, colon)
+got <- RPostgreSQL::dbGetQuery(conn = con, statement = qry)
+}
+
+# This would be called like so:
+
+queryfunc(parameter, table, column1, column2)
+
+```
+
+This will produce the same result as: 
+
+``` {r, eval=FALSE}
+
+dbGetQuery(con, "SELECT column1 FROM table WHERE column2 LIKE parameter")
+
+```
+
+

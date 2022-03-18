@@ -1,0 +1,926 @@
+id;name;gender;birthdate;birthcountry;birthcontinent
+745;A. Michael Spence;male;1943-00-00;USA;North America
+102;Aage N. Bohr;male;1922-06-19;Denmark;Europe
+779;Aaron Ciechanover;male;1947-10-01;British Protectorate of Palestine;Asia
+259;Aaron Klug;male;1926-08-11;Lithuania;Europe
+1004;Abdulrazak Gurnah;male;1948-00-00;NA;NA
+114;Abdus Salam;male;1926-01-29;India;Asia
+982;Abhijit Banerjee;male;1961-02-21;India;Asia
+981;Abiy Ahmed Ali;male;1976-08-15;Ethiopia;Africa
+843;Ada E. Yonath;female;1939-06-22;British Mandate of Palestine;Asia
+866;Adam G. Riess;male;1969-12-16;USA;North America
+199;Adolf Butenandt;male;1903-03-24;Germany;Europe
+164;Adolf von Baeyer;male;1835-10-31;Prussia;Europe
+185;Adolf Windaus;male;1876-12-25;Germany;Europe
+541;Adolfo Pérez Esquivel;male;1931-11-26;Argentina;South America
+292;Ahmed Zewail;male;1946-02-26;Egypt;Africa
+853;Akira Suzuki;male;1930-09-12;Japan;Asia
+978;Akira Yoshino;male;1948-01-30;Japan;Asia
+819;Al Gore;male;1948-03-31;USA;North America
+729;Alan Heeger;male;1936-01-22;USA;North America
+376;Alan Hodgkin;male;1914-02-05;United Kingdom;Europe
+730;Alan MacDiarmid;male;1927-04-14;New Zealand;Oceania
+11;Albert A. Michelson;male;1852-12-19;Prussia;Europe
+628;Albert Camus;male;1913-11-07;French Algeria;Africa
+403;Albert Claude;male;1898-08-24;Belgium;Europe
+26;Albert Einstein;male;1879-03-14;Germany;Europe
+814;Albert Fert;male;1938-03-07;France;Europe
+465;Albert Gobat;male;1843-05-21;Switzerland;Europe
+519;Albert Luthuli;male;1898-00-00;Southern Rhodesia;Africa
+513;Albert Schweitzer;male;1875-01-14;Germany;Europe
+332;Albert Szent-Györgyi;male;1893-09-16;Austria-Hungary;Europe
+304;Albrecht Kossel;male;1853-09-16;Mecklenburg;Europe
+83;Aleksandr M. Prokhorov;male;1916-07-11;Australia;Oceania
+644;Alexandr Solzhenitsyn;male;1918-12-11;Russia;Europe
+766;Alexei Abrikosov;male;1928-06-25;USSR;Europe
+306;Alexis Carrel;male;1873-06-28;France;Europe
+544;Alfonso García Robles;male;1911-03-20;Mexico;North America
+392;Alfred D. Hershey;male;1908-12-04;USA;North America
+479;Alfred Fried;male;1864-11-11;Austria;Europe
+450;Alfred G. Gilman;male;1941-07-01;USA;North America
+87;Alfred Kastler;male;1902-05-03;Germany;Europe
+174;Alfred Werner;male;1866-12-12;France;Europe
+892;Alice Munro;female;1931-07-10;Canada;North America
+417;Allan M. Cormack;male;1924-02-23;South Africa;Africa
+305;Allvar Gullstrand;male;1862-06-05;Sweden;Europe
+300;Alphonse Laveran;male;1845-06-18;France;Europe
+543;Alva Myrdal;female;1902-01-31;Sweden;Europe
+882;Alvin E. Roth;male;1951-12-18;USA;North America
+719;Amartya Sen;male;1933-11-03;India;Asia
+509;NA;NA;NA;NA;NA
+537;NA;NA;NA;NA;NA
+499;Arthur Henderson;male;1863-09-13;Scotland;Europe
+368;Arthur Kornberg;male;1918-03-03;USA;North America
+119;Arthur L. Schawlow;male;1921-05-05;USA;North America
+203;Artturi Virtanen;male;1895-01-15;Russian Empire;Europe
+722;Arvid Carlsson;male;1923-01-25;Sweden;Europe
+310;August Krogh;male;1874-11-15;Denmark;Europe
+475;Auguste Beernaert;male;1829-07-26;Belgium;Europe
+553;Aung San Suu Kyi;female;1945-06-19;Burma;Asia
+780;Avram Hershko;male;1937-12-31;Hungary;Europe
+923;Aziz Sancar;male;1946-09-08;Turkey;Asia
+845;Barack H. Obama;male;1961-08-04;USA;North America
+428;Barbara McClintock;female;1902-06-16;USA;North America
+942;Barry C. Barish;male;1936-01-27;USA;North America
+789;Barry J. Marshall;male;1951-09-30;Australia;Oceania
+743;Barry Sharpless;male;1941-04-28;USA;North America
+409;Baruch S. Blumberg;male;1925-07-28;USA;North America
+419;Baruj Benacerraf;male;1920-10-29;Venezuela;South America
+103;Ben R. Mottelson;male;1926-07-09;USA;North America
+936;Bengt Holmström;male;1949-04-18;Finland;Europe
+426;Bengt I. Samuelsson;male;1934-05-21;Sweden;Europe
+1002;Benjamin List;male;1968-01-11;Germany;Europe
+933;Bernard L. Feringa;male;1951-05-18;the Netherlands;Europe
+345;Bernardo Houssay;male;1887-04-10;Argentina;South America
+445;Bert Sakmann;male;1942-06-12;Germany;Europe
+468;Bertha von Suttner;female;1843-06-09;Austrian Empire;Europe
+689;Bertil Ohlin;male;1899-04-23;Sweden;Europe
+145;Bertram N. Brockhouse;male;1918-07-15;Canada;North America
+621;Bertrand Russell;male;1872-05-18;United Kingdom;Europe
+535;Betty Williams;female;1943-05-22;Northern Ireland;Europe
+572;Bjørnstjerne Bjørnson;male;1832-12-08;Norway;Europe
+937;Bob Dylan;male;1941-05-24;USA;North America
+629;Boris Pasternak;male;1890-02-10;Russia;Europe
+99;Brian D. Josephson;male;1940-01-04;United Kingdom;Europe
+879;Brian Kobilka;male;1955-05-30;USA;North America
+865;Brian P. Schmidt;male;1967-02-24;USA;North America
+861;Bruce A. Beutler;male;1957-12-29;USA;North America
+261;Bruce Merrifield;male;1921-07-15;USA;North America
+105;Burton Richter;male;1931-03-22;USA;North America
+34;C.T.R. Wilson;male;1869-02-14;Scotland;Europe
+298;Camillo Golgi;male;1843-07-07;Italy;Europe
+666;Camilo José Cela;male;1916-05-11;Spain;Europe
+189;Carl Bosch;male;1874-08-27;Germany;Europe
+343;Carl Cori;male;1896-12-05;Austria-Hungary;Europe
+43;Carl D. Anderson;male;1905-09-03;USA;North America
+588;Carl Spitteler;male;1845-04-24;Switzerland;Europe
+500;Carl von Ossietzky;male;1889-10-03;Germany;Europe
+740;Carl Wieman;male;1951-03-26;USA;North America
+124;Carlo Rubbia;male;1934-03-31;Italy;Europe
+562;Carlos Filipe Ximenes Belo;male;1948-02-03;East Timor;Oceania
+501;Carlos Saavedra Lamas;male;1878-11-01;Argentina;South America
+836;Carol W. Greider;female;1961-04-15;USA;North America
+55;Cecil Powell;male;1903-12-05;United Kingdom;Europe
+431;César Milstein;male;1927-10-08;Argentina;South America
+384;Charles B. Huggins;male;1901-09-22;Canada;North America
+25;Charles Edouard Guillaume;male;1861-02-15;Switzerland;Europe
+489;Charles G. Dawes;male;1865-08-27;USA;North America
+22;Charles Glover Barkla;male;1877-06-07;United Kingdom;Europe
+81;Charles H. Townes;male;1915-07-28;USA;North America
+269;Charles J. Pedersen;male;1904-10-03;Korea;Asia
+838;Charles K. Kao;male;1933-11-04;China;Asia
+987;Charles M. Rice;male;1952-08-25;USA;North America
+318;Charles Nicolle;male;1866-09-21;France;Europe
+307;Charles Richet;male;1850-08-26;France;Europe
+68;Chen Ning Yang;male;1922-09-22;China;Asia
+319;Christiaan Eijkman;male;1858-08-11;the Netherlands;Europe
+241;Christian Anfinsen;male;1916-03-26;USA;North America
+404;Christian de Duve;male;1917-10-02;United Kingdom;Europe
+486;Christian Lange;male;1869-09-17;Norway;Europe
+453;Christiane Nüsslein-Volhard;female;1942-10-20;Germany;Europe
+858;Christopher A. Pissarides;male;1948-02-20;Cyprus;Europe
+873;Christopher A. Sims;male;1942-10-21;USA;North America
+153;Claude Cohen-Tannoudji;male;1933-04-01;French Algeria;Africa
+662;Claude Simon;male;1913-10-10;Madagascar;Africa
+146;Clifford G. Shull;male;1915-09-23;USA;North America
+44;Clinton Davisson;male;1881-10-22;USA;North America
+772;Clive W.J. Granger;male;1934-09-04;United Kingdom;Europe
+505;Cordell Hull;male;1871-10-02;USA;North America
+333;Corneille Heymans;male;1892-03-28;Belgium;Europe
+803;Craig C. Mello;male;1960-10-19;USA;North America
+657;Czeslaw Milosz;male;1911-06-30;Russian Empire;Europe
+410;D. Carleton Gajdusek;male;1923-09-09;USA;North America
+520;Dag Hammarskjöld;male;1905-07-29;Sweden;Europe
+857;Dale T. Mortensen;male;1939-02-02;USA;North America
+867;Dan Shechtman;male;1941-01-24;British Mandate of Palestine;Asia
+363;Daniel Bovet;male;1907-03-23;Switzerland;Europe
+157;Daniel C. Tsui;male;1939-02-28;China;Asia
+759;Daniel Kahneman;male;1934-03-05;British Mandate of Palestine;Asia
+733;Daniel L. McFadden;male;1937-07-29;USA;North America
+415;Daniel Nathans;male;1928-10-30;USA;North America
+674;Dario Fo;male;1926-03-24;Italy;Europe
+406;David Baltimore;male;1938-03-07;USA;North America
+1007;David Card;male;1956-00-00;Canada;North America
+423;David H. Hubel;male;1926-02-27;Canada;North America
+776;David J. Gross;male;1941-02-19;USA;North America
+928;David J. Thouless;male;1934-09-21;United Kingdom;Europe
+877;David J. Wineland;male;1944-02-24;USA;North America
+997;David Julius;male;1955-11-04;USA;North America
+149;David M. Lee;male;1931-01-20;USA;North America
+567;David Trimble;male;1944-10-15;Northern Ireland;Europe
+1003;David W.C. MacMillan;male;1968-00-00;United Kingdom;Europe
+966;Denis Mukwege;male;1955-03-01;Belgian Congo;Africa
+93;Dennis Gabor;male;1900-06-05;Hungary;Europe
+237;Derek Barton;male;1918-09-08;United Kingdom;Europe
+669;Derek Walcott;male;1930-01-23;Saint Lucia;North America
+546;Desmond Tutu;male;1931-10-07;South Africa;Africa
+362;Dickinson W. Richards;male;1895-10-30;USA;North America
+975;Didier Queloz;male;1966-02-23;Switzerland;Europe
+1006;Dmitry Muratov;male;1961-00-00;USSR;Europe
+74;Donald A. Glaser;male;1926-09-21;USA;North America
+267;Donald J. Cram;male;1919-04-22;USA;North America
+962;Donna Strickland;female;1959-05-27;Canada;North America
+817;Doris Lessing;female;1919-10-22;Persia;Asia
+230;Dorothy Crowfoot Hodgkin;female;1910-05-12;Egypt;Africa
+150;Douglas D. Osheroff;male;1945-08-01;USA;North America
+710;Douglass C. North;male;1920-11-05;USA;North America
+264;Dudley R. Herschbach;male;1932-06-18;USA;North America
+443;E. Donnall Thomas;male;1920-03-15;USA;North America
+59;E. M. Purcell;male;1912-08-30;USA;North America
+397;Earl W. Sutherland, Jr.;male;1915-11-19;USA;North America
+324;Edgar Adrian;male;1889-11-30;United Kingdom;Europe
+446;Edmond H. Fischer;male;1920-04-06;China;Asia
+807;Edmund S. Phelps;male;1933-07-26;USA;North America
+166;Eduard Buchner;male;1860-05-20;Bavaria;Europe
+905;Edvard I. Moser;male;1962-04-27;Norway;Europe
+336;Edward A. Doisy;male;1893-11-13;USA;North America
+452;Edward B. Lewis;male;1918-05-20;USA;North America
+349;Edward C. Kendall;male;1886-03-08;USA;North America
+787;Edward C. Prescott;male;1940-12-26;USA;North America
+365;Edward Tatum;male;1909-12-14;USA;North America
+52;Edward V. Appleton;male;1892-09-06;United Kingdom;Europe
+447;Edwin G. Krebs;male;1918-06-06;USA;North America
+212;Edwin M. McMillan;male;1907-09-18;USA;North America
+348;Egas Moniz;male;1874-11-29;Portugal;Europe
+852;Ei-ichi Negishi;male;1935-07-14;China;Asia
+533;Eisaku Sato;male;1901-03-27;Japan;Asia
+782;Elfriede Jelinek;female;1946-10-20;Austria;Europe
+658;Elias Canetti;male;1905-07-25;Bulgaria;Europe
+275;Elias James Corey;male;1928-07-12;USA;North America
+464;Élie Ducommun;male;1833-02-19;Switzerland;Europe
+548;Elie Wiesel;male;1928-09-30;Romania;Europe
+480;Elihu Root;male;1845-02-15;USA;North America
+846;Elinor Ostrom;female;1933-08-07;USA;North America
+835;Elizabeth H. Blackburn;female;1948-11-26;Australia;Oceania
+869;Ellen Johnson Sirleaf;female;1938-10-29;Liberia;Africa
+161;Emil Fischer;male;1852-10-09;Prussia;Europe
+293;Emil von Behring;male;1854-03-15;Prussia;Europe
+72;Emilio Segrè;male;1905-02-01;Italy;Europe
+506;Emily Greene Balch;female;1867-01-08;USA;North America
+991;Emmanuelle Charpentier;female;1968-12-11;France;Europe
+46;Enrico Fermi;male;1901-09-29;Italy;Europe
+909;Eric Betzig;male;1960-01-13;USA;North America
+738;Eric Cornell;male;1961-12-19;USA;North America
+454;Eric F. Wieschaus;male;1947-06-08;USA;North America
+724;Eric Kandel;male;1929-11-07;Austria;Europe
+821;Eric S. Maskin;male;1950-12-12;USA;North America
+604;Erik Axel Karlfeldt;male;1864-07-20;Sweden;Europe
+625;Ernest Hemingway;male;1899-07-21;USA;North America
+47;Ernest Lawrence;male;1901-08-08;USA;North America
+167;Ernest Rutherford;male;1871-08-30;New Zealand;Oceania
+57;Ernest T.S. Walton;male;1903-10-06;Ireland;Europe
+471;Ernesto Teodoro Moneta;male;1833-09-20;Austrian Empire;Europe
+340;Ernst B. Chain;male;1906-06-19;Germany;Europe
+244;Ernst Otto Fischer;male;1918-11-10;Germany;Europe
+127;Ernst Ruska;male;1906-12-25;Germany;Europe
+444;Erwin Neher;male;1944-03-20;Germany;Europe
+39;Erwin Schrödinger;male;1887-08-12;Austria;Europe
+983;Esther Duflo;female;1972-10-25;France;Europe
+894;Eugene F. Fama;male;1939-02-14;USA;North America
+608;Eugene O'Neill;male;1888-10-16;USA;North America
+78;Eugene Wigner;male;1902-11-17;Austria-Hungary;Europe
+651;Eugenio Montale;male;1896-10-12;Italy;Europe
+881;NA;NA;NA;NA;NA
+649;Eyvind Johnson;male;1900-07-29;Sweden;Europe
+929;F. Duncan M. Haldane;male;1951-09-14;United Kingdom;Europe
+283;F. Sherwood Rowland;male;1927-06-28;USA;North America
+556;F.W. de Klerk;male;1936-03-18;South Africa;Africa
+58;Felix Bloch;male;1905-10-23;Switzerland;Europe
+379;Feodor Lynen;male;1911-04-06;Germany;Europe
+14;Ferdinand Braun;male;1850-06-06;Hesse-Kassel;Europe
+492;Ferdinand Buisson;male;1841-12-20;France;Europe
+460;Ferid Murad;male;1936-09-14;USA;North America
+786;Finn E. Kydland;male;1943-12-01;Norway;Europe
+963;Frances H. Arnold;female;1956-07-25;USA;North America
+372;Francis Crick;male;1916-06-08;United Kingdom;Europe
+180;Francis W. Aston;male;1877-09-01;United Kingdom;Europe
+699;Franco Modigliani;male;1918-06-18;Italy;Europe
+887;François Englert;male;1932-11-06;Belgium;Europe
+380;François Jacob;male;1920-06-17;France;Europe
+623;François Mauriac;male;1885-10-11;France;Europe
+824;Françoise Barré-Sinoussi;female;1947-07-30;France;Europe
+494;Frank B. Kellogg;male;1856-12-22;USA;North America
+778;Frank Wilczek;male;1951-05-15;USA;North America
+613;Frans Eemil Sillanpää;male;1888-09-16;Russian Empire;Europe
+193;Frédéric Joliot;male;1900-03-19;France;Europe
+573;Frédéric Mistral;male;1830-09-08;France;Europe
+463;Frédéric Passy;male;1822-05-20;France;Europe
+358;Frederick C. Robbins;male;1916-08-25;USA;North America
+313;Frederick G. Banting;male;1891-11-14;Canada;North America
+148;Frederick Reines;male;1918-03-16;USA;North America
+222;Frederick Sanger;male;1918-08-13;United Kingdom;Europe
+222;Frederick Sanger;male;1918-08-13;United Kingdom;Europe
+179;Frederick Soddy;male;1877-09-02;United Kingdom;Europe
+474;Fredrik Bajer;male;1837-04-21;Denmark;Europe
+487;Fridtjof Nansen;male;1861-10-10;Norway;Europe
+190;Friedrich Bergius;male;1884-10-11;Germany;Europe
+685;Friedrich von Hayek;male;1899-05-08;Austria;Europe
+508;NA;NA;NA;NA;NA
+60;Frits Zernike;male;1888-07-16;the Netherlands;Europe
+177;Fritz Haber;male;1868-12-09;Prussia;Europe
+355;Fritz Lipmann;male;1899-06-12;Germany;Europe
+181;Fritz Pregl;male;1869-09-03;Austria-Hungary;Europe
+659;Gabriel García Márquez;male;1927-03-06;Colombia;South America
+12;Gabriel Lippmann;male;1845-08-16;Luxembourg;Europe
+615;Gabriela Mistral;female;1889-04-07;Chile;South America
+734;Gao Xingjian;male;1940-01-04;China;Asia
+708;Gary Becker;male;1930-12-02;USA;North America
+245;Geoffrey Wilkinson;male;1921-07-14;United Kingdom;Europe
+371;Georg von Békésy;male;1899-06-03;Hungary;Europe
+253;Georg Wittig;male;1897-06-16;Germany;Europe
+744;George A. Akerlof;male;1940-06-17;USA;North America
+280;George A. Olah;male;1927-05-22;Hungary;Europe
+364;George Beadle;male;1903-10-22;USA;North America
+596;George Bernard Shaw;male;1856-07-26;Ireland;Europe
+514;George C. Marshall;male;1880-12-31;USA;North America
+421;George D. Snell;male;1903-12-19;USA;North America
+201;George de Hevesy;male;1885-08-01;Austria-Hungary;Europe
+405;George E. Palade;male;1912-11-19;Romania;Europe
+840;George E. Smith;male;1930-05-10;USA;North America
+805;George F. Smoot;male;1945-02-20;USA;North America
+439;George H. Hitchings;male;1905-04-18;USA;North America
+326;George H. Whipple;male;1878-08-28;USA;North America
+696;George J. Stigler;male;1911-01-17;USA;North America
+964;George P. Smith;male;1941-03-10;USA;North America
+45;George Paget Thomson;male;1892-05-03;United Kingdom;Europe
+235;George Porter;male;1920-12-06;United Kingdom;Europe
+327;George R. Minot;male;1885-12-02;USA;North America
+387;George Wald;male;1906-11-18;USA;North America
+142;Georges Charpak;male;1924-08-01;Poland;Europe
+430;Georges J.F. Köhler;male;1946-04-17;Germany;Europe
+517;Georges Pire;male;1910-02-10;Belgium;Europe
+398;Gerald M. Edelman;male;1929-07-01;USA;North America
+697;Gerard Debreu;male;1921-07-04;France;Europe
+961;Gérard Mourou;male;1944-06-22;France;Europe
+158;Gerardus 't Hooft;male;1946-07-05;the Netherlands;Europe
+128;Gerd Binnig;male;1947-07-20;West Germany;Europe
+334;Gerhard Domagk;male;1895-10-30;Germany;Europe
+816;Gerhard Ertl;male;1936-10-10;Germany;Europe
+240;Gerhard Herzberg;male;1904-12-25;Germany;Europe
+582;Gerhart Hauptmann;male;1862-11-15;Prussia;Europe
+438;Gertrude B. Elion;female;1918-01-23;USA;North America
+344;Gerty Cori;female;1896-08-15;Austria-Hungary;Europe
+1001;Giorgio Parisi;male;1948-08-04;Italy;Europe
+635;Giorgos Seferis;male;1900-03-13;Ottoman Empire;Asia
+576;Giosuè Carducci;male;1835-07-27;Tuscany;Europe
+229;Giulio Natta;male;1903-02-26;Italy;Europe
+213;Glenn T. Seaborg;male;1912-04-19;USA;North America
+418;Godfrey N. Hounsfield;male;1919-08-28;United Kingdom;Europe
+810;NA;NA;NA;NA;NA
+597;Grazia Deledda;female;1871-09-27;Italy;Europe
+972;Gregg L. Semenza;male;1956-07-12;USA;North America
+13;Guglielmo Marconi;male;1874-04-25;Italy;Europe
+1009;Guido W. Imbens;male;1963-09-03;the Netherlands;Europe
+684;Gunnar Myrdal;male;1898-12-06;Sweden;Europe
+461;Günter Blobel;male;1936-05-21;Germany;Europe
+676;Günter Grass;male;1927-10-16;Free City of Danzig;Europe
+17;Gustaf Dalén;male;1869-11-30;Sweden;Europe
+31;Gustav Hertz;male;1887-07-22;Germany;Europe
+491;Gustav Stresemann;male;1878-05-10;Germany;Europe
+777;H. David Politzer;male;1949-08-31;USA;North America
+389;H. Gobind Khorana;male;1922-01-09;India;Asia
+751;H. Robert Horvitz;male;1947-05-08;USA;North America
+626;Halldór Laxness;male;1902-04-23;Iceland;Europe
+416;Hamilton O. Smith;male;1931-08-23;USA;North America
+91;Hannes Alfvén;male;1908-05-30;Sweden;Europe
+88;Hans Bethe;male;1906-07-02;Germany;Europe
+188;Hans Fischer;male;1881-07-27;Germany;Europe
+136;Hans G. Dehmelt;male;1922-09-09;Prussia;Europe
+354;Hans Krebs;male;1900-08-25;Germany;Europe
+329;Hans Spemann;male;1869-06-27;Württemberg;Europe
+187;Hans von Euler-Chelpin;male;1873-02-15;Germany;Europe
+823;Harald zur Hausen;male;1936-03-11;Germany;Europe
+192;Harold C. Urey;male;1893-04-29;USA;North America
+441;Harold E. Varmus;male;1939-12-18;USA;North America
+801;Harold Pinter;male;1930-10-10;United Kingdom;Europe
+704;Harry M. Markowitz;male;1927-08-24;USA;North America
+650;Harry Martinson;male;1904-05-06;Sweden;Europe
+272;Hartmut Michel;male;1948-07-18;West Germany;Europe
+985;Harvey J. Alter;male;1935-09-12;USA;North America
+18;Heike Kamerlingh Onnes;male;1853-09-21;the Netherlands;Europe
+647;Heinrich Böll;male;1917-12-21;Germany;Europe
+129;Heinrich Rohrer;male;1933-06-06;Switzerland;Europe
+184;Heinrich Wieland;male;1877-06-04;Germany;Europe
+2;Hendrik A. Lorentz;male;1853-07-18;the Netherlands;Europe
+4;Henri Becquerel;male;1852-12-15;France;Europe
+600;Henri Bergson;male;1859-10-18;France;Europe
+481;Henri La Fontaine;male;1854-04-22;Belgium;Europe
+165;Henri Moissan;male;1852-09-28;France;Europe
+335;Henrik Dam;male;1895-02-21;Denmark;Europe
+587;Henrik Pontoppidan;male;1857-07-24;Denmark;Europe
+462;Henry Dunant;male;1828-05-08;Switzerland;Europe
+530;Henry Kissinger;male;1923-05-27;Germany;Europe
+260;Henry Taube;male;1915-11-30;Canada;North America
+139;Henry W. Kendall;male;1926-12-09;USA;North America
+575;Henryk Sienkiewicz;male;1846-05-05;Poland;Europe
+262;Herbert A. Hauptman;male;1917-02-14;USA;North America
+252;Herbert C. Brown;male;1912-05-22;United Kingdom;Europe
+727;Herbert Kroemer;male;1928-08-25;Germany;Europe
+338;Herbert S. Gasser;male;1888-07-05;USA;North America
+691;Herbert Simon;male;1916-06-15;USA;North America
+617;Hermann Hesse;male;1877-07-02;Germany;Europe
+342;Hermann J. Muller;male;1890-12-21;USA;North America
+216;Hermann Staudinger;male;1881-03-23;Germany;Europe
+844;Herta Müller;female;1953-08-17;Romania;Europe
+731;Hideki Shirakawa;male;1936-08-20;Japan;Asia
+54;Hideki Yukawa;male;1907-01-23;Japan;Asia
+907;Hiroshi Amano;male;1960-09-11;Japan;Asia
+485;Hjalmar Branting;male;1860-11-23;Sweden;Europe
+156;Horst L. Störmer;male;1949-04-06;West Germany;Europe
+408;Howard M. Temin;male;1934-12-10;USA;North America
+359;Hugo Theorell;male;1903-07-06;Sweden;Europe
+71;Igor Y. Tamm;male;1895-07-08;Russia;Europe
+721;Il´ja M. Frank;male;1908-10-23;Russia;Europe
+301;Ilya Mechnikov;male;1845-05-15;Russian Empire;Europe
+250;Ilya Prigogine;male;1917-01-25;Russia;Europe
+761;Imre Kertész;male;1929-11-09;Hungary;Europe
+467;NA;NA;NA;NA;NA
+818;NA;NA;NA;NA;NA
+797;NA;NA;NA;NA;NA
+948;NA;NA;NA;NA;NA
+564;NA;NA;NA;NA;NA
+482;NA;NA;NA;NA;NA
+482;NA;NA;NA;NA;NA
+482;NA;NA;NA;NA;NA
+527;NA;NA;NA;NA;NA
+547;NA;NA;NA;NA;NA
+194;Irène Joliot-Curie;NA;NA;NA;NA
+191;Irving Langmuir;NA;NA;NA;NA
+781;Irwin Rose;NA;NA;NA;NA
+654;Isaac Bashevis Singer;NA;NA;NA;NA
+906;Isamu Akasaki;NA;NA;NA;NA
+49;Isidor Isaac Rabi;NA;NA;NA;NA
+606;Ivan Bunin;NA;NA;NA;NA
+296;Ivan Pavlov;NA;NA;NA;NA
+98;Ivar Giaever;NA;NA;NA;NA
+633;Ivo Andric;NA;NA;NA;NA
+130;J. Georg Bednorz;NA;NA;NA;NA
+80;J. Hans D. Jensen;NA;NA;NA;NA
+763;J. M. Coetzee;NA;NA;NA;NA
+440;J. Michael Bishop;NA;NA;NA;NA
+930;J. Michael Kosterlitz;NA;NA;NA;NA
+790;J. Robin Warren;NA;NA;NA;NA
+10;J.J. Thomson;NA;NA;NA;NA
+592;Jacinto Benavente;NA;NA;NA;NA
+728;Jack Kilby;male;1923-11-08;USA;North America
+134;Jack Steinberger;male;1921-05-25;Germany;Europe
+837;Jack W. Szostak;male;1952-11-09;United Kingdom;Europe
+160;Jacobus H. van 't Hoff;male;1852-08-30;the Netherlands;Europe
+944;Jacques Dubochet;male;1942-06-08;Switzerland;Europe
+382;Jacques Monod;male;1910-02-09;France;Europe
+715;James A. Mirrlees;male;1936-07-05;Scotland;Europe
+204;James B. Sumner;male;1887-11-19;USA;North America
+41;James Chadwick;male;1891-10-20;United Kingdom;Europe
+116;James Cronin;male;1931-09-29;USA;North America
+690;James E. Meade;male;1907-06-23;United Kingdom;Europe
+884;James E. Rothman;male;1950-11-03;USA;North America
+30;James Franck;male;1882-08-26;Germany;Europe
+732;James J. Heckman;male;1944-04-19;USA;North America
+700;James M. Buchanan Jr.;male;1919-10-03;USA;North America
+958;James P. Allison;male;1948-08-07;USA;North America
+973;James Peebles;male;1935-04-25;Canada;North America
+104;James Rainwater;male;1917-12-09;USA;North America
+695;James Tobin;male;1918-03-05;USA;North America
+373;James Watson;male;1928-04-06;USA;North America
+678;Jan Tinbergen;male;1903-04-12;the Netherlands;Europe
+496;Jane Addams;female;1860-09-06;USA;North America
+223;Jaroslav Heyrovsky;male;1890-12-20;Austria-Hungary;Europe
+661;Jaroslav Seifert;male;1901-09-23;Austria-Hungary;Europe
+32;Jean Baptiste Perrin;male;1870-09-30;France;Europe
+420;Jean Dausset;male;1916-10-19;France;Europe
+915;Jean Tirole;male;1953-08-09;France;Europe
+832;Jean-Marie Gustave Le Clézio;male;1940-04-13;France;Europe
+268;Jean-Marie Lehn;male;1939-09-30;France;Europe
+637;Jean-Paul Sartre;male;1905-06-21;France;Europe
+931;Jean-Pierre Sauvage;male;1944-10-21;France;Europe
+938;Jeffrey C. Hall;male;1945-05-03;USA;North America
+992;Jennifer A. Doudna;female;1964-02-19;USA;North America
+289;Jens C. Skou;male;1918-10-08;Denmark;Europe
+138;Jerome I. Friedman;male;1930-03-28;USA;North America
+263;Jerome Karle;male;1918-06-18;USA;North America
+762;Jimmy Carter;male;1924-10-01;USA;North America
+945;Joachim Frank;male;1940-09-12;Germany;Europe
+565;Jody Williams;female;1950-10-09;USA;North America
+270;Johann Deisenhofer;male;1943-09-30;Germany;Europe
+15;Johannes Diderik van der Waals;male;1837-11-23;the Netherlands;Europe
+316;Johannes Fibiger;male;1867-04-23;Denmark;Europe
+24;Johannes Stark;male;1874-04-15;Germany;Europe
+614;Johannes V. Jensen;male;1873-01-20;Denmark;Europe
+756;John B. Fenn;male;1917-06-15;USA;North America
+976;John B. Goodenough;male;1922-07-25;Germany;Europe
+66;John Bardeen;male;1908-05-23;USA;North America
+66;John Bardeen;male;1908-05-23;USA;North America
+711;John C. Harsanyi;male;1920-05-29;Hungary;Europe
+227;John C. Kendrew;male;1917-03-24;United Kingdom;Europe
+804;John C. Mather;male;1946-08-07;USA;North America
+266;John C. Polanyi;male;1929-01-23;Germany;Europe
+56;John Cockcroft;male;1897-05-27;United Kingdom;Europe
+247;John Cornforth;male;1917-09-07;Australia;Oceania
+752;John E. Sulston;male;1942-03-27;United Kingdom;Europe
+288;John E. Walker;male;1941-01-07;United Kingdom;Europe
+356;John F. Enders;male;1897-02-10;USA;North America
+712;John F. Nash Jr.;male;1928-06-13;USA;North America
+605;John Galsworthy;male;1867-08-14;United Kingdom;Europe
+205;John H. Northrop;male;1891-07-05;USA;North America
+109;John H. Van Vleck;male;1899-03-13;USA;North America
+566;John Hume;male;1937-01-18;Northern Ireland;Europe
+792;John L. Hall;male;1934-08-21;USA;North America
+314;John Macleod;male;1876-09-06;Scotland;Europe
+903;John O'Keefe;male;1939-11-18;USA;North America
+291;John Pople;male;1925-10-31;United Kingdom;Europe
+681;John R. Hicks;male;1904-04-08;United Kingdom;Europe
+507;John R. Mott;male;1865-05-25;USA;North America
+427;John R. Vane;male;1927-03-29;United Kingdom;Europe
+634;John Steinbeck;male;1902-02-27;USA;North America
+574;José Echegaray;male;1832-04-19;Spain;Europe
+563;José Ramos-Horta;male;1949-12-26;East Timor;Oceania
+675;José Saramago;male;1922-11-16;Portugal;Europe
+664;Joseph Brodsky;male;1940-05-24;USSR;Europe
+442;Joseph E. Murray;male;1919-04-01;USA;North America
+746;Joseph E. Stiglitz;male;1943-02-09;USA;North America
+337;Joseph Erlanger;male;1874-01-05;USA;North America
+144;Joseph H. Taylor Jr.;male;1941-03-29;USA;North America
+433;Joseph L. Goldstein;male;1940-04-18;USA;North America
+560;Joseph Rotblat;male;1908-11-04;Russian Empire;Europe
+1008;Joshua D. Angrist;male;1960-00-00;USA;North America
+366;Joshua Lederberg;male;1925-05-23;USA;North America
+934;Juan Manuel Santos;male;1951-08-10;Colombia;South America
+627;Juan Ramón Jiménez;male;1881-12-24;Spain;Europe
+862;Jules A. Hoffmann;male;1941-08-02;Luxembourg;Europe
+309;Jules Bordet;male;1870-06-13;Belgium;Europe
+85;Julian Schwinger;male;1918-02-12;USA;North America
+396;Julius Axelrod;male;1912-05-30;USA;North America
+317;Julius Wagner-Jauregg;male;1857-03-07;Austria;Europe
+131;K. Alex Müller;male;1927-04-20;Switzerland;Europe
+120;Kai M. Siegbahn;male;1918-04-20;Sweden;Europe
+913;Kailash Satyarthi;male;1954-01-11;India;Asia
+586;Karl Gjellerup;male;1857-06-02;Denmark;Europe
+321;Karl Landsteiner;male;1868-06-14;Austrian Empire;Europe
+400;Karl von Frisch;male;1886-11-20;Austria;Europe
+228;Karl Ziegler;male;1898-11-26;Germany;Europe
+278;Kary B. Mullis;male;1944-12-28;USA;North America
+947;Kazuo Ishiguro;male;1954-11-08;Japan;Asia
+386;Keffer Hartline;male;1903-12-22;USA;North America
+257;Kenichi Fukui;male;1918-10-04;Japan;Asia
+121;Kenneth G. Wilson;male;1936-06-08;USA;North America
+682;Kenneth J. Arrow;male;1921-08-23;USA;North America
+671;Kenzaburo Oe;male;1935-01-31;Japan;Asia
+725;Kim Dae-jung;male;1925-12-03;Korea;Asia
+943;Kip S. Thorne;male;1940-06-01;USA;North America
+473;Klas Pontus Arnoldson;male;1844-10-27;Sweden;Europe
+1000;Klaus Hasselmann;male;1931-10-25;Germany;Europe
+126;Klaus von Klitzing;male;1943-06-28;German-occupied Poland;Europe
+589;Knut Hamsun;male;1859-08-04;Norway;Europe
+749;Kofi Annan;male;1938-04-08;Gold Coast;Africa
+757;Koichi Tanaka;male;1959-08-03;Japan;Asia
+378;Konrad Bloch;male;1912-01-21;Germany;Europe
+401;Konrad Lorenz;male;1903-11-07;Austria;Europe
+850;Konstantin Novoselov;male;1974-08-23;Russia;Europe
+211;Kurt Alder;male;1902-07-10;Prussia;Europe
+758;Kurt Wüthrich;male;1938-10-04;Switzerland;Europe
+236;Lars Onsager;male;1903-11-27;Norway;Europe
+895;Lars Peter Hansen;male;1952-10-26;USA;North America
+21;Lawrence Bragg;male;1890-03-31;Australia;Oceania
+694;Lawrence R. Klein;male;1920-09-14;USA;North America
+531;Le Duc Tho ;male;1911-10-14;Vietnam;Asia
+523;NA;NA;NA;NA;NA
+545;Lech Walesa;male;1943-09-29;Poland;Europe
+735;Leland Hartwell;male;1939-10-30;USA;North America
+97;Leo Esaki;male;1925-03-12;Japan;Asia
+484;Léon Bourgeois;male;1851-05-21;France;Europe
+512;Léon Jouhaux;male;1879-07-01;France;Europe
+132;Leon M. Lederman;male;1922-07-15;USA;North America
+95;Leon N. Cooper;male;1930-02-28;USA;North America
+820;Leonid Hurwicz;male;1917-08-21;Russia;Europe
+686;Leonid Vitaliyevich Kantorovich;male;1912-01-19;Russian Empire;Europe
+200;Leopold Ruzicka;male;1887-09-13;Austria-Hungary;Europe
+516;Lester Bowles Pearson;male;1897-04-23;Canada;North America
+77;Lev Landau;male;1908-01-22;Russian Empire;Asia
+870;Leymah Gbowee;female;1972-02-01;Liberia;Africa
+775;Linda B. Buck;female;1947-01-29;USA;North America
+217;Linus Pauling;male;1901-02-28;USA;North America
+217;Linus Pauling;male;1901-02-28;USA;North America
+855;Liu Xiaobo;male;1955-12-28;China;Asia
+883;Lloyd S. Shapley;male;1923-06-02;USA;North America
+510;Lord Boyd Orr;male;1880-09-23;Scotland;Europe
+8;Lord Rayleigh;male;1842-11-12;United Kingdom;Europe
+221;Lord Todd;male;1907-10-02;Scotland;Europe
+36;Louis de Broglie;male;1892-08-15;France;Europe
+459;Louis J. Ignarro;male;1941-05-31;USA;North America
+92;Louis Néel;male;1904-11-22;France;Europe
+472;Louis Renault;male;1843-05-21;France;Europe
+993;Louise Glück;female;1943-04-22;USA;North America
+825;Luc Montagnier;male;1932-08-18;France;Europe
+493;Ludwig Quidde;male;1858-03-23;Germany;Europe
+607;Luigi Pirandello;male;1867-06-28;Italy;Europe
+89;Luis Alvarez;male;1911-06-13;USA;North America
+239;Luis Leloir;male;1906-09-06;France;Europe
+977;M. Stanley Whittingham;male;1941-12-22;United Kingdom;Europe
+536;Mairead Corrigan;female;1944-01-27;Northern Ireland;Europe
+827;Makoto Kobayashi;male;1944-04-07;Japan;Asia
+914;Malala Yousafzai;female;1997-07-12;Pakistan;Asia
+233;Manfred Eigen;male;1927-05-09;Germany;Europe
+29;Manne Siegbahn;male;1886-12-03;Sweden;Europe
+79;Maria Goeppert Mayer;female;1906-06-28;Germany;Europe
+1005;Maria Ressa;female;1963-10-02;Philippines;Asia
+6;Marie Curie;female;1867-11-07;Russian Empire;Europe
+6;Marie Curie;female;1867-11-07;Russian Empire;Europe
+282;Mario J. Molina;male;1943-03-19;Mexico;North America
+811;Mario R. Capecchi;male;1937-10-06;Italy;Europe
+854;Mario Vargas Llosa;male;1936-03-28;Peru;South America
+390;Marshall W. Nirenberg;male;1927-04-10;USA;North America
+830;Martin Chalfie;male;1947-01-15;USA;North America
+889;Martin Karplus;male;1930-03-15;Austria;Europe
+147;Martin L. Perl;male;1927-06-24;USA;North America
+524;Martin Luther King Jr.;male;1929-01-15;USA;North America
+451;Martin Rodbell;male;1925-12-01;USA;North America
+100;Martin Ryle;male;1918-09-27;United Kingdom;Europe
+159;Martinus J.G. Veltman;male;1931-06-27;the Netherlands;Europe
+833;Martti Ahtisaari;male;1937-06-23;Finland;Europe
+754;Masatoshi Koshiba;male;1926-09-19;Japan;Asia
+702;Maurice Allais;male;1911-05-31;France;Europe
+581;Maurice Maeterlinck;male;1862-08-29;Belgium;Europe
+374;Maurice Wilkins;male;1916-12-15;New Zealand;Oceania
+61;Max Born;male;1882-12-11;Germany;Europe
+391;Max Delbrück;male;1906-09-04;Germany;Europe
+226;Max F. Perutz;male;1914-05-19;Austria;Europe
+23;Max Planck;male;1858-04-23;Schleswig;Europe
+352;Max Theiler;male;1899-01-30;South Africa;Africa
+19;Max von Laue;male;1879-10-09;Germany;Europe
+904;May-Britt Moser;female;1963-01-04;Norway;Europe
+568;NA;NA;NA;NA;NA
+225;Melvin Calvin;male;1911-04-08;USA;North America
+133;Melvin Schwartz;male;1932-11-02;USA;North America
+539;Menachem Begin;male;1913-08-16;Russian Empire;Europe
+705;Merton H. Miller;male;1923-05-16;USA;North America
+986;Michael Houghton;male;NA;NA;NA
+984;Michael Kremer;male;1964-11-12;USA;North America
+890;Michael Levitt;male;1947-05-09;South Africa;Africa
+939;Michael Rosbash;male;1944-03-07;USA;North America
+432;Michael S. Brown;male;1941-04-13;USA;North America
+279;Michael Smith;male;1932-04-26;United Kingdom;Europe
+940;Michael W. Young;male;1949-03-28;USA;North America
+974;Michel Mayor;male;1942-01-12;Switzerland;Europe
+641;Miguel Angel Asturias;male;1899-10-19;Guatemala;North America
+552;Mikhail Gorbachev;male;1931-03-02;USSR;Europe
+638;Mikhail Sholokhov;male;1905-05-24;Russia;Europe
+688;Milton Friedman;male;1912-07-31;USA;North America
+880;Mo Yan;male;1955-02-02;China;Asia
+798;Mohamed ElBaradei;male;1942-06-17;Egypt;Africa
+540;Mother Teresa;female;1910-08-26;Ottoman Empire;Europe
+809;Muhammad Yunus;male;1940-06-28;British India;Asia
+90;Murray Gell-Mann;male;1929-09-15;USA;North America
+718;Myron Scholes;male;1941-07-01;Canada;North America
+967;Nadia Murad;female;1993-00-00;Iraq;Asia
+668;Nadine Gordimer;female;1923-11-20;South Africa;Africa
+665;Naguib Mahfouz;male;1911-12-11;Egypt;Africa
+503;NA;NA;NA;NA;NA
+495;Nathan Söderblom;male;1866-01-15;Sweden;Europe
+925;NA;NA;NA;NA;NA
+640;Nelly Sachs;female;1891-12-10;Germany;Europe
+555;Nelson Mandela;male;1918-07-18;South Africa;Africa
+497;Nicholas Murray Butler;male;1862-04-02;USA;North America
+118;Nicolaas Bloembergen;male;1920-03-11;the Netherlands;Europe
+82;Nicolay G. Basov;male;1922-12-14;USSR;Europe
+27;Niels Bohr;male;1885-10-07;Denmark;Europe
+429;Niels K. Jerne;male;1911-12-23;United Kingdom;Europe
+295;Niels Ryberg Finsen;male;1860-12-15;Faroe Islands (Denmark);Europe
+402;Nikolaas Tinbergen;male;1907-04-15;the Netherlands;Europe
+220;Nikolay Semenov;male;1896-04-03;Russia;Europe
+528;Norman Borlaug;male;1914-03-25;USA;North America
+135;Norman F. Ramsey;male;1915-08-27;USA;North America
+196;Norman Haworth;male;1883-03-19;United Kingdom;Europe
+667;Octavio Paz;male;1914-03-31;Mexico;North America
+238;Odd Hassel;male;1897-05-17;Norway;Europe
+655;Odysseus Elytis;male;1911-11-02;Crete;Europe
+515;NA;NA;NA;NA;NA
+515;NA;NA;NA;NA;NA
+979;Olga Tokarczuk;female;1962-01-29;Poland;Europe
+847;Oliver E. Williamson;male;1932-09-27;USA;North America
+935;Oliver Hart;male;1948-10-09;United Kingdom;Europe
+813;Oliver Smithies;male;1925-06-23;United Kingdom;Europe
+893;NA;NA;NA;NA;NA
+808;Orhan Pamuk;male;1952-06-07;Turkey;Asia
+829;Osamu Shimomura;male;1928-08-27;Japan;Asia
+549;Oscar Arias Sánchez;male;1940-09-13;Costa Rica;North America
+210;Otto Diels;male;1876-01-23;Germany;Europe
+202;Otto Hahn;male;1879-03-08;Germany;Europe
+331;Otto Loewi;male;1873-06-03;Germany;Europe
+312;Otto Meyerhof;male;1884-04-12;Germany;Europe
+48;Otto Stern;male;1888-02-17;Germany;Europe
+169;Otto Wallach;male;1847-03-27;Germany;Europe
+322;Otto Warburg;male;1883-10-08;Germany;Europe
+73;Owen Chamberlain;male;1920-07-10;USA;North America
+35;Owen Willans Richardson;male;1879-04-26;United Kingdom;Europe
+645;Pablo Neruda;male;1904-07-12;Chile;South America
+622;Pär Lagerkvist;male;1891-05-23;Sweden;Europe
+53;Patrick M.S. Blackett;male;1897-11-18;United Kingdom;Europe
+912;Patrick Modiano;male;1945-07-30;France;Europe
+648;Patrick White;male;1912-05-28;United Kingdom;Europe
+679;Paul A. Samuelson;male;1915-05-15;USA;North America
+40;Paul A.M. Dirac;male;1902-08-08;United Kingdom;Europe
+254;Paul Berg;male;1926-06-30;USA;North America
+764;Paul C. Lauterbur;male;1929-05-06;USA;North America
+287;Paul D. Boyer;male;1918-07-31;USA;North America
+302;Paul Ehrlich;male;1854-03-14;Prussia;Europe
+723;Paul Greengard;male;1925-12-11;USA;North America
+476;Paul Henri d'Estournelles de Constant;male;1852-11-22;France;Europe
+580;Paul Heyse;male;1830-03-15;Prussia;Europe
+281;Paul J. Crutzen;male;1933-12-03;the Netherlands;Europe
+246;Paul J. Flory;male;1910-06-19;USA;North America
+197;Paul Karrer;male;1889-04-21;Russia;Europe
+834;Paul Krugman;male;1953-02-28;USA;North America
+969;Paul M. Romer;male;1955-00-00;USA;North America
+922;Paul Modrich;male;1946-06-13;USA;North America
+346;Paul Müller;male;1899-01-12;Switzerland;Europe
+995;Paul R. Milgrom;male;1948-04-20;USA;North America
+173;Paul Sabatier;male;1854-11-05;France;Europe
+70;Pavel A. Cherenkov;male;1904-07-28;Russia;Europe
+610;Pearl Buck;female;1892-06-26;USA;North America
+51;Percy W. Bridgman;male;1882-04-21;USA;North America
+477;NA;NA;NA;NA;NA
+856;Peter A. Diamond;male;1940-04-29;USA;North America
+769;Peter Agre;male;1949-01-30;USA;North America
+455;Peter C. Doherty;male;1940-10-15;Australia;Oceania
+195;Peter Debye;male;1884-03-24;the Netherlands;Europe
+815;Peter Grünberg;male;1939-05-18;Czechoslovakia;Europe
+980;Peter Handke;male;1942-12-06;Austria;Europe
+888;Peter Higgs;male;1929-05-29;United Kingdom;Europe
+370;Peter Medawar;male;1915-02-28;Brazil;South America
+251;Peter Mitchell;male;1920-09-29;United Kingdom;Europe
+383;Peyton Rous;male;1879-10-05;USA;North America
+518;Philip Noel-Baker;male;1889-11-01;United Kingdom;Europe
+351;Philip S. Hench;male;1896-02-28;USA;North America
+107;Philip W. Anderson;male;1923-12-13;USA;North America
+9;Philipp Lenard;male;1862-06-07;Hungary;Europe
+449;Phillip A. Sharp;male;1944-06-06;USA;North America
+5;Pierre Curie;male;1859-05-15;France;Europe
+141;Pierre-Gilles de Gennes;male;1932-10-24;France;Europe
+3;Pieter Zeeman;male;1865-05-25;the Netherlands;Europe
+64;Polykarp Kusch;male;1911-01-26;Germany;Europe
+561;NA;NA;NA;NA;NA
+110;Pyotr Kapitsa;male;1894-07-09;Russian Empire;Europe
+583;Rabindranath Tagore;male;1861-05-07;India;Asia
+677;Ragnar Frisch;male;1895-03-03;Norway;Europe
+385;Ragnar Granit;male;1900-10-30;Russian Empire;Europe
+941;Rainer Weiss;male;1932-09-29;Germany;Europe
+511;Ralph Bunche;male;1904-08-07;USA;North America
+863;Ralph M. Steinman;male;1943-01-14;Canada;North America
+466;Randal Cremer;male;1828-03-18;United Kingdom;Europe
+885;Randy W. Schekman;male;1948-12-30;USA;North America
+753;Raymond Davis Jr.;male;1914-10-14;USA;North America
+989;Reinhard Genzel;male;1952-03-24;Germany;Europe
+713;Reinhard Selten;male;1930-10-05;Germany;Europe
+407;Renato Dulbecco;male;1914-02-22;Italy;Europe
+526;René Cassin;male;1887-10-05;France;Europe
+755;Riccardo Giacconi;male;1931-10-06;Italy;Europe
+774;Richard Axel;male;1946-07-02;USA;North America
+286;Richard E. Smalley;male;1943-06-06;USA;North America
+140;Richard E. Taylor;male;1929-11-02;Canada;North America
+851;Richard F. Heck;male;1931-08-15;USA;North America
+949;Richard H. Thaler;male;1945-09-12;USA;North America
+946;Richard Henderson;male;1945-07-19;Scotland;Europe
+448;Richard J. Roberts;male;1943-09-06;United Kingdom;Europe
+198;Richard Kuhn;male;1900-12-03;Austria-Hungary;Europe
+215;Richard L.M. Synge;male;1914-10-28;United Kingdom;Europe
+86;Richard P. Feynman;male;1918-05-11;USA;North America
+276;Richard R. Ernst;male;1933-08-14;Switzerland;Europe
+796;Richard R. Schrock;male;1945-01-04;USA;North America
+698;Richard Stone;male;1913-08-30;United Kingdom;Europe
+176;Richard Willstätter;male;1872-08-13;Germany;Europe
+182;Richard Zsigmondy;male;1865-04-01;Austrian Empire;Europe
+554;Rigoberta Menchú Tum;female;1959-01-09;Guatemala;North America
+435;Rita Levi-Montalcini;female;1909-04-22;Italy;Europe
+258;Roald Hoffmann;male;1937-07-18;Poland;Europe
+28;Robert A. Millikan;male;1868-03-22;USA;North America
+155;Robert B. Laughlin;male;1950-11-01;USA;North America
+996;Robert B. Wilson;male;1937-05-16;USA;North America
+231;Robert B. Woodward;male;1917-04-10;USA;North America
+308;Robert Bárány;male;1876-04-22;Austria;Europe
+717;Robert C. Merton;male;1944-07-31;USA;North America
+151;Robert C. Richardson;male;1937-06-26;USA;North America
+502;Robert Cecil, Viscount Cecil of Chelwood;male;1864-09-14;United Kingdom;Europe
+714;Robert E. Lucas Jr.;male;1937-09-15;USA;North America
+284;Robert F. Curl Jr.;male;1933-08-23;USA;North America
+771;Robert F. Engle III;male;1942-11-10;USA;North America
+458;Robert F. Furchgott;male;1916-06-04;USA;North America
+848;Robert G. Edwards;male;1925-09-27;United Kingdom;Europe
+795;Robert H. Grubbs;male;1942-02-27;USA;North America
+75;Robert Hofstadter;male;1915-02-05;USA;North America
+271;Robert Huber;male;1937-02-20;Germany;Europe
+799;Robert J. Aumann;male;1930-06-08;Germany;Europe
+878;Robert J. Lefkowitz;male;1943-04-15;USA;North America
+896;Robert J. Shiller;male;1946-03-29;USA;North America
+297;Robert Koch;male;1843-12-11;Germany;Europe
+701;Robert M. Solow;male;1924-08-23;USA;North America
+720;Robert Mundell;male;1932-10-24;Canada;North America
+232;Robert S. Mulliken;male;1896-06-07;USA;North America
+96;Robert Schrieffer;male;1931-05-31;USA;North America
+709;Robert W. Fogel;male;1927-07-01;USA;North America
+388;Robert W. Holley;male;1922-01-28;USA;North America
+112;Robert Woodrow Wilson;male;1936-01-10;USA;North America
+770;Roderick MacKinnon;male;1956-02-19;USA;North America
+399;Rodney R. Porter;male;1917-10-08;United Kingdom;Europe
+822;Roger B. Myerson;male;1951-03-29;USA;North America
+806;Roger D. Kornberg;male;1947-04-24;USA;North America
+411;Roger Guillemin;male;1924-01-11;France;Europe
+609;Roger Martin du Gard;male;1881-03-23;France;Europe
+988;Roger Penrose;male;1931-08-08;United Kingdom;Europe
+422;Roger W. Sperry;male;1913-08-20;USA;North America
+831;Roger Y. Tsien;male;1952-02-01;USA;North America
+456;Rolf M. Zinkernagel;male;1944-01-06;Switzerland;Europe
+584;Romain Rolland;male;1866-01-29;France;Europe
+234;Ronald G.W. Norrish;male;1897-11-09;United Kingdom;Europe
+707;Ronald H. Coase;male;1910-12-29;United Kingdom;Europe
+294;Ronald Ross;male;1857-05-13;India;Asia
+413;Rosalyn Yalow;female;1921-07-19;USA;North America
+791;Roy J. Glauber;male;1925-09-01;USA;North America
+578;Rudolf Eucken;male;1846-01-05;East Friesland;Europe
+76;Rudolf Mössbauer;male;1929-01-31;Germany;Europe
+277;Rudolph A. Marcus;male;1923-07-21;Canada;North America
+577;Rudyard Kipling;male;1865-12-30;British India;Asia
+143;Russell A. Hulse;male;1950-11-28;USA;North America
+742;Ryoji Noyori;male;1938-09-03;Japan;Asia
+84;Sin-Itiro Tomonaga;male;1906-03-31;Japan;Asia
+603;Sinclair Lewis;male;1885-02-07;USA;North America
+339;Sir Alexander Fleming;male;1881-08-06;Scotland;Europe
+693;Sir Arthur Lewis;male;1915-01-23;British West Indies;North America
+488;Sir Austen Chamberlain;male;1863-10-16;United Kingdom;Europe
+394;Sir Bernard Katz;male;1911-03-26;Germany;Europe
+37;Sir Chandrasekhara Venkata Raman;male;1888-11-07;India;Asia
+323;Sir Charles Sherrington;male;1857-11-27;United Kingdom;Europe
+219;Sir Cyril Hinshelwood;male;1897-05-19;United Kingdom;Europe
+369;Sir Frank Macfarlane Burnet;male;1899-09-03;Australia;Oceania
+320;Sir Frederick Hopkins;male;1861-06-20;United Kingdom;Europe
+965;Sir Gregory P. Winter;male;1951-04-14;United Kingdom;Europe
+285;Sir Harold Kroto;male;1939-10-07;United Kingdom;Europe
+330;Sir Henry Dale;male;1875-06-09;United Kingdom;Europe
+341;Sir Howard Florey;male;1898-09-24;Australia;Oceania
+932;Sir J. Fraser Stoddart;male;1942-05-24;United Kingdom;Europe
+437;Sir James W. Black;male;1924-06-14;Scotland;Europe
+874;Sir John B. Gurdon;male;1933-10-02;United Kingdom;Europe
+375;Sir John Eccles;male;1903-01-27;Australia;Oceania
+812;Sir Martin J. Evans;male;1941-01-01;United Kingdom;Europe
+108;Sir Nevill F. Mott;male;1905-09-30;United Kingdom;Europe
+498;Sir Norman Angell;male;1872-12-26;United Kingdom;Europe
+737;Sir Paul Nurse;male;1949-01-25;United Kingdom;Europe
+971;Sir Peter J. Ratcliffe;male;1954-05-14;United Kingdom;Europe
+765;Sir Peter Mansfield;male;1933-10-09;United Kingdom;Europe
+207;Sir Robert Robinson;male;1886-09-13;United Kingdom;Europe
+163;Sir William Ramsay;male;1852-10-02;Scotland;Europe
+242;Stanford Moore;male;1913-09-04;USA;North America
+457;Stanley B. Prusiner;male;1942-05-28;USA;North America
+434;Stanley Cohen;male;1922-11-17;USA;North America
+910;Stefan W. Hell;male;1962-12-23;Romania;Europe
+152;Steven Chu;male;1948-02-28;USA;North America
+115;Steven Weinberg;male;1933-05-03;USA;North America
+122;Subramanyan Chandrasekhar;male;1910-10-19;India;Asia
+569;Sully Prudhomme;male;1839-03-16;France;Europe
+425;Sune K. Bergström;male;1916-01-10;Sweden;Europe
+436;Susumu Tonegawa;male;1939-09-05;Japan;Asia
+162;Svante Arrhenius;male;1859-02-19;Sweden;Europe
+924;Svetlana Alexievich;female;1948-05-31;Ukraine;Europe
+750;Sydney Brenner;male;1927-01-13;South Africa;Africa
+999;Syukuro Manabe;male;1931-09-21;Japan;Asia
+619;T.S. Eliot;male;1888-09-26;USA;North America
+350;Tadeus Reichstein;male;1897-07-20;Poland;Europe
+919;Takaaki Kajita;male;1959-03-09;Japan;Asia
+959;Tasuku Honjo;male;1942-01-27;Japan;Asia
+871;Tawakkol Karman;female;1979-02-07;Yemen;Asia
+551;The 14th Dalai Lama;male;1935-07-06;Tibet;Asia
+183;The Svedberg;male;1884-08-30;Sweden;Europe
+303;Theodor Kocher;male;1841-08-25;Switzerland;Europe
+571;Theodor Mommsen;male;1817-11-30;Schleswig;Europe
+793;Theodor W. Hänsch;male;1941-10-30;Germany;Europe
+470;Theodore Roosevelt;male;1858-10-27;USA;North America
+175;Theodore W. Richards;male;1868-01-31;USA;North America
+692;Theodore W. Schultz;male;1902-04-30;USA;North America
+842;Thomas A. Steitz;male;1940-08-23;USA;North America
+800;Thomas C. Schelling;male;1921-04-14;USA;North America
+886;Thomas C. Südhof;male;1955-12-22;Germany;Europe
+325;Thomas H. Morgan;male;1866-09-25;USA;North America
+357;Thomas H. Weller;male;1915-06-15;USA;North America
+872;Thomas J. Sargent;male;1943-07-19;USA;North America
+602;Thomas Mann;male;1875-06-06;Germany;Europe
+274;Thomas R. Cech;male;1947-12-08;USA;North America
+736;Tim Hunt;male;1943-02-19;United Kingdom;Europe
+687;Tjalling C. Koopmans;male;1910-08-28;the Netherlands;Europe
+478;Tobias Asser;male;1838-04-28;the Netherlands;Europe
+921;Tomas Lindahl;male;1938-01-28;Sweden;Europe
+868;Tomas Tranströmer;male;1931-04-15;Sweden;Europe
+670;Toni Morrison;female;1931-02-18;USA;North America
+424;Torsten N. Wiesel;male;1924-06-03;Sweden;Europe
+828;Toshihide Maskawa;male;1940-02-07;Japan;Asia
+703;Trygve Haavelmo;male;1911-12-13;Norway;Europe
+69;Tsung-Dao Lee;male;1926-11-24;China;Asia
+918;Tu Youyou;female;1930-12-30;China;Asia
+395;Ulf von Euler;male;1905-02-07;Sweden;Europe
+748;NA;NA;NA;NA;NA
+525;NA;NA;NA;NA;NA
+550;NA;NA;NA;NA;NA
+747;V. S. Naipaul;NA;NA;NA;NA
+117;Val Fitch;NA;NA;NA;NA
+841;Venkatraman Ramakrishnan;NA;NA;NA;NA
+585;Verner von Heidenstam;NA;NA;NA;NA
+760;Vernon L. Smith;NA;NA;NA;NA
+653;Vicente Aleixandre;NA;NA;NA;NA
+42;Victor F. Hess;NA;NA;NA;NA
+172;Victor Grignard;NA;NA;NA;NA
+218;Vincent du Vigneaud;NA;NA;NA;NA
+767;Vitaly L. Ginzburg;NA;NA;NA;NA
+248;Vladimir Prelog;NA;NA;NA;NA
+255;Walter Gilbert;NA;NA;NA;NA
+67;Walter H. Brattain;NA;NA;NA;NA
+347;Walter Hess;NA;NA;NA;NA
+290;Walter Kohn;NA;NA;NA;NA
+62;Walther Bothe;NA;NA;NA;NA
+178;Walther Nernst;NA;NA;NA;NA
+783;Wangari Maathai;NA;NA;NA;NA
+683;Wassily Leontief;NA;NA;NA;NA
+206;Wendell M. Stanley;NA;NA;NA;NA
+414;Werner Arber;NA;NA;NA;NA
+361;Werner Forssmann;NA;NA;NA;NA
+38;Werner Heisenberg;NA;NA;NA;NA
+1;Wilhelm Conrad Röntgen;male;1845-03-27;Prussia;Europe
+168;Wilhelm Ostwald;male;1853-09-02;Russian Empire;Europe
+16;Wilhelm Wien;male;1864-01-13;Prussia;Europe
+224;Willard F. Libby;male;1908-12-17;USA;North America
+839;Willard S. Boyle;male;1924-08-19;Canada;North America
+315;Willem Einthoven;male;1860-05-21;Java, Dutch East Indies;Asia
+123;William A. Fowler;male;1911-08-09;USA;North America
+65;William B. Shockley;male;1910-02-13;United Kingdom;Europe
+20;William Bragg;male;1862-07-02;United Kingdom;Europe
+593;William Butler Yeats;male;1865-06-13;Ireland;Europe
+916;William C. Campbell;male;1930-06-28;Ireland;Europe
+968;William D. Nordhaus;male;1941-05-31;USA;North America
+154;William D. Phillips;male;1948-11-05;USA;North America
+911;William E. Moerner;male;1953-06-24;USA;North America
+209;William F. Giauque;male;1895-05-12;Canada;North America
+706;William F. Sharpe;male;1934-06-16;USA;North America
+620;William Faulkner;male;1897-09-25;USA;North America
+970;William G. Kaelin Jr;male;1957-11-23;USA;North America
+660;William Golding;male;1911-09-19;United Kingdom;Europe
+243;William H. Stein;male;1911-06-25;USA;North America
+741;William Knowles;male;1917-06-01;USA;North America
+249;William Lipscomb;male;1919-12-09;USA;North America
+328;William P. Murphy;male;1892-02-06;USA;North America
+716;William Vickrey;male;1914-06-21;Canada;North America
+63;Willis E. Lamb;male;1913-07-12;USA;North America
+529;Willy Brandt;male;1913-12-18;Germany;Europe
+624;Winston Churchill;male;1874-11-30;United Kingdom;Europe
+673;Wislawa Szymborska;female;1923-07-02;Poland;Europe
+594;Wladyslaw Reymont;male;1867-05-07;Russian Empire;Europe
+663;Wole Soyinka;male;1934-07-13;Nigeria;Africa
+739;Wolfgang Ketterle;male;1957-10-21;West Germany;Europe
+137;Wolfgang Paul;male;1913-08-10;Germany;Europe
+50;Wolfgang Pauli;male;1900-04-25;Austria;Europe
+483;Woodrow Wilson;male;1856-12-28;USA;North America
+994;NA;NA;NA;NA;NA
+557;Yasser Arafat;male;1929-08-24;Egypt;Africa
+642;Yasunari Kawabata;male;1899-06-11;Japan;Asia
+559;Yitzhak Rabin;male;1922-03-01;British Mandate of Palestine;Asia
+826;Yoichiro Nambu;male;1921-01-18;Japan;Asia
+927;Yoshinori Ohsumi;male;1945-02-09;Japan;Asia
+265;Yuan T. Lee;male;1936-11-19;Taiwan;Asia
+794;Yves Chauvin;male;1930-10-10;Belgium;Europe
+726;Zhores Alferov;male;1930-03-15;USSR;Europe
