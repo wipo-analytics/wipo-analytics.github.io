@@ -10,7 +10,10 @@ date: 03/15/2022
 output: distill::distill_article
 ---
 
-![](postgreslogo.png)
+```{r postgres, echo=FALSE, fig.align='center'}
+
+knitr::include_graphics("postgreslogo.png")
+```
 
 In this post we will cover some of the basics of using PostgreSQL on macOS. This will include some background about what PostgreSQL is and how it works, installation, creation of databases and basic querying.
 

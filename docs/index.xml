@@ -7,23 +7,47 @@
     <description>A resource hub for open patent analytics
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Mar 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>PatentsView Bulk Data</title>
-      <dc:creator>Paul Oldham</dc:creator>
-      <link>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</link>
-      <description>Learn how to download bulk US patent data from PatentsView with R.</description>
-      <guid>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</guid>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
-      <media:content url="https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data/images/pv_bulk.png" medium="image" type="image/png" width="3234" height="2812"/>
+      <title>Using PostgreSQL with RStudio and DBI</title>
+      <dc:creator>Jasmine Kindness</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/postgresdbi</link>
+      <description>Using DBI to connect to and query PostgreSQL databases</description>
+      <guid>https://wipo-analytics.github.io/posts/postgresdbi</guid>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Visualising Nobel Prizes and Gender using API data</title>
+      <title>Women Inventors Data in R</title>
+      <dc:creator>Paul Oldham</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2022-03-15-women-inventors</link>
+      <description>Data on Women Inventors from the USPTO</description>
+      <guid>https://wipo-analytics.github.io/posts/2022-03-15-women-inventors</guid>
+      <pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Getting Started with PostgreSQL</title>
+      <dc:creator>Jasmine Kindness</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/gettingstartedwithpostgres</link>
+      <description>Learn the basics of Postgres, what it is, how it works, and how to install it on macOS</description>
+      <guid>https://wipo-analytics.github.io/posts/gettingstartedwithpostgres</guid>
+      <pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/gettingstartedwithpostgres/distill-preview.png" medium="image" type="image/png" width="830" height="248"/>
+    </item>
+    <item>
+      <title>Visualising Nobel API data in R</title>
       <dc:creator>Jasmine Kindness</dc:creator>
       <link>https://wipo-analytics.github.io/posts/howtoapi</link>
-      <description>Follow along as we call data from the Nobel API, convert it from JSON, and visualise it to learn more about the gender distribution of Nobel Prize recipients</description>
+      <description>Follow along as we call data from the Nobel API, convert it from JSON and visualise it to gain insight about the gender distribution of Nobel Prize recipients</description>
       <guid>https://wipo-analytics.github.io/posts/howtoapi</guid>
-      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Querying PostgreSQL Tables</title>
+      <dc:creator>Jasmine Kindness</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/queryingpostgres</link>
+      <description>How to create and query a PostgreSQL database</description>
+      <guid>https://wipo-analytics.github.io/posts/queryingpostgres</guid>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Import Bulk PatentsView Data with R</title>
@@ -32,6 +56,15 @@
       <description>Importing USPTO PatentsView Data Download Files with R.</description>
       <guid>https://wipo-analytics.github.io/posts/2022-01-13-patentsview-import-bulk-data</guid>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>PatentsView Bulk Data</title>
+      <dc:creator>Paul Oldham</dc:creator>
+      <link>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</link>
+      <description>Learn how to download bulk US patent data from PatentsView with R.</description>
+      <guid>https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data</guid>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data/images/pv_bulk.png" medium="image" type="image/png" width="3234" height="2812"/>
     </item>
     <item>
       <title>elasticsearch</title>

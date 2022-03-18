@@ -4,22 +4,22 @@
       "path": "about.html",
       "title": "About this Site",
       "author": [],
-      "contents": "\nThis is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics) and Lakshmi Supriya (WIPO), Christine Gacuiri (Amband).\n\n\n\n",
-      "last_modified": "2022-03-11T12:51:28+00:00"
+      "contents": "\nThis is the resource hub for the training materials in Patent\nAnalytics from the World Intellectual Property Organization. The WIPO\npatent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World\nAnalytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics)\nand Lakshmi Supriya (WIPO), Christine Gacuiri (Amband).\n\n\n\n",
+      "last_modified": "2022-03-18T12:03:15+00:00"
     },
     {
       "path": "git_steps.html",
       "title": "Untitled",
       "author": [],
-      "contents": "\n\n\n\n\n\n\n\n\nWIPO Patent Analytics\n\n\nHome\nAbout\nManual\nHandbook\nDatasets\nPresentations\n☰\n\n\n  \n    \n      \n        \n        \n        \n      \n      \n    \n    \n      \n  Home\n\n\n  About\n\n\n  Manual\n\n\n  Handbook\n\n\n  Datasets\n\n\n  Presentations\n\n      \n  \n\n\n\n\n\n\nUntitled\n\n\n\n\n\nProcess - STEPS\nIn Git make sure you are in master brach\nPULL to get latest version of master\nCreate a new branch for the work you are about to do. Give the branch a name jazz_api, jazz_sql\nMake sure you are in your branch\nMake changes\nCommit and push on your branch\nMake pull request\nMerge to Master if you are sure it will not break anything\nOtherwise request review\n\n\n\n\n\n\n\n\n\n\n\n\n\n// add bootstrap table styles to pandoc tables\nfunction bootstrapStylePandocTables() {\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\n}\n$(document).ready(function () {\n  bootstrapStylePandocTables();\n});\n\n\n\n$(document).ready(function () {\n  window.buildTabsets(\"TOC\");\n});\n\n$(document).ready(function () {\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\n    $(this).parent().toggleClass('nav-tabs-open');\n  });\n});\n\n  (function () {\n    var script = document.createElement(\"script\");\n    script.type = \"text/javascript\";\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\n  })();\n",
-      "last_modified": "2022-03-11T12:51:28+00:00"
+      "contents": "\n\n\n\n\n\n\n\n\nWIPO Patent Analytics\n\n\nHome\nAbout\nManual\nHandbook\nDatasets\nPresentations\n☰\n\n\n  \n    \n      \n        \n        \n        \n      \n      \n    \n    \n      \n  Home\n\n\n  About\n\n\n  Manual\n\n\n  Handbook\n\n\n  Datasets\n\n\n  Presentations\n\n      \n  \n\n\n\n\n\n\nUntitled\n\n\n\n\n\nProcess - STEPS\nIn Git make sure you are in master brach\nPULL to get latest version of master\nCreate a new branch for the work you are about to do. Give the\nbranch a name jazz_api, jazz_sql\nMake sure you are in your branch\nMake changes\nCommit and push on your branch\nMake pull request\nMerge to Master if you are sure it will not break anything\nOtherwise request review\n\n\n\n\n\n\n\n\n\n\n\n\n\n// add bootstrap table styles to pandoc tables\nfunction bootstrapStylePandocTables() {\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\n}\n$(document).ready(function () {\n  bootstrapStylePandocTables();\n});\n\n\n\n$(document).ready(function () {\n  window.buildTabsets(\"TOC\");\n});\n\n$(document).ready(function () {\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\n    $(this).parent().toggleClass('nav-tabs-open');\n  });\n});\n\n  (function () {\n    var script = document.createElement(\"script\");\n    script.type = \"text/javascript\";\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\n  })();\n",
+      "last_modified": "2022-03-18T12:03:16+00:00"
     },
     {
       "path": "index.html",
       "title": "WIPO Analytics",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-03-11T12:51:28+00:00"
+      "last_modified": "2022-03-18T12:03:16+00:00"
     }
   ],
   "collections": ["posts/posts.json"]

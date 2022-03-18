@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-11-01"/>
-  <meta property="article:created" itemprop="dateCreated" content="2022-11-01"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-01-01"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-01-01"/>
   <meta name="article:author" content="Paul Oldham"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -113,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["PatentsView Bulk Data"]},{"type":"character","attributes":{},"value":["Learn how to download bulk US patent data from PatentsView with R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Paul Oldham"]},{"type":"character","attributes":{},"value":["https://github.com/wipo-analytics"]},{"type":"character","attributes":{},"value":["0000-0002-1013-4390"]}]}]},{"type":"character","attributes":{},"value":["11-01-2022"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["PatentsView Bulk Data"]},{"type":"character","attributes":{},"value":["Learn how to download bulk US patent data from PatentsView with R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","orcid_id","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Paul Oldham"]},{"type":"character","attributes":{},"value":["https://github.com/wipo-analytics"]},{"type":"character","attributes":{},"value":["0000-0002-1013-4390"]},{"type":"character","attributes":{},"value":["Manchester Institute of Innovation Research"]}]}]},{"type":"character","attributes":{},"value":["01-01-2022"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1460,7 +1460,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"PatentsView Bulk Data","description":"Learn how to download bulk US patent data from PatentsView with R.","authors":[{"author":"Paul Oldham","authorURL":"https://github.com/wipo-analytics","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0000-0002-1013-4390"}],"publishedDate":"2022-11-01T00:00:00.000+00:00","citationText":"Oldham, 2022"}
+{"title":"PatentsView Bulk Data","description":"Learn how to download bulk US patent data from PatentsView with R.","authors":[{"author":"Paul Oldham","authorURL":"https://github.com/wipo-analytics","affiliation":"Manchester Institute of Innovation Research","affiliationURL":"#","orcidID":"0000-0002-1013-4390"}],"publishedDate":"2022-01-01T00:00:00.000+00:00","citationText":"Oldham, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1473,22 +1473,47 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>PatentsView Bulk Data</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Learn how to download bulk US patent data from PatentsView with R.</p></p>
+<p><p>Learn how to download bulk US patent data from PatentsView with
+R.</p></p>
 </div>
 
 <div class="d-byline">
-  Paul Oldham <a href="https://github.com/wipo-analytics" class="uri">https://github.com/wipo-analytics</a> 
+  Paul Oldham <a href="https://github.com/wipo-analytics"
+class="uri">https://github.com/wipo-analytics</a> (Manchester Institute
+of Innovation Research)
   
-<br/>11-01-2022
+<br/>01-01-2022
 </div>
 
 <div class="d-article">
 <h2 id="introduction">Introduction</h2>
-<p>The US PatentsView service is a great innovation in making patent data available at scale. In a <a href="INSERT">previous article</a> Enric Escorsa introduced the PattentsView API in R. In this article we are going to focus on the <a href="https://patentsview.org/download/data-download-tables">PatentsView Data Download</a>.</p>
-<p>If you work with patent data a lot you may want to create your own internal database. Alternatively, if you are interested in text mining and machine learning you will probably want to access patent data at scale. The <a href="https://patentsview.org/download/data-download-tables">PatentsView Data Download</a> makes it easy to do this. A lot of work has gone in to making the data available in table format so that it can be easily used by data scientists without a lot of messing around parsing masses of XML or JSON. It is difficult to over-emphasise how important this work has been because it takes away a huge amount of the pain involved in patent analytics at scale and provides us with very clean data formats to work with.</p>
-<p>In this article we are going to focus on obtaining the information about the data that we want to download from PatentsView in an organised way using web scraping and data tidying in R to create two data tables. In part 2 we will use the results of this article to automate downloading the PatentsView bulk tables.</p>
+<p>The US PatentsView service is a great innovation in making patent
+data available at scale. In a <a href="INSERT">previous article</a>
+Enric Escorsa introduced the PattentsView API in R. In this article we
+are going to focus on the <a
+href="https://patentsview.org/download/data-download-tables">PatentsView
+Data Download</a>.</p>
+<p>If you work with patent data a lot you may want to create your own
+internal database. Alternatively, if you are interested in text mining
+and machine learning you will probably want to access patent data at
+scale. The <a
+href="https://patentsview.org/download/data-download-tables">PatentsView
+Data Download</a> makes it easy to do this. A lot of work has gone in to
+making the data available in table format so that it can be easily used
+by data scientists without a lot of messing around parsing masses of XML
+or JSON. It is difficult to over-emphasise how important this work has
+been because it takes away a huge amount of the pain involved in patent
+analytics at scale and provides us with very clean data formats to work
+with.</p>
+<p>In this article we are going to focus on obtaining the information
+about the data that we want to download from PatentsView in an organised
+way using web scraping and data tidying in R to create two data tables.
+In part 2 we will use the results of this article to automate
+downloading the PatentsView bulk tables.</p>
 <h3 id="the-data-download-page">The Data Download Page</h3>
-<p>In Figure <a href="#fig:downloads">1</a> we can see the download page. To the left we see a data dictionary link with details of the columns in each table and to the right we see the tables themselves.</p>
+<p>In Figure <a href="#fig:downloads">1</a> we can see the download page. To the
+left we see a data dictionary link with details of the columns in each
+table and to the right we see the tables themselves.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:downloads"></span>
 <img src="images/pv_bulk.png" alt="The PatentsView Data Download Page" width="1617" />
@@ -1497,7 +1522,8 @@ Figure 1: The PatentsView Data Download Page
 </p>
 </div>
 </div>
-<p>Before we get excited and start clicking to download the tables lets take a look at the data dictionary.</p>
+<p>Before we get excited and start clicking to download the tables lets
+take a look at the data dictionary.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:dictionary"></span>
 <img src="images/pv_bulk_dictionary.png" alt="The Granted Data Dictionary" width="1661" />
@@ -1506,20 +1532,58 @@ Figure 2: The Granted Data Dictionary
 </p>
 </div>
 </div>
-<p>What we notice here is a description of the content of each column data table along with examples and the data type. We need all this information if we are to construct PatentsView as a Postgres or other database or to use the data with Apache Spark. The data on ids provides the basis for joining different tables and the type is an important part of the database schema. However, notice that this is a html table and there is no excel or .csv version for download that we can see.</p>
-<p>One approach to downloading all this data is to simply click on each link and download the file. However, there are a lot of tables and in reality this is only half of them. The tables we see in Figure <a href="#fig:downloads">1</a> are for <em>granted patents</em> and there is a separate page for <a href="https://patentsview.org/download/pg-download-tables">pre-grant publications of pgPubs</a>. So, we will be doing a lot of clicking of links if we want to obtain all this data. In addition, PatentsView is also subject to quite regular updates (every few months or so). So, if we want to keep the data up to date (and sooner or later we will want to do that) then we will have to click all these links all over again.</p>
-<p>Another approach to downloading all this data is to write a small reusable script that will do this for us. However, to do that we need to perform some other tasks first.</p>
+<p>What we notice here is a description of the content of each column
+data table along with examples and the data type. We need all this
+information if we are to construct PatentsView as a Postgres or other
+database or to use the data with Apache Spark. The data on ids provides
+the basis for joining different tables and the type is an important part
+of the database schema. However, notice that this is a html table and
+there is no excel or .csv version for download that we can see.</p>
+<p>One approach to downloading all this data is to simply click on each
+link and download the file. However, there are a lot of tables and in
+reality this is only half of them. The tables we see in Figure
+<a href="#fig:downloads">1</a> are for <em>granted patents</em> and there is a
+separate page for <a
+href="https://patentsview.org/download/pg-download-tables">pre-grant
+publications of pgPubs</a>. So, we will be doing a lot of clicking of
+links if we want to obtain all this data. In addition, PatentsView is
+also subject to quite regular updates (every few months or so). So, if
+we want to keep the data up to date (and sooner or later we will want to
+do that) then we will have to click all these links all over again.</p>
+<p>Another approach to downloading all this data is to write a small
+reusable script that will do this for us. However, to do that we need to
+perform some other tasks first.</p>
 <ol type="1">
-<li>Investigate the <a href="https://patentsview.org/about/terms-privacy">terms of use</a> to make sure that what we are about to do is OK;</li>
-<li>Identify the elements of the page containing the tables with links to the files to download;</li>
+<li>Investigate the <a
+href="https://patentsview.org/about/terms-privacy">terms of use</a> to
+make sure that what we are about to do is OK;</li>
+<li>Identify the elements of the page containing the tables with links
+to the files to download;</li>
 <li>Download and reconstruct the table with the links;</li>
 <li>Download the files;</li>
 <li>Reconstruct the data dictionary for reference.</li>
 </ol>
-<p>To do that we are going to use R, the <code>rvest</code> package and a helper gadget.</p>
+<p>To do that we are going to use R, the <code>rvest</code> package and
+a helper gadget.</p>
 <h3 id="getting-set-up">Getting Set Up</h3>
-<p>You will need to follow the instructions for downloading RStudio and R for your system that you will find <a href="https://www.rstudio.com/products/rstudio/download/">here</a>. For this article we assume that you already have some familiarity with R but if not there are plenty of introductory tutorials out there. You can also just run each of the chunks in this article on your local machine and they should work.</p>
-<p>Once you are up and running you need to install some packages. <code>rvest</code> is installed as part of the <a href="https://www.tidyverse.org/packages/">tidyverse</a> suite of packages that are used for importing and wrangling data with R. <code>usethis</code>, <code>glue</code> and `janitor` are optional helper packages for this article but they are seriously useful and well worth becoming familiar with. <code>vroom</code> is used for rapidly importing large datasets in R and you will want to install this to make use of the R <a href="https://github.com/PatentsView/PatentsView-Code-Snippets/tree/master/03_bulk_download_read_in">import scripts</a> from PatentsView later on.</p>
+<p>You will need to follow the instructions for downloading RStudio and
+R for your system that you will find <a
+href="https://www.rstudio.com/products/rstudio/download/">here</a>. For
+this article we assume that you already have some familiarity with R but
+if not there are plenty of introductory tutorials out there. You can
+also just run each of the chunks in this article on your local machine
+and they should work.</p>
+<p>Once you are up and running you need to install some packages.
+<code>rvest</code> is installed as part of the <a
+href="https://www.tidyverse.org/packages/">tidyverse</a> suite of
+packages that are used for importing and wrangling data with R.
+<code>usethis</code>, <code>glue</code> and `janitor` are optional
+helper packages for this article but they are seriously useful and well
+worth becoming familiar with. <code>vroom</code> is used for rapidly
+importing large datasets in R and you will want to install this to make
+use of the R <a
+href="https://github.com/PatentsView/PatentsView-Code-Snippets/tree/master/03_bulk_download_read_in">import
+scripts</a> from PatentsView later on.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span><span class='op'>)</span>
@@ -1530,8 +1594,12 @@ Figure 2: The Granted Data Dictionary
 </code></pre>
 </div>
 </div>
-<p>If you are downloading the tidyverse for the first time this might be a good time for a cup of tea.</p>
-<p>When the packages are installed we load them. Note that we need to include <code>rvest</code> in this list because it is downloaded along with the tidyverse but is not loaded when we call the <code>tidyverse</code>.</p>
+<p>If you are downloading the tidyverse for the first time this might be
+a good time for a cup of tea.</p>
+<p>When the packages are installed we load them. Note that we need to
+include <code>rvest</code> in this list because it is downloaded along
+with the tidyverse but is not loaded when we call the
+<code>tidyverse</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
@@ -1543,12 +1611,30 @@ Figure 2: The Granted Data Dictionary
 </code></pre>
 </div>
 </div>
-<p>We are going to be downloading the data download page and extracting the elements we are interested in. To help us figure out the elements that we want from the page we will use a small Google Chrome extension called <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en">Selector Gadget</a>.</p>
-<p>Assuming that you are reading this in your browser, drag the <a href="javascript:(function()%7Bvar%20s=document.createElement(&#39;div&#39;);s.innerHTML=&#39;Loading…&#39;;s.style.color=&#39;black&#39;;s.style.padding=&#39;20px&#39;;s.style.position=&#39;fixed&#39;;s.style.zIndex=&#39;9999&#39;;s.style.fontSize=&#39;3.0em&#39;;s.style.border=&#39;2px%20solid%20black&#39;;s.style.right=&#39;40px&#39;;s.style.top=&#39;40px&#39;;s.setAttribute(&#39;class&#39;,&#39;selector_gadget_loading&#39;);s.style.background=&#39;white&#39;;document.body.appendChild(s);s=document.createElement(&#39;script&#39;);s.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;);s.setAttribute(&#39;src&#39;,&#39;https://dv0akt2986vzh.cloudfront.net/unstable/lib/selectorgadget.js&#39;);document.body.appendChild(s);%7D)();">Selector Gadget</a> to your bookmarks bar.</p>
-<h2 id="extracting-the-table-and-file-links">Extracting the Table and File Links</h2>
-<p>We are going to use the <code>rvest</code> package to download the html and then identify and extract the table using <code>rvest</code>.</p>
-<p><code>rvest</code> by Hadley Wickham is a go to package for web scraping in R (with Beautiful Soup for Pythonistas). You can read a basic getting started guide <a href="https://rvest.tidyverse.org/">here</a> and there are plenty of example and tutorials that will help you go further with <code>rvest</code>. It is always good professional practice to check the terms of use on the sites you are planning to work with. We will break this up into steps to walk through what is happening.</p>
-<p>The first thing we need to do is to download the html page we want to work with.</p>
+<p>We are going to be downloading the data download page and extracting
+the elements we are interested in. To help us figure out the elements
+that we want from the page we will use a small Google Chrome extension
+called <a
+href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en">Selector
+Gadget</a>.</p>
+<p>Assuming that you are reading this in your browser, drag the <a
+href="javascript:(function()%7Bvar%20s=document.createElement(&#39;div&#39;);s.innerHTML=&#39;Loading…&#39;;s.style.color=&#39;black&#39;;s.style.padding=&#39;20px&#39;;s.style.position=&#39;fixed&#39;;s.style.zIndex=&#39;9999&#39;;s.style.fontSize=&#39;3.0em&#39;;s.style.border=&#39;2px%20solid%20black&#39;;s.style.right=&#39;40px&#39;;s.style.top=&#39;40px&#39;;s.setAttribute(&#39;class&#39;,&#39;selector_gadget_loading&#39;);s.style.background=&#39;white&#39;;document.body.appendChild(s);s=document.createElement(&#39;script&#39;);s.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;);s.setAttribute(&#39;src&#39;,&#39;https://dv0akt2986vzh.cloudfront.net/unstable/lib/selectorgadget.js&#39;);document.body.appendChild(s);%7D)();">Selector
+Gadget</a> to your bookmarks bar.</p>
+<h2 id="extracting-the-table-and-file-links">Extracting the Table and
+File Links</h2>
+<p>We are going to use the <code>rvest</code> package to download the
+html and then identify and extract the table using
+<code>rvest</code>.</p>
+<p><code>rvest</code> by Hadley Wickham is a go to package for web
+scraping in R (with Beautiful Soup for Pythonistas). You can read a
+basic getting started guide <a
+href="https://rvest.tidyverse.org/">here</a> and there are plenty of
+example and tutorials that will help you go further with
+<code>rvest</code>. It is always good professional practice to check the
+terms of use on the sites you are planning to work with. We will break
+this up into steps to walk through what is happening.</p>
+<p>The first thing we need to do is to download the html page we want to
+work with.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_raw</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_html</a></span><span class='op'>(</span><span class='st'>"https://patentsview.org/download/data-download-tables"</span><span class='op'>)</span>
@@ -1559,10 +1645,18 @@ Figure 2: The Granted Data Dictionary
 <pre><code>{html_document}
 &lt;html lang=&quot;en&quot; dir=&quot;ltr&quot; prefix=&quot;content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# &quot;&gt;
 [1] &lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; cha ...
-[2] &lt;body class=&quot;path-datasets layout-no-sidebars path-node page-no ...</code></pre>
+[2] &lt;body class=&quot;path-datasets layout-no-sidebars path-download&quot;&gt;\n ...</code></pre>
 </div>
-<p>When we print this out we have lots of raw stuff and this does not look very promising.</p>
-<p>Next we want to use the Selector Gadget. What the Selector Gadget does is allows us to identify the CSS tags in the page for the elements that we want. In this case we want the table. Choose the Selector Gadget in your bookmark bar. We then click into the head of the table and keep clicking around until we have selected the table. Note that as we do this other elements of the page may turn green or yellow. Scroll around the page to spot this and click on them until they go red as we see in Figure <a href="#fig:scribe">3</a>.</p>
+<p>When we print this out we have lots of raw stuff and this does not
+look very promising.</p>
+<p>Next we want to use the Selector Gadget. What the Selector Gadget
+does is allows us to identify the CSS tags in the page for the elements
+that we want. In this case we want the table. Choose the Selector Gadget
+in your bookmark bar. We then click into the head of the table and keep
+clicking around until we have selected the table. Note that as we do
+this other elements of the page may turn green or yellow. Scroll around
+the page to spot this and click on them until they go red as we see in
+Figure <a href="#fig:scribe">3</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:scribe"></span>
 <iframe src="https://scribehow.com/shared/Use_the_Selector_Gadget__ZMzT4_CmTrW9QNUTkxJiKA" width="624" height="400px" data-external="1">
@@ -1572,8 +1666,11 @@ Figure 3: Using the Selector Gadget
 </p>
 </div>
 </div>
-<p>At the bottom of the screen we copy the CSS selectors and then come back to R. It is time to experiment. What we are aiming for here is to create a data frame with the table in it.</p>
-<p>To do that we want to insert the code into html_element and then convert that into a table.</p>
+<p>At the bottom of the screen we copy the CSS selectors and then come
+back to R. It is time to experiment. What we are aiming for here is to
+create a data frame with the table in it.</p>
+<p>To do that we want to insert the code into html_element and then
+convert that into a table.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_tbl</span> <span class='op'>&lt;-</span> <span class='va'>granted_raw</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
@@ -1587,12 +1684,18 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Hmmm… that gives us an error. When using the Selector Gadget as we navigate around we can easily end up with extra elements that we don’t want. One effective approach is to simply work backwards along the selectors deleting them to see if that works. Another approach is to go back into the browser and use the Developer view to inspect the html.</p>
+<p>Hmmm… that gives us an error. When using the Selector Gadget as we
+navigate around we can easily end up with extra elements that we don’t
+want. One effective approach is to simply work backwards along the
+selectors deleting them to see if that works. Another approach is to go
+back into the browser and use the Developer view to inspect the
+html.</p>
 <div class="layout-chunk" data-layout="l-body">
 <iframe src="https://scribehow.com/shared/Inspect_the_Html__d5XbOIeOQk-lMIId7H7l9g" width="624" height="400px" data-external="1">
 </iframe>
 </div>
-<p>So, looking at this what we really want is the element called <code>myTable</code>. Lets try that.</p>
+<p>So, looking at this what we really want is the element called
+<code>myTable</code>. Lets try that.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_tbl</span> <span class='op'>&lt;-</span> <span class='va'>granted_raw</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
@@ -1601,14 +1704,15 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>We can see the result in Table <a href="#tab:printtry"><strong>??</strong></a>. We are displaying here using the <code>gt</code> package for pretty display of tables.</p>
+<p>We can see the result in Table <a href="#tab:printtry"><strong>??</strong></a>. We are displaying
+here using the <code>gt</code> package for pretty display of tables.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="exghwfwxeu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ytxyfxudjn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#exghwfwxeu .gt_table {
+#ytxyfxudjn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1633,7 +1737,7 @@ Figure 3: Using the Selector Gadget
   border-left-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_heading {
+#ytxyfxudjn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1645,7 +1749,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_title {
+#ytxyfxudjn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1655,7 +1759,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-width: 0;
 }
 
-#exghwfwxeu .gt_subtitle {
+#ytxyfxudjn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1665,13 +1769,13 @@ Figure 3: Using the Selector Gadget
   border-top-width: 0;
 }
 
-#exghwfwxeu .gt_bottom_border {
+#ytxyfxudjn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_col_headings {
+#ytxyfxudjn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1686,7 +1790,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_col_heading {
+#ytxyfxudjn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1706,7 +1810,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#exghwfwxeu .gt_column_spanner_outer {
+#ytxyfxudjn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1718,15 +1822,15 @@ Figure 3: Using the Selector Gadget
   padding-right: 4px;
 }
 
-#exghwfwxeu .gt_column_spanner_outer:first-child {
+#ytxyfxudjn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#exghwfwxeu .gt_column_spanner_outer:last-child {
+#ytxyfxudjn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#exghwfwxeu .gt_column_spanner {
+#ytxyfxudjn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1738,7 +1842,7 @@ Figure 3: Using the Selector Gadget
   width: 100%;
 }
 
-#exghwfwxeu .gt_group_heading {
+#ytxyfxudjn .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1760,7 +1864,7 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#exghwfwxeu .gt_empty_group_heading {
+#ytxyfxudjn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1775,15 +1879,15 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#exghwfwxeu .gt_from_md > :first-child {
+#ytxyfxudjn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#exghwfwxeu .gt_from_md > :last-child {
+#ytxyfxudjn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#exghwfwxeu .gt_row {
+#ytxyfxudjn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1802,7 +1906,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#exghwfwxeu .gt_stub {
+#ytxyfxudjn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1814,7 +1918,7 @@ Figure 3: Using the Selector Gadget
   padding-left: 12px;
 }
 
-#exghwfwxeu .gt_summary_row {
+#ytxyfxudjn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1824,7 +1928,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#exghwfwxeu .gt_first_summary_row {
+#ytxyfxudjn .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1834,7 +1938,7 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_grand_summary_row {
+#ytxyfxudjn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1844,7 +1948,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#exghwfwxeu .gt_first_grand_summary_row {
+#ytxyfxudjn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1854,11 +1958,11 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_striped {
+#ytxyfxudjn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#exghwfwxeu .gt_table_body {
+#ytxyfxudjn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1867,7 +1971,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_footnotes {
+#ytxyfxudjn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1881,13 +1985,13 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_footnote {
+#ytxyfxudjn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#exghwfwxeu .gt_sourcenotes {
+#ytxyfxudjn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1901,41 +2005,41 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#exghwfwxeu .gt_sourcenote {
+#ytxyfxudjn .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#exghwfwxeu .gt_left {
+#ytxyfxudjn .gt_left {
   text-align: left;
 }
 
-#exghwfwxeu .gt_center {
+#ytxyfxudjn .gt_center {
   text-align: center;
 }
 
-#exghwfwxeu .gt_right {
+#ytxyfxudjn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#exghwfwxeu .gt_font_normal {
+#ytxyfxudjn .gt_font_normal {
   font-weight: normal;
 }
 
-#exghwfwxeu .gt_font_bold {
+#ytxyfxudjn .gt_font_bold {
   font-weight: bold;
 }
 
-#exghwfwxeu .gt_font_italic {
+#ytxyfxudjn .gt_font_italic {
   font-style: italic;
 }
 
-#exghwfwxeu .gt_super {
+#ytxyfxudjn .gt_super {
   font-size: 65%;
 }
 
-#exghwfwxeu .gt_footnote_marks {
+#ytxyfxudjn .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1949,52 +2053,86 @@ Figure 3: Using the Selector Gadget
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Description</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"># of Rows</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Origin</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Data Last Updated</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Update Version</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">pregrant applications (PGPubs)</td>
-<td class="gt_row gt_left">Information on the published applications (PGPubs)</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">raw &amp; disamb</td>
-<td class="gt_row gt_left"></td></tr>
     <tr><td class="gt_row gt_left">application
-            zip: 76.6 MiB, tsv: 417.9 MiB</td>
+
+
+zip: 77.5 MiB
+tsv: 422.8 MiB</td>
 <td class="gt_row gt_left">Information on the applications for granted patent</td>
-<td class="gt_row gt_left">7,811,937</td>
+<td class="gt_row gt_left">7,903,067</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td></tr>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
     <tr><td class="gt_row gt_left">assignee
-            zip: 18.5 MiB, tsv: 38.7 MiB</td>
+
+
+zip: 18.8 MiB
+tsv: 39.2 MiB</td>
 <td class="gt_row gt_left">Disambiguated assignee data for granted patents and pre-granted applications</td>
-<td class="gt_row gt_left">530,932</td>
+<td class="gt_row gt_left">538,617</td>
 <td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">October 8, 2021</td></tr>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
     <tr><td class="gt_row gt_left">botanic
-            zip: 624.5 KiB, tsv: 1.2 MiB</td>
+
+
+zip: 635.7 KiB
+tsv: 1.3 MiB</td>
 <td class="gt_row gt_left">Botanic information for plant patents</td>
-<td class="gt_row gt_left">17,756</td>
+<td class="gt_row gt_left">18,065</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td></tr>
-    <tr><td class="gt_row gt_left">brf_sum_text</td>
-<td class="gt_row gt_left">Brief summary text</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left"></td></tr>
-    <tr><td class="gt_row gt_left">claim</td>
-<td class="gt_row gt_left">Full text of patent claims, including dependency and sequence</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left"></td></tr>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
+    <tr><td class="gt_row gt_left">cpc_current
+
+
+zip: 1.5 GiB
+tsv: 4.0 GiB</td>
+<td class="gt_row gt_left">Current CPC classification data for all patents (applied retrospectively to all patents)</td>
+<td class="gt_row gt_left">45,263,138</td>
+<td class="gt_row gt_left">raw (from separate classification files)</td>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
+    <tr><td class="gt_row gt_left">cpc_group
+
+
+zip: 21.5 KiB
+tsv: 67.9 KiB</td>
+<td class="gt_row gt_left">Lookup table of current CPC groups</td>
+<td class="gt_row gt_left">673</td>
+<td class="gt_row gt_left">raw (from separate classification files)</td>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
+    <tr><td class="gt_row gt_left">cpc_subgroup
+
+
+zip: 5.4 MiB
+tsv: 61.1 MiB</td>
+<td class="gt_row gt_left">Lookup table of current CPC subgroups</td>
+<td class="gt_row gt_left">261,155</td>
+<td class="gt_row gt_left">raw (from separate classification files)</td>
+<td class="gt_row gt_left">September 30, 2021</td></tr>
   </tbody>
   
   
 </table>
 </div>
 </div>
-<p>We now have the table with all the various text, but what we do not have is the hyperlinks to the files. To get those we go back to the Selector Gadget and select only the first column of the table (as that contains the hyperlinks to download the files. This time we use <code>html_nodes</code> to select only those nodes and then we want the <code>href</code> attribute of those nodes (as href is for hyperlinks).</p>
-<p>When doing this we need to bear in mind that we are after links to files to download and there may be other hyperlinks in the table that we don’t want or other junk. We therefore want a way to limit the links to the download.</p>
-<p>We can take this stepwise and we will use a quick tibble (data frame) to illustrate. Note that we have added <code>drop_na()</code> at the end to remove the NA (not available) as that gets us closer to what we want. If working with a data frame with more than one column make sure you specify the column name for <code>drop_na()</code>.</p>
+<p>We now have the table with all the various text, but what we do not
+have is the hyperlinks to the files. To get those we go back to the
+Selector Gadget and select only the first column of the table (as that
+contains the hyperlinks to download the files. This time we use
+<code>html_nodes</code> to select only those nodes and then we want the
+<code>href</code> attribute of those nodes (as href is for
+hyperlinks).</p>
+<p>When doing this we need to bear in mind that we are after links to
+files to download and there may be other hyperlinks in the table that we
+don’t want or other junk. We therefore want a way to limit the links to
+the download.</p>
+<p>We can take this stepwise and we will use a quick tibble (data frame)
+to illustrate. Note that we have added <code>drop_na()</code> at the end
+to remove the NA (not available) as that gets us closer to what we want.
+If working with a data frame with more than one column make sure you
+specify the column name for <code>drop_na()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_urls</span> <span class='op'>&lt;-</span> <span class='va'>granted_raw</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
@@ -2010,15 +2148,29 @@ Figure 3: Using the Selector Gadget
 <pre><code># A tibble: 6 × 1
   url                                                                 
   &lt;chr&gt;                                                               
-1 /download/pg-download-tables                                        
-2 https://s3.amazonaws.com/data.patentsview.org/download/application.…
-3 https://s3.amazonaws.com/data.patentsview.org/download/assignee.tsv…
-4 https://s3.amazonaws.com/data.patentsview.org/download/botanic.tsv.…
-5 /download/brf_sum_text                                              
-6 /download/claims                                                    </code></pre>
+1 https://s3.amazonaws.com/data.patentsview.org/download/application.…
+2 https://s3.amazonaws.com/data.patentsview.org/download/assignee.tsv…
+3 https://s3.amazonaws.com/data.patentsview.org/download/botanic.tsv.…
+4 https://s3.amazonaws.com/data.patentsview.org/download/cpc_current.…
+5 https://s3.amazonaws.com/data.patentsview.org/download/cpc_group.ts…
+6 https://s3.amazonaws.com/data.patentsview.org/download/cpc_subgroup…</code></pre>
 </div>
-<p>In an ideal world we would now join these two tables together. However, there is a problem: the tables are not the same length and so cannot just be joined. The <code>granted_tbl</code> has 55 rows and the <code>granted_links</code> has 54. Inspecting the two files does not reveal anything obvious such as blank space or extra links that I could see.</p>
-<p>One solution to this is to focus on what the two tables have in common. If we inspect <code>Table Name</code> in the <code>granted_tbl</code> and then links in <code>granted_links</code> we will see that what they have in common is the word “zip.” This gives us an easy solution that gets us where we want to go. We solve this by using <code>mutate</code> to add a column called zip that detects the word “zip” using (<code>str_detect()</code>) in both tables and then reduce the size of the table to those cases using <code>filter == TRUE</code>. We tidy up by dropping the zip column and check whether the two tables now have the same number of rows.</p>
+<p>In an ideal world we would now join these two tables together.
+However, there is a problem: the tables are not the same length and so
+cannot just be joined. The <code>granted_tbl</code> has 55 rows and the
+<code>granted_links</code> has 54. Inspecting the two files does not
+reveal anything obvious such as blank space or extra links that I could
+see.</p>
+<p>One solution to this is to focus on what the two tables have in
+common. If we inspect <code>Table Name</code> in the
+<code>granted_tbl</code> and then links in <code>granted_links</code> we
+will see that what they have in common is the word “zip”. This gives us
+an easy solution that gets us where we want to go. We solve this by
+using <code>mutate</code> to add a column called zip that detects the
+word “zip” using (<code>str_detect()</code>) in both tables and then
+reduce the size of the table to those cases using
+<code>filter == TRUE</code>. We tidy up by dropping the zip column and
+check whether the two tables now have the same number of rows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_tbl</span> <span class='op'>&lt;-</span> <span class='va'>granted_tbl</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
@@ -2037,7 +2189,11 @@ Figure 3: Using the Selector Gadget
 </div>
 <pre><code>[1] TRUE</code></pre>
 </div>
-<p>Yay! One thing we know about these two tables is that they are in the same order. That means we should be able to safely bind them together. Normally, we would prefer to join two tables using a common identifier such as an id or name but we don’t have that. We will use <code>bind_cols</code> for this.</p>
+<p>Yay! One thing we know about these two tables is that they are in the
+same order. That means we should be able to safely bind them together.
+Normally, we would prefer to join two tables using a common identifier
+such as an id or name but we don’t have that. We will use
+<code>bind_cols</code> for this.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_cols</a></span><span class='op'>(</span><span class='va'>granted_tbl</span>, <span class='va'>granted_urls</span><span class='op'>)</span>
@@ -2047,12 +2203,12 @@ Figure 3: Using the Selector Gadget
   <span class='fu'>gt</span><span class='fu'>::</span><span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="fzqatpseyo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="tolgduoyqd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#fzqatpseyo .gt_table {
+#tolgduoyqd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2077,7 +2233,7 @@ Figure 3: Using the Selector Gadget
   border-left-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_heading {
+#tolgduoyqd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2089,7 +2245,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_title {
+#tolgduoyqd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2099,7 +2255,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-width: 0;
 }
 
-#fzqatpseyo .gt_subtitle {
+#tolgduoyqd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2109,13 +2265,13 @@ Figure 3: Using the Selector Gadget
   border-top-width: 0;
 }
 
-#fzqatpseyo .gt_bottom_border {
+#tolgduoyqd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_col_headings {
+#tolgduoyqd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2130,7 +2286,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_col_heading {
+#tolgduoyqd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2150,7 +2306,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#fzqatpseyo .gt_column_spanner_outer {
+#tolgduoyqd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2162,15 +2318,15 @@ Figure 3: Using the Selector Gadget
   padding-right: 4px;
 }
 
-#fzqatpseyo .gt_column_spanner_outer:first-child {
+#tolgduoyqd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fzqatpseyo .gt_column_spanner_outer:last-child {
+#tolgduoyqd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fzqatpseyo .gt_column_spanner {
+#tolgduoyqd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2182,7 +2338,7 @@ Figure 3: Using the Selector Gadget
   width: 100%;
 }
 
-#fzqatpseyo .gt_group_heading {
+#tolgduoyqd .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2204,7 +2360,7 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#fzqatpseyo .gt_empty_group_heading {
+#tolgduoyqd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2219,15 +2375,15 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#fzqatpseyo .gt_from_md > :first-child {
+#tolgduoyqd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fzqatpseyo .gt_from_md > :last-child {
+#tolgduoyqd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fzqatpseyo .gt_row {
+#tolgduoyqd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2246,7 +2402,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#fzqatpseyo .gt_stub {
+#tolgduoyqd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2258,7 +2414,7 @@ Figure 3: Using the Selector Gadget
   padding-left: 12px;
 }
 
-#fzqatpseyo .gt_summary_row {
+#tolgduoyqd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2268,7 +2424,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#fzqatpseyo .gt_first_summary_row {
+#tolgduoyqd .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2278,7 +2434,7 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_grand_summary_row {
+#tolgduoyqd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2288,7 +2444,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#fzqatpseyo .gt_first_grand_summary_row {
+#tolgduoyqd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2298,11 +2454,11 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_striped {
+#tolgduoyqd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fzqatpseyo .gt_table_body {
+#tolgduoyqd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2311,7 +2467,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_footnotes {
+#tolgduoyqd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2325,13 +2481,13 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_footnote {
+#tolgduoyqd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#fzqatpseyo .gt_sourcenotes {
+#tolgduoyqd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2345,41 +2501,41 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#fzqatpseyo .gt_sourcenote {
+#tolgduoyqd .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#fzqatpseyo .gt_left {
+#tolgduoyqd .gt_left {
   text-align: left;
 }
 
-#fzqatpseyo .gt_center {
+#tolgduoyqd .gt_center {
   text-align: center;
 }
 
-#fzqatpseyo .gt_right {
+#tolgduoyqd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fzqatpseyo .gt_font_normal {
+#tolgduoyqd .gt_font_normal {
   font-weight: normal;
 }
 
-#fzqatpseyo .gt_font_bold {
+#tolgduoyqd .gt_font_bold {
   font-weight: bold;
 }
 
-#fzqatpseyo .gt_font_italic {
+#tolgduoyqd .gt_font_italic {
   font-style: italic;
 }
 
-#fzqatpseyo .gt_super {
+#tolgduoyqd .gt_super {
   font-size: 65%;
 }
 
-#fzqatpseyo .gt_footnote_marks {
+#tolgduoyqd .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2393,52 +2549,70 @@ Figure 3: Using the Selector Gadget
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Description</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"># of Rows</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Origin</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Data Last Updated</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Update Version</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">url</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
     <tr><td class="gt_row gt_left">application
-            zip: 76.6 MiB, tsv: 417.9 MiB</td>
+
+
+zip: 77.5 MiB
+tsv: 422.8 MiB</td>
 <td class="gt_row gt_left">Information on the applications for granted patent</td>
-<td class="gt_row gt_left">7,811,937</td>
+<td class="gt_row gt_left">7,903,067</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/application.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">assignee
-            zip: 18.5 MiB, tsv: 38.7 MiB</td>
+
+
+zip: 18.8 MiB
+tsv: 39.2 MiB</td>
 <td class="gt_row gt_left">Disambiguated assignee data for granted patents and pre-granted applications</td>
-<td class="gt_row gt_left">530,932</td>
+<td class="gt_row gt_left">538,617</td>
 <td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/assignee.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">botanic
-            zip: 624.5 KiB, tsv: 1.2 MiB</td>
+
+
+zip: 635.7 KiB
+tsv: 1.3 MiB</td>
 <td class="gt_row gt_left">Botanic information for plant patents</td>
-<td class="gt_row gt_left">17,756</td>
+<td class="gt_row gt_left">18,065</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/botanic.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_current
-            zip: 1.5 GiB, tsv: 4.0 GiB</td>
+
+
+zip: 1.5 GiB
+tsv: 4.0 GiB</td>
 <td class="gt_row gt_left">Current CPC classification data for all patents (applied retrospectively to all patents)</td>
-<td class="gt_row gt_left">44,759,564</td>
+<td class="gt_row gt_left">45,263,138</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_current.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_group
-            zip: 21.5 KiB, tsv: 67.8 KiB</td>
+
+
+zip: 21.5 KiB
+tsv: 67.9 KiB</td>
 <td class="gt_row gt_left">Lookup table of current CPC groups</td>
-<td class="gt_row gt_left">672</td>
+<td class="gt_row gt_left">673</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">August 11, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_group.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_subgroup
-            zip: 5.4 MiB, tsv: 61.1 MiB</td>
+
+
+zip: 5.4 MiB
+tsv: 61.1 MiB</td>
 <td class="gt_row gt_left">Lookup table of current CPC subgroups</td>
-<td class="gt_row gt_left">260,874</td>
+<td class="gt_row gt_left">261,155</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">August 11, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_subgroup.tsv.zip</td></tr>
   </tbody>
   
@@ -2446,8 +2620,11 @@ Figure 3: Using the Selector Gadget
 </table>
 </div>
 </div>
-<p>It is a good idea to check that the top and bottom rows are what you expect to see just as a precaution.</p>
-<p>So, now we have a table with the links to the files we want to download. We could just create a long list of the urls and download them one at a time like this.</p>
+<p>It is a good idea to check that the top and bottom rows are what you
+expect to see just as a precaution.</p>
+<p>So, now we have a table with the links to the files we want to
+download. We could just create a long list of the urls and download them
+one at a time like this.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/download.file.html'>download.file</a></span><span class='op'>(</span><span class='st'>"https://s3.amazonaws.com/data.patentsview.org/download/application.tsv.zip"</span>, destfile <span class='op'>=</span> <span class='st'>"appication_tsv.zip"</span><span class='op'>)</span>
@@ -2456,9 +2633,22 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>That will work, but we would need to do it 49 times without making a mistake. If we wanted to change the destination for saving the files we would have to edit all of that (without making a mistake). A better approach in this case is to write a reusable function that also gives us some flexibility on where we store the data.</p>
-<p>We’re going to call this function <code>pv_download.</code> It is going to take two initial arguments and then we will start improving it. We are going to use the magical <code>glue</code> package for string interpolation (joining strings together) to help us with naming things.</p>
-<p>Our strategy will be to keep the file name exactly as it is, because these should stay stable and we will inevitably get confused if we change the files we download. We will use the <code>basename()</code> function to extract the file name to use. Lets take a look at what basename does by selecting the first of our urls and passing it into <code>basename()</code>.</p>
+<p>That will work, but we would need to do it 49 times without making a
+mistake. If we wanted to change the destination for saving the files we
+would have to edit all of that (without making a mistake). A better
+approach in this case is to write a reusable function that also gives us
+some flexibility on where we store the data.</p>
+<p>We’re going to call this function <code>pv_download.</code> It is
+going to take two initial arguments and then we will start improving it.
+We are going to use the magical <code>glue</code> package for string
+interpolation (joining strings together) to help us with naming
+things.</p>
+<p>Our strategy will be to keep the file name exactly as it is, because
+these should stay stable and we will inevitably get confused if we
+change the files we download. We will use the <code>basename()</code>
+function to extract the file name to use. Lets take a look at what
+basename does by selecting the first of our urls and passing it into
+<code>basename()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/basename.html'>basename</a></span><span class='op'>(</span><span class='va'>granted</span><span class='op'>$</span><span class='va'>url</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
@@ -2466,7 +2656,15 @@ Figure 3: Using the Selector Gadget
 </div>
 <pre><code>[1] &quot;application.tsv.zip&quot;</code></pre>
 </div>
-<p>So, <code>basename</code> has very helpfully stripped the url down to the file name. Next we are going to use <code>glue</code> to create the destination file path and name that is needed by <code>download_file()</code>. You could use other functions such as <code>paste0()</code> for this but then you would miss the magic of <code>glue</code>. We place the two variables we want to pass inside the call with a forward slash. Note the curly brackets around the destination directory {dest} that creates the placeholder for the value that will be provided by the user.</p>
+<p>So, <code>basename</code> has very helpfully stripped the url down to
+the file name. Next we are going to use <code>glue</code> to create the
+destination file path and name that is needed by
+<code>download_file()</code>. You could use other functions such as
+<code>paste0()</code> for this but then you would miss the magic of
+<code>glue</code>. We place the two variables we want to pass inside the
+call with a forward slash. Note the curly brackets around the
+destination directory {dest} that creates the placeholder for the value
+that will be provided by the user.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pv_download</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>url</span> <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>dest</span> <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span> <span class='op'>{</span>
@@ -2478,7 +2676,11 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Let’s see if that will work with one small file. I’m also going to use the <code>janitor</code> package to clean up the column names as they are hard to work with. janitor <code>clean_names()</code> will convert spaces and punctuation to underscores and convert capital letters to lower.</p>
+<p>Let’s see if that will work with one small file. I’m also going to
+use the <code>janitor</code> package to clean up the column names as
+they are hard to work with. janitor <code>clean_names()</code> will
+convert spaces and punctuation to underscores and convert capital
+letters to lower.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>small</span> <span class='op'>&lt;-</span> <span class='va'>granted</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
@@ -2490,7 +2692,8 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>In our working directory we will create a folder to save the data using <code>dir.create()</code>.</p>
+<p>In our working directory we will create a folder to save the data
+using <code>dir.create()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='op'>(</span><span class='st'>"patents"</span><span class='op'>)</span>
@@ -2504,7 +2707,13 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Ok, we will now see a file in the folder called main class. In the next step we will want to loop over multiple urls and download the files to the destination folder as we go. We will use <code>purrr::map()</code> to do that. To test this let’s just pass two small file urls. The first argument to map is the urls to map over, the second is the function itself and finally we pass the destination directory.</p>
+<p>Ok, we will now see a file in the folder called main class. In the
+next step we will want to loop over multiple urls and download the files
+to the destination folder as we go. We will use
+<code>purrr::map()</code> to do that. To test this let’s just pass two
+small file urls. The first argument to map is the urls to map over, the
+second is the function itself and finally we pass the destination
+directory.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map</a></span><span class='op'>(</span><span class='va'>small</span><span class='op'>$</span><span class='va'>url</span>, <span class='va'>pv_download</span>, dest <span class='op'>=</span> <span class='st'>"patents"</span><span class='op'>)</span>
@@ -2516,7 +2725,14 @@ Figure 3: Using the Selector Gadget
 [[2]]
 [1] 0</code></pre>
 </div>
-<p>Now that our basic function is working we can start to improve it. The first issue we want to tackle is that the <code>destdir</code> argument is inflexible because it assumes that a folder called patents exists. Lots of people in the R community make this more flexible by checking whether a folder exists and creating it if it doesn’t. We are also going to use <code>usethis::ui_value</code> to give us an informative message if the destination already exists or if it is created.</p>
+<p>Now that our basic function is working we can start to improve it.
+The first issue we want to tackle is that the <code>destdir</code>
+argument is inflexible because it assumes that a folder called patents
+exists. Lots of people in the R community make this more flexible by
+checking whether a folder exists and creating it if it doesn’t. We are
+also going to use <code>usethis::ui_value</code> to give us an
+informative message if the destination already exists or if it is
+created.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pv_download</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>url</span> <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>dest</span> <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span> <span class='op'>{</span>
@@ -2550,15 +2766,36 @@ Figure 3: Using the Selector Gadget
 [[2]]
 [1] 0</code></pre>
 </div>
-<p>We now get two informative messages as we loop over the code. The first tells us that the <code>patents2</code> directory has been created. When we make the second call, we learn that the directory exists. <code>usethis</code> functions such as <code>ui_info</code> , <code>ui_warn</code>, <code>ui_stop</code> and <code>ui_todo</code> are incredibly useful for writing informative messages to yourself and to your users.</p>
-<p>Before we head off and start downloading the data we have another issue that it is a good idea to tackle. That is keeping a record of when we downloaded the files.</p>
+<p>We now get two informative messages as we loop over the code. The
+first tells us that the <code>patents2</code> directory has been
+created. When we make the second call, we learn that the directory
+exists. <code>usethis</code> functions such as <code>ui_info</code> ,
+<code>ui_warn</code>, <code>ui_stop</code> and <code>ui_todo</code> are
+incredibly useful for writing informative messages to yourself and to
+your users.</p>
+<p>Before we head off and start downloading the data we have another
+issue that it is a good idea to tackle. That is keeping a record of when
+we downloaded the files.</p>
 <h3 id="keeping-a-download-record">Keeping A Download Record</h3>
-<p>One issue with bulk file downloads of zip or gzip files is that we don’t really want to open them into memory to add new information such as the download date as we go. But, it will be really helpful if we can find a way to do that. One answer to that is to use the table we created earlier and store it (and the data dictionary) in the same place as the files we download.</p>
-<p>To do that it is a good idea to do some tidying up of the table we dowloaded earlier.</p>
-<p>One issue with this table is that the column names are good for display on the web but awkward to work with. We also have a <code>Table Name</code> column that contains multiple bits of information when it would be useful to have the long file names and short file names. We would also like to know when we downloaded this table. We are going to clean up three elements of the table</p>
+<p>One issue with bulk file downloads of zip or gzip files is that we
+don’t really want to open them into memory to add new information such
+as the download date as we go. But, it will be really helpful if we can
+find a way to do that. One answer to that is to use the table we created
+earlier and store it (and the data dictionary) in the same place as the
+files we download.</p>
+<p>To do that it is a good idea to do some tidying up of the table we
+dowloaded earlier.</p>
+<p>One issue with this table is that the column names are good for
+display on the web but awkward to work with. We also have a
+<code>Table Name</code> column that contains multiple bits of
+information when it would be useful to have the long file names and
+short file names. We would also like to know when we downloaded this
+table. We are going to clean up three elements of the table</p>
 <ol type="1">
-<li>Clean up the number of rows and convert it to numeric so we can sort on that if needed.</li>
-<li>extract the actual zipped file name from the url and put it in a column</li>
+<li>Clean up the number of rows and convert it to numeric so we can sort
+on that if needed.</li>
+<li>extract the actual zipped file name from the url and put it in a
+column</li>
 <li>extract the filename string and call it file_name</li>
 <li>Add the download_date so we know when we downloaded the data.</li>
 </ol>
@@ -2576,8 +2813,12 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Now that have been through the various steps with the raw table we can also look at pulling that into a function. That should have the advantage of being reusable with the pre-grant page which has very similar data. Lets combine what we have so far into a function.</p>
-<p>To do this we take the various chunks we have written so far and put them all together. This is what that code looks like.</p>
+<p>Now that have been through the various steps with the raw table we
+can also look at pulling that into a function. That should have the
+advantage of being reusable with the pre-grant page which has very
+similar data. Lets combine what we have so far into a function.</p>
+<p>To do this we take the various chunks we have written so far and put
+them all together. This is what that code looks like.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>granted_raw</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_html</a></span><span class='op'>(</span><span class='st'>"https://patentsview.org/download/data-download-tables"</span><span class='op'>)</span>
@@ -2605,10 +2846,27 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Then we think about how to reduce any repetition and generally streamline the code.</p>
-<p>As we explore the data in more detail we often find that there are other, less obvious, things that need to be addressed to arrive at satisfactory code. For example, we may want to extract information on the file size and number of rows. In particular, we can use the number of rows from the table to check against the number of rows when we import the file but we need those numbers to be in numeric rather than character form for the comparison. We also need to handle certain cases such as irregular file names (for gender) where we can use <code>case_when()</code> to keep the chain of code going without creating new objects.</p>
-<p>If you are already familiar with writing if statements you may be confused as to why the if statements below do not have an accompanying else statement. For the answer you need to watch Jenny Bryan’s excellent <a href="https://www.youtube.com/watch?v=7oyiPBjLAWY">Code Smells</a> presentation.</p>
-<p>The outcome after some experimentation and testing looks like this. Because the function is not in a package we will list the libraries (the tidyverse is a collection of packages and we don’t use all of them but it is convenient to load them all to save on typing).</p>
+<p>Then we think about how to reduce any repetition and generally
+streamline the code.</p>
+<p>As we explore the data in more detail we often find that there are
+other, less obvious, things that need to be addressed to arrive at
+satisfactory code. For example, we may want to extract information on
+the file size and number of rows. In particular, we can use the number
+of rows from the table to check against the number of rows when we
+import the file but we need those numbers to be in numeric rather than
+character form for the comparison. We also need to handle certain cases
+such as irregular file names (for gender) where we can use
+<code>case_when()</code> to keep the chain of code going without
+creating new objects.</p>
+<p>If you are already familiar with writing if statements you may be
+confused as to why the if statements below do not have an accompanying
+else statement. For the answer you need to watch Jenny Bryan’s excellent
+<a href="https://www.youtube.com/watch?v=7oyiPBjLAWY">Code Smells</a>
+presentation.</p>
+<p>The outcome after some experimentation and testing looks like this.
+Because the function is not in a package we will list the libraries (the
+tidyverse is a collection of packages and we don’t use all of them but
+it is convenient to load them all to save on typing).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
@@ -2720,7 +2978,14 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>The advantage of this approach is that it tries to anticipate some common errors and fail fast in an informative way. The function handles both cases (grant and application) and the meta data can be saved to the same destination as the download files. If we were planning to include this in a package we would also write some tests (using the <code>testthat</code> package) and probably add in some more fail fast elements. But, this is enough for one article. Now let’s use the function.</p>
+<p>The advantage of this approach is that it tries to anticipate some
+common errors and fail fast in an informative way. The function handles
+both cases (grant and application) and the meta data can be saved to the
+same destination as the download files. If we were planning to include
+this in a package we would also write some tests (using the
+<code>testthat</code> package) and probably add in some more fail fast
+elements. But, this is enough for one article. Now let’s use the
+function.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grants</span> <span class='op'>&lt;-</span> <span class='fu'>pv_meta</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"grant"</span>, dest <span class='op'>=</span> <span class='st'>"patents"</span><span class='op'>)</span>
@@ -2728,12 +2993,12 @@ Figure 3: Using the Selector Gadget
 </div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div id="goushmowic" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="aizqzrkiew" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#goushmowic .gt_table {
+#aizqzrkiew .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2758,7 +3023,7 @@ Figure 3: Using the Selector Gadget
   border-left-color: #D3D3D3;
 }
 
-#goushmowic .gt_heading {
+#aizqzrkiew .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2770,7 +3035,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#goushmowic .gt_title {
+#aizqzrkiew .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2780,7 +3045,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-width: 0;
 }
 
-#goushmowic .gt_subtitle {
+#aizqzrkiew .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2790,13 +3055,13 @@ Figure 3: Using the Selector Gadget
   border-top-width: 0;
 }
 
-#goushmowic .gt_bottom_border {
+#aizqzrkiew .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#goushmowic .gt_col_headings {
+#aizqzrkiew .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2811,7 +3076,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#goushmowic .gt_col_heading {
+#aizqzrkiew .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2831,7 +3096,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#goushmowic .gt_column_spanner_outer {
+#aizqzrkiew .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2843,15 +3108,15 @@ Figure 3: Using the Selector Gadget
   padding-right: 4px;
 }
 
-#goushmowic .gt_column_spanner_outer:first-child {
+#aizqzrkiew .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#goushmowic .gt_column_spanner_outer:last-child {
+#aizqzrkiew .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#goushmowic .gt_column_spanner {
+#aizqzrkiew .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2863,7 +3128,7 @@ Figure 3: Using the Selector Gadget
   width: 100%;
 }
 
-#goushmowic .gt_group_heading {
+#aizqzrkiew .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2885,7 +3150,7 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#goushmowic .gt_empty_group_heading {
+#aizqzrkiew .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2900,15 +3165,15 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#goushmowic .gt_from_md > :first-child {
+#aizqzrkiew .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#goushmowic .gt_from_md > :last-child {
+#aizqzrkiew .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#goushmowic .gt_row {
+#aizqzrkiew .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2927,7 +3192,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#goushmowic .gt_stub {
+#aizqzrkiew .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2939,7 +3204,7 @@ Figure 3: Using the Selector Gadget
   padding-left: 12px;
 }
 
-#goushmowic .gt_summary_row {
+#aizqzrkiew .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2949,7 +3214,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#goushmowic .gt_first_summary_row {
+#aizqzrkiew .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2959,7 +3224,7 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#goushmowic .gt_grand_summary_row {
+#aizqzrkiew .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2969,7 +3234,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#goushmowic .gt_first_grand_summary_row {
+#aizqzrkiew .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2979,11 +3244,11 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#goushmowic .gt_striped {
+#aizqzrkiew .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#goushmowic .gt_table_body {
+#aizqzrkiew .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2992,7 +3257,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-color: #D3D3D3;
 }
 
-#goushmowic .gt_footnotes {
+#aizqzrkiew .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3006,13 +3271,13 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#goushmowic .gt_footnote {
+#aizqzrkiew .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#goushmowic .gt_sourcenotes {
+#aizqzrkiew .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3026,41 +3291,41 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#goushmowic .gt_sourcenote {
+#aizqzrkiew .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#goushmowic .gt_left {
+#aizqzrkiew .gt_left {
   text-align: left;
 }
 
-#goushmowic .gt_center {
+#aizqzrkiew .gt_center {
   text-align: center;
 }
 
-#goushmowic .gt_right {
+#aizqzrkiew .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#goushmowic .gt_font_normal {
+#aizqzrkiew .gt_font_normal {
   font-weight: normal;
 }
 
-#goushmowic .gt_font_bold {
+#aizqzrkiew .gt_font_bold {
   font-weight: bold;
 }
 
-#goushmowic .gt_font_italic {
+#aizqzrkiew .gt_font_italic {
   font-style: italic;
 }
 
-#goushmowic .gt_super {
+#aizqzrkiew .gt_super {
   font-size: 65%;
 }
 
-#goushmowic .gt_footnote_marks {
+#aizqzrkiew .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -3076,7 +3341,7 @@ Figure 3: Using the Selector Gadget
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">description</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">number_of_rows</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">origin</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">data_last_updated</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">update_version</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">table_source</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">file_name</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">urls</th>
@@ -3085,61 +3350,67 @@ Figure 3: Using the Selector Gadget
   <tbody class="gt_table_body">
     <tr><td class="gt_row gt_left">application</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">76.6 Mb</td>
+<td class="gt_row gt_left">77.5 Mb
+tsv</td>
 <td class="gt_row gt_left">Information on the applications for granted patent</td>
-<td class="gt_row gt_right">7811937</td>
+<td class="gt_row gt_right">7903067</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">application.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/application.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">assignee</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">18.5 Mb</td>
+<td class="gt_row gt_left">18.8 Mb
+tsv</td>
 <td class="gt_row gt_left">Disambiguated assignee data for granted patents and pre-granted applications</td>
-<td class="gt_row gt_right">530932</td>
+<td class="gt_row gt_right">538617</td>
 <td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">assignee.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/assignee.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">botanic</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">624.5 Kb</td>
+<td class="gt_row gt_left">635.7 Kb
+tsv</td>
 <td class="gt_row gt_left">Botanic information for plant patents</td>
-<td class="gt_row gt_right">17756</td>
+<td class="gt_row gt_right">18065</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">botanic.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/botanic.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_current</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">1.5 Gb</td>
+<td class="gt_row gt_left">1.5 Gb
+tsv</td>
 <td class="gt_row gt_left">Current CPC classification data for all patents (applied retrospectively to all patents)</td>
-<td class="gt_row gt_right">44759564</td>
+<td class="gt_row gt_right">45263138</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">October 8, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">cpc_current.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_current.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_group</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">21.5 Kb</td>
+<td class="gt_row gt_left">21.5 Kb
+tsv</td>
 <td class="gt_row gt_left">Lookup table of current CPC groups</td>
-<td class="gt_row gt_right">672</td>
+<td class="gt_row gt_right">673</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">August 11, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">cpc_group.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_group.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_subgroup</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">5.4 Mb</td>
+<td class="gt_row gt_left">5.4 Mb
+tsv</td>
 <td class="gt_row gt_left">Lookup table of current CPC subgroups</td>
-<td class="gt_row gt_right">260874</td>
+<td class="gt_row gt_right">261155</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">August 11, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">cpc_subgroup.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/download/cpc_subgroup.tsv.zip</td></tr>
@@ -3149,7 +3420,8 @@ Figure 3: Using the Selector Gadget
 </table>
 </div>
 </div>
-<p>So now we have a table with the metadata and the table is saved in the dest folder we have defined.</p>
+<p>So now we have a table with the metadata and the table is saved in
+the dest folder we have defined.</p>
 <p>Let’s see what happens if we use another term.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -3157,7 +3429,8 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>Ok, that works and we now want to try with the pregrant or applications table.</p>
+<p>Ok, that works and we now want to try with the pregrant or
+applications table.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>applications</span> <span class='op'>&lt;-</span> <span class='fu'>pv_meta</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"pregrant"</span>, dest <span class='op'>=</span> <span class='st'>"applications"</span><span class='op'>)</span>
@@ -3165,12 +3438,12 @@ Figure 3: Using the Selector Gadget
 </div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div id="uqhjfsasju" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xneosfoktj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#uqhjfsasju .gt_table {
+#xneosfoktj .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3195,7 +3468,7 @@ Figure 3: Using the Selector Gadget
   border-left-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_heading {
+#xneosfoktj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3207,7 +3480,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_title {
+#xneosfoktj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3217,7 +3490,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-width: 0;
 }
 
-#uqhjfsasju .gt_subtitle {
+#xneosfoktj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3227,13 +3500,13 @@ Figure 3: Using the Selector Gadget
   border-top-width: 0;
 }
 
-#uqhjfsasju .gt_bottom_border {
+#xneosfoktj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_col_headings {
+#xneosfoktj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3248,7 +3521,7 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_col_heading {
+#xneosfoktj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3268,7 +3541,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#uqhjfsasju .gt_column_spanner_outer {
+#xneosfoktj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3280,15 +3553,15 @@ Figure 3: Using the Selector Gadget
   padding-right: 4px;
 }
 
-#uqhjfsasju .gt_column_spanner_outer:first-child {
+#xneosfoktj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uqhjfsasju .gt_column_spanner_outer:last-child {
+#xneosfoktj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uqhjfsasju .gt_column_spanner {
+#xneosfoktj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3300,7 +3573,7 @@ Figure 3: Using the Selector Gadget
   width: 100%;
 }
 
-#uqhjfsasju .gt_group_heading {
+#xneosfoktj .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3322,7 +3595,7 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#uqhjfsasju .gt_empty_group_heading {
+#xneosfoktj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3337,15 +3610,15 @@ Figure 3: Using the Selector Gadget
   vertical-align: middle;
 }
 
-#uqhjfsasju .gt_from_md > :first-child {
+#xneosfoktj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uqhjfsasju .gt_from_md > :last-child {
+#xneosfoktj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uqhjfsasju .gt_row {
+#xneosfoktj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3364,7 +3637,7 @@ Figure 3: Using the Selector Gadget
   overflow-x: hidden;
 }
 
-#uqhjfsasju .gt_stub {
+#xneosfoktj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3376,7 +3649,7 @@ Figure 3: Using the Selector Gadget
   padding-left: 12px;
 }
 
-#uqhjfsasju .gt_summary_row {
+#xneosfoktj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3386,7 +3659,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#uqhjfsasju .gt_first_summary_row {
+#xneosfoktj .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3396,7 +3669,7 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_grand_summary_row {
+#xneosfoktj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3406,7 +3679,7 @@ Figure 3: Using the Selector Gadget
   padding-right: 5px;
 }
 
-#uqhjfsasju .gt_first_grand_summary_row {
+#xneosfoktj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3416,11 +3689,11 @@ Figure 3: Using the Selector Gadget
   border-top-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_striped {
+#xneosfoktj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uqhjfsasju .gt_table_body {
+#xneosfoktj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3429,7 +3702,7 @@ Figure 3: Using the Selector Gadget
   border-bottom-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_footnotes {
+#xneosfoktj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3443,13 +3716,13 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_footnote {
+#xneosfoktj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#uqhjfsasju .gt_sourcenotes {
+#xneosfoktj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3463,41 +3736,41 @@ Figure 3: Using the Selector Gadget
   border-right-color: #D3D3D3;
 }
 
-#uqhjfsasju .gt_sourcenote {
+#xneosfoktj .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#uqhjfsasju .gt_left {
+#xneosfoktj .gt_left {
   text-align: left;
 }
 
-#uqhjfsasju .gt_center {
+#xneosfoktj .gt_center {
   text-align: center;
 }
 
-#uqhjfsasju .gt_right {
+#xneosfoktj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uqhjfsasju .gt_font_normal {
+#xneosfoktj .gt_font_normal {
   font-weight: normal;
 }
 
-#uqhjfsasju .gt_font_bold {
+#xneosfoktj .gt_font_bold {
   font-weight: bold;
 }
 
-#uqhjfsasju .gt_font_italic {
+#xneosfoktj .gt_font_italic {
   font-style: italic;
 }
 
-#uqhjfsasju .gt_super {
+#xneosfoktj .gt_super {
   font-size: 65%;
 }
 
-#uqhjfsasju .gt_footnote_marks {
+#xneosfoktj .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -3513,75 +3786,79 @@ Figure 3: Using the Selector Gadget
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">description</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">number_of_rows</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">origin</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">updated</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">update_version</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">table_source</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">file_name</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">urls</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">granted_patent_crosswalk</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">53.3 Mb</td>
-<td class="gt_row gt_left">Mapping between published applications and granted patents
-
-            This table includes mappings for data through June 29, 2021.</td>
-<td class="gt_row gt_right">3517645</td>
-<td class="gt_row gt_left">processed</td>
-<td class="gt_row gt_left">Oct 08, 2021</td>
-<td class="gt_row gt_left">pregrant</td>
-<td class="gt_row gt_left">granted_patent_crosswalk.tsv.zip</td>
-<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/granted_patent_crosswalk.tsv.zip</td></tr>
-    <tr><td class="gt_row gt_left">publication_assignee</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">56.7 Mb</td>
-<td class="gt_row gt_left">Crosswalk table between published applications and assignee table</td>
-<td class="gt_row gt_right">2923006</td>
-<td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">Oct 08, 2021</td>
-<td class="gt_row gt_left">pregrant</td>
-<td class="gt_row gt_left">publication_assignee.tsv.zip</td>
-<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/publication_assignee.tsv.zip</td></tr>
-    <tr><td class="gt_row gt_left">publication_inventor</td>
-<td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">196.4 Mb</td>
-<td class="gt_row gt_left">Crosswalk table between published applications and inventor table</td>
-<td class="gt_row gt_right">16083268</td>
-<td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">Oct 08, 2021</td>
-<td class="gt_row gt_left">pregrant</td>
-<td class="gt_row gt_left">publication_inventor.tsv.zip</td>
-<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/publication_inventor.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">application</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">1.3 Gb</td>
+<td class="gt_row gt_left">1.3 Gb
+tsv</td>
 <td class="gt_row gt_left">Data on patent applications</td>
-<td class="gt_row gt_right">5766524</td>
+<td class="gt_row gt_right">5877919</td>
 <td class="gt_row gt_left">raw</td>
-<td class="gt_row gt_left">Oct 08, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">pregrant</td>
 <td class="gt_row gt_left">application.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/application.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">assignee</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">18.5 Mb</td>
+<td class="gt_row gt_left">18.8 Mb
+tsv</td>
 <td class="gt_row gt_left">Disambiguated assignee data for granted patents and pre-granted applications</td>
-<td class="gt_row gt_right">530932</td>
+<td class="gt_row gt_right">538617</td>
 <td class="gt_row gt_left">disamb</td>
-<td class="gt_row gt_left">Oct 08, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">grant</td>
 <td class="gt_row gt_left">assignee.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/assignee.tsv.zip</td></tr>
+    <tr><td class="gt_row gt_left">cpc</td>
+<td class="gt_row gt_left"></td>
+<td class="gt_row gt_left">181.2 Mb
+tsv</td>
+<td class="gt_row gt_left">CPC classification data for all applications at the time of submission</td>
+<td class="gt_row gt_right">14211700</td>
+<td class="gt_row gt_left">raw</td>
+<td class="gt_row gt_left">September 30, 2021</td>
+<td class="gt_row gt_left">pregrant</td>
+<td class="gt_row gt_left">cpc.tsv.zip</td>
+<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/cpc.tsv.zip</td></tr>
     <tr><td class="gt_row gt_left">cpc_current</td>
 <td class="gt_row gt_left"></td>
-<td class="gt_row gt_left">574.9 Mb</td>
+<td class="gt_row gt_left">671.0 Mb
+tsv</td>
 <td class="gt_row gt_left">Current CPC classification data for all applications (applied retrospectively to all applications)</td>
-<td class="gt_row gt_right">47628084</td>
+<td class="gt_row gt_right">54188266</td>
 <td class="gt_row gt_left">raw (from separate classification files)</td>
-<td class="gt_row gt_left">July 08, 2021</td>
+<td class="gt_row gt_left">September 30, 2021</td>
 <td class="gt_row gt_left">pregrant</td>
 <td class="gt_row gt_left">cpc_current.tsv.zip</td>
 <td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/cpc_current.tsv.zip</td></tr>
+    <tr><td class="gt_row gt_left">foreign_priority</td>
+<td class="gt_row gt_left"></td>
+<td class="gt_row gt_left">44.5 Mb
+tsv</td>
+<td class="gt_row gt_left">Foreign priority data</td>
+<td class="gt_row gt_right">2898302</td>
+<td class="gt_row gt_left">raw</td>
+<td class="gt_row gt_left">September 30, 2021</td>
+<td class="gt_row gt_left">pregrant</td>
+<td class="gt_row gt_left">foreign_priority.tsv.zip</td>
+<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/foreign_priority.tsv.zip</td></tr>
+    <tr><td class="gt_row gt_left">government_interest</td>
+<td class="gt_row gt_left"></td>
+<td class="gt_row gt_left">4.9 Mb
+tsv</td>
+<td class="gt_row gt_left">Raw government interest statements on all pre-grant published patent applications (where available)</td>
+<td class="gt_row gt_right">133800</td>
+<td class="gt_row gt_left">raw</td>
+<td class="gt_row gt_left">September 30, 2021</td>
+<td class="gt_row gt_left">pregrant</td>
+<td class="gt_row gt_left">government_interest.tsv.zip</td>
+<td class="gt_row gt_left">https://s3.amazonaws.com/data.patentsview.org/pregrant_publications/government_interest.tsv.zip</td></tr>
   </tbody>
   
   
@@ -3589,18 +3866,43 @@ Figure 3: Using the Selector Gadget
 </div>
 </div>
 <p>Ok, so that also works just fine.</p>
-<p>We now have a working function that will scrape the content of the patentsview bulk data download page for grants and applications (pregrants) and that can handle obvious errors. However, there are various ways in which the function we have written could be improved. Here are some suggested exercises for code improvement.</p>
+<p>We now have a working function that will scrape the content of the
+patentsview bulk data download page for grants and applications
+(pregrants) and that can handle obvious errors. However, there are
+various ways in which the function we have written could be improved.
+Here are some suggested exercises for code improvement.</p>
 <h3 id="exercises">Exercises</h3>
 <ul>
-<li><p>Many people who are familiar with patent data will use the term “application” rather than “pregrant.” How could you adjust this code to accommodate both possibilities so that the function does not fail on type = “application.”</p></li>
-<li><p>The chunk of code with the comment handle different types uses two if statements for the different cases. However, there is a widely use R function that could be used instead here. Hint: watch Jenny Bryan’s code smells.</p></li>
-<li><p>The separate() function in dplyr has different arguments for <code>extra =</code>, experiment to see what happens if you use the different arguments.</p></li>
-<li><p>dply’rs <code>case_when()</code> function is a powerful alternative to using if statements in a chunk of code. Experiment with changing the names and results. What happens in the wider table if you remove the line <code>name != "rawgender" ~  paste0(name, ".tsv.zip")`</code> from the second <code>case_when()</code> statement.</p></li>
+<li><p>Many people who are familiar with patent data will use the term
+“application” rather than “pregrant”. How could you adjust this code to
+accommodate both possibilities so that the function does not fail on
+type = “application”.</p></li>
+<li><p>The chunk of code with the comment handle different types uses
+two if statements for the different cases. However, there is a widely
+use R function that could be used instead here. Hint: watch Jenny
+Bryan’s code smells.</p></li>
+<li><p>The separate() function in dplyr has different arguments for
+<code>extra =</code>, experiment to see what happens if you use the
+different arguments.</p></li>
+<li><p>dply’rs <code>case_when()</code> function is a powerful
+alternative to using if statements in a chunk of code. Experiment with
+changing the names and results. What happens in the wider table if you
+remove the line
+<code>name != "rawgender" ~  paste0(name, ".tsv.zip")`</code> from the
+second <code>case_when()</code> statement.</p></li>
 </ul>
-<h3 id="downloading-the-bulk-data-files">Downloading the Bulk Data Files</h3>
-<p>We now have a function for downloading the meta data from patents view as <code>pv_meta()</code> and the beginnings of a function to download the actual files in <code>pv_download()</code>. We now want to do the actual downloading.</p>
-<p>Bear in mind that if you are doing this for real you will want to have a few hundred gigabytes of storage space for both the grants and pregrant applications data. So make sure you have plenty of space available before attempting that.</p>
-<p>Let’s take a look at our working version of the <code>pv_download()</code> function.</p>
+<h3 id="downloading-the-bulk-data-files">Downloading the Bulk Data
+Files</h3>
+<p>We now have a function for downloading the meta data from patents
+view as <code>pv_meta()</code> and the beginnings of a function to
+download the actual files in <code>pv_download()</code>. We now want to
+do the actual downloading.</p>
+<p>Bear in mind that if you are doing this for real you will want to
+have a few hundred gigabytes of storage space for both the grants and
+pregrant applications data. So make sure you have plenty of space
+available before attempting that.</p>
+<p>Let’s take a look at our working version of the
+<code>pv_download()</code> function.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pv_download</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>url</span> <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>dest</span> <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span> <span class='op'>{</span>
@@ -3622,23 +3924,50 @@ Figure 3: Using the Selector Gadget
 </code></pre>
 </div>
 </div>
-<p>So, what this does is allows the user to pass a single url from the patent or pregrant tables we have created and name a destination file. It will then download the file and give it the name that comes from the metadata table.</p>
-<p>We have seen above that we could pass a vector of urls to this function with the map function from the <code>purrr</code> package in the <code>tidyverse</code> as follows.</p>
+<p>So, what this does is allows the user to pass a single url from the
+patent or pregrant tables we have created and name a destination file.
+It will then download the file and give it the name that comes from the
+metadata table.</p>
+<p>We have seen above that we could pass a vector of urls to this
+function with the map function from the <code>purrr</code> package in
+the <code>tidyverse</code> as follows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map</a></span><span class='op'>(</span><span class='va'>small</span><span class='op'>$</span><span class='va'>url</span>, <span class='va'>pv_download</span>, dest <span class='op'>=</span> <span class='st'>"patents2"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<p>As we saw above, this will work. However, in reality this tells us that we are on the right track. We would not want to try and use this to download multiple multi-gigabyte files for a simple reason: at some point in iterating over the urls it will fail.</p>
-<p>The main reason this will fail is because at some point the download of an individual file will come to a stop and move on to the next file. The result will be a bunch of files that in many cases will be only partially downloaded. On top of that there is a severe risk that your internet connection will wobble at some point meaning that the download process may well fail. We know this because both of these things happened to team members when we were trying this out.</p>
+<p>As we saw above, this will work. However, in reality this tells us
+that we are on the right track. We would not want to try and use this to
+download multiple multi-gigabyte files for a simple reason: at some
+point in iterating over the urls it will fail.</p>
+<p>The main reason this will fail is because at some point the download
+of an individual file will come to a stop and move on to the next file.
+The result will be a bunch of files that in many cases will be only
+partially downloaded. On top of that there is a severe risk that your
+internet connection will wobble at some point meaning that the download
+process may well fail. We know this because both of these things
+happened to team members when we were trying this out.</p>
 <p>In reality there are two problems:</p>
 <ul>
-<li><p>The internet connection may go wobbly meaning that a file download fails to execute. This can bring execution to a complete stop part way through downloading the files.</p></li>
-<li><p>A file, notably a large file, may inexplicably only partially download before moving on to the next file.</p></li>
+<li><p>The internet connection may go wobbly meaning that a file
+download fails to execute. This can bring execution to a complete stop
+part way through downloading the files.</p></li>
+<li><p>A file, notably a large file, may inexplicably only partially
+download before moving on to the next file.</p></li>
 </ul>
-<p>The first of these issues can be handled by using the <code>safely()</code> function from the purrr package (see also try and trycatch). Rather than stopping execution when an error is encountered the code will skip over the error. When executed inside safely a function will return a result and if there is an error will capture the error message before continuing to execute the rest of the code. You can read more about safely in <span class="math display">\[Hadley Wickham&#39;s Advanced R\]</span>(<a href="https://adv-r.hadley.nz/function-operators.html" class="uri">https://adv-r.hadley.nz/function-operators.html</a>).</p>
-<p>We will illustrate this with Hadley’s Wickham’s example. We start by creating a function that is wrapped inside safely. Let’s start with a list.</p>
+<p>The first of these issues can be handled by using the
+<code>safely()</code> function from the purrr package (see also try and
+trycatch). Rather than stopping execution when an error is encountered
+the code will skip over the error. When executed inside safely a
+function will return a result and if there is an error will capture the
+error message before continuing to execute the rest of the code. You can
+read more about safely in <a
+href="https://adv-r.hadley.nz/function-operators.html">Hadley Wickham’s
+Advanced R</a>.</p>
+<p>We will illustrate this with Hadley’s Wickham’s example. We start by
+creating a function that is wrapped inside safely. Let’s start with a
+list.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
@@ -3658,8 +3987,8 @@ Figure 3: Using the Selector Gadget
 </div>
 <pre><code>function (...) 
 capture_error(.f(...), otherwise, quiet)
-&lt;bytecode: 0x7f97fa0d5e78&gt;
-&lt;environment: 0x7f97fa0d26a0&gt;</code></pre>
+&lt;bytecode: 0x7fcd102ff358&gt;
+&lt;environment: 0x7fcd102ff8d0&gt;</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#&gt; function (...) </span>
 <span class='co'>#&gt; capture_error(.f(...), otherwise, quiet)</span>
@@ -3675,7 +4004,8 @@ capture_error(.f(...), otherwise, quiet)
 </code></pre>
 </div>
 </div>
-<p>If we look at res we see that it is a list with 2 elements, a result and an error</p>
+<p>If we look at res we see that it is a list with 2 elements, a result
+and an error</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span>
@@ -3685,7 +4015,10 @@ capture_error(.f(...), otherwise, quiet)
  $ result: num 1.39
  $ error : NULL</code></pre>
 </div>
-<p>The result we want is in result while the error message is NULL because there is no error. So,safely always returns a list with these two elements. If there is an error there will be an error message and result will by NULL. But the code will keep executing.</p>
+<p>The result we want is in result while the error message is NULL
+because there is no error. So,safely always returns a list with these
+two elements. If there is an error there will be an error message and
+result will by NULL. But the code will keep executing.</p>
 <p>Let’s force an error to illustrate that.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -3698,12 +4031,32 @@ NULL
 $error
 &lt;simpleError in x[[x]]: invalid subscript type &#39;list&#39;&gt;</code></pre>
 </div>
-<p>We can use this to our advantage in passing a vector of urls to pv_download because we can use our safe version of a function inside one of the map functions as we did earlier. In this case we will use purrr::walk2() rather than map inside the function. The code we will use was kindly provided by Matt Herman in an <span class="math display">\[answer to a question\]</span>(<a href="https://community.rstudio.com/t/download-multiple-files-using-download-file-function-while-skipping-broken-links-with-walk2/51222" class="uri">https://community.rstudio.com/t/download-multiple-files-using-download-file-function-while-skipping-broken-links-with-walk2/51222</a>) on <span class="math display">\[RStudio community\]</span>(<a href="https://community.rstudio.com/" class="uri">https://community.rstudio.com/</a>) and so credit for the solution to the first solution to our problem goes to Matt. That solution looks like this.</p>
-<p>We start by defining a safe function that we will call safe_download. We then pass the url and the dest arguments to purrr::walk() to make the call to safe download. In essence this will iterate over each url and the entry in dest for destination passing the relevant arguments to our safe_download(). Note here that purrr iterators (map functions including walk) exist in different versions that can take one or more arguments. So.</p>
+<p>We can use this to our advantage in passing a vector of urls to
+pv_download because we can use our safe version of a function inside one
+of the map functions as we did earlier. In this case we will use
+purrr::walk2() rather than map inside the function. The code we will use
+was kindly provided by Matt Herman in an <a
+href="https://community.rstudio.com/t/download-multiple-files-using-download-file-function-while-skipping-broken-links-with-walk2/51222">answer
+to a question</a> on <a href="https://community.rstudio.com/">RStudio
+community</a> and so credit for the solution to the first solution to
+our problem goes to Matt. That solution looks like this.</p>
+<p>We start by defining a safe function that we will call safe_download.
+We then pass the url and the dest arguments to purrr::walk() to make the
+call to safe download. In essence this will iterate over each url and
+the entry in dest for destination passing the relevant arguments to our
+safe_download(). Note here that purrr iterators (map functions including
+walk) exist in different versions that can take one or more arguments.
+So.</p>
 <ul>
-<li><p>map and walk take one argument (e.g. walk or map(url, safe_download)). The problem here is we can’t pass dest to safe download to specify the destination.</p></li>
-<li><p>map and walk takes two arguments (e.g. walk2 or map2(url, dest, safe_download)). Here we can pass two arguments and solve our issue.</p></li>
-<li><p>pmap and pwalk allow us to pass multiple arguments to a function if we need to (e.g. pmap(url, dest, something, something, safe_download)). Not needed here but incredibly useful.</p></li>
+<li><p>map and walk take one argument (e.g. walk or map(url,
+safe_download)). The problem here is we can’t pass dest to safe download
+to specify the destination.</p></li>
+<li><p>map and walk takes two arguments (e.g. walk2 or map2(url, dest,
+safe_download)). Here we can pass two arguments and solve our
+issue.</p></li>
+<li><p>pmap and pwalk allow us to pass multiple arguments to a function
+if we need to (e.g. pmap(url, dest, something, something,
+safe_download)). Not needed here but incredibly useful.</p></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -3713,10 +4066,24 @@ $error
 </code></pre>
 </div>
 </div>
-<p>This solves the first of our problems because the code will keep running if our internet connection wobbles and we see an error message for those files that fail.</p>
-<p>We could run this code and it would work. However, we will then discover that while the files download they will be incomplete (a good reason to extract the number of rows and file sizes from the meta data). The code will run just fine for small files but will only partially download large files. This was a very puzzling problem.</p>
-<p>The answer to this problem is found by realising that the base R <code>download.file()</code> has a default time out of 1 minute. That means that if it takes longer than a minute (as for many files in this case), we will get what can be downloaded in a minute.</p>
-<p>To solve this problem we need to recognise that <code>download.file()</code> has an options argument (see ?<code>options()</code>) that allows us to adjust the number of seconds before time out (it is also possible to store the timeout level in the renvironment file - see ?options() under timeout). We have set the default to 600 seconds (one hour) but you can adjust it as needed.</p>
+<p>This solves the first of our problems because the code will keep
+running if our internet connection wobbles and we see an error message
+for those files that fail.</p>
+<p>We could run this code and it would work. However, we will then
+discover that while the files download they will be incomplete (a good
+reason to extract the number of rows and file sizes from the meta data).
+The code will run just fine for small files but will only partially
+download large files. This was a very puzzling problem.</p>
+<p>The answer to this problem is found by realising that the base R
+<code>download.file()</code> has a default time out of 1 minute. That
+means that if it takes longer than a minute (as for many files in this
+case), we will get what can be downloaded in a minute.</p>
+<p>To solve this problem we need to recognise that
+<code>download.file()</code> has an options argument (see
+?<code>options()</code>) that allows us to adjust the number of seconds
+before time out (it is also possible to store the timeout level in the
+renvironment file - see ?options() under timeout). We have set the
+default to 600 seconds (one hour) but you can adjust it as needed.</p>
 <p>Armed with this knowledge we arrive at our download function.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -3750,15 +4117,24 @@ $error
 </code></pre>
 </div>
 </div>
-<p>To use the function we will want to ensure that we have plenty of space available on disk (such as an external drive). As we download the files, depending on our internet connection, some downloads may fail and so we will want to create an object that stores the record of the download for review. We can then go back to the files that may have failed.</p>
-<p>To give this function a try we will use the small examples we used earlier with the new function. If seeking to download all files you should expect the download to take several hours or longer depending on the speed of your connection.</p>
+<p>To use the function we will want to ensure that we have plenty of
+space available on disk (such as an external drive). As we download the
+files, depending on our internet connection, some downloads may fail and
+so we will want to create an object that stores the record of the
+download for review. We can then go back to the files that may have
+failed.</p>
+<p>To give this function a try we will use the small examples we used
+earlier with the new function. If seeking to download all files you
+should expect the download to take several hours or longer depending on
+the speed of your connection.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>small_res</span> <span class='op'>&lt;-</span> <span class='fu'>pv_download</span><span class='op'>(</span><span class='va'>small</span><span class='op'>$</span><span class='va'>url</span>, dest <span class='op'>=</span> <span class='st'>"test"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -3766,15 +4142,6 @@ $error
 <div class="d-appendix">
 </div>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

@@ -1,0 +1,241 @@
+data_type,file_name,zip_name,download_date,table_name,description,number_of_rows,origin,update_version,url
+grant,application,application.tsv.zip,2022-03-15,"application
+
+
+zip: 77.5 MiB
+tsv: 422.8 MiB",Information on the applications for granted patent,7903067,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/application.tsv.zip
+grant,assignee,assignee.tsv.zip,2022-03-15,"assignee
+
+
+zip: 18.8 MiB
+tsv: 39.2 MiB",Disambiguated assignee data for granted patents and pre-granted applications,538617,disamb,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/assignee.tsv.zip
+grant,botanic,botanic.tsv.zip,2022-03-15,"botanic
+
+
+zip: 635.7 KiB
+tsv: 1.3 MiB",Botanic information for plant patents,18065,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/botanic.tsv.zip
+grant,cpc_current,cpc_current.tsv.zip,2022-03-15,"cpc_current
+
+
+zip: 1.5 GiB
+tsv: 4.0 GiB",Current CPC classification data for all patents (applied retrospectively to all patents),45263138,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/cpc_current.tsv.zip
+grant,cpc_group,cpc_group.tsv.zip,2022-03-15,"cpc_group
+
+
+zip: 21.5 KiB
+tsv: 67.9 KiB",Lookup table of current CPC groups,673,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/cpc_group.tsv.zip
+grant,cpc_subgroup,cpc_subgroup.tsv.zip,2022-03-15,"cpc_subgroup
+
+
+zip: 5.4 MiB
+tsv: 61.1 MiB",Lookup table of current CPC subgroups,261155,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/cpc_subgroup.tsv.zip
+grant,cpc_subsection,cpc_subsection.tsv.zip,2022-03-15,"cpc_subsection
+
+
+zip: 3.2 KiB
+tsv: 7.9 KiB",Lookup table of current CPC subsections,136,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/cpc_subsection.tsv.zip
+grant,figures,figures.tsv.zip,2022-03-15,"figures
+
+
+zip: 169.6 MiB
+tsv: 300.8 MiB",Number of figures and sheets,7366137,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/figures.tsv.zip
+grant,foreigncitation,foreigncitation.tsv.zip,2022-03-15,"foreigncitation
+
+
+zip: 1.1 GiB
+tsv: 2.8 GiB",Citations made to foreign patents by US patents,33100597,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/foreigncitation.tsv.zip
+grant,foreign_priority,foreign_priority.tsv.zip,2022-03-15,"foreign_priority
+
+
+zip: 126.4 MiB
+tsv: 302.1 MiB",Foreign priority data,3668091,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/foreign_priority.tsv.zip
+grant,government_interest,government_interest.tsv.zip,2022-03-15,"government_interest
+
+
+zip: 5.0 MiB
+tsv: 35.5 MiB",Raw government interest statements on all patents (where available),159086,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/government_interest.tsv.zip
+grant,government_organization,government_organization.tsv.zip,2022-03-15,"government_organization
+
+
+zip: 5.9 KiB
+tsv: 34.1 KiB",Organization names and related agency hierarchy parsed from the government interest statements on all patents (where available),297,processed,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/government_organization.tsv.zip
+grant,inventor,inventor.tsv.zip,2022-03-15,"inventor
+
+
+zip: 44.8 MiB
+tsv: 205.4 MiB",Disambiguated inventor data for granted patents and pre-granted applications,4483943,disamb,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/inventor.tsv.zip
+grant,ipcr,ipcr.tsv.zip,2022-03-15,"ipcr
+
+
+zip: 631.2 MiB
+tsv: 1.8 GiB",International Patent Classification data for all patents (as of publication date),19161256,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/ipcr.tsv.zip
+grant,lawyer,lawyer.tsv.zip,2022-03-15,"lawyer
+
+
+zip: 5.7 MiB
+tsv: 12.4 MiB",Disambiguated lawyer data,179697,disamb,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/lawyer.tsv.zip
+grant,location,location.tsv.zip,2022-03-15,"location
+
+
+zip: 5.2 MiB
+tsv: 19.3 MiB","Disambiguated location data, including latitude and longitude for granted patents and pre-granted applications",242926,disamb,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/location.tsv.zip
+grant,mainclass,mainclass.tsv.zip,2022-03-15,"mainclass
+
+
+zip: 2.4 KiB
+tsv: 7.1 KiB",Lookup table of original USPC main classes (as of patent publication date),1239,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/mainclass.tsv.zip
+grant,mainclass_current,mainclass_current.tsv.zip,2022-03-15,"mainclass_current
+
+
+zip: 7.5 KiB
+tsv: 21.5 KiB",Lookup table of current USPC main technology classes (applied retrospectively to all patents),510,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/mainclass_current.tsv.zip
+grant,nber,nber.tsv.zip,2022-03-15,"nber
+
+
+zip: 115.3 MiB
+tsv: 228.9 MiB",NBER classification data for all patents up to May 2015,5105937,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/nber.tsv.zip
+grant,nber_category,nber_category.tsv.zip,2022-03-15,"nber_category
+
+
+zip: 222.0 B
+tsv: 113.0 B",Lookup table for NBER categories,7,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/nber_category.tsv.zip
+grant,nber_subcategory,nber_subcategory.tsv.zip,2022-03-15,"nber_subcategory
+
+
+zip: 625.0 B
+tsv: 928.0 B",Lookup table for NBER subcategories,38,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/nber_subcategory.tsv.zip
+grant,non_inventor_applicant,non_inventor_applicant.tsv.zip,2022-03-15,"non_inventor_applicant
+
+
+zip: 251.7 MiB
+tsv: 536.9 MiB",Non-inventor applicant information,4753137,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/non_inventor_applicant.tsv.zip
+grant,otherreference,otherreference.tsv.zip,2022-03-15,"otherreference
+
+
+zip: 3.9 GiB
+tsv: 8.1 GiB","Non-patent citations mentioned in patents (e.g. articles, papers, etc.)",47761497,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/otherreference.tsv.zip
+grant,patent,patent.tsv.zip,2022-03-15,"patent
+
+
+zip: 1.5 GiB
+tsv: 5.8 GiB",Data on granted patents,7905326,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent.tsv.zip
+grant,patent_assignee,patent_assignee.tsv.zip,2022-03-15,"patent_assignee
+
+
+zip: 145.7 MiB
+tsv: 611.9 MiB",Metadata table for many-to-many relationships,7304703,disamb (linking table),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent_assignee.tsv.zip
+grant,patent_contractawardnumber,patent_contractawardnumber.tsv.zip,2022-03-15,"patent_contractawardnumber
+
+
+zip: 1.4 MiB
+tsv: 4.7 MiB",Contract or award numbers parsed from the government interest statements on all patents (where available),191993,processed,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent_contractawardnumber.tsv.zip
+grant,patent_govintorg,patent_govintorg.tsv.zip,2022-03-15,"patent_govintorg
+
+
+zip: 650.6 KiB
+tsv: 2.5 MiB",Metadata table with patent-to-organization relationships linked to the government_organization table,195065,processed,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent_govintorg.tsv.zip
+grant,patent_inventor,patent_inventor.tsv.zip,2022-03-15,"patent_inventor
+
+
+zip: 254.7 MiB
+tsv: 1.2 GiB",Metadata table for many-to-many relationships,19378853,disamb (linking table),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent_inventor.tsv.zip
+grant,patent_lawyer,patent_lawyer.tsv.zip,2022-03-15,"patent_lawyer
+
+
+zip: 116.4 MiB
+tsv: 388.6 MiB",Metadata table for many-to-many relationships,9026892,disamb (linking table),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/patent_lawyer.tsv.zip
+grant,pct_data,pct_data.tsv.zip,2022-03-15,"pct_data
+
+
+zip: 58.4 MiB
+tsv: 165.8 MiB",PCT data,1663951,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/pct_data.tsv.zip
+grant,persistent_assignee_disambig,persistent_assignee_disambig.tsv.zip,2022-03-15,"persistent_assignee_disambig
+
+
+zip: 766.4 MiB
+tsv: 1.5 GiB",Persistent Assignee Disambiguation - Updated to include missing values in the disamb_assignee_id_20201229 column field.,7304703,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/persistent_assignee_disambig.tsv.zip
+grant,persistent_inventor_disambig,persistent_inventor_disambig.tsv.zip,2022-03-15,"persistent_inventor_disambig
+
+
+zip: 675.9 MiB
+tsv: 3.1 GiB",Persistent Inventor Disambiguation,18273330,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/persistent_inventor_disambig.tsv.zip
+grant,rawassignee,rawassignee.tsv.zip,2022-03-15,"rawassignee
+
+
+zip: 522.2 MiB
+tsv: 1009.7 MiB",Raw assignee information as it appears in the source text and XML files,7251050,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rawassignee.tsv.zip
+grant,rawexaminer,rawexaminer.tsv.zip,2022-03-15,"rawexaminer
+
+
+zip: 350.8 MiB
+tsv: 753.5 MiB",Raw examiner information,10659166,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rawexaminer.tsv.zip
+grant,rawinventor,rawinventor.tsv.zip,2022-03-15,"rawinventor
+
+
+zip: 1.1 GiB
+tsv: 2.2 GiB",Raw inventor information as it appears in the source text and XML files,19378853,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rawinventor.tsv.zip
+grant,rawlawyer,rawlawyer.tsv.zip,2022-03-15,"rawlawyer
+
+
+zip: 470.2 MiB
+tsv: 977.4 MiB",Raw lawyer information as it appears in the source text and XML files,9051384,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rawlawyer.tsv.zip
+grant,rawlocation,rawlocation.tsv.zip,2022-03-15,"rawlocation
+
+
+zip: 1.0 GiB
+tsv: 3.1 GiB","Raw location data for inventors and assignees, as it appears in xml and text source files",31406248,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rawlocation.tsv.zip
+grant,rel_app_text,rel_app_text.tsv.zip,2022-03-15,"rel_app_text
+
+
+zip: 221.6 MiB
+tsv: 954.4 MiB",Related applications text,2108214,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/rel_app_text.tsv.zip
+grant,subclass,subclass.tsv.zip,2022-03-15,"subclass
+
+
+zip: 599.4 KiB
+tsv: 2.6 MiB",Lookup table of original USPC subclasses (as of patent publication date),272546,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/subclass.tsv.zip
+grant,subclass_current,subclass_current.tsv.zip,2022-03-15,"subclass_current
+
+
+zip: 2.1 MiB
+tsv: 7.3 MiB",Lookup table of current USPC subclasses (applied retrospectively to all patents),168048,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/subclass_current.tsv.zip
+grant,usapplicationcitation,usapplicationcitation.tsv.zip,2022-03-15,"usapplicationcitation
+
+
+zip: 2.0 GiB
+tsv: 6.0 GiB",Citations made to US patent applications by US patents,50573718,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/usapplicationcitation.tsv.zip
+grant,uspatentcitation,uspatentcitation.tsv.zip,2022-03-15,"uspatentcitation
+
+
+zip: 4.5 GiB
+tsv: 11.6 GiB",Citations made to US granted patents by US patents,121137053,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/uspatentcitation.tsv.zip
+grant,uspc,uspc.tsv.zip,2022-03-15,"uspc
+
+
+zip: 490.6 MiB
+tsv: 963.7 MiB",USPC classification data for all patents,18063760,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/uspc.tsv.zip
+grant,uspc_current,uspc_current.tsv.zip,2022-03-15,"uspc_current
+
+
+zip: 619.0 MiB
+tsv: 1.2 GiB",Current USPC classification data for all patents up to May 2015,22852958,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/uspc_current.tsv.zip
+grant,usreldoc,usreldoc.tsv.zip,2022-03-15,"usreldoc
+
+
+zip: 409.1 MiB
+tsv: 1.2 GiB",U.S. related documents (post-2005 patents only),12245208,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/usreldoc.tsv.zip
+grant,us_term_of_grant,us_term_of_grant.tsv.zip,2022-03-15,"us_term_of_grant
+
+
+zip: 94.9 MiB
+tsv: 224.3 MiB",U.S. term of grant data,3921900,raw,"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/us_term_of_grant.tsv.zip
+grant,wipo,wipo.tsv.zip,2022-03-15,"wipo
+
+
+zip: 29.7 MiB
+tsv: 168.7 MiB",WIPO technology fields for all patents,10551403,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/wipo.tsv.zip
+grant,wipo_field,wipo_field.tsv.zip,2022-03-15,"wipo_field
+
+
+zip: 1.5 KiB
+tsv: 3.7 KiB",Lookup table of WIPO technology fields,70,raw (from separate classification files),"September 30, 2021",https://s3.amazonaws.com/data.patentsview.org/download/wipo_field.tsv.zip

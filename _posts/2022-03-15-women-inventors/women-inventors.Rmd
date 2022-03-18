@@ -1,0 +1,543 @@
+---
+title: Women Inventors Data in R
+description: |
+ Data on Women Inventors from the USPTO
+author:
+  - name: Paul Oldham
+    url: https://github.com/wipo-analytics
+    orcid_id: 0000-0002-1013-4390
+    affiliation: Manchester Institute of Innovation Research
+date: '2022-03-15'
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, library(tidyverse))
+```
+
+## Introduction
+
+In this post we describe how to create a set of datasets on Women Inventors using the bulk data from the USPTO PatentsView website. This builds on the previous post on [how to download bulk patent data from the USPTO for use in R](https://wipo-analytics.github.io/posts/2022-01-11-patentsview-bulk-data/).
+
+The data on women inventors at the USPTO is the result of work by the team at the USPTO PatentsView service to classify male and female inventors in USPTO data. You can read more about this on the PatentsView site [here](https://patentsview.org/gender-and-innovation). The Office of the Chief Economist produced a report on Women and Innovation that can be accessed [here](https://www.uspto.gov/sites/default/files/documents/OCE-DH-Progress-Potential-2020.pdf) and the methodology can be accessed [here](https://s3.amazonaws.com/data.patentsview.org/documents/On-line+Appendix+-+Gender+Attribution+of+USPTO+Inventors.pdf). 
+
+We will be working with a set of large files and you will find the results of this work available for download into R in an [Open Science Framework repository](https://osf.io/k8mah/). The data has also been bundled up into the WomenInventorR package that can be accessed [here]().
+
+```{r, eval=FALSE}
+#install.packages("devtools")
+devtools::install_github("poldham/patentsviewdata")
+
+```
+
+We will also be using the tidyverse to wrangle the data.
+
+```{r, eval=FALSE}
+library(patentsviewdata)
+library(tidyverse)
+```
+
+### The data files
+
+We will be working with US granted patents data from PatentsView.
+
+The `patentsviewdata` package allows us to import the metadata for that page on the website including the urls for the AWS file storage. You can access that page at [PatentsView](https://patentsview.org/download/data-download-tables) to explore the contents. As explained in a previous post, creating the table in R makes it easier to access and downlaod the data we want.
+
+```{r eval=FALSE}
+grants <- patentsviewdata::pv_meta("grant")
+```
+
+There are a large number of files in this table and we need just a few. We will pick our way through them with `filter()`.
+
+```{r eval=FALSE}
+fns <- grants %>% 
+  filter(file_name == "assignee" | file_name == "ipcr" | file_name == "inventor" | 
+           file_name == "location" | file_name == "patent" | file_name == "patent_assignee" | 
+           file_name == "patent_inventor")
+```
+
+```{r echo=FALSE, eval=FALSE}
+save(fns, file = "fns.rda")
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("fns.rda")
+
+fns %>% 
+  select(url, zip_name) %>% 
+  head() %>% 
+  knitr::kable()
+```
+
+We can read these files over a connection using the `pv_download()` function that was developed in an earlier post [here]() and is now included in the `patentsviewdata package`. This function will download the file from the url and add it to a named destination folder (it will be created if it doesn't exist). Because we are dealing with large files we set the time out to something sensible (10 minutes by default). You may need to adjust this depending on your internet connection.
+
+```{r pv_download, eval=FALSE}
+pv_download(fns$url[1], dest = "grants", timeout = 600)
+```
+
+Files can be imported directly from .zip files (with the occasional exception of the patent.tsv.zip) file, using `pv_import()`. If you save and then specify the path to the metadata file we just downloaded the function will check that the number of rows match those on the PatentsView data download page.
+
+```{r eval=FALSE}
+pv_import(path = "/grants/inventor.tsv.zip", dest = grants, meta_path = "grants/grants.rda")
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+inventor_head <- inventor %>% 
+  head()
+save(inventor_head, file = "inventor_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("inventor_head.rda")
+
+inventor_head %>% knitr::kable()
+```
+
+Note that these can take some time to download as they are large files. The patents file can be difficult to directly import from a zip file in R.
+
+### Inventor Data
+
+In the first step we need to import the inventor table. This contains a column called `male_flag` (we rename it `gender_flag`) that allows us to divide the data into women and male inventors.
+
+```{r createinventors, eval=FALSE}
+library(tidyverse)
+
+# inventors
+pv_download(fns$url[2], dest = "grants", timeout = 600)
+
+inventor <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/inventor.tsv.zip")
+
+women_inventors <- inventor %>% 
+  rename(gender_flag = male_flag) %>% 
+  filter(gender_flag == 0) 
+
+male_inventors <- inventor %>% 
+  rename(gender_flag = male_flag) %>% 
+  filter(gender_flag == 1) 
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_inventors_head <- women_inventors %>% 
+  head()
+save(women_inventors_head, file = "women_inventors_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_inventors_head.rda")
+
+women_inventors_head %>% knitr::kable()
+```
+
+```{r saveinventors, echo=FALSE, eval=FALSE}
+#qs::qsave(women_inventors, file = "data/women_inventors.qs")
+#qs::qsave(male_inventors, file = "data/male_inventors.qs")
+
+#save(women_inventors, file = "data/women_inventors.rda", compress = "xz")
+#save(male_inventors, file = "data/male_inventors.rda", compress = "xz")
+```
+
+In the next step we will want to link our women inventor data to the main patent data table. However, we have to use the ids in an intermediate table to do that.
+
+### Linking Inventors to the Granted Patents Table
+
+We now download the main patent file (granted patents). However, to make the link to our women inventors we need to pass through the `patent_inventor` table that contains the inventor id, the patent document id (patent_id) and a location_id.
+
+We can read in the `patent_inventor` table and take a look.
+
+```{r patentinventor, eval=FALSE}
+library(readr)
+# expect 19,111,181
+
+# downlaod the patent_inventor table
+
+pv_download(fns$url[7], dest = "grants", timeout = 600)
+
+patent_inventor <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/patent_inventor.tsv.zip")
+
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+patent_inventor_head <- patent_inventor %>% 
+  head()
+save(patent_inventor_head, file = "patent_inventor_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("patent_inventor_head.rda")
+
+patent_inventor_head %>% knitr::kable()
+```
+
+Next we join the data with the women_inventor table we created above using the relevant ids.
+
+```{r women_patent_id, eval=FALSE}
+women_patent_id <- patent_inventor %>% 
+  mutate(women = .$inventor_id %in% women_inventors$id) %>% 
+  filter(women == TRUE)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_patent_id_head <- women_patent_id %>% 
+  head()
+save(women_patent_id_head, file = "women_patent_id_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_patent_id_head.rda")
+
+women_patent_id_head %>% knitr::kable()
+```
+
+Note that the outcome of this is a table that allows us to link to the patent table, so it is an intermediate object that just contains identifiers.
+
+### Linking to the Patent table
+
+The patent table is large and is particularly troublesome to read in. When reading in directly from a .zip it will sometimes fail. It can be best to unzip it first as we have done here.
+
+```{r patent, eval=FALSE}
+# expect 7814196
+
+pv_download(fns$url[5], dest = "grants", timeout = 600)
+
+patent <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/patent.tsv")
+```
+
+We now use the patent_id in the women_patent_id table to filter the granted patents table to those involving women. It is possible to do this directly with `patent %>% filter(.$id %in% women_patent_id$patent_id)` but creating a "women" column to use in filtering can also be a useful device for helping to keep track of what you have done.
+
+```{r women_granted, eval=FALSE}
+women_granted <- patent %>% 
+  mutate(women = .$id %in% women_patent_id$patent_id) %>% 
+  filter(women == TRUE)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_granted_head <- women_granted %>% 
+  head()
+save(women_granted_head, file = "women_granted_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_granted_head.rda")
+
+women_granted_head
+```
+
+We now have a data.frame with over 1.4 million granted patents where women appear as an inventor.
+
+### Separating out Patent Texts
+
+This data.frame is somewhat large because it includes the title and abstracts for the patent documents. In practice, if we want to engage in text mining or named entity recognition tasks we will normally only want the text fields and the id. So, let's separate these out into two sets.
+
+```{r eval=FALSE}
+womens_texts <- women_granted %>% 
+  select(id, title, abstract)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+womens_texts_head <- womens_texts %>% 
+  head(2)
+save(womens_texts_head, file = "womens_texts_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("womens_texts_head.rda")
+
+womens_texts_head
+```
+
+### The main patent data frame
+
+We now create an easier to handle patent data frame.
+
+```{r eval=FALSE}
+women_granted <- women_granted %>% 
+  select(-title, -abstract)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_granted_head <- women_granted %>% 
+  head()
+save(women_granted_head, file = "women_granted_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_granted_head.rda")
+
+women_granted_head %>% knitr::kable()
+```
+
+Note that the patent grant table includes a link to the original xml file. However, we no longer need to work with the XML for the full texts of US patents because the the PatentsView team have converted them to table format to make analysis easier. The main text field datasets (briefsum, description or specification, and claims) are avaiable as tables from the data download page. It is therefore unecessary to work with the XML unless you enjoy suffering.
+
+### What Technology Areas are Women Active In?
+
+The patent system uses detailed classification systems commonly consisting of alphanumeric codes (known as symbols) with the Internatinal Patent Classification and the more detailed Cooperative Patent Classification as the main classifications. The classifications are hierarchical and proceed from the section (e.g. A) to the subgroup level. For analytics purposes (when presenting to an audience) we will typically use the sub-group level. The IPC table that we will import will divide the classification into its relevant units (section, class, sub-class, group and sub-group) elements. To make life easier we will create a sub-class column that we can work with. We will minimize the table by only selecting relevant fields that we are likely to use. However, if we were seeking to explore indiviudal areas of technolology we would want to have the group and subgroup data available.
+
+To make this all a bit more understandable we are going to add an additional column with a short description table known as the short IPC created by Paul Oldham and Stephen Hall.
+
+```{r ipc, eval=FALSE}
+pv_download(fns$url[3], dest = "grants", timeout = 600)
+
+ipc <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/ipcr.tsv.zip") %>% 
+  unite(sub_class, c("section", "ipc_class", "subclass"), sep = "", remove = FALSE) %>% 
+  unite(group, c("sub_class", "main_group"), sep = "/", remove = FALSE) %>% 
+  select(uuid, patent_id, section, ipc_class, sub_class, group) %>% 
+  left_join(., patentr::ipc_short, by = c("sub_class" = "code"))
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+ipc_head <- ipc %>% 
+  head()
+save(ipc_head, file = "ipc_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("ipc_head.rda")
+
+ipc_head %>% knitr::kable()
+```
+
+Once we have our table we can start counting things.
+
+```{r ipcsccount, eval=FALSE}
+ipc_count <- ipc %>% 
+  count(sub_class, sort = TRUE)
+
+head(ipc_count)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+ipc_count_head <- ipc_count %>% 
+  head()
+save(ipc_count_head, file = "ipc_count_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("ipc_count_head.rda")
+
+ipc_count_head %>% knitr::kable()
+```
+
+These sub classes may not mean a lot as codes but they are the key to understanding areeas of technology where women are most active as inventors in the patent system. You can find out more by visiting the IPC website for the top result [G06f](https://www.wipo.int/classifications/ipc/en/ITsupport/Version20170101/transformations/ipc/20170101/en/htm/G06F.htm).
+
+We can do the same for the group level to try and get a more detailed idea.
+
+```{r ipcgroup, eval=FALSE}
+ipc_group <- ipc %>% 
+  count(group, sort = TRUE)
+
+head(ipc_group)
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+ipc_group_head <- ipc_group %>% 
+  head()
+save(ipc_group_head, file = "ipc_group_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("ipc_group_head.rda")
+
+ipc_group_head %>% knitr::kable()
+```
+
+Here we could look up [A61K/31](https://www.wipo.int/classifications/ipc/en/ITsupport/Version20170101/transformations/ipc/20170101/en/htm/A61K.htm) to see what this code encompasses.
+
+We have already provided you with the means to produce a visualisation of this data without using the codes, and invite you to experiment.
+
+### Who do women inventors work for
+
+To answer this question we need to obtain the assignee (applicant) data. We will need two tables to make the link to our women inventors. The assignee table contains ids and details for individual applicants and organisations. The patent_assignees table contains ids to link between tables.
+
+```{r assignee, eval=FALSE}
+# downlaod the assignee table
+pv_download(fns$url[1], dest = "grants", timeout = 600)
+
+assignee <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/assignee.tsv.zip") 
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+assignee_head <- assignee %>% 
+  head()
+save(assignee_head, file = "assignee_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("assignee_head.rda")
+
+assignee_head %>% knitr::kable()
+```
+
+```{r patent_assignee, eval=FALSE}
+library(readr)
+# download the patent_assignee table
+pv_download(fns$url[6], dest = "grants", timeout = 600)
+
+patent_assignee <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/patent_assignee.tsv.zip") 
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+patent_assignee_head <- patent_assignee %>% 
+  head()
+save(patent_assignee_head, file = "patent_assignee_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("patent_assignee_head.rda")
+
+patent_assignee_head %>% knitr::kable()
+```
+
+```{r womenassigness, eval=FALSE}
+library(tidyverse)
+women_assignees <- women_patent_id %>% 
+  rename(inventor_location_id = location_id) %>% 
+  left_join(patent_assignee, by = "patent_id") %>% 
+  rename(assignee_location_id = location_id)  %>% 
+  left_join(assignee, by = c("assignee_id" = "id"))
+
+# note that the women_assignees table is longer at 1,913,654 than the women_patent_id. This may arise if an inventor with the same id appears with different assignees over their career but merits investigation.  
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_assignees_head <- women_assignees %>% 
+  head()
+save(women_assignees_head, file = "women_assignees_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_assignees_head.rda")
+
+women_assignees_head %>% knitr::kable()
+```
+
+### Location Data
+
+There are two types of location data that are available to us. The first is inventor location data and the second is applicany (assignee) data. While the geocoding is unlikely to be perfect it will provide opportunities to create maps and other forms of analysis on the global distribution of women inventors and the organisations they work for.
+
+We will start by obtaining the locations for the women inventors.
+
+```{r inventorlocations, eval=FALSE}
+
+pv_download(fns$url[4], dest = "grants", timeout = 600)
+
+location <- pv_import("/Users/pauloldham/Documents/patentsview2021/grant/location.tsv.zip") 
+
+country <- countrycode::codelist_panel %>% 
+  janitor::clean_names() %>% 
+  mutate(duplicated = duplicated(country_name_en)) %>% 
+  filter(duplicated == FALSE) %>%
+  select(country_name_en, iso2c, region) %>% 
+  rename(country_name = country_name_en)
+  
+women_location <- left_join(women_patent_id, location, by = c("location_id" = "id")) %>% 
+  drop_na(country) %>% # some country entries are NA values (no example of NA for Namibia)
+  left_join(country, by = c("country" = "iso2c")) # 1802405 so a small drop from the main table
+```
+
+```{=html}
+<!---save(women_location, file = "data/women/rda/women_location.rda", compress = "xz")
+
+qs::qsave(women_location, "data/women/women_location.qs")--->
+```
+
+
+```{r echo=FALSE, eval=FALSE}
+
+women_location_head <- women_location %>% 
+  head()
+save(women_location_head, file = "women_location_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_location_head.rda")
+
+women_location_head %>% knitr::kable()
+```
+
+Note that this table provides latitude and longitude coordinates that can be used in R to create maps.
+
+We now do the same for the applicants (assignees) data.
+
+```{r assigneelocations, eval=FALSE}
+women_assignees_location <- left_join(women_assignees, location, by = c("assignee_location_id" = "id")) %>% 
+  drop_na(country) %>% # some country entries are NA values (no example of NA for Namibia)
+  left_join(country, by = c("country" = "iso2c"))
+```
+
+```{r echo=FALSE, eval=FALSE}
+
+women_assignees_location_head <- women_assignees_location %>% 
+  head()
+save(women_assignees_location_head, file = "women_assignees_location_head.rda")
+
+```
+
+```{r echo=FALSE, eval=TRUE}
+load("women_assignees_location_head.rda")
+
+women_assignees_location_head %>% knitr::kable()
+```
+
+### Extra Data
+
+In performing an analysis we will often want to place the data in its wider context. Thus, the data on women inventors that we have just created is a subset of the wider data on US patent grants. We have preserved some of this context by retaining the data on male inventors. We can finish up by thinking about other types of data that would be useful.
+
+In considering the context of patent activity involving women as inventors it would clearly be desirable to retain the data on overall trends on patent grants in the patent table. However, it would make sense to drop the text (title and abstract) fields that can make this a difficult file to work with.
+
+```{r patentrends, eval=FALSE}
+patent_trends <- patent %>% 
+  select(-title, -abstract)
+```
+
+### The womeninventoR Package
+
+The code above describes the process used to create the data tables for women inventors that we have bundled into the womeninventoR data package. You can access the data package [here]().
+
+### Conlusion
+
+The release of large scale data on women inventors in the United States represents a significant achievement on the part of the USPTO PatentsView team led by Christina Jones. This dataset deserves to be more widely known and offers rich opportunities for exploration by the R and wider data science community. 
+
+### Exercises
+
+Based on the data that we have imported we can now start asking questions that move from basic to advanced approaches. 
+
+1. Who are the top women inventors in the United States (based on the count of patent grants)? 
+2. Distinct people may share the same name (known as lumping). Can you see any evidence of this in the data? What other data fields (possibly in other tables) might assist with addressing lumped names?
+3. Who are the top applicant organisations in the United States?
+4. What are the top technology areas where women inventors have received patent grants?
+5. What is the trend over time in patent grants involving women inventors relative to the overall trend in patent grants?
+6. What are the top countries represented in the women inventor location data (by inventor and by organisation)
+7. What are the main locations in the United States where women inventors are located. Visualise the data on the state and the city/town level.
+8. A significant proportion of US patents involving women as inventors are listed for countries outside the United States. Create a global map that allows the data to be visualised and filtered by country.
+9. The USPTO Office of the Chief Economist report [here](https://www.uspto.gov/sites/default/files/documents/OCE-DH-Progress-Potential-2020.pdf) focuses on two measures: a) the share of granted patents held by women, and: b) the WIR rate which is the share of women among all inventor-patentees for a given period of time. Can you reproduce this approach taking into account the information in the methodology [here](https://s3.amazonaws.com/data.patentsview.org/documents/On-line+Appendix+-+Gender+Attribution+of+USPTO+Inventors.pdf). 
+10. What improvements would you make to the representation of the data on women inventors in the Progress and Potential [report](https://www.uspto.gov/sites/default/files/documents/OCE-DH-Progress-Potential-2020.pdf)?
+11. The availability of text data provides opportunities to engage in text based topic modelling (e.g. Following the [tidytext approach](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html) popularised by Julia Silge and Daniel Robinson)
+12. What opportunities exist for modelling women inventor data in R (for example using the [tidymodels framework](https://www.tidymodels.org/)). Is it possible to produce forecasts for trends in women inventors over time and what factors would affect the ability to forecast this type of data?
