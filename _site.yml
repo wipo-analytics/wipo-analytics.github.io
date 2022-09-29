@@ -17,7 +17,7 @@ navbar:
     - text: "Handbook"
       href:  https://wipo-analytics.github.io/handbook/
     - text: "Datasets"
-      href:  https://wipo-analytics.github.io/
+      href:  datasets.html
     - text: "Presentations"
       href:  https://github.com/wipo-analytics/presentations  
 output: 

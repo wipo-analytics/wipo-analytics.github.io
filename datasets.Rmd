@@ -1,0 +1,30 @@
+---
+title: "WIPO Patent Analytics Training Datasets"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The WIPO Patent Analytics team have developed a number of datasets for use in patent analytics publications and training workshops. The datasets are freely accessible through a repository on the Open Science Framework [here](https://osf.io/s8ugn/).
+
+Datasets are organised around publications and themes. The datasets can be downloaded as individual zip files at the links provided below. 
+
+- __drones__. A legacy dataset of [Clarivate Analytics](https://clarivate.com/) patent records for drone technology. This is not updated and is used purely for training in approaches to patent counts and the use of Derwent Innovation data. Download the zip file [here](https://osf.io/download/zubd4/). The data is also available in the `drones` data package for R users that can be accessed at [https://wipo-analytics.github.io/drones/](https://wipo-analytics.github.io/drones/).
+
+- __dronesr__: A recent dataset of scientific and patent publications from [the Lens](https://www.lens.org/) open access database. This dataset contains a full spectrum of scientific and patent literature on drone technology and is current until December 2021. To download all files use this [link](https://osf.io/download/yngqc/). Use the following links for individual zipped sets: [literature](https://osf.io/download/r2jau/), [patents](https://osf.io/download/ugf96/). Public collections are also available on the Lens for these sets to allow for exploration.
+  
+  - Literature [https://www.lens.org/lens/search/scholar/list?collectionId=199039](https://www.lens.org/lens/search/scholar/list?collectionId=199039)
+  - Patents [https://www.lens.org/lens/search/patent/list?collectionId=199031](https://www.lens.org/lens/search/patent/list?collectionId=199031)
+  
+The `dronesr` data package for R users can be installed from [https://poldham.github.io/dronesr/](https://poldham.github.io/dronesr/).  
+
+
+
+- __Handbook__: The datasets used in each chapter of the WIPO Patent Analytics Handbook including large patent datasets from the US PatentsView are available from the repository [here](https://osf.io/s8ugn/) and organised by chapter. Many of these datasets are in the R .rda format. These sets include large files for the classification and text mining chapters and you may wish to download them individually.
+
+- __Manual__: The datasets used in the WIPO Manual on Open Source Patent Analytics are available for the chapters on Tableau Public and Gephi. They can be downloaded as a single zip file [here](https://osf.io/download/s8fa7/). 
+
+<!--- - __WomenInventoR__: --->
+
+- __Workshops__: Datasets that were used in WIPO national and Regional Training workshops between 2015-2018 can be downloaded [here](https://osf.io/download/agwqc/).
