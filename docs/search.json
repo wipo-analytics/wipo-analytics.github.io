@@ -4,43 +4,43 @@
       "path": "about.html",
       "title": "About this Site",
       "author": [],
-      "contents": "\nThis is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics) and Lakshmi Supriya (WIPO), Christine Gacuiri (Amband).\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:56+01:00"
+      "contents": "\nThis is the resource hub for the training materials in Patent Analytics from the World Intellectual Property Organization. The WIPO patent analytics team are Irene Kitsara (WIPO), Paul Oldham (One World Analytics), Enric Escorsa (WIPO), Jasmine Kindness (One World Analytics), Craig D’souza (WIPO) and Lakshmi Supriya (WIPO), Christine Gacuiri (Amband).\n\n\n\n",
+      "last_modified": "2022-09-30T13:58:42+01:00"
     },
     {
       "path": "datasets.html",
       "title": "WIPO Patent Analytics Training Datasets",
       "author": [],
       "contents": "\nThe WIPO Patent Analytics team have developed a number of datasets for use in patent analytics publications and training workshops. The datasets are freely accessible through a repository on the Open Science Framework here.\nDatasets are organised around publications and themes. The datasets can be downloaded as individual zip files at the links provided below.\ndrones. A legacy dataset of Clarivate Analytics patent records for drone technology. This is not updated and is used purely for training in approaches to patent counts and the use of Derwent Innovation data. Download the zip file here. The data is also available in the drones data package for R users that can be accessed at https://wipo-analytics.github.io/drones/.\ndronesr: A recent dataset of scientific and patent publications from the Lens open access database. This dataset contains a full spectrum of scientific and patent literature on drone technology and is current until December 2021. To download all files use this link. Use the following links for individual zipped sets: literature, patents. Public collections are also available on the Lens for these sets to allow for exploration.\nLiterature https://www.lens.org/lens/search/scholar/list?collectionId=199039\nPatents https://www.lens.org/lens/search/patent/list?collectionId=199031\n\nThe dronesr data package for R users can be installed from https://poldham.github.io/dronesr/.\nHandbook: The datasets used in each chapter of the WIPO Patent Analytics Handbook including large patent datasets from the US PatentsView are available from the repository here and organised by chapter. Many of these datasets are in the R .rda format. These sets include large files for the classification and text mining chapters and you may wish to download them individually.\nManual: The datasets used in the WIPO Manual on Open Source Patent Analytics are available for the chapters on Tableau Public and Gephi. They can be downloaded as a single zip file here.\nWorkshops: Datasets that were used in WIPO national and Regional Training workshops between 2015-2018 can be downloaded here.\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:56+01:00"
+      "last_modified": "2022-09-30T13:58:42+01:00"
     },
     {
       "path": "git_steps.html",
       "title": "Untitled",
       "author": [],
       "contents": "\n\n\n\n\n\n\n\n\nWIPO Patent Analytics\n\n\nHome\nAbout\nManual\nHandbook\nDatasets\nPresentations\nWorkshop Preparation\n☰\n\n\n  \n    \n      \n        \n        \n        \n      \n      \n    \n    \n      \n  Home\n\n\n  About\n\n\n  Manual\n\n\n  Handbook\n\n\n  Datasets\n\n\n  Presentations\n\n\n  Workshop Preparation\n\n      \n  \n\n\n\n\n\n\nUntitled\n\n\n\n\n\nProcess - STEPS\nIn Git make sure you are in master brach\nPULL to get latest version of master\nCreate a new branch for the work you are about to do. Give the\nbranch a name jazz_api, jazz_sql\nMake sure you are in your branch\nMake changes\nCommit and push on your branch\nMake pull request\nMerge to Master if you are sure it will not break anything\nOtherwise request review\n\n\n\n\n\n\n\n\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:57+01:00"
+      "last_modified": "2022-09-30T13:58:43+01:00"
     },
     {
       "path": "index.html",
       "title": "WIPO Analytics",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:57+01:00"
+      "last_modified": "2022-09-30T13:58:43+01:00"
     },
     {
       "path": "instructions.html",
       "title": "Workshop Instructions",
       "author": [],
       "contents": "\nWIPO Analytics Workshop Instructions\nWIPO workshops in patent analytics involve hands on exercises that\nrequire that participants sign up for accounts and install software on\ntheir computers. In cases where a workshop is hosted by an organisation a computer laboratory is often used and technicians are invited to assist with ensuring that machines contain the required software. Please follow these instructions carefully.\nAccounts to sign up for\nPlease ensure that you sign up for the following accounts before the\nworkshop. Please follow the information below closely.\nSign up for a Tableau Public Account (free) and download the Tableau\nPublic software for your system. https://public.tableau.com/s/\nMake a note of your username and password and keep it somewhere\naccessible as you will need it during the sessions.\nSign up for Github account\nSign up for a free Github account from\nhttps://github.com and download Github Desktop for your operating\nsystem.\nSign in to Github Desktop when downloaded.\nSign up for an info.gram account (for infographics)\nSign up here: https://infogr.am\nSign up for an account with the Lens at: https://www.lens.org/\nMake a note of your username and password.\nSoftware to Install\nThe following software and packages (RStudio) need to be installed.\nTableau Public\nCreate an account on https://public.tableau.com/s/ and download the software. Note that it is Tableau Public (which is free) that needs to be downloaded. If you download Tableau Desktop that is OK but it will expire after 14 days.\nGephi 0.9.7\nGo to https://gephi.org/users/download/ and choose your operating system.\nVery Important. Check that Gephi will open and that it displays a welcome screen with example files. Click on one of those and it should display a network diagram.\nWhen Gephi is open we need to install some plugins.\nGo to:\nTools > Plugins > Available Plugins\nIn Available Plugins tick the box next to:\nConvert Excel and csv Files to Networks\nThen choose install and just keep clicking OK and Continue until you are asked to reboot Gephi.\nInstall Open Refine (Google Refine)\nDownload and install Open Refine for your system from here:\nhttps://openrefine.org/download.html\nChoose the latest version\nOpen Refine/Google Refine works with the Chrome browser (and will not work with Internet Explorer). Please ensure that Chrome is installed and set as the pre-defined web browser, so that Open Refine will open (show a start screen)\nRStudio\nWe need to install R and then the user interface RStudio (we must have both).\nStep 1. Install the version of R for your system (called base)\nThe link to download R is here https://cran.rstudio.com/\nChoose Run and follow the instructions.\nStep 2. Download the free RStudio Desktop for your system from\nhttps://www.rstudio.com/products/rstudio/\nInstall Packages in RStudio\nThe packages should be installed in the same root directory as the core packages (those that are automatically installed). This can be a problem on network machines so please ensure that the following packages will load (tick next to the package in the packages tab)\nTo install the packages:\nOpen RStudio and look for the Console (bottom left pane)\nCopy and paste the following into the Console to install the packages we will need (note the use of straight and not curly quotes):\ninstall.packages(“tidyverse”)\ninstall.packages(“rmarkdown”)\ninstall.packages(“tidytext”)\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:57+01:00"
+      "last_modified": "2022-09-30T13:58:43+01:00"
     },
     {
       "path": "presentations.html",
       "title": "Presentations",
       "author": [],
       "contents": "\nAccess presentations used in WIPO Patent Analytics Training. Presentations are organised in the order of sessions. Please see the software instructions if you are organising or participating in a session.\nPresentations\nWIPOs work with patent analytics\nFree and Open Source Patent Analytics Tools\nThe Patent Analytics Workflow\nObtaining patent data from patent scope\nObtainingg patent data from the Lens\nPatent Data Fields\nCleaning Patent Data with Open Refine\nCleaning Patent data with VantagePoint\nVisualising Data with Tableau Public\nVisualising Networks with Gephi. Please ensure that Gephi is installed for this practical session and follow these instructions in case of problems on Windows.\nVisualizing Data with Infographics\nOther Presentations\nIntroduction to Patent Analytics\nIP Management Indicators\nPreparing Patent Landscape Reports\nDifferent Types and Objectives of Patent Analytics\n\n\n\n",
-      "last_modified": "2022-09-30T13:55:58+01:00"
+      "last_modified": "2022-09-30T13:58:44+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
