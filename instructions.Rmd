@@ -1,8 +1,5 @@
 ---
 title: "Workshop Instructions"
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -13,9 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 WIPO workshops in patent analytics involve hands on exercises that
 require that participants sign up for accounts and install software on
-their computers. In cases where a workshop is hosted by an organisation
-a computer laboratory is often used and technicians are invited to
-assist with ensuring that machines contain the required software.
+their computers. In cases where a workshop is hosted by an organisation a computer laboratory is often used and technicians are invited to assist with ensuring that machines contain the required software. Please follow these instructions carefully. 
 
 ### Accounts to sign up for
 
