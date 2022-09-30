@@ -1,0 +1,10 @@
+---
+title: "Presentations"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Access presentations used in WIPO Patent Analytics Training
+

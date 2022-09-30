@@ -19,7 +19,7 @@ navbar:
     - text: "Datasets"
       href:  datasets.html
     - text: "Presentations"
-      href:  https://github.com/wipo-analytics/presentations  
+      href:  presentations.html  
 output: 
   distill::distill_article:   
     includes:     
