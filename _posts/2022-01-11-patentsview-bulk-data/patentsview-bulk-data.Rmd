@@ -1,5 +1,5 @@
 ---
-title: "PatentsView Bulk Data"
+title: "PatentsView Bulk Data with R"
 description: |
   Learn how to download bulk US patent data from PatentsView with R.
 author:

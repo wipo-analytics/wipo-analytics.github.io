@@ -1,7 +1,7 @@
 ---
 title: Women Inventors Data in R
 description: |
- Data on Women Inventors from the USPTO
+ Import Data on Women Inventors from the USPTO PatentsView Service into R
 author:
   - name: Paul Oldham
     url: https://github.com/wipo-analytics

@@ -88,27 +88,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>WIPO Patent Analytics: WIPO Patent Analytics Training Datasets</title>
+  <title>WIPO Patent Analytics: Workshop Instructions</title>
 
 
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="WIPO Patent Analytics: WIPO Patent Analytics Training Datasets"/>
+  <meta property="og:title" content="WIPO Patent Analytics: Workshop Instructions"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="WIPO Patent Analytics"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="WIPO Patent Analytics: WIPO Patent Analytics Training Datasets"/>
+  <meta property="twitter:title" content="WIPO Patent Analytics: Workshop Instructions"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["WIPO Patent Analytics Training Datasets"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Workshop Instructions"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"integer","attributes":{},"value":[72]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2094,7 +2094,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"WIPO Patent Analytics Training Datasets","authors":[]}
+{"title":"Workshop Instructions","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2122,7 +2122,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>WIPO Patent Analytics Training Datasets</h1>
+<h1>Workshop Instructions</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2130,25 +2130,81 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>The WIPO Patent Analytics team have developed a number of datasets for use in patent analytics publications and training workshops. The datasets are freely accessible through a repository on the Open Science Framework <a href="https://osf.io/s8ugn/">here</a>.</p>
-<p>Datasets are organised around publications and themes. The datasets can be downloaded as individual zip files at the links provided below.</p>
+<h2 id="wipo-analytics-workshop-instructions">WIPO Analytics Workshop Instructions</h2>
+<p>WIPO workshops in patent analytics involve hands on exercises that
+require that participants sign up for accounts and install software on
+their computers. In cases where a workshop is hosted by an organisation
+a computer laboratory is often used and technicians are invited to
+assist with ensuring that machines contain the required software.</p>
+<h3 id="accounts-to-sign-up-for">Accounts to sign up for</h3>
+<p>Please ensure that you sign up for the following accounts before the
+workshop. Please follow the information below closely.</p>
+<ol type="1">
+<li>Sign up for a <strong>Tableau Public Account (free)</strong> and download the Tableau
+Public software for your system. <a href="https://public.tableau.com/s/" class="uri">https://public.tableau.com/s/</a></li>
+</ol>
+<p>Make a note of your username and password and keep it somewhere
+accessible as you will need it during the sessions.</p>
+<ol start="2" type="1">
+<li>Sign up for <strong>Github account</strong></li>
+</ol>
+<p>Sign up for a free Github account from
+<a href="https://github.com" class="uri">https://github.com</a> and download Github Desktop for your operating
+system.</p>
+<p>Sign in to Github Desktop when downloaded.</p>
+<ol start="3" type="1">
+<li>Sign up for an <strong>info.gram account</strong> (for infographics)</li>
+</ol>
+<p>Sign up here: <a href="https://infogr.am" class="uri">https://infogr.am</a></p>
+<ol start="4" type="1">
+<li>Sign up for an account with the Lens at: <a href="https://www.lens.org/" class="uri">https://www.lens.org/</a></li>
+</ol>
+<p>Make a note of your username and password.</p>
+<h2 id="software-to-install">Software to Install</h2>
+<p>The following software and packages (RStudio) need to be installed.</p>
+<ol type="1">
+<li><strong>Tableau Public</strong></li>
+</ol>
+<p>Create an account on <a href="https://public.tableau.com/s/" class="uri">https://public.tableau.com/s/</a> and download the software. Note that it is Tableau Public (which is free) that needs to be downloaded. If you download Tableau Desktop that is OK but it will expire after 14 days.</p>
+<ol start="2" type="1">
+<li><strong>Gephi 0.9.7</strong>
+Go to <a href="https://gephi.org/users/download/" class="uri">https://gephi.org/users/download/</a> and choose your operating system.</li>
+</ol>
+<p>Very Important. Check that Gephi will open and that it displays a welcome screen with example files. Click on one of those and it should display a network diagram.</p>
+<p>When Gephi is open we need to install some plugins.</p>
+<p>Go to:</p>
+<p>Tools &gt; Plugins &gt; Available Plugins
+In Available Plugins tick the box next to:
+<code>Convert Excel and csv Files to Networks</code></p>
+<p>Then choose install and just keep clicking OK and Continue until you are asked to reboot Gephi.</p>
+<ol start="3" type="1">
+<li>Install <strong>Open Refine</strong> (Google Refine)</li>
+</ol>
+<p>Download and install Open Refine for your system from here:</p>
+<p><a href="https://openrefine.org/download.html" class="uri">https://openrefine.org/download.html</a></p>
+<p>Choose the latest version</p>
+<p>Open Refine/Google Refine works with the Chrome browser (and will not work with Internet Explorer). Please ensure that Chrome is installed and set as the pre-defined web browser, so that Open Refine will open (show a start screen)</p>
+<ol start="3" type="1">
+<li><strong>RStudio</strong></li>
+</ol>
+<p>We need to <strong>install R</strong> and then the user interface RStudio (we must have both).</p>
+<p>Step 1. Install the version of R for your system (called base)
+The link to download R is here <a href="https://cran.rstudio.com/" class="uri">https://cran.rstudio.com/</a>
+Choose Run and follow the instructions.</p>
+<p>Step 2. Download the free RStudio Desktop for your system from
+<a href="https://www.rstudio.com/products/rstudio/" class="uri">https://www.rstudio.com/products/rstudio/</a></p>
+<ol start="4" type="1">
+<li><strong>Install Packages in RStudio</strong></li>
+</ol>
+<p>The packages should be installed in the same root directory as the core packages (those that are automatically installed). This can be a problem on network machines so please ensure that the following packages will load (tick next to the package in the packages tab)</p>
+<p>To install the packages:</p>
 <ul>
-<li><p><strong>drones</strong>. A legacy dataset of <a href="https://clarivate.com/">Clarivate Analytics</a> patent records for drone technology. This is not updated and is used purely for training in approaches to patent counts and the use of Derwent Innovation data. Download the zip file <a href="https://osf.io/download/zubd4/">here</a>. The data is also available in the <code>drones</code> data package for R users that can be accessed at <a href="https://wipo-analytics.github.io/drones/">https://wipo-analytics.github.io/drones/</a>.</p></li>
-<li><p><strong>dronesr</strong>: A recent dataset of scientific and patent publications from <a href="https://www.lens.org/">the Lens</a> open access database. This dataset contains a full spectrum of scientific and patent literature on drone technology and is current until December 2021. To download all files use this <a href="https://osf.io/download/yngqc/">link</a>. Use the following links for individual zipped sets: <a href="https://osf.io/download/r2jau/">literature</a>, <a href="https://osf.io/download/ugf96/">patents</a>. Public collections are also available on the Lens for these sets to allow for exploration.</p>
-<ul>
-<li>Literature <a href="https://www.lens.org/lens/search/scholar/list?collectionId=199039">https://www.lens.org/lens/search/scholar/list?collectionId=199039</a></li>
-<li>Patents <a href="https://www.lens.org/lens/search/patent/list?collectionId=199031">https://www.lens.org/lens/search/patent/list?collectionId=199031</a></li>
-</ul></li>
+<li>Open RStudio and look for the Console (bottom left pane)</li>
+<li>Copy and paste the following into the Console to install the packages we will need (note the use of straight and not curly quotes):</li>
 </ul>
-<p>The <code>dronesr</code> data package for R users can be installed from <a href="https://poldham.github.io/dronesr/">https://poldham.github.io/dronesr/</a>.</p>
-<ul>
-<li><p><strong>Handbook</strong>: The datasets used in each chapter of the WIPO Patent Analytics Handbook including large patent datasets from the US PatentsView are available from the repository <a href="https://osf.io/s8ugn/">here</a> and organised by chapter. Many of these datasets are in the R .rda format. These sets include large files for the classification and text mining chapters and you may wish to download them individually.</p></li>
-<li><p><strong>Manual</strong>: The datasets used in the WIPO Manual on Open Source Patent Analytics are available for the chapters on Tableau Public and Gephi. They can be downloaded as a single zip file <a href="https://osf.io/download/s8fa7/">here</a>.</p></li>
-</ul>
-<!--- - __WomenInventoR__: --->
-<ul>
-<li><strong>Workshops</strong>: Datasets that were used in WIPO national and Regional Training workshops between 2015-2018 can be downloaded <a href="https://osf.io/download/agwqc/">here</a>.</li>
-</ul>
+<p>install.packages(“tidyverse”)
+install.packages(“rmarkdown”)
+install.packages(“tidytext”)</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

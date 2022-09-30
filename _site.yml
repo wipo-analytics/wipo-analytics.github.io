@@ -19,7 +19,10 @@ navbar:
     - text: "Datasets"
       href:  datasets.html
     - text: "Presentations"
-      href:  presentations.html  
+      href:  presentations.html
+    - text: "Workshop Preparation"
+      href:  instructions.html 
+      
 output: 
   distill::distill_article:   
     includes:     

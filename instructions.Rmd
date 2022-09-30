@@ -1,0 +1,108 @@
+---
+title: "Workshop Instructions"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## WIPO Analytics Workshop Instructions
+
+WIPO workshops in patent analytics involve hands on exercises that
+require that participants sign up for accounts and install software on
+their computers. In cases where a workshop is hosted by an organisation
+a computer laboratory is often used and technicians are invited to
+assist with ensuring that machines contain the required software.
+
+### Accounts to sign up for
+
+Please ensure that you sign up for the following accounts before the
+workshop. Please follow the information below closely.
+
+1) Sign up for a __Tableau Public Account (free)__ and download the Tableau
+Public software for your system. <https://public.tableau.com/s/>
+
+Make a note of your username and password and keep it somewhere
+accessible as you will need it during the sessions.
+
+2) Sign up for __Github account__ 
+
+Sign up for a free Github account from
+<https://github.com> and download Github Desktop for your operating
+system.
+
+Sign in to Github Desktop when downloaded.
+
+3) Sign up for an __info.gram account__ (for infographics)
+
+Sign up here: <https://infogr.am>
+
+4) Sign up for an account with the Lens at: <https://www.lens.org/>
+
+Make a note of your username and password.
+
+## Software to Install
+
+The following software and packages (RStudio) need to be installed.
+
+1) __Tableau Public__
+
+Create an account on <https://public.tableau.com/s/> and download the software. Note that it is Tableau Public (which is free) that needs to be downloaded. If you download Tableau Desktop that is OK but it will expire after 14 days. 
+
+2)	__Gephi 0.9.7__
+Go to <https://gephi.org/users/download/> and choose your operating system. 
+
+Very Important. Check that Gephi will open and that it displays a welcome screen with example files. Click on one of those and it should display a network diagram.
+
+When Gephi is open we need to install some plugins. 
+
+Go to:
+
+Tools > Plugins > Available Plugins
+In Available Plugins tick the box next to:
+`Convert Excel and csv Files to Networks`
+
+Then choose install and just keep clicking OK and Continue until you are asked to reboot Gephi. 
+
+3) Install __Open Refine__ (Google Refine)
+
+Download and install Open Refine for your system from here:
+
+<https://openrefine.org/download.html>
+
+Choose the latest version
+
+Open Refine/Google Refine works with the Chrome browser (and will not work with Internet Explorer). Please ensure that Chrome is installed and set as the pre-defined web browser, so that Open Refine will open (show a start screen)
+
+3) __RStudio__
+
+We need to __install R__ and then the user interface RStudio (we must have both). 
+
+Step 1. Install the version of R for your system (called base)
+The link to download R is here <https://cran.rstudio.com/>
+Choose Run and follow the instructions.
+
+Step 2. Download the free RStudio Desktop for your system from 
+<https://www.rstudio.com/products/rstudio/>
+
+4) __Install Packages in RStudio__
+
+The packages should be installed in the same root directory as the core packages (those that are automatically installed). This can be a problem on network machines so please ensure that the following packages will load (tick next to the package in the packages tab)
+
+To install the packages: 
+
+-	Open RStudio and look for the Console (bottom left pane)
+-	Copy and paste the following into the Console to install the packages we will need (note the use of straight and not curly quotes):
+
+install.packages("tidyverse")
+install.packages("rmarkdown") 
+install.packages("tidytext")
+
+
+
+
+
+

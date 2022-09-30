@@ -6,5 +6,41 @@ title: "Presentations"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Access presentations used in WIPO Patent Analytics Training
+Access presentations used in WIPO Patent Analytics Training. Presentations are organised in the order of sessions. Please see the [software instructions](https://wipo-analytics.github.io/instructions.html) if you are organising or participating in a session. 
+
+## Presentations
+
+1. [WIPOs work with patent analytics](https://github.com/wipo-analytics/presentations/blob/master/WIPO%20activities%20in%20patent%20analytics%20and%20their%20integration%20in%20the%20TISC%20program.pptx?raw=true)
+
+2. [Free and Open Source Patent Analytics Tools](https://github.com/wipo-analytics/presentations/blob/master/Free%20and%20Open%20Source%20Tools%20For%20Patent%20Analytics.pptx?raw=true)
+
+3. [The Patent Analytics Workflow](https://github.com/wipo-analytics/presentations/blob/master/workflow.pptx?raw=true)
+
+4. [Obtaining patent data from patent scope](https://github.com/wipo-analytics/presentations/blob/master/Obtaining%20Patent%20Data%20from%20Patentscope%20Introduction%20and%20Practical%20Exercise.pptx?raw=true)
+
+5. [Obtainingg patent data from the Lens](https://github.com/wipo-analytics/presentations/blob/master/Obtaining%20Patent%20Data%20from%20the%20Lens.pptx?raw=true)
+
+6. [Patent Data Fields](https://github.com/wipo-analytics/presentations/raw/master/patent_data_fields.pdf)
+
+7. [Cleaning Patent Data with Open Refine](https://github.com/wipo-analytics/presentations/raw/master/Topic_6_Cleaning_Patent_Data_Open_Refine.pdf)
+
+8. [Cleaning Patent data with VantagePoint](https://github.com/wipo-analytics/presentations/raw/master/Topic_6_Cleaning_Patent_Data_Vantage_Point.pdf)
+
+9. [Visualising Data with Tableau Public](https://github.com/wipo-analytics/presentations/raw/master/Topic_8_Visualization_Tableau_Public.pdf) 
+
+10. Visualising Networks with Gephi. Please ensure that Gephi is installed for this practical session and follow [these instructions](https://github.com/wipo-analytics/presentations/raw/master/gephi_installation.pdf) in case of problems on Windows.
+
+11. [Visualizing Data with Infographics](https://github.com/wipo-analytics/presentations/blob/master/Creating%20Infographics.pptx?raw=true)
+
+### Other Presentations
+
+- [Introduction to Patent Analytics](https://github.com/wipo-analytics/presentations/blob/master/Introduction%20to%20Patent%20Analytics.pptx?raw=true)
+
+- [IP Management Indicators](https://github.com/wipo-analytics/presentations/blob/master/IPManagement_Indicators.pptx?raw=true)
+
+- [Preparing Patent Landscape Reports](https://github.com/wipo-analytics/presentations/raw/master/Patent%20Analytics%20Tasks%2C%20Stages%20and%20Workflow%20in%20the%20preparation%20of%20Patent%20Landscape%20Report.pptx)
+
+- [Different Types and Objectives of Patent Analytics](https://github.com/wipo-analytics/presentations/raw/master/Topic_9_%20Different%20Types%20and%20Objectives%20of%20Patent%20Analysis%20-%20Copy.pdf)
+
+
 
