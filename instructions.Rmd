@@ -1,12 +1,10 @@
 ---
-title: "Workshop Instructions"
+title: "WIPO Analytics Workshop Instructions"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-## WIPO Analytics Workshop Instructions
 
 WIPO workshops in patent analytics involve hands on exercises that
 require that participants sign up for accounts and install software on

@@ -18,13 +18,20 @@ Access presentations used in WIPO Patent Analytics Training. Presentations are o
 
 4. [Obtaining patent data from patent scope](https://github.com/wipo-analytics/presentations/blob/master/Obtaining%20Patent%20Data%20from%20Patentscope%20Introduction%20and%20Practical%20Exercise.pptx?raw=true)
 
-5. [Obtainingg patent data from the Lens](https://github.com/wipo-analytics/presentations/blob/master/Obtaining%20Patent%20Data%20from%20the%20Lens.pptx?raw=true)
+5. [Obtaining patent data from the Lens](https://github.com/wipo-analytics/presentations/blob/master/Obtaining%20Patent%20Data%20from%20the%20Lens.pptx?raw=true)
 
 6. [Patent Data Fields](https://github.com/wipo-analytics/presentations/raw/master/patent_data_fields.pdf)
 
 7. [Cleaning Patent Data with Open Refine](https://github.com/wipo-analytics/presentations/raw/master/Topic_6_Cleaning_Patent_Data_Open_Refine.pdf)
 
 8. [Cleaning Patent data with VantagePoint](https://github.com/wipo-analytics/presentations/raw/master/Topic_6_Cleaning_Patent_Data_Vantage_Point.pdf)
+
+A series of videos are avaible on Vimeo for step by step work with VantagePoint using the drones dataset.
+ 
+ - [Import Excel](https://vimeo.com/423990161)
+ - [Navigating VantagePoint](https://vimeo.com/424029373)
+ - [Splitting Data Fields](https://vimeo.com/424281236)
+ - [Text Mining](https://vimeo.com/user39387513)
 
 9. [Visualising Data with Tableau Public](https://github.com/wipo-analytics/presentations/raw/master/Topic_8_Visualization_Tableau_Public.pdf) 
 
